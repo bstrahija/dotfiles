@@ -1,0 +1,96 @@
+[core]
+	excludesfile = /Users/boris/.gitignore
+	quotepath = false
+	autocrlf = input
+	editor = subl
+	safecrlf = false
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Boris Strahija
+	email = boris@creolab.hr
+[color]
+	ui = auto
+	status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	st = status -sb
+	stat = status
+	ci = commit
+	br = branch
+	co = checkout
+	cm = commit -m
+	df = diff
+	ds = diff --staged
+	undo = reset --soft HEAD^
+	standup = log --since '1 day ago' --oneline --author <boris@creolab.hr>
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	lg = log -p
+	ac = !git add -A && git commit -m
+	acm = !git add -A && git commit -m
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	logx = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	plu = pull -u
+	fcm = !git fetch && git co master
+	fcd = !git fetch && git co develop
+	fetchreset = !git fetch && git reset --hard origin/master
+	fetchresetdev = !git fetch && git reset --hard origin/develop
+	type = cat-file -t
+    dump = cat-file -p
+	aa = add .
+	amend = commit --amend -C HEAD
+	rma = ls-files -deleted | xargs git rm
+	addremove = add -A
+	addrem = add -A
+	addrm = add -A
+	pom = push -u origin master
+	pod = push -u origin develop
+	pot = push -u origin test
+	md2m = !git checkout master && git merge develop && git checkout develop
+	md2t = !git checkout test && git merge develop && git checkout develop
+	mm2d = !git checkout develop && git merge master && git checkout master
+	mm2t = !git checkout test && git merge master && git checkout master
+	mt2m = !git checkout master && git merge test && git checkout test
+	mt2d = !git checkout develop && git merge test && git checkout test
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[format]
+	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
+[mergetool]
+	keepBackup = true
+	prompt = false
+[push]
+	default = current
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[http]
+	sslVerify = false

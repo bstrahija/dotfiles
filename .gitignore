@@ -1,0 +1,12 @@
+.DS_Store
+.tags
+.tags_sorted_by_file
+sftp-config.json
+*.sublime-project
+*.sublime-workspace
+.idea
+_ide_helper.php
+_ide_helpers.php
+fat-logfiles.txt
+composer.phar
+composer.lock
