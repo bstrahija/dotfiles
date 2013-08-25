@@ -49,7 +49,7 @@ alias ctags=/usr/local/bin/ctags
 # -------------------------------------------------------------------
 # Global
 # -------------------------------------------------------------------
-alias ls='ls -laGh'
+alias ls='ls -laGhF'
 alias 'today=calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
 alias 'dus=du -sckx * | sort -nr'
 alias 'adventure=emacs -batch -l dunnet'
@@ -73,6 +73,26 @@ alias nowdate='date +"%d-%m-%Y"'
 alias df='df -H'
 alias du='du -ch'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+
+# Flush Directory Service cache
+alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# URL-encode/decode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
