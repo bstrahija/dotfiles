@@ -50,12 +50,13 @@ alias ctags=/usr/local/bin/ctags
 # Global
 # -------------------------------------------------------------------
 alias ls='ls -laGhF'
-alias 'today=calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
-alias 'dus=du -sckx * | sort -nr'
-alias 'adventure=emacs -batch -l dunnet'
-alias 'mailsize=du -hs ~/Library/mail'
-alias 'bk=cd $OLDPWD'
-alias 'ttop=top -ocpu -R -F -s 2 -n30'
+alias today="cat /usr/share/calendar/calendar.* | grep `date +"%m/%d"`"
+alias danas="cat /usr/share/calendar/hr_HR.ISO8859-2/calendar.* | grep `date +"%m/%d"`"
+alias dus='du -sckx * | sort -nr'
+alias adventure='emacs -batch -l dunnet'
+alias mailsize='du -hs ~/Library/mail'
+alias bk='cd $OLDPWD'
+alias ttop='top -ocpu -R -F -s 2 -n30'
 alias phpmamp='/Applications/MAMP/bin/php/php5.4.10/bin/php'
 alias c='clear'
 alias la='ls -alh'
