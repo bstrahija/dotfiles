@@ -74,6 +74,7 @@ alias df='df -H'
 alias du='du -ch'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias subl="sublime -n"
 
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -92,6 +93,21 @@ alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
+
+# Shortcuts
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Sites"
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias s="subl ."
+alias o="open"
+alias oo="open ."
 
 
 ## Colorize the grep command output for ease of use (good for log files)##
