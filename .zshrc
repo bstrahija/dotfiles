@@ -99,10 +99,12 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; composer self-update; npm update npm -g; npm update -g; sudo gem update'
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Sites"
+alias pc="cd ~/Sites/creo"
+alias pp="cd ~/Sites/personal"
 alias g="git"
 alias h="history"
 alias j="jobs"
