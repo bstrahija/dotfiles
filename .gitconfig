@@ -73,7 +73,7 @@
 	mt2d = !git checkout develop && git merge test && git checkout test
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [format]
 	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 [mergetool]
