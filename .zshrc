@@ -148,15 +148,6 @@ alias gf='git reflog'
 alias git='hub'
 
 # -------------------------------------------------------------------
-# CodeIgniter
-# -------------------------------------------------------------------
-alias getci='git clone -b 2.1-stable git://github.com/EllisLab/CodeIgniter.git'
-alias getsparks='php -r "$(curl -fsSL http://getsparks.org/go-sparks)"'
-alias spark='php tools/spark'
-alias cisetup='rm -Rf .git; rm .gitignore; rm license.txt; rm -Rf user_guide; mv system application;'
-
-
-# -------------------------------------------------------------------
 # Laravel
 # -------------------------------------------------------------------
 # alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
@@ -184,5 +175,7 @@ alias g:f="php artisan generate:form"
 # Composer
 # -------------------------------------------------------------------
 alias cmpi='composer install'
+alias ci='composer install'
 alias cmpu='composer update'
+alias cu='composer update'
 alias cmpd='composer dump-autoload --optimize'
