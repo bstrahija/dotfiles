@@ -151,7 +151,7 @@ alias git='hub'
 # Laravel
 # -------------------------------------------------------------------
 # alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
-alias laravel="composer create-project laravel/laravel"
+# alias laravel="composer create-project laravel/laravel"
 alias artisan='php artisan'
 alias art='php artisan'
 alias bob='php artisan bob::build'

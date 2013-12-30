@@ -4,9 +4,6 @@
 	autocrlf = input
 	editor = subl -w
 	safecrlf = false
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = Boris Strahija
 	email = boris@creolab.hr
@@ -72,9 +69,6 @@
 	mt2m = !git checkout master && git merge test && git checkout test
 	mt2d = !git checkout develop && git merge test && git checkout test
 	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
 [format]
 	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 [mergetool]
@@ -82,17 +76,6 @@
 	prompt = false
 [push]
 	default = current
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
 [http]
 	sslVerify = false
 [credential]
