@@ -19,8 +19,7 @@ plugins=(git git-extras github git-remote-branch laravel brew textmate osx compo
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/.rbenv/shims:/Applications/MAMP/bin/php/php5.4.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:PATH=$HOME/.rbenv/bin:/usr/local/Cellar/ruby/1.9.3-p374:/var/lib/gems/1.8/bin:/usr/local/Cellar/imagemagick/6.8.0-10/bin:/Applications/VirtualBox.app/Contents/MacOS:
-
+export PATH="$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -152,6 +151,7 @@ alias git='hub'
 # -------------------------------------------------------------------
 # alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
 # alias laravel="composer create-project laravel/laravel"
+# No need for laravel alias because of phar in /usr/local/bin
 alias artisan='php artisan'
 alias art='php artisan'
 alias bob='php artisan bob::build'
@@ -174,6 +174,7 @@ alias g:f="php artisan generate:form"
 # -------------------------------------------------------------------
 # Composer
 # -------------------------------------------------------------------
+alias composer='hhvm /usr/local/bin/composer'
 alias cmpi='composer install'
 alias ci='composer install'
 alias cmpu='composer update'
