@@ -2,6 +2,7 @@
 .tags
 .tags_sorted_by_file
 sftp-config.json
+sftp-config-alt.json
 *.sublime-project
 *.sublime-workspace
 .idea

@@ -174,6 +174,7 @@ alias g:f="php artisan generate:form"
 # -------------------------------------------------------------------
 # Composer
 # -------------------------------------------------------------------
+alias hhvm='hhvm --config=/etc/hhvm/config.hdf'
 alias composer='hhvm /usr/local/bin/composer'
 alias cmpi='composer install'
 alias ci='composer install'
