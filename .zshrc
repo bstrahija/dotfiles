@@ -76,6 +76,7 @@ alias du='du -ch'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias subl="sublime -n"
+alias qlf="qlmanage -p"
 
 # Flush Directory Service cache
 alias flushdns="sudo killall -HUP mDNSResponder"
