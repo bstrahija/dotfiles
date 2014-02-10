@@ -10,3 +10,4 @@ _ide_helper.php
 _ide_helpers.php
 fat-logfiles.txt
 composer.phar
+.env

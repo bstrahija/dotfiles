@@ -77,6 +77,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias subl="sublime -n"
 alias qlf="qlmanage -p"
+alias so="source ~/.dotfiles/.zshrc"
 
 # Flush Directory Service cache
 alias flushdns="sudo killall -HUP mDNSResponder"
@@ -153,6 +154,8 @@ alias git='hub'
 # alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
 # alias laravel="composer create-project laravel/laravel"
 # No need for laravel alias because of phar in /usr/local/bin
+#alias laravel='hhvm /usr/local/bin/laravel'
+alias laravel="composer create-project laravel/laravel"
 alias artisan='php artisan'
 alias art='php artisan'
 alias bob='php artisan bob::build'
