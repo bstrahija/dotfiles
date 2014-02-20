@@ -1,0 +1,148 @@
+# -------------------------------------------------------------------
+# ZSH
+# -------------------------------------------------------------------
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+
+
+# -------------------------------------------------------------------
+# Global
+# -------------------------------------------------------------------
+alias ls='ls -laGhF'
+alias today="cat /usr/share/calendar/calendar.* | grep `date +"%m/%d"`"
+alias danas="cat /usr/share/calendar/hr_HR.ISO8859-2/calendar.* | grep `date +"%m/%d"`"
+alias dus='du -sckx * | sort -nr'
+alias adventure='emacs -batch -l dunnet'
+alias mailsize='du -hs ~/Library/mail'
+alias bk='cd $OLDPWD'
+alias ttop='top -ocpu -R -F -s 2 -n30'
+alias phpmamp='/Applications/MAMP/bin/php/php5.4.10/bin/php'
+alias c='clear'
+alias la='ls -alh'
+alias cdd='cd -'  # back to last directory
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias mkdir='mkdir -pv'
+alias h='history'
+alias j='jobs -l'
+alias path='echo -e ${PATH//:/\\n}'
+alias nowdate='date +"%d-%m-%Y"'
+alias df='df -H'
+alias du='du -ch'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias subl="sublime -n"
+alias qlf="qlmanage -p"
+alias so="source ~/.dotfiles/zshrc"
+alias ctags=/usr/local/bin/ctags
+alias flushdns="sudo killall -HUP mDNSResponder"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# URL-encode/decode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; composer self-update; npm update npm -g; npm update -g; sudo gem update'
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Quick way to rebuild the Launch Services database and get rid
+# of duplicates in the Open With submenu.
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+
+# -------------------------------------------------------------------
+# Shortcuts
+# -------------------------------------------------------------------
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Sites"
+alias pc="cd ~/Sites/creo"
+alias pp="cd ~/Sites/personal"
+alias pt="cd ~/Sites/test"
+alias pn="cd ~/NTH/workspace"
+alias dot="cd ~/.dotfiles"
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias s="subl ."
+alias o="open"
+alias oo="open ."
+
+
+# -------------------------------------------------------------------
+# Git
+# -------------------------------------------------------------------
+alias ga='git add'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gacm='git acm'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+alias git='hub'
+
+# -------------------------------------------------------------------
+# Laravel
+# -------------------------------------------------------------------
+# alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
+# alias laravel="composer create-project laravel/laravel"
+# No need for laravel alias because of phar in /usr/local/bin
+#alias laravel='hhvm /usr/local/bin/laravel'
+alias laravel="composer create-project laravel/laravel"
+alias artisan='php artisan'
+alias art='php artisan'
+alias bob='php artisan bob::build'
+alias migrate="php artisan migrate"
+alias serve="php artisan serve"
+alias dump="php artisan dump"
+alias t="phpunit"
+
+# Generators Package
+alias g:c="php artisan generate:controller"
+alias g:m="php artisan generate:model"
+alias g:v="php artisan generate:view"
+alias g:mig="php artisan generate:migration"
+alias g:t="php artisan generate:test"
+alias g:r="php artisan generate:resource"
+alias g:s="php artisan generate:scaffold"
+alias g:f="php artisan generate:form"
+
+
+# -------------------------------------------------------------------
+# Composer
+# -------------------------------------------------------------------
+alias hhvm='hhvm --config=/etc/hhvm/config.hdf'
+alias composer='hhvm /usr/local/bin/composer'
+alias cmpi='composer install'
+alias ci='composer install'
+alias cmpu='composer update'
+alias cu='composer update'
+alias cmpd='composer dump-autoload --optimize'
