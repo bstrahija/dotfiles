@@ -5,6 +5,7 @@ alias zshconfig="subl ~/.dotfiles/zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 alias aliases="subl ~/.dotfiles/aliases"
 alias dotfiles="subl ~/.dotfiles"
+alias sublconfig="subl ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 
 
 # -------------------------------------------------------------------
@@ -41,6 +42,7 @@ alias qlf="qlmanage -p"
 alias so="source ~/.dotfiles/zshrc"
 alias ctags=/usr/local/bin/ctags
 alias flushdns="sudo killall -HUP mDNSResponder"
+alias getwp="wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && rm -f latest.tar.gz && mv wordpress/ public/"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"

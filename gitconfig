@@ -8,11 +8,11 @@
 	name = Boris Strahija
 	email = bstrahija@gmail.com
 [color]
-	ui = auto
+	ui = true
 	status = auto
-    diff = auto
-    branch = auto
-    interactive = auto
+	diff = auto
+	branch = auto
+	interactive = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -46,13 +46,15 @@
 	logx = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	g = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
 	plu = pull -u
 	fcm = !git fetch && git co master
 	fcd = !git fetch && git co develop
 	fetchreset = !git fetch && git reset --hard origin/master
 	fetchresetdev = !git fetch && git reset --hard origin/develop
 	type = cat-file -t
-    dump = cat-file -p
+	dump = cat-file -p
 	aa = add .
 	amend = commit --amend -C HEAD
 	rma = ls-files -deleted | xargs git rm
@@ -69,6 +71,7 @@
 	mt2m = !git checkout master && git merge test && git checkout test
 	mt2d = !git checkout develop && git merge test && git checkout test
 	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+	this = !git init && git add . && git commmit -m \"Initial commit.\"
 [format]
 	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 [mergetool]
@@ -86,9 +89,22 @@
 	tool = opendiff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [help]
 	autocorrect = 1
+
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+
+[url "https://git.loc.ch:8444/"]
+	insteadOf = nth:
