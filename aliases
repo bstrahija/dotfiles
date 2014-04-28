@@ -118,7 +118,7 @@ alias gf='git reflog'
 # alias laravel="git clone -o laravel https://github.com/laravel/laravel.git"
 # alias laravel="composer create-project laravel/laravel"
 # No need for laravel alias because of phar in /usr/local/bin
-#alias laravel='hhvm /usr/local/bin/laravel'
+# alias laravel='hhvm /usr/local/bin/laravel'
 alias laravel="composer create-project laravel/laravel"
 alias artisan='php artisan'
 alias art='php artisan'
@@ -143,7 +143,7 @@ alias g:f="php artisan generate:form"
 # Composer
 # -------------------------------------------------------------------
 alias hhvm='hhvm --config=/etc/hhvm/config.hdf'
-alias composer='hhvm /usr/local/bin/composer'
+# alias composer='hhvm /usr/local/bin/composer'
 alias cmpi='composer install'
 alias ci='composer install'
 alias cmpu='composer update'
