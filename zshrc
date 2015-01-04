@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/aliases
 
 # Customize to your needs...
-export PATH="$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+export PATH="/usr/local/bin:$(brew --prefix homebrew/php/php56)/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

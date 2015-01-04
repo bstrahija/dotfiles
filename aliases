@@ -17,6 +17,8 @@ alias danas="cat /usr/share/calendar/hr_HR.ISO8859-2/calendar.* | grep `date +"%
 alias dus='du -sckx * | sort -nr'
 alias adventure='emacs -batch -l dunnet'
 alias mailsize='du -hs ~/Library/mail'
+alias mailpurge='find ~/Library/Mail -name "Attachments" -depth -exec rm -rf {} \;'
+alias mailoptimize=' sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum;'
 alias bk='cd $OLDPWD'
 alias ttop='top -ocpu -R -F -s 2 -n30'
 alias phpmamp='/Applications/MAMP/bin/php/php5.4.10/bin/php'
@@ -29,7 +31,6 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias mkdir='mkdir -pv'
-alias h='history'
 alias j='jobs -l'
 alias path='echo -e ${PATH//:/\\n}'
 alias nowdate='date +"%d-%m-%Y"'
@@ -43,6 +44,13 @@ alias so="source ~/.dotfiles/zshrc"
 alias ctags=/usr/local/bin/ctags
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias getwp="wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && rm -f latest.tar.gz && mv wordpress/ public/"
+alias betty="~/.betty/main.rb"
+alias hosts="subl /etc/hosts"
+alias phpini="php -i | grep 'Configuration File'"
+alias use_php53="brew unlink php54 && brew unlink php55 && brew unlink php53 && brew link php53"
+alias use_php54="brew unlink php55 && brew unlink php54 && brew link php54"
+alias use_php55="brew unlink php54 && brew unlink php55 && brew link php55"
+alias use_php56="brew unlink php54 && brew unlink php55 && brew unlink php56 && brew link php56"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
@@ -67,6 +75,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# Compression / Tar / Untar
+alias untar="tar -zxvf"
+alias untarbz2="tar -jxvf"
+alias targz="tar -pczf"
+
 # Quick way to rebuild the Launch Services database and get rid
 # of duplicates in the Open With submenu.
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
@@ -75,14 +88,18 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 # -------------------------------------------------------------------
 # Shortcuts
 # -------------------------------------------------------------------
+alias h="cd ~/"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Sites"
-alias pc="cd ~/Sites/creo"
-alias pp="cd ~/Sites/personal"
-alias pt="cd ~/Sites/test"
-alias pn="cd ~/NTH/workspace"
+alias p="cd ~/Code"
+alias pc="cd ~/Code/creo"
+alias pj="cd ~/Code/creo/jivial"
+alias pp="cd ~/Code/personal"
+alias pt="cd ~/Code/test"
+alias pk="cd ~/Code/knight"
+alias pn="cd ~/Code/nth"
+alias pnw="cd ~/Code/nth/wp-nth"
 alias dot="cd ~/.dotfiles"
 alias g="git"
 alias h="history"
@@ -111,6 +128,8 @@ alias gpu='git pull'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
+alias delete-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias show-merged='git branch --merged | grep -v "\*"'
 
 # -------------------------------------------------------------------
 # Laravel
@@ -119,14 +138,18 @@ alias gf='git reflog'
 # alias laravel="composer create-project laravel/laravel"
 # No need for laravel alias because of phar in /usr/local/bin
 # alias laravel='hhvm /usr/local/bin/laravel'
-alias laravel="composer create-project laravel/laravel"
+# alias laravel="composer create-project laravel/laravel"
 alias artisan='php artisan'
 alias art='php artisan'
-alias bob='php artisan bob::build'
 alias migrate="php artisan migrate"
 alias serve="php artisan serve"
 alias dump="php artisan dump"
+alias routes="php artisan routes"
 alias t="phpunit"
+alias vm='ssh vagrant@127.0.0.1 -p 2222'
+alias vmup='cd ~/Code/homestead && vagrant up && cd -'
+alias vmdown='cd ~/Code/homestead && vagrant suspend && cd -'
+alias phpspec=vendor/bin/phpspec
 
 # Generators Package
 alias g:c="php artisan generate:controller"
@@ -149,3 +172,23 @@ alias ci='composer install'
 alias cmpu='composer update'
 alias cu='composer update'
 alias cmpd='composer dump-autoload --optimize'
+alias wpnth='composer create-project --repository-url=http://satis.webslb.com samurai/wp-root'
+
+# -------------------------------------------------------------------
+# NGINX
+# -------------------------------------------------------------------
+alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.restart='nginx.stop && nginx.start'
+alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
+alias php-fpm.restart='php-fpm.stop && php-fpm.start'
+alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
+alias mysql.restart='mysql.stop && mysql.start'
+alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
+alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
+alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
+alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
+alias nginx.logs.phpmyadmin.error='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.error.log'
+alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'

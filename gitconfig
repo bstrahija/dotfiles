@@ -108,3 +108,7 @@
 
 [url "https://git.loc.ch:8444/"]
 	insteadOf = nth:
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
