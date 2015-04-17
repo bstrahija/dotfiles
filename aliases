@@ -97,7 +97,8 @@ alias pc="cd ~/Code/creo"
 alias pj="cd ~/Code/creo/jivial"
 alias pp="cd ~/Code/personal"
 alias pt="cd ~/Code/test"
-alias pk="cd ~/Code/knight"
+alias pi="cd ~/Code/influendo"
+alias pis="cd ~/Code/influendo/subscribely"
 alias pn="cd ~/Code/nth"
 alias pnw="cd ~/Code/nth/wp-nth"
 alias dot="cd ~/.dotfiles"
@@ -128,8 +129,12 @@ alias gpu='git pull'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
+alias git-discard='git clean -df; git checkout -- .'
 alias delete-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias remove-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias show-merged='git branch --merged | grep -v "\*"'
+alias grm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gsm='git branch --merged | grep -v "\*"'
 
 # -------------------------------------------------------------------
 # Laravel
@@ -142,14 +147,18 @@ alias show-merged='git branch --merged | grep -v "\*"'
 alias artisan='php artisan'
 alias art='php artisan'
 alias migrate="php artisan migrate"
+alias migrefresh="php artisan migrate:refresh --seed"
 alias serve="php artisan serve"
 alias dump="php artisan dump"
-alias routes="php artisan routes"
+alias routes="php artisan route:list"
 alias t="phpunit"
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 alias vmup='cd ~/Code/homestead && vagrant up && cd -'
 alias vmdown='cd ~/Code/homestead && vagrant suspend && cd -'
 alias phpspec=vendor/bin/phpspec
+alias rock='rocketeer'
+alias tinker='php artisan tinker'
+alias gw='gulp watch'
 
 # Generators Package
 alias g:c="php artisan generate:controller"
@@ -172,6 +181,7 @@ alias ci='composer install'
 alias cmpu='composer update'
 alias cu='composer update'
 alias cmpd='composer dump-autoload --optimize'
+alias co='composer dump-autoload --optimize'
 alias wpnth='composer create-project --repository-url=http://satis.webslb.com samurai/wp-root'
 
 # -------------------------------------------------------------------

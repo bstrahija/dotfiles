@@ -11,3 +11,4 @@ _ide_helpers.php
 fat-logfiles.txt
 composer.phar
 .env
+.sass-cache

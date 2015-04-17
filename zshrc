@@ -8,12 +8,13 @@ export CPPFLAGS=-I/opt/X11/include
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+# ZSH_THEME="cloud"
+ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras github git-remote-branch laravel brew textmate osx composer laravel4)
+plugins=(git git-extras github git-remote-branch laravel brew textmate osx composer laravel4 laravel5)
 
 # Include
 source $ZSH/oh-my-zsh.sh
