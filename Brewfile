@@ -20,7 +20,6 @@ install vim --override-system-vi
 tap homebrew/dupes
 install homebrew/dupes/grep
 tap josegonzalez/homebrew-php
-install php55
 
 # Install other useful binaries
 install ack
