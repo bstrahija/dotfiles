@@ -52,6 +52,10 @@ alias use_php54="brew unlink php55 && brew unlink php54 && brew link php54"
 alias use_php55="brew unlink php54 && brew unlink php55 && brew link php55"
 alias use_php56="brew unlink php54 && brew unlink php55 && brew unlink php56 && brew link php56"
 
+# OSX
+alias enc="launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist && open /System/Library/CoreServices/NotificationCenter.app"
+alias dnc="launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist && killall NotificationCenter"
+
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
@@ -96,16 +100,18 @@ alias p="cd ~/Code"
 alias pc="cd ~/Code/creo"
 alias pj="cd ~/Code/creo/jivial"
 alias pp="cd ~/Code/personal"
+alias pcv="cd ~/Code/creo/varewo"
 alias pt="cd ~/Code/test"
 alias pi="cd ~/Code/influendo"
-alias pis="cd ~/Code/influendo/subscribely"
+alias pil="cd ~/Code/influendo/optimize-leads"
 alias pn="cd ~/Code/nth"
 alias pnw="cd ~/Code/nth/wp-nth"
 alias dot="cd ~/.dotfiles"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias s="subl ."
+alias e="subl -n ."
+alias s="subl -n ."
 alias o="open"
 alias oo="open ."
 
@@ -115,7 +121,7 @@ alias oo="open ."
 # -------------------------------------------------------------------
 alias ga='git add'
 alias gp='git push'
-alias gl='git log'
+alias gl='git logx'
 alias gs='git status'
 alias gd='git diff'
 alias gm='git commit -m'
@@ -135,6 +141,7 @@ alias remove-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch 
 alias show-merged='git branch --merged | grep -v "\*"'
 alias grm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gsm='git branch --merged | grep -v "\*"'
+alias nah='git reset --hard;git clean -df;'
 
 # -------------------------------------------------------------------
 # Laravel
@@ -144,6 +151,7 @@ alias gsm='git branch --merged | grep -v "\*"'
 # No need for laravel alias because of phar in /usr/local/bin
 # alias laravel='hhvm /usr/local/bin/laravel'
 # alias laravel="composer create-project laravel/laravel"
+alias lumen="composer create-project laravel/lumen --prefer-dist"
 alias artisan='php artisan'
 alias art='php artisan'
 alias migrate="php artisan migrate"
@@ -152,13 +160,22 @@ alias serve="php artisan serve"
 alias dump="php artisan dump"
 alias routes="php artisan route:list"
 alias t="phpunit"
-alias vm='ssh vagrant@127.0.0.1 -p 2222'
-alias vmup='cd ~/Code/homestead && vagrant up && cd -'
-alias vmdown='cd ~/Code/homestead && vagrant suspend && cd -'
 alias phpspec=vendor/bin/phpspec
 alias rock='rocketeer'
 alias tinker='php artisan tinker'
 alias gw='gulp watch'
+
+# VM / Homestead / Vagrant
+alias hs="homestead"
+alias vm="cd ~/Homestead && vagrant ssh"
+alias vmssh="cd ~/Homestead && vagrant ssh"
+alias vmup="cd ~/Homestead && vagrant up && cd -"
+alias vmdown="cd ~/Homestead && vagrant halt && cd -"
+alias vmhalt="cd ~/Homestead && vagrant halt && cd -"
+alias vmconfig="subl cd ~/.homestead/Homestead.yaml"
+alias vmsites="subl cd ~/.homestead/Homestead.yaml"
+alias vmrefresh="cd ~/Homestead && vagrant provision && cd -"
+alias vmprovision="cd ~/Homestead && vagrant provision && cd -"
 
 # Generators Package
 alias g:c="php artisan generate:controller"
@@ -202,3 +219,8 @@ alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.ac
 alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
 alias nginx.logs.phpmyadmin.error='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.error.log'
 alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
+
+# -------------------------------------------------------------------
+# CS:GO
+# -------------------------------------------------------------------
+alias csgo='subl ~/Library/Application\ Support/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo'
