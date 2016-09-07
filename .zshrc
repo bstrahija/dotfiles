@@ -23,7 +23,8 @@ source ~/.dotfiles/aliases
 source ~/.dotfiles/wp-completion.bash
 
 # Customize to your needs...
-export PATH="$(brew --prefix josegonzalez/php/php55)/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+# export PATH="$(brew --prefix josegonzalez/php/php56)/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
