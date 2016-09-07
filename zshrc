@@ -9,7 +9,7 @@ export CPPFLAGS=-I/opt/X11/include
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="cloud"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="honukai"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -21,7 +21,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/aliases
 
 # Customize to your needs...
-export PATH="/usr/local/bin:$(brew --prefix homebrew/php/php56)/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+# export PATH="/usr/local/bin:$(brew --prefix homebrew/php/php56)/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+export PATH="/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
