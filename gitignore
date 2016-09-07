@@ -12,3 +12,4 @@ fat-logfiles.txt
 composer.phar
 .env
 .sass-cache
+npm-debug.log

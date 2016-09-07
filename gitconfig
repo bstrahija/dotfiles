@@ -22,6 +22,8 @@
 	frag = magenta bold
 	old = red bold
 	new = green bold
+[status]
+  submodule = 1
 [color "status"]
 	added = yellow
 	changed = green
@@ -38,12 +40,12 @@
 	undo = reset --soft HEAD^
 	standup = log --since '1 day ago' --oneline --author <boris@creolab.hr>
 	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-	lg = log -p
+	lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	ac = !git add -A && git commit -m
 	acm = !git add -A && git commit -m
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	logx = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	logx = log --all --graph --decorate --oneline --simplify-by-decoration
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
 	g = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
@@ -89,10 +91,12 @@
 	tool = opendiff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[apply]
+  whitespace = nowarn
 [help]
 	autocorrect = 1
 
@@ -116,9 +120,9 @@
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
-[init]
-	templatedir = /Users/boris/.git_template
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[init]
+	templatedir = /Users/boris/.git_template
