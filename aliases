@@ -1,10 +1,10 @@
 # -------------------------------------------------------------------
 # ZSH
 # -------------------------------------------------------------------
-alias zshconfig="subl ~/.dotfiles/zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
-alias aliases="subl ~/.dotfiles/aliases"
-alias dotfiles="subl ~/.dotfiles"
+alias zshconfig="atom ~/.dotfiles/zshrc"
+alias ohmyzsh="atom ~/.oh-my-zsh"
+alias aliases="atom ~/.dotfiles/aliases"
+alias dotfiles="atom ~/.dotfiles"
 alias sublconfig="subl ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 
 
@@ -45,7 +45,7 @@ alias ctags=/usr/local/bin/ctags
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias getwp="wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && rm -f latest.tar.gz && mv wordpress/ public/"
 alias betty="~/.betty/main.rb"
-alias hosts="subl /etc/hosts"
+alias hosts="atom /etc/hosts"
 alias phpini="php -i | grep 'Configuration File'"
 alias use_php53="brew unlink php54 && brew unlink php55 && brew unlink php53 && brew link php53"
 alias use_php54="brew unlink php55 && brew unlink php54 && brew link php54"
@@ -110,7 +110,8 @@ alias dot="cd ~/.dotfiles"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias e="subl -n ."
+alias e="atom ."
+alias a="atom ."
 alias s="subl -n ."
 alias o="open"
 alias oo="open ."
@@ -172,8 +173,8 @@ alias vmssh="cd ~/Homestead && vagrant ssh"
 alias vmup="cd ~/Homestead && vagrant up && cd -"
 alias vmdown="cd ~/Homestead && vagrant halt && cd -"
 alias vmhalt="cd ~/Homestead && vagrant halt && cd -"
-alias vmconfig="subl cd ~/.homestead/Homestead.yaml"
-alias vmsites="subl cd ~/.homestead/Homestead.yaml"
+alias vmconfig="atom cd ~/.homestead/Homestead.yaml"
+alias vmsites="atom cd ~/.homestead/Homestead.yaml"
 alias vmrefresh="cd ~/Homestead && vagrant provision && cd -"
 alias vmprovision="cd ~/Homestead && vagrant provision && cd -"
 
@@ -223,4 +224,4 @@ alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyad
 # -------------------------------------------------------------------
 # CS:GO
 # -------------------------------------------------------------------
-alias csgo='subl ~/Library/Application\ Support/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo'
+alias csgo='atom ~/Library/Application\ Support/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo'
