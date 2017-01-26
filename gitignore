@@ -1,5 +1,7 @@
 .DS_Store
 .tags
+.tags1
+.tags2
 .tags_sorted_by_file
 sftp-config.json
 sftp-config-alt.json
@@ -12,5 +14,9 @@ _ide_helpers.php
 fat-logfiles.txt
 composer.phar
 .env
+.env.testing
+.env.staging
+.env.production
 .sass-cache
 npm-debug.log
+.imdone
