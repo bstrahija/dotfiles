@@ -42,7 +42,7 @@ alias subl="sublime -n"
 alias qlf="qlmanage -p"
 alias so="source ~/.dotfiles/zshrc"
 alias ctags=/usr/local/bin/ctags
-alias flushdns="sudo killall -HUP mDNSResponder"
+alias flushdns="sudo killall -9 mDNSResponder; sudo killall -9 dnsmasq"
 alias getwp="wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && rm -f latest.tar.gz && mv wordpress/ public/"
 alias betty="~/.betty/main.rb"
 alias hosts="atom /etc/hosts"
@@ -104,6 +104,7 @@ alias pcv="cd ~/Code/creo/varewo"
 alias pt="cd ~/Code/test"
 alias pi="cd ~/Code/influendo"
 alias pil="cd ~/Code/influendo/optimize-leads"
+alias pio="cd ~/Code/influendo/optimizepress"
 alias pn="cd ~/Code/nth"
 alias pnw="cd ~/Code/nth/wp-nth"
 alias dot="cd ~/.dotfiles"
@@ -177,6 +178,10 @@ alias vmconfig="atom cd ~/.homestead/Homestead.yaml"
 alias vmsites="atom cd ~/.homestead/Homestead.yaml"
 alias vmrefresh="cd ~/Homestead && vagrant provision && cd -"
 alias vmprovision="cd ~/Homestead && vagrant provision && cd -"
+
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
 
 # Generators Package
 alias g:c="php artisan generate:controller"
