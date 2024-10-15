@@ -3,6 +3,7 @@
 .tags1
 .tags2
 .tags_sorted_by_file
+sftp.json
 sftp-config.json
 sftp-config-alt.json
 .remote-sync.json
@@ -10,6 +11,7 @@ sftp-config-alt.json
 *.sublime-workspace
 .idea
 _ide_helper.php
+.phpstorm.meta.php
 _ide_helpers.php
 fat-logfiles.txt
 composer.phar
@@ -20,3 +22,4 @@ composer.phar
 .sass-cache
 npm-debug.log
 .imdone
+.vscode

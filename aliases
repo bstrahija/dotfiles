@@ -1,17 +1,20 @@
 # -------------------------------------------------------------------
 # ZSH
 # -------------------------------------------------------------------
-alias zshconfig="atom ~/.dotfiles/zshrc"
-alias ohmyzsh="atom ~/.oh-my-zsh"
-alias aliases="atom ~/.dotfiles/aliases"
-alias dotfiles="atom ~/.dotfiles"
+alias zshconfig="code ~/.dotfiles/zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+alias aliases="code ~/.dotfiles/aliases"
+alias dotfiles="code ~/.dotfiles"
 alias sublconfig="subl ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+alias python="python3"
 
 
 # -------------------------------------------------------------------
 # Global
 # -------------------------------------------------------------------
-alias ls='ls -laGhF'
+alias ls='exa -alh'
+alias ll='exa -alh'
+alias cat='bat'
 alias today="cat /usr/share/calendar/calendar.* | grep `date +"%m/%d"`"
 alias danas="cat /usr/share/calendar/hr_HR.ISO8859-2/calendar.* | grep `date +"%m/%d"`"
 alias dus='du -sckx * | sort -nr'
@@ -19,23 +22,25 @@ alias adventure='emacs -batch -l dunnet'
 alias mailsize='du -hs ~/Library/mail'
 alias mailpurge='find ~/Library/Mail -name "Attachments" -depth -exec rm -rf {} \;'
 alias mailoptimize=' sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum;'
-alias bk='cd $OLDPWD'
+alias bk='z $OLDPWD'
 alias ttop='top -ocpu -R -F -s 2 -n30'
 alias phpmamp='/Applications/MAMP/bin/php/php5.4.10/bin/php'
 alias c='clear'
-alias la='ls -alh'
-alias cdd='cd -'  # back to last directory
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
+alias la='exa -laGhF'
+alias cd='z'
+alias cdd='z -'  # back to last directory
+alias ..='z ..'
+alias ...='z ../..'
+alias ....='z ../../..'
+alias .....='z ../../../..'
+alias ......='z ../../../../..'
 alias mkdir='mkdir -pv'
 alias j='jobs -l'
 alias path='echo -e ${PATH//:/\\n}'
 alias nowdate='date +"%d-%m-%Y"'
-alias df='df -H'
+# alias df='df -H'
 alias du='du -ch'
+alias df='dust'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias subl="sublime -n"
@@ -45,12 +50,17 @@ alias ctags=/usr/local/bin/ctags
 alias flushdns="sudo killall -9 mDNSResponder; sudo killall -9 dnsmasq"
 alias getwp="wget http://wordpress.org/latest.tar.gz && tar -zxvf latest.tar.gz && rm -f latest.tar.gz && mv wordpress/ public/"
 alias betty="~/.betty/main.rb"
-alias hosts="atom /etc/hosts"
+alias hosts="code /etc/hosts"
 alias phpini="php -i | grep 'Configuration File'"
 alias use_php53="brew unlink php54 && brew unlink php55 && brew unlink php53 && brew link php53"
 alias use_php54="brew unlink php55 && brew unlink php54 && brew link php54"
 alias use_php55="brew unlink php54 && brew unlink php55 && brew link php55"
 alias use_php56="brew unlink php54 && brew unlink php55 && brew unlink php56 && brew link php56"
+alias ping='prettyping --nolegend'
+alias top="sudo htop" # alias top and fix high sierra bug
+alias htop="sudo btop"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias c="cursor"
 
 # OSX
 alias enc="launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist && open /System/Library/CoreServices/NotificationCenter.app"
@@ -92,28 +102,30 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 # -------------------------------------------------------------------
 # Shortcuts
 # -------------------------------------------------------------------
-alias h="cd ~/"
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/Code"
-alias pc="cd ~/Code/creo"
-alias pj="cd ~/Code/creo/jivial"
-alias pp="cd ~/Code/personal"
-alias pcv="cd ~/Code/creo/varewo"
-alias pt="cd ~/Code/test"
-alias pi="cd ~/Code/influendo"
-alias pil="cd ~/Code/influendo/optimize-leads"
-alias pio="cd ~/Code/influendo/optimizepress"
-alias pn="cd ~/Code/nth"
-alias pnw="cd ~/Code/nth/wp-nth"
-alias dot="cd ~/.dotfiles"
+alias h="z ~/"
+alias d="z ~/Dropbox"
+alias dl="z ~/Downloads"
+alias dt="z ~/Desktop"
+alias p="z ~/Code"
+alias pc="z ~/Code/creo"
+alias pj="z ~/Code/creo/jivial"
+alias pp="z ~/Code/personal"
+alias pcv="z ~/Code/creo/varewo"
+alias pt="z ~/Code/test"
+alias pi="z ~/Code/influendo"
+alias pil="z ~/Code/influendo/optimizeleads"
+alias psl="z ~/Code/influendo/optimizepress-sl"
+alias pop="z ~/Code/influendo/optimizepress/public/wp-content/plugins"
+alias pio="z ~/Code/influendo/optimizepress/public"
+alias pik="z ~/Code/influendo/kourses-app"
+alias pn="z ~/Code/nth"
+alias pnw="z ~/Code/nth/wp-nth"
+alias dot="z ~/.dotfiles"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias e="atom ."
-alias a="atom ."
-alias s="subl -n ."
+alias e="code ."
+alias s="code -n ."
 alias o="open"
 alias oo="open ."
 
@@ -156,31 +168,41 @@ alias nah='git reset --hard;git clean -df;'
 alias lumen="composer create-project laravel/lumen --prefer-dist"
 alias artisan='php artisan'
 alias art='php artisan'
+alias a='php artisan'
+alias aclr='php artisan view:clear; php artisan cache:clear; php artisan config:clear; php artisan event:clear; php artisan debugbar:clear; php artisan filament:clear-cached-components; php artisan icons:clear;'
 alias migrate="php artisan migrate"
-alias migrefresh="php artisan migrate:refresh --seed"
+alias mfresh="php artisan migrate:refresh --seed"
 alias serve="php artisan serve"
 alias dump="php artisan dump"
 alias routes="php artisan route:list"
-alias t="phpunit"
+alias t="./vendor/bin/phpunit --testdox"
 alias phpspec=vendor/bin/phpspec
 alias rock='rocketeer'
 alias tinker='php artisan tinker'
 alias gw='gulp watch'
+alias sail='bash vendor/bin/sail'
+alias npmd='npm run dev'
+alias npmw='npm run watch'
+alias npmw='npm run build'
+alias nd='npm run dev'
+alias nw='npm run watch'
+alias nw='npm run build'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 # VM / Homestead / Vagrant
 alias hs="homestead"
-alias vm="cd ~/Homestead && vagrant ssh"
-alias vmssh="cd ~/Homestead && vagrant ssh"
-alias vmup="cd ~/Homestead && vagrant up && cd -"
-alias vmdown="cd ~/Homestead && vagrant halt && cd -"
-alias vmhalt="cd ~/Homestead && vagrant halt && cd -"
-alias vmconfig="atom cd ~/.homestead/Homestead.yaml"
-alias vmsites="atom cd ~/.homestead/Homestead.yaml"
-alias vmrefresh="cd ~/Homestead && vagrant provision && cd -"
-alias vmprovision="cd ~/Homestead && vagrant provision && cd -"
+alias vm="z ~/Homestead && vagrant ssh && z -"
+alias vmssh="z ~/Homestead && vagrant ssh && z -"
+alias vmup="z ~/Homestead && vagrant up && z -"
+alias vmdown="z ~/Homestead && vagrant halt && z -"
+alias vmhalt="z ~/Homestead && vagrant halt && z -"
+alias vmconfig="code ~/Homestead/Homestead.yaml"
+alias vmsites="code ~/Homestead/Homestead.yaml"
+alias vmrefresh="z ~/Homestead && vagrant provision && z -"
+alias vmprovision="z ~/Homestead && vagrant provision && z -"
 
 function homestead() {
-    ( cd ~/Homestead && vagrant $* )
+    ( z ~/Homestead && vagrant $* )
 }
 
 # Generators Package
@@ -229,4 +251,4 @@ alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyad
 # -------------------------------------------------------------------
 # CS:GO
 # -------------------------------------------------------------------
-alias csgo='atom ~/Library/Application\ Support/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo'
+alias csgo='code ~/Library/Application\ Support/Steam/steamapps/common/Counter-Strike\ Global\ Offensive/csgo'

@@ -1,7 +1,7 @@
 set nocompatible   " Disable vi-compatibility
 set t_Co=256
 
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright "
 set guifont=menlo\ for\ powerline:h16
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar

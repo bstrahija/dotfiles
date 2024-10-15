@@ -10,7 +10,7 @@ export CPPFLAGS=-I/opt/X11/include
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="rixius"
 # ZSH_THEME="cloud"
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -19,11 +19,9 @@ plugins=(git git-extras github git-remote-branch laravel5 brew textmate osx comp
 
 # Include
 source $ZSH/oh-my-zsh.sh
-source ~/.dotfiles/aliases
-source ~/.dotfiles/wp-completion.bash
+source $HOME/.dotfiles/aliases
 
 # Customize to your needs...
-# export PATH="$(brew --prefix josegonzalez/php/php56)/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$PATH"
 
 # Set to this to use case-sensitive completion
@@ -40,3 +38,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+
+source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme

@@ -74,6 +74,7 @@
 	mt2d = !git checkout develop && git merge test && git checkout test
 	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
 	this = !git init && git add . && git commmit -m \"Initial commit.\"
+	nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
 [format]
 	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
 [mergetool]
@@ -93,7 +94,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [apply]
   whitespace = nowarn
@@ -121,6 +122,13 @@
 	smudge = git hawser smudge %f
 	required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
+[commit]
+	template = /Users/boris/.stCommitMsg
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
