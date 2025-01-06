@@ -1,0 +1,15 @@
+# /Users/bstrahija/.config/tmuxinator/dotfiles.yml
+
+name: dotfiles
+root: ~/.dotfiles
+
+windows:
+  - dotfiles:
+      layout: main-vertical
+      panes:
+        - editor:
+          - nvim .
+        - main:
+          - ls
+        - git:
+          - git status

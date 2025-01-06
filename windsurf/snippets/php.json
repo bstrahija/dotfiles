@@ -1,0 +1,31 @@
+{
+    "PRINT_R": {
+		"prefix": "ppr",
+		"body": [
+			"echo '<pre>'; print_r($1); echo '</pre>';"
+		],
+		"description": "Print_r variables"
+	},
+
+    "Public method": {
+		"prefix": "met",
+		"body": [
+			"public function ${1:method}(${2:Type} ${3:\\$param}): ${4:ReturnType}",
+            "{",
+            "$5",
+            "}"
+		],
+		"description": "Print_r variables"
+	},
+
+    "Public function": {
+		"prefix": "pf",
+		"body": [
+			"public function ${1:method}()",
+            "{",
+            "$2",
+            "}"
+		],
+		"description": "Print_r variables"
+	}
+}

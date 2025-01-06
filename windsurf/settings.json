@@ -1,0 +1,314 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.fontFamily": "Monaspace Argon Medium, DankMono Nerd Font Mono, Monaspace Argon Medium, JetBrains Mono, Fira Code, Menlo, Cascadia Code, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "editor.fontSize": 12,
+    "editor.lineHeight": 36,
+    "codeium.enableCodeLens": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "explorer.openEditors.visible": 1,
+    "workbench.tree.indent": 18,
+    "php-docblocker.useShortNames": true,
+    "php-docblocker.alignParams": true,
+    "php-docblocker.alignReturn": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "window.openFilesInNewWindow": "on",
+    "files.exclude": {
+        "**/.idea": true
+    },
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 300,
+    "editor.rulers": [
+        120
+    ],
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorBlinking": "phase",
+    "search.mode": "reuseEditor",
+    "search.exclude": {
+        "**/.git": true,
+        "**/*.log": true,
+        "**/node_modules": true,
+        "**/tmp": true,
+        "**/wp-content/**/public": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.showStatusBar": true,
+    "intelephense.environment.phpVersion": "8.2.0",
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "cSpell.customDictionaries": {
+        "custom-dictionary-user": {
+            "name": "custom-dictionary-user",
+            "path": "~/.cspell/custom-dictionary-user.txt",
+            "addWords": true,
+            "scope": "user"
+        }
+    },
+    "#workbench.layoutControl.enabled": true,
+    "workbench.startupEditor": "none",
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "editor.fontWeight": "300",
+    "workbench.fontAliasing": "auto",
+    "editor.linkedEditing": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "php-cs-fixer.executablePath": "/usr/local/bin/php-cs-fixer",
+    "terminal.integrated.env.osx": {},
+    "intelephense.telemetry.enabled": false,
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "console-ninja.featureSet": "Community",
+    "editor.accessibilitySupport": "off",
+    "symbols.hidesExplorerArrows": false,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "@TODO"
+    ],
+    "tailwind-raw-reorder.classRegex": {
+        "jade": [
+            {
+                "regex": "\\.([\\._a-zA-Z0-9\\-]+)",
+                "separator": "\\.",
+                "replacement": "."
+            },
+            "\\bclass\\s*=\\s*[\\\"\\']([\\._a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']"
+        ],
+        "html": [
+            [
+                "\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ],
+        "css": "\\B@apply\\s+([\\._a-zA-Z0-9\\s\\-\\:\\/]+);",
+        "javascript": [
+            [
+                "((?:class(?:Name)?|tw)\\s*=\\s*([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>]\\2)",
+                "(?:class(?:Name)?|tw)\\s*=\\s*(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ],
+        "javascriptreact": [
+            [
+                "((?:class(?:Name)?|tw)\\s*=\\s*{?([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>]\\2)",
+                "(?:class(?:Name)?|tw)\\s*=\\s*{?(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ],
+        "typescript": [
+            [
+                "((?:class(?:Name)?|tw)\\s*=\\s*([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>]\\2)",
+                "(?:class(?:Name)?|tw)\\s*=\\s*(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ],
+        "typescriptreact": [
+            [
+                "((?:class(?:Name)?|tw)\\s*=\\s*{?([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>]\\2)",
+                "(?:class(?:Name)?|tw)\\s*=\\s*{?(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ],
+        "php": [
+            [
+                "\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
+                "[\"'`]([^]+)"
+            ]
+        ]
+    },
+    "emmet.preferences": {},
+    "emmet.includeLanguages": {
+        "postcss": "css",
+        "blade": "html",
+    },
+    "editor.snippetSuggestions": "bottom",
+    "workbench.editor.enablePreview": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "cSpell.language": "en,hr-HR,hr",
+    "tailwind-fold.autoFold": false,
+    "tailwind-fold.supportedLanguages":["html", "blade"],
+    "prettier.configPath": "public/.prettierrc",
+
+    // formatters
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "svelte.ask-to-enable-ts-plugin": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "[php]": {
+        "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?",
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+     "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "git.autofetch": true,
+    "editor.formatOnSave": true,
+
+    // Spelling
+    "cSpell.userWords": [
+        "aapmnav",
+        "ABSPATH",
+        "acceptables",
+        "apmnav",
+        "Arrayable",
+        "astro",
+        "autoload",
+        "bpmnav",
+        "checkmark",
+        "classmap",
+        "corvuspay",
+        "cpmnav",
+        "Creo",
+        "Creolab",
+        "datepicker",
+        "dbdelta",
+        "dpmnav",
+        "draggable",
+        "endforeach",
+        "Fabien",
+        "Faktoor",
+        "flatpickr",
+        "HRFF",
+        "Hubspot",
+        "laravel",
+        "lukapeharda",
+        "Macroable",
+        "mailchimp",
+        "mailerlite",
+        "mailpoet",
+        "mainvideo",
+        "mautic",
+        "mediumint",
+        "meforma",
+        "memberpress",
+        "moosend",
+        "mpdf",
+        "mpociot",
+        "nohover",
+        "numberposts",
+        "neofetch",
+        "offcanvas",
+        "ontraport",
+        "opdashboard",
+        "OPPROTECT",
+        "optimizecart",
+        "OPTIMIZEFLOW",
+        "optimizemember",
+        "optimizepress",
+        "optimizeprotect",
+        "Optin",
+        "opui",
+        "phpcs",
+        "phpunit",
+        "pickr",
+        "playsinline",
+        "pmnav",
+        "Potencier",
+        "quentn",
+        "Rexlia",
+        "sendinblue",
+        "sendlane",
+        "sendreach",
+        "Sensefly",
+        "sfly",
+        "shortcode",
+        "shortcodes",
+        "sidenav",
+        "spinkit",
+        "Strahija",
+        "subline",
+        "submenu",
+        "subnavigation",
+        "symfony",
+        "synthwave",
+        "tinyint",
+        "toplevel",
+        "trailingslashit",
+        "Uids",
+        "userdata",
+        "varchar",
+        "vite",
+        "vueform",
+        "vueuse",
+        "vuex",
+        "woocommerce",
+        "wpbody",
+        "wpcontent",
+        "wpdb",
+        "yoast",
+        "zimsko"
+    ],
+    "intelephense.codeLens.implementations.enable": true,
+    "intelephense.codeLens.usages.enable": true,
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    },
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "gitblame.inlineMessageEnabled": true,
+    "gitblame.inlineMessageFormat": "by ${author.name} (${time.ago})",
+    "gitblame.currentUserAlias": "You",
+    "gitblame.inlineMessageMargin": 1,
+    "sqltools.useNodeRuntime": true,
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "windsurf.autocompleteSpeed": "fast",
+    "laravel-pint.enable": true,
+    "editor.wordWrapColumn": 180,
+    "bladeFormatter.format.wrapLineLength": 180,
+    "html.format.wrapLineLength": 180,
+    "scssFormatter.printWidth": 180,
+    "vue.inlayHints.missingProps": true,
+    "prettier.printWidth": 180,
+    "prettier.tabWidth": 4,
+    "files.associations": {
+        ".windsurfrules": "markdown"
+    },
+    "intelephense.codeLens.overrides.enable": true,
+    "intelephense.codeLens.parent.enable": true,
+    "intelephense.codeLens.references.enable": true,
+    "editor.minimap.enabled": false,
+    "windsurf.cascadeOpenOnReload": false,
+    "workbench.productIconTheme": "fluent-icons",
+
+}

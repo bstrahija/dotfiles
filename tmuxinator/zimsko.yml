@@ -1,0 +1,16 @@
+# /Users/bstrahija/.config/tmuxinator/zimsko.yml
+
+name: zimsko
+root: ~/Code/personal/zimsko
+
+windows:
+  - zimsko:
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - npm:
+          - php artisan solo
+        - git:
+          - git status
+  - logs: lnav storage/logs/laravel.log

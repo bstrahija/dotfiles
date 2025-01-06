@@ -1,0 +1,44 @@
+theme = catppuccin-mocha
+font-family = FiraCode Nerd Font Mono
+font-size = 12
+font-thicken = true
+
+adjust-underline-position = 40%
+adjust-underline-thickness = -60%
+adjust-cell-height = 25%
+cursor-style = block
+cursor-style-blink = false
+background-opacity = 0.9
+background-blur-radius = 20
+
+window-width = 83
+window-height = 23
+window-padding-x = 20
+window-padding-y = 5
+
+confirm-close-surface = false
+clipboard-paste-protection = false
+macos-titlebar-style=tabs
+
+# Use option key as meta in TMUX
+macos-option-as-alt = true
+
+# Global toggle the terminal
+# This is disabled due to it is replaced by Raycast
+# keybind = global:ctrl+<=toggle_visibility
+
+# Global toggle the quick terminal
+keybind = global:ctrl+f1=toggle_quick_terminal
+
+# Move between panes in terminal (not TMUX)
+keybind = option+command+up=goto_split:top
+keybind = option+command+down=goto_split:bottom
+keybind = option+command+left=goto_split:left
+keybind = option+command+right=goto_split:right
+keybind = option+shift+<=text:~
+
+# Unbind stuff for TMUX
+keybind = opt+left=unbind
+keybind = opt+right=unbind
+keybind = grave_accent=unbind
+keybind = grave_accent=unbind

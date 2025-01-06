@@ -1,0 +1,22 @@
+# /Users/bstrahija/.config/tmuxinator/optimizepress.yml
+
+name: optimizepress
+root: ~/Code/influendo/optimizepress
+
+windows:
+  - op-dashboard:
+      layout: main-vertical
+      panes:
+        - main:
+          - cd public/wp-content/plugins/op-dashboard/
+          - ls
+        - npm:
+          - cd public/wp-content/plugins/op-dashboard/
+          - npm run dev
+        - git:
+          - cd public/wp-content/plugins/op-dashboard/
+          - git status
+  - opd-logs:
+    - cd public/wp-content/plugins/op-dashboard/
+    - lnav storage/logs/op.log
+  - wp-logs: lnav public/wp-content/logs/debug.log

@@ -1,0 +1,140 @@
+# -------------------------------------------------------------------
+# ZSH/Machine
+# -------------------------------------------------------------------
+alias dotfiles="code ~/.dotfiles"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+alias aliases="code ~/.config/aliases"
+alias hosts="code /etc/hosts"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias tx="tmux"
+alias txn="tmux new -s"
+alias txa="tmux attach"
+alias txm="tmuxinator start"
+
+# -------------------------------------------------------------------
+# Global
+# -------------------------------------------------------------------
+alias so="source ~/.zshrc"
+alias ls='eza -alh'
+alias ll='eza -alh'
+alias la='eza -laGhF'
+alias cat='bat'
+alias htop='btop'
+alias c='clear'
+alias cd='z'
+alias cdd='z -'  # back to last directory
+alias ..='z ..'
+alias ...='z ../..'
+alias ....='z ../../..'
+alias .....='z ../../../..'
+alias ......='z ../../../../..'
+alias mkdir='mkdir -pv'
+alias du='du -ch'
+alias df='dust'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
+alias ping='prettyping'
+
+# -------------------------------------------------------------------
+# Editors
+# -------------------------------------------------------------------
+alias code='windsurf'
+alias subl='subl -n'
+
+# -------------------------------------------------------------------
+# Archiving
+# -------------------------------------------------------------------
+alias untar="tar -zxvf"
+alias untarbz2="tar -jxvf"
+alias targz="tar -pczf"
+
+# -------------------------------------------------------------------
+# Directory Shortcuts
+# -------------------------------------------------------------------
+alias h="z ~/"
+alias d="z ~/Dropbox"
+alias dl="z ~/Downloads"
+alias dt="z ~/Desktop"
+alias p="z ~/Code"
+alias pc="z ~/Code/creo"
+alias pp="z ~/Code/personal"
+alias pt="z ~/Code/test"
+alias pi="z ~/Code/influendo"
+alias po="z ~/Code/influendo/optimizepress"
+alias pop="z ~/Code/influendo/optimizepress/public/wp-content/plugins"
+alias pil="z ~/Code/influendo/optimizeleads"
+alias psl="z ~/Code/influendo/hub.optimizepress"
+
+# -------------------------------------------------------------------
+# More Shortcuts
+# -------------------------------------------------------------------
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias o="open"
+alias oo="open ."
+
+# -------------------------------------------------------------------
+# Git
+# -------------------------------------------------------------------
+alias ga='git add'
+alias gp='git push'
+alias gl='git logx'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gacm='git acm'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+alias git-discard='git clean -df; git checkout -- .'
+alias delete-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias remove-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias show-merged='git branch --merged | grep -v "\*"'
+alias grm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gsm='git branch --merged | grep -v "\*"'
+alias nah='git reset --hard;git clean -df;'
+
+# -------------------------------------------------------------------
+# Laravel
+# -------------------------------------------------------------------
+alias artisan='php artisan'
+alias art='php artisan'
+alias a='php artisan'
+alias aclr='php artisan view:clear; php artisan cache:clear; php artisan config:clear; php artisan event:clear; php artisan debugbar:clear; php artisan filament:clear-cached-components; php artisan icons:clear;'
+alias migrate="php artisan migrate"
+alias mfresh="php artisan migrate:fresh --seed"
+alias serve="php artisan serve"
+alias dump="php artisan dump"
+alias routes="php artisan route:list"
+alias t="./vendor/bin/phpunit --testdox"
+alias test="./vendor/bin/phpunit --testdox"
+alias phpspec=vendor/bin/phpspec
+alias rock='rocketeer'
+alias tinker='php artisan tinker'
+alias gw='gulp watch'
+alias npmd='npm run dev'
+alias npmw='npm run watch'
+alias npmw='npm run build'
+alias nd='npm run dev'
+alias nw='npm run watch'
+alias nw='npm run build'
+alias solo='php artisan solo'
+
+# -------------------------------------------------------------------
+# Composer
+# -------------------------------------------------------------------
+alias cmpi='composer install'
+alias ci='composer install'
+alias cmpu='composer update'
+alias cu='composer update'
+alias cmpd='composer dump-autoload --optimize'
+alias co='composer dump-autoload --optimize'

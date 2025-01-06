@@ -1,0 +1,126 @@
+[core]
+	excludesfile = /Users/bstrahija/.gitignore
+	quotepath = false
+	autocrlf = input
+	editor = subl -w
+	safecrlf = false
+	fileMode = false
+[user]
+	name = Boris Strahija
+	email = bstrahija@gmail.com
+[color]
+	ui = true
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[status]
+  submodule = 1
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	st = status -sb
+	stat = status
+	ci = commit
+	br = branch
+	co = checkout
+	cm = commit -m
+	df = diff
+	ds = diff --staged
+	undo = reset --soft HEAD^
+	standup = log --since '1 day ago' --oneline --author <boris@creolab.hr>
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ac = !git add -A && git commit -m
+	acm = !git add -A && git commit -m
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	logx = log --all --graph --decorate --oneline --simplify-by-decoration
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+	g = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+	plu = pull -u
+	fcm = !git fetch && git co master
+	fcd = !git fetch && git co develop
+	fetchreset = !git fetch && git reset --hard origin/master
+	fetchresetdev = !git fetch && git reset --hard origin/develop
+	type = cat-file -t
+	dump = cat-file -p
+	aa = add .
+	amend = commit --amend -C HEAD
+	rma = ls-files -deleted | xargs git rm
+	addremove = add -A
+	addrem = add -A
+	addrm = add -A
+	pom = push -u origin master
+	pod = push -u origin develop
+	pot = push -u origin test
+	md2m = !git checkout master && git merge develop && git checkout develop
+	md2t = !git checkout test && git merge develop && git checkout develop
+	mm2d = !git checkout develop && git merge master && git checkout master
+	mm2t = !git checkout test && git merge master && git checkout master
+	mt2m = !git checkout master && git merge test && git checkout test
+	mt2d = !git checkout develop && git merge test && git checkout test
+	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+	this = !git init && git add . && git commmit -m \"Initial commit.\"
+	nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
+[format]
+	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
+[mergetool]
+	keepBackup = true
+	prompt = false
+[push]
+	default = current
+[http]
+	sslVerify = false
+[credential]
+	helper = osxkeychain
+[merge]
+	tool = opendiff
+[diff]
+	tool = opendiff
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[apply]
+  whitespace = nowarn
+[help]
+	autocorrect = 1
+
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
+
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+
+[url "https://git.loc.ch:8444/"]
+	insteadOf = nth:
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
