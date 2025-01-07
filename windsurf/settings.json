@@ -1,10 +1,9 @@
 {
-    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "catppuccin-mocha",
     "editor.fontFamily": "Monaspace Argon Medium, DankMono Nerd Font Mono, Monaspace Argon Medium, JetBrains Mono, Fira Code, Menlo, Cascadia Code, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "editor.fontSize": 12,
-    "editor.lineHeight": 36,
+    "editor.lineHeight": 40,
     "codeium.enableCodeLens": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
@@ -310,5 +309,6 @@
     "editor.minimap.enabled": false,
     "windsurf.cascadeOpenOnReload": false,
     "workbench.productIconTheme": "fluent-icons",
+    "workbench.colorTheme": "Catppuccin Mocha",
 
 }

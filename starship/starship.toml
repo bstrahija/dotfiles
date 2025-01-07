@@ -1,23 +1,45 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+format = """
+$username\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$php\
+$bun\
+$deno\
+$nodejs\
+$lua\
+$python\
+$ruby\
+$jobs\
+$cmd_duration\
+$memory_usage\
+$line_break\
+$character"""
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
-palette = "catppuccin_macchiato"
+palette = "catppuccin_mocha"
+
+[fill]
+symbol = " "
 
 # Starship modules
 [character]
 # Note the use of Catppuccin color 'peach'
-success_symbol = "[[󰄛](green) ❯](peach)"
-error_symbol = "[[󰄛](red) ❯](peach)"
-vimcmd_symbol = "[󰄛 ❮](subtext1)" # For use with zsh-vi-mode
+success_symbol = "[[🍻](green) ❯](peach)"
+error_symbol = "[[🍻](red) ❯](peach)"
+vimcmd_symbol = "[🍻 ❮](subtext1)" # For use with zsh-vi-mode
 
 [git_branch]
 style = "bold mauve"
 
 [directory]
-truncation_length = 4
-style = "bold lavender"
+truncation_length = 3
+truncation_symbol = ".../"
+style = "bold blue"
+format = "[$path ]($style)"
+
 
 # Palette definitions
 [palettes.catppuccin_latte]

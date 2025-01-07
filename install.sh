@@ -6,11 +6,10 @@ echo "==> Installing PHP.new (PHP, Laravel, Composer)..."
 /bin/bash -c "$(curl -fsSL https://php.new/install/mac)"
 
 # Install Homebrew packages
-echo "==> Installing homebrew packages and OhMyZSH..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "==> Installing homebrew packages..."
 brew install starship nvim lnav fzf zoxide dust eza neofetch starship nano nanorc btop tmuxinator
 
-# ZSH / OhMyZSH / Starship
+# ZSH / Starship
 echo "==> Linking ZSH..."
 rm ~/.config/aliases
 rm ~/.zshrc
