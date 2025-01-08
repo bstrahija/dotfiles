@@ -35,6 +35,7 @@ windows:
           - git status
         - npm:
           - npm run dev
+  - opm-logs: lnav public/wp-content/plugins/op-mentor/storage/logs/op.log
   - op-checkouts:
       root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts/
       layout: main-vertical
@@ -44,5 +45,6 @@ windows:
         - git:
           - git status
         - npm:
-          - gulp dev
+          - npm run dev
+  - opc-logs: lnav public/wp-content/plugins/op-checkouts/storage/logs/op.log
   - wp-logs: lnav public/wp-content/logs/debug.log
