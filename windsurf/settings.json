@@ -126,7 +126,7 @@
     "emmet.preferences": {},
     "emmet.includeLanguages": {
         "postcss": "css",
-        "blade": "html",
+        "blade": "html"
     },
     "editor.snippetSuggestions": "bottom",
     "workbench.editor.enablePreview": false,
@@ -310,5 +310,5 @@
     "windsurf.cascadeOpenOnReload": false,
     "workbench.productIconTheme": "fluent-icons",
     "workbench.colorTheme": "Catppuccin Mocha",
-
+    "redhat.telemetry.enabled": false
 }

@@ -5,18 +5,44 @@ root: ~/Code/influendo/optimizepress
 
 windows:
   - op-dashboard:
+      root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-dashboard/
       layout: main-vertical
       panes:
         - main:
-          - cd public/wp-content/plugins/op-dashboard/
           - ls
-        - npm:
-          - cd public/wp-content/plugins/op-dashboard/
-          - npm run dev
         - git:
-          - cd public/wp-content/plugins/op-dashboard/
           - git status
-  - opd-logs:
-    - cd public/wp-content/plugins/op-dashboard/
-    - lnav storage/logs/op.log
+        - npm:
+          - npm run dev
+  - opd-logs: lnav public/wp-content/plugins/op-dashboard/storage/logs/op.log
+  - op-builder:
+      root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-builder/
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - git:
+          - git status
+        - npm:
+          - npm run dev
+  - op-mentor:
+      root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-mentor/
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - git:
+          - git status
+        - npm:
+          - npm run dev
+  - op-checkouts:
+      root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts/
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - git:
+          - git status
+        - npm:
+          - gulp dev
   - wp-logs: lnav public/wp-content/logs/debug.log

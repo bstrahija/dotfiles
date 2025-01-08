@@ -1,0 +1,17 @@
+# /Users/bstrahija/.config/tmuxinator/oppackages.yml
+
+name: oppackages
+root: ~/Code/influendo/packages
+
+windows:
+  - oppackages:
+      root: ~/Code/influendo/packages/
+      layout: main-vertical
+      panes:
+        - integrations:
+          - cd integrations
+          - ls
+        - support:
+          - cd support
+          - ls
+

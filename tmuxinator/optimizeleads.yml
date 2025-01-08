@@ -1,0 +1,18 @@
+# /Users/bstrahija/.config/tmuxinator/optimizeleads.yml
+
+name: optimizeleads
+root: ~/Code/influendo/optimizeleads
+
+windows:
+  - optimizeleads:
+      root: ~/Code/influendo/optimizeleads/
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - git:
+          - git status
+        - npm:
+          - npm run dev
+  - logs: lnav storage/logs/laravel.log
+
