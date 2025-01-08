@@ -6,7 +6,7 @@ root: ~/Code/influendo/packages
 windows:
   - oppackages:
       root: ~/Code/influendo/packages/
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - integrations:
           - cd integrations

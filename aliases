@@ -8,10 +8,19 @@ alias aliases="code ~/.config/aliases"
 alias hosts="code /etc/hosts"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# -------------------------------------------------------------------
+# TMUX
+# -------------------------------------------------------------------
 alias tx="tmux"
 alias txn="tmux new -s"
 alias txa="tmux attach"
 alias txm="tmuxinator start"
+alias txdot="tmuxinator start dotfiles"
+alias txopl="tmuxinator start optimizeleads"
+alias txop="tmuxinator start optimizepress"
+alias txopp="tmuxinator start oppackages"
+alias txz="tmuxinator start zimsko"
 
 # -------------------------------------------------------------------
 # Global
