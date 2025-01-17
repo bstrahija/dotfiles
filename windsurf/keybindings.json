@@ -12,6 +12,11 @@
     },
     {
         "key": "cmd+r",
+        "command": "workbench.action.quickOpen",
+        "args": "@:"
+    },
+    {
+        "key": "shift+ctrl+o",
         "command": "workbench.action.gotoSymbol"
     },
     {

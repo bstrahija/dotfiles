@@ -26,9 +26,10 @@ alias txz="tmuxinator start zimsko"
 # Global
 # -------------------------------------------------------------------
 alias so="source ~/.zshrc"
-alias ls='eza -alh'
-alias ll='eza -alh'
-alias la='eza -laGhF'
+alias l='eza'
+alias ls='eza -alh --icons=always --color-scale-mode=gradient --hyperlink'
+alias ll='eza -alh --icons=always --group-directories-first'
+alias la='eza -laGhF --icons=always'
 alias cat='bat'
 alias htop='btop'
 alias c='clear'
@@ -120,7 +121,7 @@ alias art='php artisan'
 alias a='php artisan'
 alias aclr='php artisan view:clear; php artisan cache:clear; php artisan config:clear; php artisan event:clear; php artisan debugbar:clear; php artisan filament:clear-cached-components; php artisan icons:clear;'
 alias migrate="php artisan migrate"
-alias mfresh="php artisan migrate:fresh --seed"
+alias fresh="php artisan migrate:fresh --seed"
 alias serve="php artisan serve"
 alias dump="php artisan dump"
 alias routes="php artisan route:list"

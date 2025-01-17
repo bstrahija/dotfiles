@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "catppuccin-mocha",
-    "editor.fontFamily": "Monaspace Argon Medium, DankMono Nerd Font Mono, Monaspace Argon Medium, JetBrains Mono, Fira Code, Menlo, Cascadia Code, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": false, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "editor.fontFamily": "MonoLisa Nerd Font Mono, JetBrains Mono, FiraCode Nerd Font, Cascadia Code, Inconsolata, DankMono Nerd Font Mono, Monaspace Argon Medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "editor.fontSize": 12,
     "editor.lineHeight": 40,
     "codeium.enableCodeLens": false,
@@ -310,5 +310,17 @@
     "windsurf.cascadeOpenOnReload": false,
     "workbench.productIconTheme": "fluent-icons",
     "workbench.colorTheme": "Catppuccin Mocha",
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "catppuccin.italicKeywords": false,
+    "search.useGlobalIgnoreFiles": true,
+    "projectManager.vscode.ignoredFolders": [
+        "node_modules",
+        "out",
+        "typings",
+        "test",
+        "public/css",
+        "public/js",
+        "public/vendor",
+        "public/build"
+    ]
 }
