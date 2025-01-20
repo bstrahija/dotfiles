@@ -44,8 +44,6 @@ echo "==> Linking neofetch..."
 rm ~/.config/neofetch
 ln -s ~/.dotfiles/neofetch ~/.config/neofetch
 
-# Neovim
-
 # Ghostty
 echo "==> Linking Ghostty"
 rm ~/.config/ghostty
@@ -73,6 +71,27 @@ ln -s ~/.dotfiles/tmuxinator ~/.config/tmuxinator
 # Code
 echo "==> Linking Code"
 ln -s /Volumes/Superhero/Code ~/Code
+
+# Install apps
+echo "==> Installing apps..."
+apps=(
+    alt-tab
+    charmstone
+    dbngin
+    dropbox
+    ghostty
+    google-chrome
+    google-drive
+    herd
+    hyperkey
+    iina
+    jordanbaird-ice
+    pika
+    raycast
+    rocket
+    stats
+)
+brew install "${apps[@]}" --cask
 
 # Windsurf
 echo "==> Linking Windsurf"

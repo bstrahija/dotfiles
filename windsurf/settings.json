@@ -134,9 +134,11 @@
     "gitlens.codeLens.enabled": false,
     "cSpell.language": "en,hr-HR,hr",
     "tailwind-fold.autoFold": false,
-    "tailwind-fold.supportedLanguages":["html", "blade"],
+    "tailwind-fold.supportedLanguages": [
+        "html",
+        "blade"
+    ],
     "prettier.configPath": "public/.prettierrc",
-
     // formatters
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -161,15 +163,13 @@
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?",
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
-     "[css]": {
+    "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "git.autofetch": true,
     "editor.formatOnSave": true,
-
     // Spelling
     "cSpell.userWords": [
         "aapmnav",
@@ -322,5 +322,9 @@
         "public/js",
         "public/vendor",
         "public/build"
-    ]
+    ],
+    "workbench.activityBar.location": "hidden",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
