@@ -11,6 +11,7 @@ brew install starship nvim lnav fzf zoxide dust eza neofetch starship nano nanor
 
 # ZSH / Starship
 echo "==> Linking ZSH..."
+ln -s /Volumes/Superhero/DotFiles ~/.dotfiles
 rm ~/.config/aliases
 rm ~/.zshrc
 ln -s ~/.dotfiles/aliases ~/.config/aliases
@@ -78,8 +79,10 @@ apps=(
     alt-tab
     charmstone
     dbngin
+    dockey
     dropbox
     ghostty
+    github
     google-chrome
     google-drive
     herd
@@ -89,7 +92,12 @@ apps=(
     pika
     raycast
     rocket
+    setapp
+    skype
+    slack
     stats
+    viber
+    zen-browser
 )
 brew install "${apps[@]}" --cask
 

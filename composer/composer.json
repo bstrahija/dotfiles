@@ -1,2 +1,5 @@
 {
+    "require": {
+        "beyondcode/expose": "^2.6"
+    }
 }
