@@ -19,9 +19,7 @@
     },
     "files.autoSave": "onFocusChange",
     "files.autoSaveDelay": 300,
-    "editor.rulers": [
-        120
-    ],
+    "editor.rulers": [120],
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "editor.cursorBlinking": "phase",
@@ -62,16 +60,7 @@
     "console-ninja.featureSet": "Community",
     "editor.accessibilitySupport": "off",
     "symbols.hidesExplorerArrows": false,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]",
-        "@TODO"
-    ],
+    "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]", "[x]", "@TODO"],
     "tailwind-raw-reorder.classRegex": {
         "jade": [
             {
@@ -81,12 +70,7 @@
             },
             "\\bclass\\s*=\\s*[\\\"\\']([\\._a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']"
         ],
-        "html": [
-            [
-                "\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
-                "[\"'`]([^]+)"
-            ]
-        ],
+        "html": [["\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2", "[\"'`]([^]+)"]],
         "css": "\\B@apply\\s+([\\._a-zA-Z0-9\\s\\-\\:\\/]+);",
         "javascript": [
             [
@@ -116,12 +100,7 @@
                 "[\"'`]([^]+)"
             ]
         ],
-        "php": [
-            [
-                "\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2",
-                "[\"'`]([^]+)"
-            ]
-        ]
+        "php": [["\\sclass=(([\"'`])(?:(?:[^{}<>](?!\\2))|\\\\\\2)+[^{}<>])\\2", "[\"'`]([^]+)"]]
     },
     "emmet.preferences": {},
     "emmet.includeLanguages": {
@@ -134,10 +113,7 @@
     "gitlens.codeLens.enabled": false,
     "cSpell.language": "en,hr-HR,hr",
     "tailwind-fold.autoFold": false,
-    "tailwind-fold.supportedLanguages": [
-        "html",
-        "blade"
-    ],
+    "tailwind-fold.supportedLanguages": ["html", "blade"],
     "prettier.configPath": "public/.prettierrc",
     // formatters
     "[javascript]": {
@@ -313,18 +289,11 @@
     "redhat.telemetry.enabled": false,
     "catppuccin.italicKeywords": false,
     "search.useGlobalIgnoreFiles": true,
-    "projectManager.vscode.ignoredFolders": [
-        "node_modules",
-        "out",
-        "typings",
-        "test",
-        "public/css",
-        "public/js",
-        "public/vendor",
-        "public/build"
-    ],
+    "projectManager.vscode.ignoredFolders": ["node_modules", "out", "typings", "test", "public/css", "public/js", "public/vendor", "public/build"],
     "workbench.activityBar.location": "hidden",
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "windsurf.autoExecutionPolicy": "off",
+    "windsurf.chatFontSize": "default"
 }
