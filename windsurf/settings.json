@@ -1,5 +1,5 @@
 {
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "editor.fontFamily": "MonoLisa Nerd Font Mono, JetBrains Mono, FiraCode Nerd Font, Cascadia Code, Inconsolata, DankMono Nerd Font Mono, Monaspace Argon Medium, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "editor.fontSize": 12,
@@ -309,7 +309,6 @@
     "editor.minimap.enabled": false,
     "windsurf.cascadeOpenOnReload": false,
     "workbench.productIconTheme": "fluent-icons",
-    "workbench.colorTheme": "Catppuccin Mocha",
     "redhat.telemetry.enabled": false,
     "catppuccin.italicKeywords": false,
     "search.useGlobalIgnoreFiles": true,
@@ -326,5 +325,6 @@
     "workbench.activityBar.location": "hidden",
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "workbench.colorTheme": "Catppuccin Macchiato"
 }
