@@ -5,6 +5,7 @@
 	editor = subl -w
 	safecrlf = false
 	fileMode = false
+	filemode = false
 [user]
 	name = Boris Strahija
 	email = bstrahija@gmail.com
