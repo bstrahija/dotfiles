@@ -66,3 +66,6 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 
 # Starship
 eval "$(starship init zsh)"
+
+# Added by Windsurf
+export PATH="/Users/bstrahija/.codeium/windsurf/bin:$PATH"
