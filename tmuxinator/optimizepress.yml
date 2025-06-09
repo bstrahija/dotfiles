@@ -36,6 +36,17 @@ windows:
         - npm:
           - npm run dev
   - opm-logs: lnav public/wp-content/plugins/op-mentor/storage/logs/op.log
+  - op-funnels:
+      root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-funnels/
+      layout: main-vertical
+      panes:
+        - main:
+          - ls
+        - git:
+          - git status
+        - npm:
+          - npm run dev
+  - opf-logs: lnav public/wp-content/plugins/op-funnels/storage/logs/op.log
   - op-checkouts:
       root: ~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts/
       layout: main-vertical
