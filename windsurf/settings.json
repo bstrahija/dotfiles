@@ -1,8 +1,7 @@
 {
-    "workbench.iconTheme": "catppuccin-macchiato",
-    "editor.fontFamily": "MonoLisa Nerd Font Mono, JetBrains Mono, FiraCode Nerd Font, Cascadia Code, Inconsolata, DankMono Nerd Font Mono, Monaspace Argon Medium, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
-    "editor.fontSize": 12,
+    "editor.fontFamily": "Dank Mono, MonoLisa Nerd Font Mono, JetBrains Mono, FiraCode Nerd Font, Cascadia Code, Inconsolata, DankMono Nerd Font Mono, Monaspace Argon Medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "editor.fontSize": 15,
     "editor.lineHeight": 40,
     "codeium.enableCodeLens": false,
     "editor.bracketPairColorization.enabled": true,
@@ -145,7 +144,6 @@
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "git.autofetch": true,
-    "editor.formatOnSave": true,
     // Spelling
     "cSpell.userWords": [
         "aapmnav",
@@ -281,10 +279,8 @@
     },
     "intelephense.codeLens.overrides.enable": true,
     "intelephense.codeLens.parent.enable": true,
-    "intelephense.codeLens.references.enable": true,
     "editor.minimap.enabled": false,
     "windsurf.cascadeOpenOnReload": false,
-    "workbench.productIconTheme": "fluent-icons",
     "redhat.telemetry.enabled": false,
     "catppuccin.italicKeywords": false,
     "search.useGlobalIgnoreFiles": true,
@@ -293,7 +289,12 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Catppuccin Macchiato",
     "windsurf.autoExecutionPolicy": "off",
-    "windsurf.chatFontSize": "default"
+    "windsurf.chatFontSize": "default",
+    "windsurf.explainAndFixInCurrentConversation": true,
+    "git.openRepositoryInParentFolders": "always",
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha"
 }
