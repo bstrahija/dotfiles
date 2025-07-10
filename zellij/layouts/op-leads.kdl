@@ -1,0 +1,31 @@
+layout name="OptimizeLeads Layout" {
+    tab name="OptimizeLeads" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane cwd="~/Code/influendo/optimizeleads"
+
+            pane split_direction="horizontal" {
+                pane cwd="~/Code/influendo/optimizeleads"
+                pane cwd="~/Code/influendo/optimizeleads"
+            }
+        }
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/influendo/optimizeleads" command="lnav" args="~/Code/influendo/optimizeleads/storage/logs/laravel.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

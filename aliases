@@ -23,6 +23,20 @@ alias txopp="tmuxinator start oppackages"
 alias txz="tmuxinator start zimsko"
 
 # -------------------------------------------------------------------
+# Zellij
+# -------------------------------------------------------------------
+alias zj="zellij"
+alias zz="zellij"
+alias zzopb="zellij --layout ~/.config/zellij/layouts/op-builder.kdl"
+alias zzopc="zellij --layout ~/.config/zellij/layouts/op-checkouts.kdl"
+alias zzopd="zellij --layout ~/.config/zellij/layouts/op-dashboard.kdl"
+alias zzopf="zellij --layout ~/.config/zellij/layouts/op-funnels.kdl"
+alias zzopm="zellij --layout ~/.config/zellij/layouts/op-mentor.kdl"
+alias zzopu="zellij --layout ~/.config/zellij/layouts/op-urgency.kdl"
+alias zzopl="zellij --layout ~/.config/zellij/layouts/op-leads.kdl"
+alias zzz="zellij --layout ~/.config/zellij/layouts/zimsko.kdl"
+
+# -------------------------------------------------------------------
 # Global
 # -------------------------------------------------------------------
 alias so="source ~/.zshrc"

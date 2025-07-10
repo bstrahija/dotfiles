@@ -1,0 +1,43 @@
+layout name="OptimizeCheckouts Layout" {
+    tab name="OptimizeCheckouts" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts"
+
+            pane split_direction="horizontal" {
+                pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts"
+                pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts"
+            }
+        }
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/influendo/optimizepress/public/wp-content/logs" command="lnav" args="debug.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Checkouts Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-checkouts" command="lnav" args="storage/logs/op.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+layout name="OptimizeMentor Layout" {
+    tab name="OptimizeMentor" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-mentor"
+
+            pane split_direction="horizontal" {
+                pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-mentor"
+                pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-mentor"
+            }
+        }
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/influendo/optimizepress/public/wp-content/logs" command="lnav" args="debug.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Mentor Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/influendo/optimizepress/public/wp-content/plugins/op-mentor" command="lnav" args="storage/logs/op.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

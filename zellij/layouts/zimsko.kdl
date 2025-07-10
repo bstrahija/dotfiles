@@ -1,0 +1,31 @@
+layout name="Zimsko Layout" {
+    tab name="Zimsko App" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane cwd="~/Code/personal/zimsko"
+
+            pane split_direction="horizontal" {
+                pane cwd="~/Code/personal/zimsko"
+                pane cwd="~/Code/personal/zimsko"
+            }
+        }
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="Logs"  {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane cwd="~/Code/personal/zimsko" command="lnav" args="storage/logs/laravel.log"
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}
