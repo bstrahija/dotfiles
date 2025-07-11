@@ -142,7 +142,6 @@ alias routes="php artisan route:list"
 alias t="./vendor/bin/phpunit --testdox"
 alias test="./vendor/bin/phpunit --testdox"
 alias phpspec=vendor/bin/phpspec
-alias rock='rocketeer'
 alias tinker='php artisan tinker'
 alias gw='gulp watch'
 alias npmd='npm run dev'
@@ -150,7 +149,7 @@ alias npmw='npm run watch'
 alias npmw='npm run build'
 alias nd='npm run dev'
 alias nw='npm run watch'
-alias nw='npm run build'
+alias nb='npm run build'
 alias solo='php artisan solo'
 
 # -------------------------------------------------------------------

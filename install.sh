@@ -64,6 +64,10 @@ ln -s ~/.dotfiles/nvim ~/.config/nvim
 echo "==> Linking TMUX"
 ln -s ~/.dotfiles/tmux/tmux.conf ~/.config/tmux/tmux.conf
 
+# Zellij
+echo "==> Linking Zellij"
+ln -s ~/.dotfiles/zelliy/config.kdl ~/.config//zelliy/config.kdl
+
 # TMUXinator
 echo "==> Linking TMUXinator"
 rm ~/.config/tmuxinator
@@ -73,11 +77,29 @@ ln -s ~/.dotfiles/tmuxinator ~/.config/tmuxinator
 echo "==> Linking Code"
 ln -s /Volumes/Superhero/Code ~/Code
 
+# Install packages
+echo "==> Installing apps..."
+packages=(
+    bat # Better cat
+    btop # Better top
+    dust # Better du
+    eza # Better ls
+    fastfetch
+    fzf # Fuzzy finder
+    git
+    lnav # Log file viewer
+    nvim # Neovim
+    prettyping # Better ping
+    zellij # Terminal multiplexer\
+    zoxide # Smart directory navigation
+)
+brew install "${apps[@]}"
+
 # Install apps
 echo "==> Installing apps..."
 apps=(
     alt-tab
-    charmstone
+    coconutbattery
     dbngin
     dockey
     dropbox
@@ -86,28 +108,22 @@ apps=(
     google-chrome
     google-drive
     herd
-    hyperkey
     iina
     jordanbaird-ice
-    pika
+    pika # Color picker
     raycast
-    rocket
+    reamp # Winamp cl
+    reflex-app # forward play key to Spotify
+    rocket # Emojis
     setapp
     skype
     slack
     stats
+    steam
     viber
+    visual-studio-code
     zen-browser
 )
 brew install "${apps[@]}" --cask
-
-# Windsurf
-echo "==> Linking Windsurf"
-rm ~/Library/Application\ Support/Windsurf/User/settings.json
-rm ~/Library/Application\ Support/Windsurf/User/keybindings.json
-rm -rf ~/Library/Application\ Support/Windsurf/User/snippets
-ln -s ~/.dotfiles/windsurf/settings.json ~/Library/Application\ Support/Windsurf/User/settings.json
-ln -s ~/.dotfiles/windsurf/keybindings.json ~/Library/Application\ Support/Windsurf/User/keybindings.json
-ln -s ~/.dotfiles/windsurf/snippets ~/Library/Application\ Support/Windsurf/User/snippets
 
 echo "Done."
