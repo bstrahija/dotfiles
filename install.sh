@@ -7,7 +7,24 @@ echo "==> Installing PHP.new (PHP, Laravel, Composer)..."
 
 # Install Homebrew packages
 echo "==> Installing homebrew packages..."
-brew install starship nvim lnav fzf zoxide dust eza neofetch starship nano nanorc btop tmuxinator
+packages=(
+    bat # Better cat
+    btop # Better top
+    dust # Better du
+    eza # Better ls
+    fastfetch
+    fzf # Fuzzy finder
+    git
+    lnav # Log file viewer
+    nano
+    nanorc
+    nvim # Neovim
+    prettyping # Better ping
+    starship
+    zellij # Terminal multiplexer\
+    zoxide # Smart directory navigation
+)
+brew install "${apps[@]}"
 
 # ZSH / Starship
 echo "==> Linking ZSH..."
@@ -77,24 +94,6 @@ ln -s ~/.dotfiles/tmuxinator ~/.config/tmuxinator
 echo "==> Linking Code"
 ln -s /Volumes/Superhero/Code ~/Code
 
-# Install packages
-echo "==> Installing apps..."
-packages=(
-    bat # Better cat
-    btop # Better top
-    dust # Better du
-    eza # Better ls
-    fastfetch
-    fzf # Fuzzy finder
-    git
-    lnav # Log file viewer
-    nvim # Neovim
-    prettyping # Better ping
-    zellij # Terminal multiplexer\
-    zoxide # Smart directory navigation
-)
-brew install "${apps[@]}"
-
 # Install apps
 echo "==> Installing apps..."
 apps=(
@@ -103,16 +102,21 @@ apps=(
     dbngin
     dockey
     dropbox
+    eqmac
     ghostty
+    gimp
     github
     google-chrome
     google-drive
-    herd
-    iina
+    handbrake-app # Video transcoder
+    herd # Laravel development
+    iina # Media player
     jordanbaird-ice
+    linear-linear
     pika # Color picker
     raycast
     reamp # Winamp cl
+    reaper # Digital audio workstation
     reflex-app # forward play key to Spotify
     rocket # Emojis
     setapp
@@ -120,9 +124,13 @@ apps=(
     slack
     stats
     steam
+    stremio
+    transmission
     viber
+    virtualbox
     visual-studio-code
     zen-browser
+    zoom
 )
 brew install "${apps[@]}" --cask
 
