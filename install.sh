@@ -13,6 +13,7 @@ packages=(
     dust # Better du
     eza # Better ls
     fastfetch
+    flashspace # Spaces replacement
     fzf # Fuzzy finder
     git
     lnav # Log file viewer
