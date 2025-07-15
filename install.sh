@@ -100,7 +100,7 @@ echo "==> Installing apps..."
 apps=(
     alt-tab
     coconutbattery
-    dbngin
+    dbngin # Database management
     dockey
     dropbox
     eqmac
@@ -114,7 +114,10 @@ apps=(
     iina # Media player
     jordanbaird-ice
     linear-linear
+    notion # Note-taking app
+    obsidian # Note-taking app
     pika # Color picker
+    postman # API development
     raycast
     reamp # Winamp cl
     reaper # Digital audio workstation

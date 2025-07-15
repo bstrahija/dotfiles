@@ -64,6 +64,16 @@
               "bundleIdentifier" : "com.binarynights.forklift-setapp",
               "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
               "name" : "ForkLift"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
             }
           ],
           "display" : "DELL U2719D",
@@ -127,6 +137,11 @@
               "bundleIdentifier" : "com.binarynights.forklift-setapp",
               "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
               "name" : "ForkLift"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
             }
           ],
           "display" : "DELL U2719D",
@@ -190,6 +205,11 @@
               "bundleIdentifier" : "com.MLSoundLab.MLDrums",
               "iconPath" : "/Applications/ML Drums.app/Contents/Resources/Icon.icns",
               "name" : "ML Drums"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
             }
           ],
           "display" : "DELL U2719D",
@@ -219,6 +239,11 @@
               "bundleIdentifier" : "com.binarynights.forklift-setapp",
               "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
               "name" : "ForkLift"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
             }
           ],
           "display" : "DELL U2719D",
