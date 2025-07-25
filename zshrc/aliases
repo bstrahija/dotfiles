@@ -26,7 +26,7 @@ alias txz="tmuxinator start zimsko"
 # Zellij
 # -------------------------------------------------------------------
 alias zj="zellij"
-alias zz="zellij"
+alias zz="zellij attach _default"
 alias zzopb="zellij --layout ~/.config/zellij/layouts/op-builder.kdl"
 alias zzopc="zellij --layout ~/.config/zellij/layouts/op-checkouts.kdl"
 alias zzopd="zellij --layout ~/.config/zellij/layouts/op-dashboard.kdl"
@@ -44,6 +44,7 @@ alias l='eza -alh --icons=always --color-scale-mode=gradient --hyperlink'
 alias ls='eza -alh --icons=always --color-scale-mode=gradient --hyperlink'
 alias ll='eza -alh --icons=always --group-directories-first'
 alias la='eza -laGhF --icons=always'
+alias lt='eza -alh --icons=always --color-scale-mode=gradient --hyperlink --tree --level=2'
 alias cat='bat'
 alias htop='btop'
 alias c='clear'

@@ -7,7 +7,7 @@ VOLUME_NAME="Superhero"
 
 # Create a variable for the current directory absolute path
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CODE_DIR="$VOLUME_NAME/Code"
+CODE_DIR="/Volumes/$VOLUME_NAME/Code"
 
 ## Install Homebrew
 if ! command -v brew &> /dev/null; then

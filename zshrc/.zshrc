@@ -70,3 +70,7 @@ export HERD_PHP_85_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 # Starship
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
