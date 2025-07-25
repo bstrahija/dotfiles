@@ -8,10 +8,10 @@ else
   export EDITOR='nvim'
 fi
 
-alias zshconfig="subl ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 
 # Add my aliases
-source ~/.config/aliases
+source ~/.config/zshrc/aliases
 
 # zoxide (better cd)
 eval "$(zoxide init zsh)"
@@ -27,8 +27,8 @@ function y() {
 }
 
 # ZSH plugins
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/83/"
@@ -64,12 +64,9 @@ export HERD_PHP_80_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 # Herd injected PHP 7.4 configuration.
 export HERD_PHP_74_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/74/"
 
-# Starship
-eval "$(starship init zsh)"
-
-# Added by Windsurf
-export PATH="/Users/bstrahija/.codeium/windsurf/bin:$PATH"
-
-
 # Herd injected PHP 8.5 configuration.
 export HERD_PHP_85_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/85/"
+
+# Starship
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
