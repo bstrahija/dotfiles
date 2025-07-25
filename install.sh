@@ -1,3 +1,7 @@
+## Link up dotfiles
+brew install stow
+stow .
+
 echo "Installing .dotfiles"
 echo "---"
 
@@ -16,13 +20,18 @@ packages=(
     flashspace # Spaces replacement
     fzf # Fuzzy finder
     git
+    jq # JSON processor
     lnav # Log file viewer
     nano
     nanorc
     nvim # Neovim
+    nvm
     prettyping # Better ping
     starship
-    zellij # Terminal multiplexer\
+    stripe/stripe-cli/stripe # Stripe CLI
+    trash
+    xh # CURL alternative
+    zellij # Terminal multiplexer
     zoxide # Smart directory navigation
 )
 brew install "${apps[@]}"
@@ -116,6 +125,7 @@ apps=(
     linear-linear
     notion # Note-taking app
     obsidian # Note-taking app
+    pearcleaner
     pika # Color picker
     postman # API development
     raycast
@@ -124,11 +134,13 @@ apps=(
     reflex-app # forward play key to Spotify
     rocket # Emojis
     setapp
-    skype
+    signal # Secure messaging
     slack
+    speedtest-cli
     stats
     steam
     stremio
+    sublime-text
     transmission
     viber
     virtualbox

@@ -176,6 +176,11 @@
               "bundleIdentifier" : "com.binarynights.forklift-setapp",
               "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
               "name" : "ForkLift"
+            },
+            {
+              "bundleIdentifier" : "com.smartcodeltd.stremio",
+              "iconPath" : "/Applications/Stremio.app/Contents/Resources/stremio.icns",
+              "name" : "Stremio"
             }
           ],
           "display" : "DELL U2719D",

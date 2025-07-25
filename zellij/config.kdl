@@ -275,6 +275,10 @@ load_plugins {
 //
 theme "catppuccin-macchiato"
 
+pane_frames true
+tab_bar true
+
+
 // Choose the base input mode of zellij.
 // Default: normal
 //

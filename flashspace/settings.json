@@ -1,4 +1,5 @@
 {
+  "activeWorkspaceOnFocusChange" : true,
   "alternativeDisplays" : "",
   "centerCursorOnFocusChange" : false,
   "centerCursorOnWorkspaceChange" : true,
@@ -8,25 +9,35 @@
   "enableFocusManagement" : false,
   "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
-  "enableSpaceControl" : false,
+  "enableSpaceControl" : true,
   "enableSpaceControlAnimations" : true,
   "enableSwipeGestures" : true,
   "enableWorkspaceTransitions" : false,
+  "floatingApps" : [
+    {
+      "bundleIdentifier" : "com.binarynights.forklift-setapp",
+      "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
+      "name" : "ForkLift"
+    }
+  ],
   "focusFrontmostWindow" : false,
   "keepUnassignedAppsOnSwitch" : false,
+  "loopWorkspaces" : true,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
   "pipApps" : [
 
   ],
   "pipScreenCornerOffset" : 15,
+  "restartAppOnWakeUp" : true,
   "restoreHiddenAppsOnSwitch" : true,
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
-  "showMenuBarTitle" : false,
+  "showMenuBarTitle" : true,
+  "showSpaceControl" : "f12",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : false,
   "spaceControlMaxColumns" : 6,
@@ -39,6 +50,7 @@
   "swipeThreshold" : 0.2,
   "swipeUp3FingerAction" : "showSpaceControl",
   "swipeUp4FingerAction" : "none",
-  "workspaceTransitionDimming" : 0.2,
+  "switchWorkspaceWhenPipCloses" : true,
+  "workspaceTransitionDimming" : 0.5,
   "workspaceTransitionDuration" : 0.5
 }

@@ -40,7 +40,7 @@ alias zzz="zellij --layout ~/.config/zellij/layouts/zimsko.kdl"
 # Global
 # -------------------------------------------------------------------
 alias so="source ~/.zshrc"
-alias l='eza'
+alias l='eza -alh --icons=always --color-scale-mode=gradient --hyperlink'
 alias ls='eza -alh --icons=always --color-scale-mode=gradient --hyperlink'
 alias ll='eza -alh --icons=always --group-directories-first'
 alias la='eza -laGhF --icons=always'
@@ -62,10 +62,12 @@ alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias ping='prettyping'
 
 # -------------------------------------------------------------------
-# Editors
+# Apps
 # -------------------------------------------------------------------
 alias code='code'
+alias reamp='open -a reAmp'
 alias subl='subl -n'
+
 
 # -------------------------------------------------------------------
 # Archiving

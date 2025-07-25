@@ -69,3 +69,7 @@ eval "$(starship init zsh)"
 
 # Added by Windsurf
 export PATH="/Users/bstrahija/.codeium/windsurf/bin:$PATH"
+
+
+# Herd injected PHP 8.5 configuration.
+export HERD_PHP_85_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/85/"

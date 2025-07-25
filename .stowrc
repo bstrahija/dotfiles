@@ -1,0 +1,5 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=DS_Store
+--ignore=Code/*
+--ignore=raycast/*
