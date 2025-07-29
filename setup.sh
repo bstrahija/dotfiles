@@ -39,6 +39,7 @@ packages=(
     git
     jq # JSON processor
     lnav # Log file viewer
+    mailpit # Local email testing
     nano
     nanorc
     nvim # Neovim

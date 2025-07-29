@@ -1,3 +1,6 @@
 tmux/plugins
 composer/auth.json
 composer/vendor
+cursor/globalStorage
+cursor/History
+cursor/WorkspaceStorage

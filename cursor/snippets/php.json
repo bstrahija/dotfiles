@@ -1,0 +1,30 @@
+{
+	"print_r": {
+		"prefix": "ppr",
+		"body": [
+			"echo '<pre>';",
+			"print_r(${1:variable});",
+			"echo '</pre>';",
+			"$0"
+		],
+		"description": "Print human-readable information about a variable"
+	},
+	"print_r with die": {
+		"prefix": "pprd",
+		"body": [
+			"echo '<pre>';",
+			"print_r(${1:variable});",
+			"echo '</pre>';",
+			"die();",
+			"$0"
+		],
+		"description": "Print human-readable information about a variable and stop execution"
+	},
+	"var_dump": {
+		"prefix": "vd",
+		"body": [
+			"var_dump(${1:variable});"
+		],
+		"description": "Dump information about a variable"
+	}
+}
