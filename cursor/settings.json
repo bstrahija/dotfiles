@@ -193,5 +193,7 @@
     "window.commandCenter": false,
     "breadcrumbs.enabled": false,
     "color-highlight.markerType": "dot-after",
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "cursor.composer.textSizeScale": 1.15,
+    "Devdb.colorTheme": "dark"
 }
