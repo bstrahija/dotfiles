@@ -84,6 +84,11 @@
               "bundleIdentifier" : "com.usebruno.app",
               "iconPath" : "/Applications/Bruno.app/Contents/Resources/icon.icns",
               "name" : "Bruno"
+            },
+            {
+              "bundleIdentifier" : "com.exafunction.windsurf",
+              "iconPath" : "/Applications/Windsurf.app/Contents/Resources/Windsurf.icns",
+              "name" : "Windsurf"
             }
           ],
           "display" : "DELL U2719D",

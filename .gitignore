@@ -4,3 +4,6 @@ composer/vendor
 cursor/globalStorage
 cursor/History
 cursor/WorkspaceStorage
+windsurf/globalStorage
+windsurf/History
+windsurf/WorkspaceStorage

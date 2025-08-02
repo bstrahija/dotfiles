@@ -65,7 +65,7 @@ alias ping='prettyping'
 # -------------------------------------------------------------------
 # Apps
 # -------------------------------------------------------------------
-alias code='code'
+alias edit='code'
 alias reamp='open -a reAmp'
 alias subl='subl -n'
 
