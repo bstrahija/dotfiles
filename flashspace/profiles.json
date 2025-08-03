@@ -264,6 +264,11 @@
               "bundleIdentifier" : "notion.id",
               "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
               "name" : "Notion"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.1ACB683A-0D2C-46FA-A609-1C9E87DF5A18",
+              "iconPath" : "/Users/bstrahija/Applications/T3 Chat.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "T3 Chat"
             }
           ],
           "display" : "DELL U2719D",
