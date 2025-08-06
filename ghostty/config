@@ -1,7 +1,8 @@
 theme = Everforest Dark - Hard
 font-family = FiraCode Nerd Font Mono
-font-size = 12
+font-size = 13
 font-thicken = true
+background = #2d353b
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
@@ -9,7 +10,7 @@ adjust-cell-height = 30%
 cursor-style = block
 cursor-style-blink = false
 background-opacity = 0.9
-background-blur-radius = 25
+background-blur-radius = 30
 
 window-width = 83
 window-height = 23

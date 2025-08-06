@@ -18,14 +18,14 @@ if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 brew update && brew upgrade
-echo "--- Done. ---" && echo ""
+echo "--- Done updating Homebrew. ---" && echo ""
 
 # Install PHP
 echo "======================================================================="
 echo "==> Installing PHP.new (PHP, Laravel, Composer)..."
 echo "======================================================================="
 /bin/bash -c "$(curl -fsSL https://php.new/install/mac)"
-echo "--- Done. ---" && echo ""
+echo "--- Done installing PHP. ---" && echo ""
 
 # Install Homebrew packages
 echo "======================================================================="
@@ -57,7 +57,7 @@ packages=(
     zoxide # Smart directory navigation
 )
 brew install "${packages[@]}"
-echo "--- Done. ---" && echo ""
+echo "--- Done installing Homebrew packages. ---" && echo ""
 
 # Git
 echo "======================================================================="
@@ -67,7 +67,7 @@ rm ~/.gitconfig
 rm ~/.gitignore
 ln -s "$DOTFILES_DIR/git/.gitconfig" ~/.gitconfig
 ln -s "$DOTFILES_DIR/git/.gitignore" ~/.gitignore
-echo "--- Done. ---" && echo ""
+echo "--- Done linking Git. ---" && echo ""
 
 # ZSH
 echo "======================================================================="
@@ -75,7 +75,7 @@ echo "==> Linking ZSH..."
 echo "======================================================================="
 rm ~/.zshrc
 ln -s "$DOTFILES_DIR/zshrc/.zshrc" ~/.zshrc
-echo "--- Done. ---" && echo ""
+echo "--- Done linking ZSH. ---" && echo ""
 
 ## Link up dotfiles
 echo "======================================================================="
@@ -83,7 +83,7 @@ echo "==> Linking up dotfiles with stow..."
 echo "======================================================================="
 brew install stow
 stow .
-echo "--- Done. ---" && echo ""
+echo "--- Done linking dotfiles. ---" && echo ""
 
 # Code
 echo "======================================================================="
@@ -99,9 +99,24 @@ echo "==> Linking up editor config..."
 echo "======================================================================="
 rm -rf "~/Library/Application Support/Cursor/User"
 ln -s "$DOTFILES_DIR/cursor" "$HOME_DIR/Library/Application Support/Cursor/User"
-echo "--- From --- $DOTFILES_DIR/cursor"
-echo "--- To --- $HOME_DIR/Library/Application Support/Cursor/User"
-echo "--- Done. ---" && echo ""
+echo "--- Done linking cursor config. ---" && echo ""
+
+# Install fonts
+echo "======================================================================="
+echo "==> Installing fonts..."
+echo "======================================================================="
+apps=(
+    font-caskaydia-cove-nerd-font
+    font-caskaydia-mono-nerd-font
+    font-fira-code-nerd-font
+    font-jetbrains-mono-nerd-font
+    font-meslo-lg-nerd-font
+    font-monaspace-nerd-font
+    font-roboto-mono-nerd-font
+    font-ubuntu-mono-nerd-font
+)
+brew install "${apps[@]}" --cask
+echo "--- Done installing fonts. ---" && echo ""
 
 # Install apps
 echo "======================================================================="
@@ -125,7 +140,9 @@ apps=(
     jordanbaird-ice
     linear-linear
     notion # Note-taking app
+    mechvibes # Keyboard sound effects
     obsidian # Note-taking app
+    ollama-app # Local AI model hosting
     pearcleaner
     pika # Color picker
     postman # API development
@@ -149,7 +166,7 @@ apps=(
     zoom
 )
 brew install "${apps[@]}" --cask
-echo "--- Done. ---" && echo ""
+echo "--- Done installing apps. ---" && echo ""
 
 echo "======================================================================="
 echo "==> Done!"

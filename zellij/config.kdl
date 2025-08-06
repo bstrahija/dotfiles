@@ -296,7 +296,7 @@ tab_bar true
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "disable-status-bar"
 
 // The folder in which Zellij will look for layouts
 // (Requires restart)

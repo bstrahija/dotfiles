@@ -89,6 +89,11 @@
               "bundleIdentifier" : "com.exafunction.windsurf",
               "iconPath" : "/Applications/Windsurf.app/Contents/Resources/Windsurf.icns",
               "name" : "Windsurf"
+            },
+            {
+              "bundleIdentifier" : "dev.zed.Zed",
+              "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+              "name" : "Zed"
             }
           ],
           "display" : "DELL U2719D",
@@ -128,6 +133,11 @@
               "bundleIdentifier" : "com.tinyspeck.slackmacgap",
               "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
               "name" : "Slack"
+            },
+            {
+              "bundleIdentifier" : "org.whispersystems.signal-desktop",
+              "iconPath" : "/Applications/Signal.app/Contents/Resources/icon.icns",
+              "name" : "Signal"
             }
           ],
           "display" : "DELL U2719D",
@@ -157,6 +167,21 @@
               "bundleIdentifier" : "notion.id",
               "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
               "name" : "Notion"
+            },
+            {
+              "bundleIdentifier" : "com.readdle.SparkDesktop-setapp",
+              "iconPath" : "/Applications/Setapp/Spark Mail.app/Contents/Resources/icon.icns",
+              "name" : "Spark Mail"
+            },
+            {
+              "bundleIdentifier" : "io.canarymail.mac",
+              "iconPath" : "/Applications/Canary Mail.app/Contents/Resources/AppIcon-V3.icns",
+              "name" : "Canary Mail"
+            },
+            {
+              "bundleIdentifier" : "com.mailrtech.canarymail-setapp",
+              "iconPath" : "/Applications/Setapp/Canary Mail.app/Contents/Resources/AppIcon-V3.icns",
+              "name" : "Canary Mail"
             }
           ],
           "display" : "DELL U2719D",
@@ -196,6 +221,11 @@
               "bundleIdentifier" : "com.smartcodeltd.stremio",
               "iconPath" : "/Applications/Stremio.app/Contents/Resources/stremio.icns",
               "name" : "Stremio"
+            },
+            {
+              "bundleIdentifier" : "com.valvesoftware.steam",
+              "iconPath" : "/Applications/Steam.app/Contents/Resources/Steam.icns",
+              "name" : "Steam"
             }
           ],
           "display" : "DELL U2719D",
@@ -269,6 +299,11 @@
               "bundleIdentifier" : "com.apple.Safari.WebApp.1ACB683A-0D2C-46FA-A609-1C9E87DF5A18",
               "iconPath" : "/Users/bstrahija/Applications/T3 Chat.app/Contents/Resources/ApplicationIcon.icns",
               "name" : "T3 Chat"
+            },
+            {
+              "bundleIdentifier" : "com.electron.ollama",
+              "iconPath" : "/Applications/Ollama.app/Contents/Resources/icon.icns",
+              "name" : "Ollama"
             }
           ],
           "display" : "DELL U2719D",
