@@ -1,0 +1,86 @@
+[
+	{
+		"name": "Zimsko",
+		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "OptimizePress",
+		"rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "My.OptimizePress",
+		"rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "OptimizePress Hub",
+		"rootPath": "/Volumes/Superhero/Code/influendo/hub.optimizepress",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Kourses",
+		"rootPath": "/Volumes/Superhero/Code/influendo/kourses",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "OptimizeLeads",
+		"rootPath": "/Volumes/Superhero/Code/influendo/optimizeleads",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Dead Dog Summer",
+		"rootPath": "/Volumes/Superhero/Code/personal/dds",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "DotFiles",
+		"rootPath": "/Volumes/Superhero/DotFiles",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Skvosh",
+		"rootPath": "/Volumes/Superhero/Code/personal/skvosh",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Icon Generator",
+		"rootPath": "/Volumes/Superhero/Code/creo/icon-generator",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Appointer",
+		"rootPath": "/Volumes/Superhero/Code/creo/appointer",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Creo",
+		"rootPath": "/Volumes/Superhero/Code/creo/creolab",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	}
+]

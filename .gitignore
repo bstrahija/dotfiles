@@ -1,9 +1,17 @@
 tmux/plugins
 composer/auth.json
 composer/vendor
+
 cursor/globalStorage
 cursor/History
 cursor/WorkspaceStorage
+
+vscode/globalStorage/*
+!vscode/globalStorage/alefragnani.project-manager
+vscode/History
+vscode/sync
+vscode/WorkspaceStorage
+
 windsurf/globalStorage
 windsurf/History
 windsurf/WorkspaceStorage

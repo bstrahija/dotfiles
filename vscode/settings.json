@@ -3,7 +3,7 @@
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.fontAliasing": "auto",
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Dank Mono, JetBrains Mono, Fira Code, Monaspace Neon Medium, Menlo, Cascadia Code, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "DankMono Nerd Font Mono",
   "editor.fontLigatures": false, // "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
   "editor.fontSize": 15,
   "editor.lineHeight": 38,
@@ -36,8 +36,6 @@
   },
   "editor.suggest.insertMode": "replace",
   "editor.suggest.showStatusBar": true,
-
-  "workbench.layoutControl.enabled": true,
   "workbench.startupEditor": "none",
   "php.suggest.basic": false,
   "php.validate.enable": false,
@@ -72,6 +70,7 @@
     "dpmnav",
     "draggable",
     "endforeach",
+    "everforest",
     "Fabien",
     "Faktoor",
     "flatpickr",
@@ -83,10 +82,14 @@
     "HRFF",
     "Hubspot",
     "icontact",
+    "iina",
+    "inertiajs",
     "infusionsoft",
     "isnotset",
+    "jordanbaird",
     "kourses",
     "laravel",
+    "lucide",
     "lukapeharda",
     "macchiato",
     "Macroable",
@@ -95,6 +98,7 @@
     "mailpoet",
     "mainvideo",
     "mautic",
+    "mechvibes",
     "mediumint",
     "meetdemio",
     "meforma",
@@ -108,8 +112,10 @@
     "notcontains",
     "notequals",
     "numberposts",
+    "nvim",
     "offcanvas",
     "ohmyemma",
+    "ollama",
     "ontraport",
     "opdash",
     "opdashboard",
@@ -123,6 +129,7 @@
     "Optin",
     "optins",
     "opui",
+    "pearcleaner",
     "phpcs",
     "phpe",
     "phpunit",
@@ -135,18 +142,21 @@
     "popoverlay",
     "Potencier",
     "quentn",
+    "reamp",
     "Rexlia",
     "Sendgrid",
     "sendinblue",
     "sendlane",
     "sendreach",
     "Sensefly",
+    "setapp",
     "sfly",
     "shortcode",
     "shortcodes",
     "sidenav",
     "spinkit",
     "Strahija",
+    "stremio",
     "subline",
     "submenu",
     "subnavigation",
@@ -164,6 +174,7 @@
     "vueform",
     "vueuse",
     "vuex",
+    "Winamp",
     "woocommerce",
     "wpbody",
     "wpcontent",
@@ -192,5 +203,41 @@
   "editor.formatOnSave": true,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "color-highlight.markerType": "dot-after",
+  "cSpell.enabledNotifications": {
+    "Maximum Word Length Exceeded": false
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "editor.lineNumbers": "relative",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "j"], "after": ["<Esc>"] },
+    { "before": ["j", "k"], "after": ["<Esc>"] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Navigation
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // Splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Panes
+   { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+   { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+   { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+   { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+  ],
+  "laravel-pint.enable": true,
+  "Laravel.phpEnvironment": "herd"
+
 }

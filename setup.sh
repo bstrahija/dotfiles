@@ -28,7 +28,7 @@ echo "======================================================================="
 echo "--- Done installing PHP. ---" && echo ""
 
 # Install Homebrew packages
-echo "======================================================================="
+
 echo "==> Installing homebrew packages..."
 echo "======================================================================="
 packages=(
@@ -93,13 +93,19 @@ rm ~/Code
 ln -s "$CODE_DIR" ~/Code
 echo "--- Done. ---" && echo ""
 
-## Link up editor config
+# Link up editor configs
 echo "======================================================================="
-echo "==> Linking up editor config..."
+echo "==> Linking up editor configs..."
 echo "======================================================================="
-rm -rf "~/Library/Application Support/Cursor/User"
+rm -rf "$HOME_DIR/Library/Application Support/Code/User"
+ln -s "$DOTFILES_DIR/vscode" "$HOME_DIR/Library/Application Support/Code/User"
+echo "--- Done linking VS Code config. ---" && echo ""
+rm -rf "$HOME_DIR/Library/Application Support/Cursor/User"
 ln -s "$DOTFILES_DIR/cursor" "$HOME_DIR/Library/Application Support/Cursor/User"
-echo "--- Done linking cursor config. ---" && echo ""
+echo "--- Done linking Cursor config. ---" && echo ""
+rm -rf "$HOME_DIR/Library/Application Support/Windsurf/User"
+ln -s "$DOTFILES_DIR/windsurf" "$HOME_DIR/Library/Application Support/Windsurf/User"
+echo "--- Done linking Windsurf config. ---" && echo ""
 
 # Install fonts
 echo "======================================================================="
