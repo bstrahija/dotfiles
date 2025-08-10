@@ -4,14 +4,14 @@ composer/vendor
 
 cursor/globalStorage
 cursor/History
-cursor/WorkspaceStorage
+cursor/workspaceStorage
 
 vscode/globalStorage/*
 !vscode/globalStorage/alefragnani.project-manager
 vscode/History
 vscode/sync
-vscode/WorkspaceStorage
+vscode/workspaceStorage
 
 windsurf/globalStorage
 windsurf/History
-windsurf/WorkspaceStorage
+windsurf/workspaceStorage
