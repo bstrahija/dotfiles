@@ -1,6 +1,7 @@
 tmux/plugins
 composer/auth.json
 composer/vendor
+license.*
 
 cursor/globalStorage
 cursor/History
@@ -15,3 +16,6 @@ vscode/workspaceStorage
 windsurf/globalStorage
 windsurf/History
 windsurf/workspaceStorage
+
+zed/keymap_backup.json
+zed/prompts

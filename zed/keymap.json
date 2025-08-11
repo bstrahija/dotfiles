@@ -2,20 +2,49 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
+      "space space": "file_finder::Toggle",
+      "shift shift": "file_finder::Toggle",
+      "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
+      "cmd-1": "workspace::ToggleRightDock",
+      "cmd-2": "workspace::ToggleLeftDock",
+      "cmd-3": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor || ProjectPanel",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      // Window movement bindings
+      // Ctrl jklk to move between panes
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      // Code actions
+      "space c a": "editor::ToggleCodeActions",
+      "space .": "editor::ToggleCodeActions",
+
+      // Navigate code
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      "space /": "pane::DeploySearch"
     }
   },
 
+  // Empty pane, set of keybindings that are available when there is no active editor
   {
-    "context": "Workspace",
+    "context": "EmptyPane || SharedScreen",
     "bindings": {
-      "cmd-1": "workspace::ToggleRightDock"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-2": "workspace::ToggleLeftDock"
+      // Open file finder
+      "space space": "file_finder::Toggle",
+      // Open recent project
+      "space f p": "projects::OpenRecent"
     }
   },
 
@@ -27,121 +56,31 @@
     }
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "a": "project_panel::NewFile"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "p": "project_panel::Paste"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "x": "project_panel::Cut"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "d": "project_panel::Delete"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "A": "project_panel::NewDirectory"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "s": "project_panel::Open"
-    }
-  },
-
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "c": "project_panel::Copy"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "r": "project_panel::Rename"
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "p": "project_panel::Paste",
+      "x": "project_panel::Cut",
+      "s": "project_panel::Open",
+      "c": "project_panel::Copy",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "space e": "project_panel::ToggleFocus"
     }
   },
 
   {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
-      "tab": "pane::ActivateNextItem"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "shift-tab": "pane::ActivatePreviousItem"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
       "H": "pane::ActivatePreviousItem",
-      "L": "pane::ActivateNextItem"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space e": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "space e": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space p": "command_palette::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space f": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
+      "L": "pane::ActivateNextItem",
+      "space e": "project_panel::ToggleFocus",
+      "space p": "command_palette::Toggle",
+      "space f": "file_finder::Toggle",
       "space r": "outline::Toggle"
-    }
-  },
-  {
-    "bindings": {
-      "ctrl+h": "workspace::ActivatePaneRight",
-      "ctrl+j": "workspace::ActivatePaneDown",
-      "ctrl+k": "workspace::ActivatePaneUp",
-      "ctrl+l": "workspace::ActivatePaneLeft"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "alt-cmd-p": [
-        "projects::OpenRecent",
-        {
-          "create_new_window": false
-        }
-      ]
     }
   }
 ]
