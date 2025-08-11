@@ -2,7 +2,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "space space": "file_finder::Toggle",
       "shift shift": "file_finder::Toggle",
       "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
       "cmd-1": "workspace::ToggleRightDock",
@@ -21,10 +20,6 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
 
-      // Code actions
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-
       // Navigate code
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
@@ -32,19 +27,7 @@
       "g I": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
       "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences",
-      "space /": "pane::DeploySearch"
-    }
-  },
-
-  // Empty pane, set of keybindings that are available when there is no active editor
-  {
-    "context": "EmptyPane || SharedScreen",
-    "bindings": {
-      // Open file finder
-      "space space": "file_finder::Toggle",
-      // Open recent project
-      "space f p": "projects::OpenRecent"
+      "g r": "editor::FindAllReferences"
     }
   },
 
@@ -77,10 +60,18 @@
       "shift-tab": "pane::ActivatePreviousItem",
       "H": "pane::ActivatePreviousItem",
       "L": "pane::ActivateNextItem",
+      "space /": "pane::DeploySearch",
+
+      // Panels
+      "space space": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
       "space p": "command_palette::Toggle",
       "space f": "file_finder::Toggle",
-      "space r": "outline::Toggle"
+      "space r": "outline::Toggle",
+
+      // Code actions
+      "space c a": "editor::ToggleCodeActions",
+      "space .": "editor::ToggleCodeActions"
     }
   }
 ]
