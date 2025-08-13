@@ -55,6 +55,7 @@
     "autoload",
     "bloginfo",
     "bpmnav",
+    "cakovec",
     "catppuccin",
     "checkmark",
     "classmap",
@@ -76,6 +77,7 @@
     "fullwidth",
     "generalsoftwareinc",
     "Getresponse",
+    "globetka",
     "guzzlehttp",
     "HELPDESK",
     "HRFF",
@@ -201,7 +203,6 @@
   "git.blame.editorDecoration.enabled": true,
   "workbench.sideBar.location": "right",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.formatOnSave": true,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -231,32 +232,39 @@
   "vim.easymotion": true, // Search with "\\f"
 
   // Vim - make if more performant
-  "extensions.experimental.affinity": { "vscode.vim": 1 },
+  "extensions.experimental.affinity": {
+    "vscode.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
+
+  // Enable text objects
+  "vscode-textobjects.vimEnabled": true,
 
   // Vim keybindings
   "vim.insertModeKeyBindings": [
     { "before": ["j", "j"], "after": ["<Esc>"] },
-    { "before": ["j", "k"], "after": ["<Esc>"] }
+    { "before": ["j", "k"], "after": ["<Esc>"] },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["leader", "/"], "commands": ["whichkey.show"] },
 
     // Esc after select
-    { "before": ["<Esc>"], "when": "editorFocus", "commands": [":nohl"], "silent": true },
+    // { "before": ["<Esc>"], "when": "editorFocus", "commands": [":nohl"], "silent": true },
 
     // Navigate commands and files
-    { "before": ["leader", "space"], "commands": ["workbench.action.showCommands"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
+    { "before": ["leader", "space"], "commands": ["workbench.action.quickOpen"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
     { "before": ["leader", "p"], "commands": ["workbench.action.showCommands"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
     { "before": ["leader", "r"], "commands": ["tettekete.list-functions"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
-    { "before": ["leader", "t"], "commands": ["tettekete.list-structures"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
+    { "before": ["leader", "t"], "commands": ["workbench.action.selectTheme"], "when": ["mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
+    { "before": ["leader", "x"], "commands": ["workbench.view.extensions"], "when": ["mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
+    { "before": ["leader", "o"], "commands": ["workbench.action.closeOtherEditors"], "when": ["mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
 
     // Tabs - Navigation
     { "before": ["<S-h>"], "commands": [":bprevious"] },
     { "before": ["<S-l>"], "commands": [":bnext"] },
     { "before": ["<Tab>"], "commands": [":bnext"] },
     { "before": ["<S-Tab>"], "commands": [":bprevious"] },
-    { "before": ["leader", "t"], "commands": ["workbench.action.closeOtherEditors"] },
 
     // Splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
@@ -271,6 +279,20 @@
     // File tree
     { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"] },
 
+    // Text object motions
+    { "before": ["v", "i", "f"], "commands": ["vscode-textobjects.select.next.inner.function.start"] },
+    { "before": ["v", "a", "f"], "commands": ["vscode-textobjects.select.next.outer.function.start"] },
+    { "before": ["c", "i", "f"], "commands": ["vscode-textobjects.change.next.inner.function.start"] },
+    { "before": ["c", "a", "f"], "commands": ["vscode-textobjects.change.next.outer.function.start"] },
+    { "before": ["d", "i", "f"], "commands": ["vscode-textobjects.delete.next.inner.function.start"] },
+    { "before": ["d", "a", "f"], "commands": ["vscode-textobjects.delete.next.outer.function.start"] },
+    { "before": ["v", "i", "c"], "commands": ["vscode-textobjects.select.next.inner.class.start"] },
+    { "before": ["v", "a", "c"], "commands": ["vscode-textobjects.select.next.outer.class.start"] },
+    { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.class.start"] },
+    { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.class.start"] },
+    { "before": ["d", "i", "c"], "commands": ["vscode-textobjects.delete.next.inner.class.start"] },
+    { "before": ["d", "a", "c"], "commands": ["vscode-textobjects.delete.next.outer.class.start"] },
+
     // Harpoon
     { "before": ["leader", "a"], "commands": ["vscode-harpoon.addEditor"] },
     { "before": ["leader", "A"], "commands": ["vscode-harpoon.editEditors"] },
@@ -284,7 +306,10 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["leader", "/"], "commands": ["whichkey.show"] }
   ],
-  "Lua.diagnostics.globals": ["vim"]
+  "Lua.diagnostics.globals": [
+    "vim"
+  ],
+  "editor.formatOnSave": true
 
 
 }

@@ -2,6 +2,7 @@ tmux/plugins
 composer/auth.json
 composer/vendor
 license.*
+licence.*
 .specstory
 
 cursor/globalStorage

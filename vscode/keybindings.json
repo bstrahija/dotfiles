@@ -86,6 +86,10 @@
         "command": "workbench.action.toggleAuxiliaryBar"
     },
     {
+        "key": "cmd+3",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
         "key": "ctrl+i",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
@@ -124,16 +128,8 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
-    {
-        "key": "cmd+r cmd+r",
+        "key": "cmd+r",
         "command": "tettekete.list-functions"
-    },
-    {
-        "key": "cmd+r cmd+t",
-        "command": "tettekete.list-structures"
     },
     {
         "key": "cmd+e",
@@ -251,6 +247,16 @@
     {
         "key": "ctrl-l",
         "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "cmd+k cmd+d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
+        "key": "f12",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
     }
 
 ]

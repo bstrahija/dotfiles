@@ -1,0 +1,67 @@
+{
+  "log": {
+    "prefix": "log",
+    "body": "error_log(${1:$VAR});",
+    "description": "Log variable to PHP error log"
+  },
+  "Debug Print_r": {
+    "prefix": "pr",
+    "body": "print_r(${1:/*debug*/});",
+    "description": "Print variable using print_r"
+  },
+  "Debug var_dump": {
+    "prefix": "vd",
+    "body": "var_dump(${1:/*debug*/});",
+    "description": "Debug var_dump"
+  },
+  "Debug Print_r formatted": {
+    "prefix": "ppr",
+    "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>'",
+    "description": "Print variable using print_r"
+  },
+  "Namespace": {
+    "prefix": "ns",
+    "body": "namespace ${1:App\\Namespace};\n\n",
+    "description": "PHP Namespace declaration"
+  },
+  "Use statement": {
+    "prefix": "use",
+    "body": "use ${1:App\\Namespace\\ClassName};\n",
+    "description": "PHP Use statement"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": "<?php\n\nnamespace ${1:App\\Namespace};\n\nclass ${2:ClassName}\n{\n    ${3:// Properties}\n\n    public function __construct(${4:args})\n    {\n        ${5:// Constructor code}\n    }\n\n    ${6:// Methods}\n}\n",
+    "description": "PHP Class declaration"
+  },
+  "Public method": {
+    "prefix": "pf",
+    "body": "public function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+    "description": "New public function"
+  },
+  "Public static method": {
+    "prefix": "psf",
+    "body": "public static function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+    "description": "New public static function"
+  },
+  "Private method": {
+    "prefix": "pvf",
+    "body": "private function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+    "description": "New private function"
+  },
+  "Protected method": {
+    "prefix": "prf",
+    "body": "protected function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+    "description": "New protected function"
+  },
+  "Foreach": {
+    "prefix": "feach",
+    "body": "foreach (${1:items}) {\n    ${2:\/\/ Code}\n}",
+    "description": "Foreach loop"
+  },
+  "If statement": {
+    "prefix": "pif",
+    "body": "if (${1:condition}) {\n    ${2:\/\/ Code}\n}",
+    "description": "Foreach loop"
+  }
+}

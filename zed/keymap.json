@@ -6,7 +6,8 @@
       "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
       "cmd-1": "workspace::ToggleRightDock",
       "cmd-2": "workspace::ToggleLeftDock",
-      "cmd-3": "workspace::ToggleBottomDock"
+      "cmd-3": "workspace::ToggleBottomDock",
+      "cmd-r": "outline::Toggle"
     }
   },
   {
@@ -18,16 +19,14 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
 
-      // Navigate code
-      "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinitionSplit",
-      "g i": "editor::GoToImplementation",
-      "g I": "editor::GoToImplementationSplit",
-      "g t": "editor::GoToTypeDefinition",
-      "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences"
+  {
+    "context": "vim_mode == insert && editor_has_snippet_completions",
+    "bindings": {
+      "tab": "editor::ShowWordCompletions"
     }
   },
 
@@ -35,9 +34,21 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore",
-      "j j": "vim::NormalBefore"
+      "j j": "vim::NormalBefore",
+
+      // Move and select in insert mode
+      "alt-h": "editor::MoveLeft",
+      "alt-l": "editor::MoveRight",
+      "alt-k": "editor::MoveUp",
+      "alt-j": "editor::MoveDown",
+      "alt-shift-h": "editor::SelectLeft",
+      "alt-shift-l": "editor::SelectRight",
+      "alt-shift-k": "editor::SelectUp",
+      "alt-shift-j": "editor::SelectDown"
     }
   },
+
+  // Manage files in the file tree
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
@@ -48,8 +59,9 @@
       "s": "project_panel::Open",
       "c": "project_panel::Copy",
       "r": "project_panel::Rename",
-      "d": "project_panel::Delete",
-      "space e": "project_panel::ToggleFocus"
+      "d": "project_panel::Trash",
+      "space e": "project_panel::ToggleFocus",
+      "cmd-e": "project_panel::ToggleFocus"
     }
   },
 
@@ -62,16 +74,46 @@
       "L": "pane::ActivateNextItem",
       "space /": "pane::DeploySearch",
 
+      // Copy shortcut
+      "shift-y": ["workspace::SendKeystrokes", "y $"],
+
+      // Subword navigation (CamelCase)
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd",
+
       // Panels
       "space space": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
+      "cmd-e": "project_panel::ToggleFocus",
+      "space t": "theme_selector::Toggle",
+      "space x": "zed::Extensions",
       "space p": "command_palette::Toggle",
       "space f": "file_finder::Toggle",
       "space r": "outline::Toggle",
+      "space o": "pane::CloseOtherItems",
+      "space s": "pane::SplitRight",
+      "space S": "pane::SplitDown",
 
       // Code actions
       "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions"
+      "space .": "editor::ToggleCodeActions",
+
+      // Navigate code
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "(Editor && mode == full)",
+    "bindings": {
+      "cmd-e": "project_panel::ToggleFocus"
     }
   }
 ]

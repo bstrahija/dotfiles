@@ -8,11 +8,16 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 14,
+  "buffer_font_family": "DankMono Nerd Font",
+  "buffer_font_size": 15,
   "buffer_line_height": { "custom": 2.4 },
+  "cursor_blink": false,
   "features": {
     "edit_prediction_provider": "copilot"
+  },
+  "file_scan_exclusions": ["_model_helpers.php"],
+  "file_types": {
+    "Blade": ["*.blade.php"]
   },
   "icon_theme": "Catppuccin Mocha",
   "indent_guides": {
@@ -38,12 +43,13 @@
         "!phpactor",
         "intelephense",
         "!phptools",
-        "!phpdocs",
+        "phpdocs",
         "..."
       ],
+      "formatter": "language_server",
       "prettier": {
         "allowed": true,
-        "plugins": ["@prettier/plugin-php"],
+        "plugins": ["@prettier/plugin-php", "@prettier/plugin-blade"],
         "parser": "php"
       }
     }
