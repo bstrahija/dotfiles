@@ -98,7 +98,7 @@
       "space f": "file_finder::Toggle",
       "space r": "outline::Toggle",
       "space o": "pane::CloseOtherItems",
-      "space s": "pane::SplitRight",
+      "spaec s": "pane::SplitRight",
       "space S": "pane::SplitDown",
       "space tab": "tab_switcher::Toggle",
 
@@ -111,6 +111,7 @@
       // Code actions
       "space c a": "editor::ToggleCodeActions",
       "space .": "editor::ToggleCodeActions",
+      "space h": "editor::Hover",
 
       // Comments
       "g c": ["editor::ToggleComments", { "advance_downwards": false }],
