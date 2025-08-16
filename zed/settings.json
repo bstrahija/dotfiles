@@ -1,5 +1,15 @@
 {
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000"
+      }
+    }
+  },
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"
@@ -8,10 +18,13 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "DankMono Nerd Font",
-  "buffer_font_size": 15,
-  "buffer_line_height": { "custom": 2.4 },
+  "buffer_font_family": "MonaspiceNe Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_line_height": { "custom": 2.6 },
   "cursor_blink": false,
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -19,9 +32,15 @@
   "file_types": {
     "Blade": ["*.blade.php"]
   },
+  "preview_tabs": {
+    "enabled": false
+  },
   "icon_theme": "Catppuccin Mocha",
   "indent_guides": {
     "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": false
   },
   // Uncomment below to use local AI with Ollama, refer https://zed.dev/docs/language-model-integration?highlight=ollama#using-ollama-on-macos
   // "assistant": {
@@ -40,9 +59,9 @@
   "languages": {
     "PHP": {
       "language_servers": [
-        "!phpactor",
-        "intelephense",
-        "!phptools",
+        "phpactor",
+        "!intelephense",
+        "phptools",
         "phpdocs",
         "..."
       ],
@@ -76,6 +95,15 @@
     "file_icons": false,
     "git_status": true
   },
+  "tab_bar": {
+    "show": true,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -83,8 +111,11 @@
   },
   "toolbar": {
     "breadcrumbs": false,
+    "selections_menu": false,
     "quick_actions": false
   },
   "ui_font_size": 15,
-  "vim_mode": true
+  "vim_mode": true,
+  "vim": {},
+  "wrap_guides": [90]
 }

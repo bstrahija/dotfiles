@@ -36,6 +36,11 @@
       "j k": "vim::NormalBefore",
       "j j": "vim::NormalBefore",
 
+      // AI suggestion
+      "ctrl-x ctrl-o": "editor::ShowCompletions",
+      "ctrl-x ctrl-a": "assistant::InlineAssist",
+      "ctrl-x ctrl-c": "editor::ShowEditPrediction",
+
       // Move and select in insert mode
       "alt-h": "editor::MoveLeft",
       "alt-l": "editor::MoveRight",
@@ -95,10 +100,24 @@
       "space o": "pane::CloseOtherItems",
       "space s": "pane::SplitRight",
       "space S": "pane::SplitDown",
+      "space tab": "tab_switcher::Toggle",
+
+      // Errors
+      "space p e": "diagnostics::Deploy",
+
+      // Git
+      "space g": "git_panel::ToggleFocus",
 
       // Code actions
       "space c a": "editor::ToggleCodeActions",
       "space .": "editor::ToggleCodeActions",
+
+      // Comments
+      "g c": ["editor::ToggleComments", { "advance_downwards": false }],
+
+      // Lines
+      "shift-enter": "editor::NewlineBelow",
+      "ctrl-shift-enter": "editor::NewlineAbove",
 
       // Navigate code
       "g d": "editor::GoToDefinition",
@@ -111,9 +130,30 @@
     }
   },
   {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide"
+    }
+  },
+  {
     "context": "(Editor && mode == full)",
     "bindings": {
       "cmd-e": "project_panel::ToggleFocus"
+    }
+  },
+
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "cmd-e": "project_panel::ToggleFocus",
+      "space e": "project_panel::ToggleFocus",
+      "space f": "file_finder::Toggle",
+      "space p": "command_palette::Toggle",
+      "space t": "theme_selector::Toggle",
+      "space x": "zed::Extensions",
+      "space space": "file_finder::Toggle",
+      "shift-shift": "file_finder::Toggle"
     }
   }
 ]
