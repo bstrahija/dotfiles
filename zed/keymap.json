@@ -66,6 +66,7 @@
       "r": "project_panel::Rename",
       "d": "project_panel::Trash",
       "space e": "project_panel::ToggleFocus",
+      "space tab": "tab_switcher::Toggle",
       "cmd-e": "project_panel::ToggleFocus"
     }
   },
@@ -98,12 +99,16 @@
       "space f": "file_finder::Toggle",
       "space r": "outline::Toggle",
       "space o": "pane::CloseOtherItems",
-      "spaec s": "pane::SplitRight",
+      "space s": "pane::SplitRight",
       "space S": "pane::SplitDown",
       "space tab": "tab_switcher::Toggle",
 
+      // File operation
+      "g p r": "project_panel::Rename",
+      "g p d": "project_panel::Duplicate",
+
       // Errors
-      "space p e": "diagnostics::Deploy",
+      "space d": "diagnostics::Deploy",
 
       // Git
       "space g": "git_panel::ToggleFocus",
@@ -135,6 +140,15 @@
     "bindings": {
       "space m p": "markdown::OpenPreview",
       "space m P": "markdown::OpenPreviewToTheSide"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "shift-K": "editor::MoveLineUp",
+      "shift-J": "editor::MoveLineDown",
+      "shift-up": "editor::MoveLineUp",
+      "shift-down": "editor::MoveLineDown"
     }
   },
   {

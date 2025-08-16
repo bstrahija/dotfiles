@@ -22,9 +22,7 @@
   "buffer_font_size": 14,
   "buffer_line_height": { "custom": 2.6 },
   "cursor_blink": false,
-  "edit_predictions": {
-    "mode": "subtle"
-  },
+  "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -35,7 +33,7 @@
   "preview_tabs": {
     "enabled": false
   },
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Bearded Icon Theme",
   "indent_guides": {
     "enabled": true
   },
@@ -90,19 +88,28 @@
     "default_width": 360
   },
   "relative_line_numbers": true,
+  "scrollbar": {
+    "show": "never"
+  },
   "show_whitespaces": "selection",
   "tabs": {
     "file_icons": false,
     "git_status": true
   },
   "tab_bar": {
-    "show": true,
+    "show": false,
     "show_tab_bar_buttons": false,
     "show_nav_history_buttons": false
   },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
+  },
+  "terminal": {
+    "font_size": 13,
+    "line_height": {
+      "custom": 1.6
+    }
   },
   "theme": {
     "mode": "system",

@@ -3,6 +3,7 @@ words = [
     "autoprefixer",
     "autoresponders",
     "axios",
+    "encrypter",
     "fillable",
     "homebrew",
     "laravel",
