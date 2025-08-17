@@ -113,6 +113,9 @@
       // Git
       "space g": "git_panel::ToggleFocus",
 
+      // AI Agent
+      "space a": "agent::ToggleFocus",
+
       // Code actions
       "space c a": "editor::ToggleCodeActions",
       "space .": "editor::ToggleCodeActions",

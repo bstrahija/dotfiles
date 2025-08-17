@@ -18,8 +18,8 @@
   },
   "autosave": "on_focus_change",
   "base_keymap": "VSCode",
-  "buffer_font_family": "MonaspiceNe Nerd Font",
-  "buffer_font_size": 14,
+  "buffer_font_family": "MonaspiceKr Nerd Font",
+  "buffer_font_size": 13,
   "buffer_line_height": { "custom": 2.6 },
   "cursor_blink": false,
   "show_edit_predictions": false,
@@ -88,16 +88,13 @@
     "default_width": 360
   },
   "relative_line_numbers": true,
-  "scrollbar": {
-    "show": "never"
-  },
   "show_whitespaces": "selection",
   "tabs": {
     "file_icons": false,
     "git_status": true
   },
   "tab_bar": {
-    "show": false,
+    "show": true,
     "show_tab_bar_buttons": false,
     "show_nav_history_buttons": false
   },

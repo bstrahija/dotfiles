@@ -35,9 +35,9 @@
         },
         {
           "appToFocus" : {
-            "bundleIdentifier" : "com.microsoft.VSCode",
-            "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
-            "name" : "Code"
+            "bundleIdentifier" : "dev.zed.Zed",
+            "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
+            "name" : "Zed"
           },
           "apps" : [
             {

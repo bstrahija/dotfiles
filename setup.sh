@@ -2,13 +2,15 @@ echo "======================================================================="
 echo "==> Start setting up my dotfiles..."
 echo "======================================================================="
 
-# Create a variable that stores the current volume name
-VOLUME_NAME="Superhero"
+# Some paths
+SCRIPT_PATH="$(realpath "$0")"
+VOLUME_NAME=$(df -P "$SCRIPT_PATH" | tail -1 | awk '{print $1}')
+MOUNTPOINT=$(df -P "$SCRIPT_PATH" | tail -1 | awk '{print $6}')
 
 # Create a variable for the current directory absolute path
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HOME_DIR="$(cd ~ && pwd)"
-CODE_DIR="/Volumes/$VOLUME_NAME/Code"
+CODE_DIR="$MOUNTPOINT/Code"
 
 ## Install Homebrew
 if ! command -v brew &> /dev/null; then
@@ -48,6 +50,7 @@ packages=(
     nvim # Neovim
     nvm
     prettyping # Better ping
+    ripgrep
     speedtest-cli
     starship
     stow
@@ -84,11 +87,12 @@ echo "======================================================================="
 echo "==> Linking up dotfiles..."
 echo "======================================================================="
 dirs=(
-    "atuin" 
-    "btop" 
+    "atuin"
+    "btop"
     "codebook"
     "composer"
     "cursor"
+    "fd"
     "flashspace"
     "ghostty"
     "intelephense"
@@ -174,14 +178,15 @@ apps=(
     handbrake-app # Video transcoder
     herd # Laravel development
     iina # Media player
+    imageoptim # Image optimization
     jordanbaird-ice
+    karabiner-elements
     linear-linear
     notion # Note-taking app
     mechvibes # Keyboard sound effects
     obsidian # Note-taking app
     ollama-app # Local AI model hosting
     pearcleaner
-    pika # Color picker
     postman # API development
     raycast
     reamp # Winamp cl
