@@ -1,10 +1,9 @@
 # -------------------------------------------------------------------
 # ZSH/Machine
 # -------------------------------------------------------------------
-alias dotfiles="code ~/.dotfiles"
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias aliases="code ~/.config/aliases"
+alias dotfiles="code /Volumes/Superhero/DotFiles"
+alias zshconfig="code ~/.zsh"
+alias aliases="code ~/.config/zsh/aliases.zh"
 alias hosts="code /etc/hosts"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"

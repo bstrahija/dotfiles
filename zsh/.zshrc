@@ -11,7 +11,7 @@ fi
 alias zshconfig="code ~/.zshrc"
 
 # Add my aliases
-source ~/.config/zshrc/aliases
+source ~/.config/zsh/aliases.zh
 
 # zoxide (better cd)
 eval "$(zoxide init zsh)"

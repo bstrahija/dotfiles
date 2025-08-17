@@ -3,7 +3,6 @@ composer/auth.json
 composer/vendor
 license.*
 licence.*
-.specstory
 
 cursor/globalStorage
 cursor/History

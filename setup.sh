@@ -78,7 +78,7 @@ echo "======================================================================="
 echo "==> Linking ZSH..."
 echo "======================================================================="
 rm ~/.zshrc
-ln -s "$DOTFILES_DIR/zshrc/.zshrc" ~/.zshrc
+ln -s "$DOTFILES_DIR/zsh/.zshrc" ~/.zshrc
 echo "--- Done linking ZSH. ---" && echo ""
 
 ## Link up dotfiles
@@ -86,38 +86,8 @@ mkdir "$HOME_DIR/.config"
 echo "======================================================================="
 echo "==> Linking up dotfiles..."
 echo "======================================================================="
-dirs=(
-    "atuin"
-    "btop"
-    "codebook"
-    "composer"
-    "cursor"
-    "fd"
-    "flashspace"
-    "ghostty"
-    "intelephense"
-    "karabiner"
-    "nano"
-    "neofetch"
-    "nvim"
-    "phptools"
-    "sketchybar"
-    "starship"
-    "tmux"
-    "tmuxinator"
-    "vscode"
-    "wezterm"
-    "windsurf"
-    "zed"
-    "zellij"
-    "zshrc"
-)
-for dir in "${dirs[@]}"; do
-    # Command 2
-    echo "- Linking $dir"
-    rm -rf "$HOME_DIR/.config/$dir"
-    ln -s "$DOTFILES_DIR/$dir" $HOME_DIR/.config/$dir
-done
+cd "$DOTFILES_DIR"
+stow .
 echo "--- Done linking dotfiles. ---" && echo ""
 
 # Code

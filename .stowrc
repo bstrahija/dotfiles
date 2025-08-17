@@ -1,6 +1,8 @@
 --target=~/.config
 --ignore=.stowrc
+--ignore=readme.md
 --ignore=DS_Store
 --ignore=Code/*
 --ignore=setup.sh
 --ignore=raycast/*
+--ignore=git/*
