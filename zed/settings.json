@@ -1,13 +1,4 @@
 {
-  "context_servers": {
-    "mcp-server-context7": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {
-        "default_minimum_tokens": "10000"
-      }
-    }
-  },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
@@ -22,7 +13,15 @@
   "buffer_font_size": 13,
   "buffer_line_height": { "custom": 2.6 },
   "cursor_blink": false,
-  "show_edit_predictions": false,
+  "context_servers": {
+    "mcp-server-context7": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "default_minimum_tokens": "10000"
+      }
+    }
+  },
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -89,6 +88,7 @@
   },
   "relative_line_numbers": true,
   "show_whitespaces": "selection",
+  "show_edit_predictions": false,
   "tabs": {
     "file_icons": false,
     "git_status": true
