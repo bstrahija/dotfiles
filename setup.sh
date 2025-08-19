@@ -55,6 +55,7 @@ packages=(
     starship
     stow
     stripe/stripe-cli/stripe # Stripe CLI
+    thefuck
     trash
     xh # CURL alternative
     zellij # Terminal multiplexer

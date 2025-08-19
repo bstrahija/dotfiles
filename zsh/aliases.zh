@@ -47,6 +47,7 @@ alias lt='eza -alh --icons=always --color-scale-mode=gradient --hyperlink --tree
 alias cat='bat'
 alias htop='btop'
 alias c='clear'
+alias fk='fuck'
 alias cd='z'
 alias cdd='z -'  # back to last directory
 alias ..='z ..'

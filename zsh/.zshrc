@@ -74,6 +74,7 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+eval $(thefuck --alias)
 
 # Added by Windsurf
 export PATH="/Users/bstrahija/.codeium/windsurf/bin:$PATH"

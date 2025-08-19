@@ -37,9 +37,9 @@
       "j j": "vim::NormalBefore",
 
       // AI suggestion
-      "ctrl-x ctrl-o": "editor::ShowCompletions",
-      "ctrl-x ctrl-a": "assistant::InlineAssist",
-      "ctrl-x ctrl-c": "editor::ShowEditPrediction",
+      "ctrl-x ctrl-z": "editor::ShowCompletions",
+      "ctrl-x ctrl-c": "assistant::InlineAssist",
+      "ctrl-x ctrl-x": "editor::ShowEditPrediction",
 
       // Move and select in insert mode
       "alt-h": "editor::MoveLeft",
@@ -102,6 +102,7 @@
       "space s": "pane::SplitRight",
       "space S": "pane::SplitDown",
       "space tab": "tab_switcher::Toggle",
+      "space w": "workspace::Save",
 
       // File operation
       "g p r": "project_panel::Rename",
