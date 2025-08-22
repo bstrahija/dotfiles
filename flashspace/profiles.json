@@ -29,7 +29,7 @@
           ],
           "display" : "DELL U2719D",
           "id" : "101B1DBA-937D-470F-997B-20D55703D0C7",
-          "name" : "Browsing",
+          "name" : "Browse",
           "shortcut" : "cmd+ctrl+opt+shift+1",
           "symbolIconName" : "safari.fill"
         },
@@ -98,7 +98,7 @@
           ],
           "display" : "DELL U2719D",
           "id" : "5F2EB965-27E8-4050-85A5-DBA99874598A",
-          "name" : "Coding",
+          "name" : "Code",
           "shortcut" : "cmd+ctrl+opt+shift+2",
           "symbolIconName" : "apple.terminal.fill"
         },
@@ -142,7 +142,7 @@
           ],
           "display" : "DELL U2719D",
           "id" : "4F5DC122-8E7E-4863-8B0F-1FDAA808D690",
-          "name" : "Comms",
+          "name" : "Msg",
           "shortcut" : "cmd+ctrl+opt+shift+3",
           "symbolIconName" : "message.badge.fill"
         },
@@ -230,7 +230,7 @@
           ],
           "display" : "DELL U2719D",
           "id" : "7F58950A-3C25-44A5-BFF6-221272FBA962",
-          "name" : "Entertainment",
+          "name" : "Entertain",
           "shortcut" : "cmd+ctrl+opt+shift+5",
           "symbolIconName" : "music.note.tv.fill"
         },
@@ -264,7 +264,7 @@
           ],
           "display" : "DELL U2719D",
           "id" : "5FA9A6B4-0049-4321-8A93-0DCC959381AA",
-          "name" : "Production",
+          "name" : "Produce",
           "shortcut" : "cmd+ctrl+opt+shift+6",
           "symbolIconName" : "music.microphone"
         },
@@ -309,7 +309,7 @@
           "display" : "DELL U2719D",
           "id" : "66A1106C-1C45-4B8C-83A1-4F6F3E786424",
           "name" : "AI",
-          "shortcut" : "cmd+ctrl+opt+shift+9",
+          "shortcut" : "cmd+ctrl+opt+shift+7",
           "symbolIconName" : "books.vertical.fill"
         }
       ]

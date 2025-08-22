@@ -1,4 +1,4 @@
-style = "full"      # Can be "full" or "compact"
+style = "compact"      # Can be "full" or "compact"
 enter_accept = true
 
 [dotfiles]

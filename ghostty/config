@@ -1,5 +1,5 @@
-theme = Everforest Dark - Hard
-font-family = FiraCode Nerd Font Mono
+theme = nord
+font-family = Hack Nerd Font Mono
 font-size = 13
 font-thicken = true
 background = #2d353b
