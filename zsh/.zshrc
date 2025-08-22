@@ -1,5 +1,14 @@
+# Homebrew
+export HOMEBREW_PREFIX=$(brew --prefix)
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# MySQL
+export PATH="$HOMEBREW_PREFIX/opt/mysql-client/bin:$PATH"
+
+# Laravel
+export PATH="$HOME/.config/composer/vendor/laravel/pint/builds:$PATH"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -26,9 +35,13 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# WordPress
+source ~/.config/wordpress/wordpress.zsh
+
 # ZSH plugins
-# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/83/"
@@ -71,10 +84,5 @@ export HERD_PHP_85_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
-. "$HOME/.atuin/bin/env"
-
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
-
-# Added by Windsurf
-export PATH="/Users/bstrahija/.codeium/windsurf/bin:$PATH"
