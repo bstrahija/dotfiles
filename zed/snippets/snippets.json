@@ -13,5 +13,10 @@
     "prefix": "todo",
     "body": "// TODO: ${1:note}",
     "description": "Add TODO comment"
+  },
+  "Console Log": {
+    "prefix": "clog",
+    "body": "console.log($0);",
+    "description": "Log variable to PHP error log"
   }
 }

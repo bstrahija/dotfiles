@@ -16,7 +16,7 @@
   },
   "Debug Print_r formatted": {
     "prefix": "ppr",
-    "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>'",
+    "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>';",
     "description": "Print variable using print_r"
   },
   "Namespace": {
@@ -62,6 +62,11 @@
   "If statement": {
     "prefix": "pif",
     "body": "if (${1:condition}) {\n    ${2:\/\/ Code}\n}",
+    "description": "Foreach loop"
+  },
+  "Method comment": {
+    "prefix": "cm",
+    "body": "/**\n * ${1:Method}\n */",
     "description": "Foreach loop"
   }
 }
