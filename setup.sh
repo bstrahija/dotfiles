@@ -42,13 +42,16 @@ packages=(
     flashspace # Spaces replacement
     fzf # Fuzzy finder
     git
+    helix # Helix editor
     jq # JSON processor
     lnav # Log file viewer
     mailpit # Local email testing
+    mysql-client
     nano
     nanorc
     nvim # Neovim
     nvm
+    php-cs-fixer
     prettyping # Better ping
     ripgrep
     speedtest-cli
@@ -57,9 +60,13 @@ packages=(
     stripe/stripe-cli/stripe # Stripe CLI
     thefuck
     trash
+    wp-cli
     xh # CURL alternative
     zellij # Terminal multiplexer
     zoxide # Smart directory navigation
+    zsh-syntax-highlighting # ZSH syntax highlighting
+    zsh-autosuggestions # ZSH command suggestions
+    zsh-completions # ZSH completions
 )
 brew install "${packages[@]}"
 echo "--- Done installing Homebrew packages. ---" && echo ""
