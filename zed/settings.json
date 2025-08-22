@@ -18,24 +18,17 @@
       "source": "custom",
       "enabled": true,
       "command": "npx",
-      "args": [
-        "-y",
-        "@automattic/mcp-wordpress-remote@latest"
-      ],
+      "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
       "env": {
-        "WP_API_URL": "https://optimizepress.test",
-        "LOG_FILE": "/Volumes/Superhero/Code/influendo/optimizepress/public/wp-content/logs/debug.log",
-        "JWT_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL29wdGltaXplcHJlc3MudGVzdCIsImlhdCI6MTc1NTU2NDUxNSwiZXhwIjoxNzU4MTU2NTE1LCJ1c2VyX2lkIjoxLCJqdGkiOiJLY2tVSW94NHNQZjV3eVZPcEZPS0hyOGRicHNkYnN4aSJ9.DuEupV7mYMTnRzDnjpyNs1rHf-X5BruT3TQVNB5CuCk"
+        "JWT_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dvcmRwcmVzcy50ZXN0IiwiaWF0IjoxNzU1Nzg0OTQ3LCJleHAiOjE3NTU3ODg1NDcsInVzZXJfaWQiOjEsImp0aSI6ImIyTHBKTkFtejF3Y1VPeWlJMjROR01QQkV3cTQxNEtVIn0.upJGRXMy-vHv9O94sN3UVNvszdV_udcJDhzz9ASxAAk",
+        "WP_API_URL": "https://wordpress.test/"
       }
     },
     "laravel-boost": {
       "source": "custom",
       "enabled": true,
       "command": "php",
-      "args": [
-        "artisan",
-        "boost:mcp"
-      ],
+      "args": ["artisan", "boost:mcp"],
       "env": {}
     },
     "mcp-server-context7": {
@@ -51,6 +44,7 @@
   },
   "file_scan_exclusions": ["_model_helpers.php"],
   "file_types": {
+    "PHP": ["*.php", "_ide_helper.php"],
     "Blade": ["*.blade.php"]
   },
   "preview_tabs": {
@@ -80,13 +74,28 @@
   "languages": {
     "PHP": {
       "language_servers": [
+        "intelephense",
         "phpactor",
-        "!intelephense",
         "phptools",
         "phpdocs",
         "..."
       ],
-      "formatter": "language_server",
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "bash",
+          "arguments": [
+            "-c",
+            "temp=$(mktemp) && cat > $temp && pint --quiet $temp && cat $temp"
+          ]
+        }
+      },
+      // "formatter": "language_server",
+      // "formatter": {
+      //   "code_actions": {
+      //     "source.fixAll.phpactor.phpCsFixer": true
+      //   }
+      // },
       "prettier": {
         "allowed": true,
         "plugins": ["@prettier/plugin-php", "@prettier/plugin-blade"],
@@ -103,6 +112,16 @@
         "environment": {
           "phpVersion": "8.4.0"
         }
+      }
+    },
+    "phptools": {
+      "initialization_options": {
+        "0": "~/.config/phptools/license.json"
+      }
+    },
+    "phpactor": {
+      "initialization_options": {
+        "language_server_completion.trim_leading_dollar": true
       }
     }
   },
@@ -135,7 +154,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Everforest Dark Medium"
+    "dark": "Nord"
   },
   "toolbar": {
     "breadcrumbs": false,

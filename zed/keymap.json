@@ -7,7 +7,8 @@
       "cmd-1": "workspace::ToggleRightDock",
       "cmd-2": "workspace::ToggleLeftDock",
       "cmd-3": "workspace::ToggleBottomDock",
-      "cmd-r": "outline::Toggle"
+      "cmd-r": "outline::Toggle",
+      "cmd-4": "agent::ToggleFocus"
     }
   },
   {
@@ -74,8 +75,6 @@
   {
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
     "bindings": {
-      "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePreviousItem",
       "H": "pane::ActivatePreviousItem",
       "L": "pane::ActivateNextItem",
       "space /": "pane::DeploySearch",
@@ -87,7 +86,6 @@
       "w": "vim::NextSubwordStart",
       "b": "vim::PreviousSubwordStart",
       "e": "vim::NextSubwordEnd",
-      "g e": "vim::PreviousSubwordEnd",
 
       // Panels
       "space space": "file_finder::Toggle",
@@ -136,7 +134,11 @@
       "g I": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
       "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences"
+      "g r": "editor::FindAllReferences",
+
+      // 0 and $ dont make sense, so go to begining and end of line
+      "g h": "vim::StartOfLineDownward",
+      "g l": "vim::EndOfLineDownward"
     }
   },
   {
