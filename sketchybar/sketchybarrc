@@ -33,39 +33,24 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-##### Adding Flashspace Indicators #####
-sketchybar --add item flashspace left \
-  --set flashspace \
-  background.color=0x22ffffff \
-  background.corner_radius=5 \
-  label.padding_left=5 \
-  label.padding_right=5 \
-  script="$CONFIG_DIR/plugins/flashspace.sh" \
-  --add event flashspace_workspace_change \
-  --subscribe flashspace flashspace_workspace_change
+sketchybar --add event flashspace_workspace_change
 
-##### Adding Mission Control Space Indicators #####
-# Let's add some mission control spaces:
-# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
-# to indicate active and available mission control spaces.
+SID=1
+WORKSPACES=$(/Applications/FlashSpace.app/Contents/Resources/flashspace list-workspaces)
 
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-for i in "${!SPACE_ICONS[@]}"
-do
-  sid="$(($i+1))"
-  space=(
-    space="$sid"
-    icon="${SPACE_ICONS[i]}"
-    icon.padding_left=7
-    icon.padding_right=7
-    background.color=0x40ffffff
-    background.corner_radius=5
-    background.height=25
-    label.drawing=off
-    script="$PLUGIN_DIR/space.sh"
-    click_script="yabai -m space --focus $sid"
-  )
-  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+for workspace in $WORKSPACES; do
+  sketchybar --add item flashspace.$SID left \
+    --subscribe flashspace.$SID flashspace_workspace_change \
+    --set flashspace.$SID \
+    background.color=0x22ffffff \
+    background.corner_radius=5 \
+    background.padding_left=5 \
+    label.padding_left=5 \
+    label.padding_right=5 \
+    label="$workspace" \
+    script="$CONFIG_DIR/plugins/flashspace.sh $workspace"
+
+  SID=$((SID + 1))
 done
 
 ##### Adding Left Items #####
