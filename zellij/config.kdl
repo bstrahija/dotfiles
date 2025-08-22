@@ -273,9 +273,10 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-macchiato"
+// theme "catppuccin-macchiato"
+theme "nord"
 
-pane_frames true
+pane_frames false
 tab_bar true
 
 
