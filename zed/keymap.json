@@ -1,180 +1,160 @@
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      "shift shift": "file_finder::Toggle",
-      "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
-      "cmd-1": "workspace::ToggleRightDock",
-      "cmd-2": "workspace::ToggleLeftDock",
-      "cmd-3": "workspace::ToggleBottomDock",
-      "cmd-r": "outline::Toggle",
-      "cmd-4": "agent::ToggleFocus"
+    // Global keybindings
+    {
+        "context": "Workspace",
+        "bindings": {
+            "shift shift": "file_finder::Toggle",
+
+            // Opent recent projects in same window
+            "alt-cmd-p": [
+                "projects::OpenRecent",
+                { "create_new_window": false }
+            ]
+        }
+    },
+    {
+        "context": "VimControl || !Editor && !Terminal",
+        "bindings": {
+            // Activate panes/docks with vim arrows
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown"
+        }
+    },
+
+    // Normal mode
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            // 0 and $ dont make sense, so go to begining and end of line
+            "g h": "vim::StartOfLineDownward",
+            "g l": "vim::EndOfLineDownward",
+
+            // Finding files
+            "space space": "file_finder::Toggle",
+            "space f": "file_finder::Toggle",
+
+            // Copy until end of line
+            "shift-y": ["workspace::SendKeystrokes", "y $"],
+
+            // Select next match
+            "g n": "editor::SelectNext",
+
+            // Code navigation and actions
+            "g d": "editor::GoToDefinition",
+            "g shift-d": "editor::GoToDeclaration",
+            "g y": "editor::GoToTypeDefinition",
+            "g i": "editor::GoToImplementation",
+            "space .": "editor::ToggleCodeActions",
+
+            // Show all errors
+            "space d": "diagnostics::Deploy",
+
+            // Comments
+            "g c": ["editor::ToggleComments", { "advance_downwards": false }],
+
+            // Lines
+            "shift-enter": "editor::NewlineBelow",
+            "ctrl-shift-enter": "editor::NewlineAbove",
+
+            // Spliting panes
+            "space s": "pane::SplitRight",
+            "space S": "pane::SplitDown",
+
+            // Git
+            "space g": "git_panel::ToggleFocus",
+
+            // AI Agent
+            "space a": "agent::ToggleFocus",
+
+            // Close all other files
+            "space o": "pane::CloseOtherItems"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+        "bindings": {
+            // Move between tabs
+            "H": "pane::ActivatePreviousItem",
+            "L": "pane::ActivateNextItem"
+        }
+    },
+
+    // Insert mode
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j k": "vim::NormalBefore",
+            "j j": "vim::NormalBefore",
+
+            // AI suggestion and incline editing
+            "ctrl-x ctrl-x": "editor::ShowEditPrediction",
+            "ctrl-x ctrl-a": "assistant::InlineAssist",
+            "ctrl-x ctrl-c": "editor::ShowCompletions",
+
+            // Move and select in insert mode
+            "alt-h": "editor::MoveLeft",
+            "alt-l": "editor::MoveRight",
+            "alt-k": "editor::MoveUp",
+            "alt-j": "editor::MoveDown",
+            "alt-shift-h": "editor::SelectLeft",
+            "alt-shift-l": "editor::SelectRight",
+            "alt-shift-k": "editor::SelectUp",
+            "alt-shift-j": "editor::SelectDown"
+        }
+    },
+    {
+        "context": "vim_mode == insert && editor_has_snippet_completions",
+        "bindings": {
+            "tab": "editor::ShowWordCompletions"
+        }
+    },
+
+    // Visual mode
+    {
+        "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+        "bindings": {
+            // Moving lines around in visual mode
+            "shift-K": "editor::MoveLineUp",
+            "shift-J": "editor::MoveLineDown",
+            "shift-up": "editor::MoveLineUp",
+            "shift-down": "editor::MoveLineDown"
+        }
+    },
+
+    // Manage files in project panel (file tree)
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "p": "project_panel::Paste",
+            "x": "project_panel::Cut",
+            "s": "project_panel::Open",
+            "c": "project_panel::Copy",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Trash",
+            "shift-d": "project_panel::Delete"
+        }
+    },
+
+    // Markdown
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && vim_operator == none && !VimWaiting",
+        "bindings": {
+            "space m p": "markdown::OpenPreview",
+            "space m P": "markdown::OpenPreviewToTheSide"
+        }
+    },
+
+    // Empty screen
+    {
+        "context": "EmptyPane || SharedScreen",
+        "bindings": {
+            "space f": "file_finder::Toggle",
+            "space space": "file_finder::Toggle",
+            "shift-shift": "file_finder::Toggle"
+        }
     }
-  },
-  {
-    "context": "Editor || ProjectPanel",
-    "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
-      // Window movement bindings
-      // Ctrl jklk to move between panes
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
-  },
-
-  {
-    "context": "vim_mode == insert && editor_has_snippet_completions",
-    "bindings": {
-      "tab": "editor::ShowWordCompletions"
-    }
-  },
-
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "j k": "vim::NormalBefore",
-      "j j": "vim::NormalBefore",
-
-      // AI suggestion
-      "ctrl-x ctrl-z": "editor::ShowCompletions",
-      "ctrl-x ctrl-c": "assistant::InlineAssist",
-      "ctrl-x ctrl-x": "editor::ShowEditPrediction",
-
-      // Move and select in insert mode
-      "alt-h": "editor::MoveLeft",
-      "alt-l": "editor::MoveRight",
-      "alt-k": "editor::MoveUp",
-      "alt-j": "editor::MoveDown",
-      "alt-shift-h": "editor::SelectLeft",
-      "alt-shift-l": "editor::SelectRight",
-      "alt-shift-k": "editor::SelectUp",
-      "alt-shift-j": "editor::SelectDown"
-    }
-  },
-
-  // Manage files in the file tree
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory",
-      "p": "project_panel::Paste",
-      "x": "project_panel::Cut",
-      "s": "project_panel::Open",
-      "c": "project_panel::Copy",
-      "r": "project_panel::Rename",
-      "d": "project_panel::Trash",
-      "space e": "project_panel::ToggleFocus",
-      "space tab": "tab_switcher::Toggle",
-      "cmd-e": "project_panel::ToggleFocus"
-    }
-  },
-
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "H": "pane::ActivatePreviousItem",
-      "L": "pane::ActivateNextItem",
-      "space /": "pane::DeploySearch",
-
-      // Copy shortcut
-      "shift-y": ["workspace::SendKeystrokes", "y $"],
-
-      // Subword navigation (CamelCase)
-      "w": "vim::NextSubwordStart",
-      "b": "vim::PreviousSubwordStart",
-      "e": "vim::NextSubwordEnd",
-
-      // Panels
-      "space space": "file_finder::Toggle",
-      "space e": "project_panel::ToggleFocus",
-      "cmd-e": "project_panel::ToggleFocus",
-      "space t": "theme_selector::Toggle",
-      "space x": "zed::Extensions",
-      "space p": "command_palette::Toggle",
-      "space f": "file_finder::Toggle",
-      "space r": "outline::Toggle",
-      "space o": "pane::CloseOtherItems",
-      "space s": "pane::SplitRight",
-      "space S": "pane::SplitDown",
-      "space tab": "tab_switcher::Toggle",
-      "space w": "workspace::Save",
-
-      // File operation
-      "g p r": "project_panel::Rename",
-      "g p d": "project_panel::Duplicate",
-
-      // Errors
-      "space d": "diagnostics::Deploy",
-
-      // Git
-      "space g": "git_panel::ToggleFocus",
-
-      // AI Agent
-      "space a": "agent::ToggleFocus",
-
-      // Code actions
-      "space c a": "editor::ToggleCodeActions",
-      "space .": "editor::ToggleCodeActions",
-      "space h": "editor::Hover",
-
-      // Comments
-      "g c": ["editor::ToggleComments", { "advance_downwards": false }],
-
-      // Lines
-      "shift-enter": "editor::NewlineBelow",
-      "ctrl-shift-enter": "editor::NewlineAbove",
-
-      // Navigate code
-      "g d": "editor::GoToDefinition",
-      "g D": "editor::GoToDefinitionSplit",
-      "g i": "editor::GoToImplementation",
-      "g I": "editor::GoToImplementationSplit",
-      "g t": "editor::GoToTypeDefinition",
-      "g T": "editor::GoToTypeDefinitionSplit",
-      "g r": "editor::FindAllReferences",
-
-      // 0 and $ dont make sense, so go to begining and end of line
-      "g h": "vim::StartOfLineDownward",
-      "g l": "vim::EndOfLineDownward"
-    }
-  },
-  {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space m p": "markdown::OpenPreview",
-      "space m P": "markdown::OpenPreviewToTheSide"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      "shift-K": "editor::MoveLineUp",
-      "shift-J": "editor::MoveLineDown",
-      "shift-up": "editor::MoveLineUp",
-      "shift-down": "editor::MoveLineDown"
-    }
-  },
-  {
-    "context": "(Editor && mode == full)",
-    "bindings": {
-      "cmd-e": "project_panel::ToggleFocus"
-    }
-  },
-
-  {
-    "context": "EmptyPane || SharedScreen",
-    "bindings": {
-      "cmd-e": "project_panel::ToggleFocus",
-      "space e": "project_panel::ToggleFocus",
-      "space f": "file_finder::Toggle",
-      "space p": "command_palette::Toggle",
-      "space t": "theme_selector::Toggle",
-      "space x": "zed::Extensions",
-      "space space": "file_finder::Toggle",
-      "shift-shift": "file_finder::Toggle"
-    }
-  }
 ]
