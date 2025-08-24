@@ -296,14 +296,19 @@
               "name" : "Notion"
             },
             {
-              "bundleIdentifier" : "com.apple.Safari.WebApp.1ACB683A-0D2C-46FA-A609-1C9E87DF5A18",
-              "iconPath" : "/Users/bstrahija/Applications/T3 Chat.app/Contents/Resources/ApplicationIcon.icns",
-              "name" : "T3 Chat"
-            },
-            {
               "bundleIdentifier" : "com.electron.ollama",
               "iconPath" : "/Applications/Ollama.app/Contents/Resources/icon.icns",
               "name" : "Ollama"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.6B557FEC-56AE-4A35-AEA3-E3EDB2FBB6D3",
+              "iconPath" : "/Applications/Grok.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "Grok"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.1ACB683A-0D2C-46FA-A609-1C9E87DF5A18",
+              "iconPath" : "/Applications/T3 Chat.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "T3 Chat"
             }
           ],
           "display" : "DELL U2719D",
