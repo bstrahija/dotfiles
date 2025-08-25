@@ -122,16 +122,16 @@
                 "..."
             ],
             "format_on_save": "on",
-            // "formatter": {
-            //     "external": {
-            //         "command": "bash",
-            //         "arguments": [
-            //             "-c",
-            //             "temp=$(mktemp) && cat > $temp && pint --quiet $temp && cat $temp"
-            //         ]
-            //     }
-            // },
-            "formatter": "language_server"
+            "formatter": {
+                "external": {
+                    "command": "bash",
+                    "arguments": [
+                        "-c",
+                        "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
+                    ]
+                }
+            }
+            // "formatter": "language_server"
             // "formatter": {
             //     "code_actions": {
             //         "source.fixAll.phpactor.phpCsFixer": true
