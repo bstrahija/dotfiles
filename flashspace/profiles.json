@@ -169,19 +169,9 @@
               "name" : "Notion"
             },
             {
-              "bundleIdentifier" : "com.readdle.SparkDesktop-setapp",
-              "iconPath" : "/Applications/Setapp/Spark Mail.app/Contents/Resources/icon.icns",
-              "name" : "Spark Mail"
-            },
-            {
-              "bundleIdentifier" : "io.canarymail.mac",
-              "iconPath" : "/Applications/Canary Mail.app/Contents/Resources/AppIcon-V3.icns",
-              "name" : "Canary Mail"
-            },
-            {
-              "bundleIdentifier" : "com.mailrtech.canarymail-setapp",
-              "iconPath" : "/Applications/Setapp/Canary Mail.app/Contents/Resources/AppIcon-V3.icns",
-              "name" : "Canary Mail"
+              "bundleIdentifier" : "com.apple.Safari.WebApp.DD53E0AF-A0A7-4A80-B01D-D53562FE7380",
+              "iconPath" : "/Users/bstrahija/Applications/Gmail.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "Gmail"
             }
           ],
           "display" : "DELL U2719D",
