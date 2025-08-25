@@ -132,16 +132,21 @@
                 }
             }
             // "formatter": "language_server"
-            // "formatter": {
-            //     "code_actions": {
-            //         "source.fixAll.phpactor.phpCsFixer": true
-            //     }
-            // },
-            // "prettier": {
-            //     "allowed": true,
-            //     "plugins": ["@prettier/plugin-php", "@prettier/plugin-blade"],
-            //     "parser": "php"
-            // }
+        },
+        "Blade": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "npx",
+                    "arguments": [
+                        "prettier",
+                        "--stdin-filepath",
+                        "{buffer_path}",
+                        "--plugin=/opt/homebrew/lib/node_modules/prettier-plugin-blade/plugin.js",
+                        "--parser=blade"
+                    ]
+                }
+            }
         }
     },
 
@@ -164,6 +169,8 @@
         },
         "phpactor": {
             "initialization_options": {
+                "language_server_php_cs_fixer.enabled": true,
+                "language_server_php_cs_fixer.bin": "/opt/homebrew/bin/php-cs-fixer",
                 "language_server_completion.trim_leading_dollar": false
             }
         }
