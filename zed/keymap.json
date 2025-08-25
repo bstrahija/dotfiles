@@ -68,6 +68,7 @@
             // Finding files
             "space space": "file_finder::Toggle",
             "space f": "file_finder::Toggle",
+            "space e": "project_panel::ToggleFocus",
 
             // Copy until end of line
             "shift-y": ["workspace::SendKeystrokes", "y $"],
@@ -174,7 +175,10 @@
             "r": "project_panel::Rename",
             "d": "project_panel::Trash",
             "l": "project_panel::Open",
-            "shift-d": "project_panel::Delete"
+            "shift-d": "project_panel::Delete",
+
+            // Close
+            "space e": "workspace::ToggleRightDock"
         }
     },
 
@@ -191,6 +195,7 @@
     {
         "context": "EmptyPane || SharedScreen",
         "bindings": {
+            "space e": "project_panel::ToggleFocus",
             "space f": "file_finder::Toggle",
             "space space": "file_finder::Toggle",
             "shift-shift": "file_finder::Toggle"

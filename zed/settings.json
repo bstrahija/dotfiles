@@ -121,7 +121,7 @@
                 "phpdocs",
                 "..."
             ],
-            // "format_on_save": "on",
+            "format_on_save": "on",
             // "formatter": {
             //     "external": {
             //         "command": "bash",
