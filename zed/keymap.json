@@ -5,11 +5,40 @@
         "bindings": {
             "shift shift": "file_finder::Toggle",
 
+            // Focus on Git panel
+            "alt-cmd-g": "git_panel::ToggleFocus",
+
+            // Focus on AI panel
+            "alt-cmd-a": "agent::ToggleFocus",
+
             // Opent recent projects in same window
             "alt-cmd-p": [
                 "projects::OpenRecent",
                 { "create_new_window": false }
             ]
+        }
+    },
+    {
+        "context": "Pane",
+        "bindings": {
+            "cmd-1": ["pane::ActivateItem", 0],
+            "cmd-2": ["pane::ActivateItem", 1],
+            "cmd-3": ["pane::ActivateItem", 2],
+            "cmd-4": ["pane::ActivateItem", 3],
+            "cmd-5": ["pane::ActivateItem", 4],
+            "cmd-6": ["pane::ActivateItem", 5],
+            "cmd-7": ["pane::ActivateItem", 6],
+            "cmd-8": ["pane::ActivateItem", 7],
+            "cmd-9": ["pane::ActivateItem", 8],
+            "cmd-0": ["pane::ActivateItem", 9]
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            // Cycle tabs
+            "ctrl-]": "pane::ActivateNextItem",
+            "ctrl-[": "pane::ActivatePreviousItem"
         }
     },
     {
@@ -19,7 +48,10 @@
             "ctrl-h": "workspace::ActivatePaneLeft",
             "ctrl-l": "workspace::ActivatePaneRight",
             "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown"
+            "ctrl-j": "workspace::ActivatePaneDown",
+
+            // Focus on project panel
+            "cmd-e": "project_panel::ToggleFocus"
         }
     },
 
@@ -28,8 +60,10 @@
         "context": "Editor && vim_mode == normal",
         "bindings": {
             // 0 and $ dont make sense, so go to begining and end of line
-            "g h": "vim::StartOfLineDownward",
-            "g l": "vim::EndOfLineDownward",
+            "0": "vim::StartOfLineDownward",
+            "B": "vim::StartOfLineDownward",
+            "-": "vim::EndOfLineDownward",
+            "_": "vim::PreviousLineStart",
 
             // Finding files
             "space space": "file_finder::Toggle",
@@ -92,6 +126,10 @@
             "ctrl-x ctrl-x": "editor::ShowEditPrediction",
             "ctrl-x ctrl-a": "assistant::InlineAssist",
             "ctrl-x ctrl-c": "editor::ShowCompletions",
+            "ctrl-c": "editor::Cancel",
+
+            // Moves to end of line in insert mode
+            "ctrl-e": "editor::MoveToEndOfLine",
 
             // Move and select in insert mode
             "alt-h": "editor::MoveLeft",
@@ -123,7 +161,7 @@
         }
     },
 
-    // Manage files in project panel (file tree)
+    // Manage files in project panel ()
     {
         "context": "ProjectPanel && not_editing",
         "bindings": {
@@ -135,6 +173,7 @@
             "c": "project_panel::Copy",
             "r": "project_panel::Rename",
             "d": "project_panel::Trash",
+            "l": "project_panel::Open",
             "shift-d": "project_panel::Delete"
         }
     },
