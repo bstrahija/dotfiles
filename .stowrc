@@ -6,3 +6,4 @@
 --ignore=setup.sh
 --ignore=raycast/*
 --ignore=git/*
+--ignore=test/*
