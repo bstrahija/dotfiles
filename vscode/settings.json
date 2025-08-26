@@ -22,12 +22,16 @@
     ],
     "workbench.editor.editorActionsLocation": "titleBar",
     "editor.inlayHints.enabled": "off",
+    "workbench.editor.showTabs": "none",
+    "breadcrumbs.enabled": false,
+    "workbench.statusBar.visible": false,
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
     "files.exclude": {
         "**/.idea": true
     },
+    "workbench.view.showTitle": false,
 
     // Search
     "search.mode": "reuseEditor",
@@ -157,8 +161,8 @@
         { "before": ["g", "c"],     "commands": ["editor.action.commentLine"],             "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
 
         // Adding new lines above and below
-        { "before": ["leader", "o"], "commands": ["editor.action.insertLineAfter"],  "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
-        { "before": ["leader", "O"], "commands": ["editor.action.insertLineBefore"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
+        // { "before": ["leader", "o"], "commands": ["editor.action.insertLineAfter"],  "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
+        // { "before": ["leader", "O"], "commands": ["editor.action.insertLineBefore"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
 
         // Pane navigation
         { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },

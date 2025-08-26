@@ -1,13 +1,26 @@
-.explorer-folders-view {
-  transform-origin: 0 0;
+.sidebar.right .composite.title {
+    display: none !important;
 }
+
+.sidebar.right {
+    height: 100%;
+}
+
+.sidebar.right .content {
+    height: 100% !important
+}
+
+.split-view-view .sidebar.right .content  {
+    height: 100% !important;
+}
+
 .explorer-viewlet .monaco-list .monaco-list-row {
-  font-family: "IBM Plex Sans", monospace;
-  font-size: 13px !important;
-  line-height: 26px !important;
-  opacity: 0.8 !important;
+    font-family: "IBM Plex Sans", monospace;
+    font-size: 13px !important;
+    line-height: 26px !important;
+    opacity: 0.8 !important;
 }
 .explorer-viewlet .monaco-icon-label .label-name {
-  font-size: 13px !important;
-  opacity: 0.8 !important;
+    font-size: 13px !important;
+    opacity: 0.8 !important;
 }
