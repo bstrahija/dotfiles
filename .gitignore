@@ -9,6 +9,7 @@ cursor/globalStorage
 cursor/History
 cursor/workspaceStorage
 
+vscode.old
 vscode/globalStorage/*
 !vscode/globalStorage/alefragnani.project-manager
 vscode/History
