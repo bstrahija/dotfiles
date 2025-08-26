@@ -1,21 +1,42 @@
 [
 	{
-		"name": "Zimsko",
-		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
+		"name": "Creo Comments",
+		"rootPath": "/Volumes/Superhero/Code/creo/creo-comments",
 		"paths": [],
 		"tags": [],
 		"enabled": true
 	},
 	{
-		"name": "OptimizePress",
-		"rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
+		"name": "DotFiles",
+		"rootPath": "/Volumes/Superhero/DotFiles",
 		"paths": [],
 		"tags": [],
 		"enabled": true
 	},
 	{
-		"name": "My.OptimizePress",
-		"rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
+		"name": "Creo Appointer",
+		"rootPath": "/Volumes/Superhero/Code/creo/appointer",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Creo Icons",
+		"rootPath": "/Volumes/Superhero/Code/creo/creo-icons",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Honorarac",
+		"rootPath": "/Volumes/Superhero/Code/creo/honorarac",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "Creolab.hr",
+		"rootPath": "/Volumes/Superhero/Code/creo/creolab",
 		"paths": [],
 		"tags": [],
 		"enabled": true
@@ -35,8 +56,22 @@
 		"enabled": true
 	},
 	{
+		"name": "My OptimizePress",
+		"rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
 		"name": "OptimizeLeads",
 		"rootPath": "/Volumes/Superhero/Code/influendo/optimizeleads",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "OptimizePress",
+		"rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
 		"paths": [],
 		"tags": [],
 		"enabled": true
@@ -49,43 +84,8 @@
 		"enabled": true
 	},
 	{
-		"name": "DotFiles",
-		"rootPath": "/Volumes/Superhero/DotFiles",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Skvosh",
-		"rootPath": "/Volumes/Superhero/Code/personal/skvosh",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Icon Generator",
-		"rootPath": "/Volumes/Superhero/Code/creo/icon-generator",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Appointer",
-		"rootPath": "/Volumes/Superhero/Code/creo/appointer",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Creo",
-		"rootPath": "/Volumes/Superhero/Code/creo/creolab",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Honorarac",
-		"rootPath": "/Volumes/Superhero/Code/creo/honorarac",
+		"name": "Zimsko",
+		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
 		"paths": [],
 		"tags": [],
 		"enabled": true
