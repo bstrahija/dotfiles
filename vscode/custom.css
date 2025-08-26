@@ -1,3 +1,7 @@
+.part.editor .content {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
 .sidebar.right .composite.title {
     display: none !important;
 }
@@ -16,7 +20,6 @@
 }
 
 .tabs-container {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 

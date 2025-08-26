@@ -228,5 +228,6 @@
         "**/*": [
             "PHP6602"
         ]
-    }
+    },
+    "workbench.editor.showTabs": "none"
 }
