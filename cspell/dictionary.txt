@@ -4,6 +4,7 @@ APPNAME
 AWEBER
 birdsend
 brevo
+cakovec
 campaignmonitor
 campaignrefinery
 catppuccin
@@ -18,6 +19,7 @@ firstname
 fluentcrm
 GETGIST
 getresponse
+globetka
 gotowebinar
 Hashids
 HELPSCOUT
@@ -28,10 +30,12 @@ IPAPI
 keap
 klicktipp
 kourses
+Laravel
 lastname
 leadlovers
 livewire
 madmimi
+oklch
 opfl
 opflow
 optimizementor
@@ -44,8 +48,10 @@ RECAPTCHA
 sendfox
 SERVERURL
 Spatie
+stylesheet
 taggings
 THRIVECART
+vite
 webinarjam
 WEBINARJAM
 wezterm

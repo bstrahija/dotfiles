@@ -8,7 +8,7 @@
     "editor.fontWeight": "400",
     "editor.lineHeight": 2.6,
     "editor.cursorBlinking": "solid",
-    "editor.smoothScrolling": false,
+    "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
@@ -23,8 +23,7 @@
     "workbench.editor.editorActionsLocation": "titleBar",
     "editor.inlayHints.enabled": "off",
     "breadcrumbs.enabled": false,
-    "workbench.statusBar.visible": false,
-    "workbench.editor.showIcons": false,
+	"workbench.editor.tabSizing": "fit",
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
@@ -49,6 +48,7 @@
     "laravel-pint.enable": true,
 
     // ==> PHP
+    "php.codeLens.enabled": false,
     "editor.formatOnSave": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
@@ -228,6 +228,5 @@
         "**/*": [
             "PHP6602"
         ]
-    },
-    "workbench.editor.showTabs": "none"
+    }
 }
