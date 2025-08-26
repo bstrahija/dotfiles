@@ -22,9 +22,9 @@
     ],
     "workbench.editor.editorActionsLocation": "titleBar",
     "editor.inlayHints.enabled": "off",
-    "workbench.editor.showTabs": "none",
     "breadcrumbs.enabled": false,
     "workbench.statusBar.visible": false,
+    "workbench.editor.showIcons": false,
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
