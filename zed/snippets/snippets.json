@@ -1,22 +1,22 @@
 {
-  "Open PHP file": {
-    "prefix": "phpx",
-    "body": "<?php \n\n${1:/* Your PHP code here */}",
-    "description": "Start PHP file"
-  },
-  "Open PHP class": {
-    "prefix": "phpc",
-    "body": "<?php\n\n${1:/* namespace ; */} \n\nclass ${3:/* Class name */}\n{\n    ${4:/* Code */}\n}",
-    "description": "Start PHP class file"
-  },
-  "Todo Comment": {
-    "prefix": "todo",
-    "body": "// TODO: ${1:note}",
-    "description": "Add TODO comment"
-  },
-  "Console Log": {
-    "prefix": "clog",
-    "body": "console.log($0);",
-    "description": "Log variable to PHP error log"
-  }
+    "Open PHP file": {
+        "prefix": "phpx",
+        "body": "<?php \n\n${1:/* Your PHP code here */}",
+        "description": "Start PHP file"
+    },
+    "Open PHP class": {
+        "prefix": "phpc",
+        "body": "<?php\n\n${1:/* namespace ; */} \n\nclass ${3:/* Class name */}\n{\n    ${4:/* Code */    }\n}",
+        "description": "Start PHP class file"
+    },
+    "Todo Comment": {
+        "prefix": "todo",
+        "body": "// TODO: ${1:note}",
+        "description": "Add TODO comment"
+    },
+    "Console Log": {
+        "prefix": "clog",
+        "body": "console.log($0);",
+        "description": "Log variable to PHP error log"
+    }
 }

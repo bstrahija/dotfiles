@@ -36,7 +36,9 @@ opfl
 opflow
 optimizementor
 phpactor
+phpe
 phpunit
+phpx
 Recalc
 RECAPTCHA
 sendfox
