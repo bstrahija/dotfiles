@@ -11,7 +11,8 @@ class App
     public function __construct()
     {
         self::stat(1, 'string');
-        $this->message = $this->message . ' from App class!';
+
+        $this->message = $this->message.' from App class!';
 
         echo $this->message;
     }
@@ -25,10 +26,10 @@ class App
     public function test(int $a, $b = null): int
     {
         $arr = [
-            'key1'     => 'value1',
+            'key1' => 'value1',
             'key24324' => 'value2',
-            'key3321'  => 'value3',
-            'key4'     => 'value4',
+            'key3321' => 'value3',
+            'key4' => 'value4',
         ];
 
         $lelele = 1;

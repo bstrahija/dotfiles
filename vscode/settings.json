@@ -42,20 +42,25 @@
     // AI
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.inlineSuggest.enabled": true,
-
-    // LSP
-    "editor.formatOnSave": true,
     "laravel-pint.enable": true,
+
     // ==> PHP
+    "editor.formatOnSave": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
     "intelephense.environment.phpVersion": "8.4.0",
     "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
+    },
+    "[blade]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
     },
     "php.suggest.basic": false,
     "php.validate.enable": false,
-    // ==> Other LSP
+
+    // ==> Other LSP's
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -84,8 +89,8 @@
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.customDictionaries": {
         "custom-dictionary-user": {
-            "name": "custom-dictionary-user",
-            "path": "~/.cspell/custom-dictionary-user.txt",
+            "name": "My Dictionary",
+            "path": "~/.config/cspell/dictionary.txt",
             "addWords": true,
             "scope": "user"
         }

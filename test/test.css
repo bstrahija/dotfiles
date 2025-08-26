@@ -1,0 +1,81 @@
+/* Modern CSS Boilerplate */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #64748b;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --border-radius: 0.5rem;
+    --font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary-color);
+    padding: 0.5em 1em;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+button {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background: var(--secondary-color);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    padding-left: 2em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
