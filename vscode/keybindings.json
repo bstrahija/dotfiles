@@ -35,6 +35,10 @@
     { "key": "shift+enter",      "command": "editor.action.insertLineAfter",  "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert')" },
     { "key": "ctrl+shift+enter", "command": "editor.action.insertLineBefore", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert')" },
 
+    // Move current line up/down
+    { "key": "alt+j", "command": "editor.action.moveLinesDownAction",  "when": "editorTextFocus" },
+    { "key": "alt+k", "command": "editor.action.moveLinesUpAction",  "when": "editorTextFocus" },
+
     // These are removed
     { "key": "alt+cmd+left", "command": "-workbench.action.previousEditor" },
     { "key": "cmd+r", "command": "-workbench.action.toggleAuxiliaryBar" },
