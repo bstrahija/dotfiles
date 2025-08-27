@@ -140,10 +140,13 @@
 
     // ==> Normal mode
     "vim.normalModeKeyBindings": [
-        { "before": ["leader", "space"], "commands": ["workbench.action.quickOpen"],         "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
+        // { "before": ["leader", "space"], "commands": ["workbench.action.quickOpen"],         "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
         { "before": ["leader", "f"],     "commands": ["workbench.action.quickOpen"],         "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
         { "before": ["leader", "o"],     "commands": ["workbench.action.closeOtherEditors"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
         { "before": ["leader", "e"],     "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"]},
+        { "before": [":"],               "commands": ["workbench.action.showCommands"], "silent": true },
+        { "before": ["<C-n>"],           "commands": [":nohl"] },
+        { "before": ["leader", "w"],     "commands": ["workbench.action.files.save"] },
 
         // Splits
         { "before": ["leader", "s"], "commands": [":vsplit"] },
@@ -174,9 +177,11 @@
         { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
 
         // Move to line start/end
-        { "before": ["0"], "commands": ["cursorHome"] },
-        { "before": ["-"], "commands": ["cursorEnd"] },
-        { "before": ["B"], "commands": ["cursorHome"] },
+        { "before": ["L"], "after": ["$"] },
+        { "before": ["H"], "after": ["^"] },
+        { "before": ["0"], "after": ["^"] },
+        { "before": ["-"], "after": ["$"] },
+        { "before": ["B"], "after": ["^"] },
 
         // Copy until end of line
         { "before": ["Y"], "after": ["y", "$"] },
@@ -322,12 +327,18 @@
         // Harpoon
         { "before": ["leader", "m"], "commands": ["vscode-harpoon.addEditor"] },
         { "before": ["leader", "M"], "commands": ["vscode-harpoon.editEditors"] },
-        { "before": ["<leader>", "p", "e"], "commands": ["vscode-harpoon.editorQuickPick"] },
+        { "before": ["leader", "b"], "commands": ["vscode-harpoon.editorQuickPick"] },
         { "before": ["leader", "1"], "commands": ["vscode-harpoon.gotoEditor1"] },
         { "before": ["leader", "2"], "commands": ["vscode-harpoon.gotoEditor2"] },
         { "before": ["leader", "3"], "commands": ["vscode-harpoon.gotoEditor3"] },
         { "before": ["leader", "4"], "commands": ["vscode-harpoon.gotoEditor4"] },
         { "before": ["leader", "5"], "commands": ["vscode-harpoon.gotoEditor5"] }
+    ],
+
+    // ==> Visual mode
+    "vim.visualModeKeyBindings": [
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     ],
 
     // Custom styling
