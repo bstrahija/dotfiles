@@ -35,6 +35,7 @@ lastname
 leadlovers
 livewire
 madmimi
+Monaspice
 oklch
 opfl
 opflow
