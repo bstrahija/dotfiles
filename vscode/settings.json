@@ -175,6 +175,10 @@
         { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
         { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
         { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+        { "before": ["<C-h>"],       "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<C-j>"],       "commands": ["workbench.action.focusBelowGroup"] },
+        { "before": ["<C-k>"],       "commands": ["workbench.action.focusAboveGroup"] },
+        { "before": ["<C-l>"],       "commands": ["workbench.action.focusRightGroup"] },
 
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
