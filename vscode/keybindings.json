@@ -31,6 +31,10 @@
     { "key": "ctrl+x ctrl+p", "command": "editor.action.inlineSuggest.showPrevious", "when": "editorTextFocus" },
     { "key": "ctrl+x ctrl-a", "command": "inlineChat.start", "when": "editorTextFocus && vim.active" },
 
+    // Adding new lines above and below
+    { "key": "shift+enter",      "command": "editor.action.insertLineAfter",  "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert')" },
+    { "key": "ctrl+shift+enter", "command": "editor.action.insertLineBefore", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert')" },
+
     // These are removed
     { "key": "alt+cmd+left", "command": "-workbench.action.previousEditor" },
     { "key": "cmd+r", "command": "-workbench.action.toggleAuxiliaryBar" },

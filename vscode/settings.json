@@ -10,6 +10,8 @@
     "editor.cursorBlinking": "solid",
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
@@ -63,6 +65,11 @@
     },
     "php.suggest.basic": false,
     "php.validate.enable": false,
+    "php.problems.exclude": {
+        "**/*": [
+            "PHP6602"
+        ]
+    },
 
     // ==> Other LSP's
     "[json]": {
@@ -158,11 +165,7 @@
         { "before": ["leader", "d"],     "commands": ["workbench.action.problems.focus"] },
 
         // Toggle comments
-        { "before": ["g", "c"],     "commands": ["editor.action.commentLine"],             "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
-
-        // Adding new lines above and below
-        // { "before": ["leader", "o"], "commands": ["editor.action.insertLineAfter"],  "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
-        // { "before": ["leader", "O"], "commands": ["editor.action.insertLineBefore"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
+        { "before": ["g", "c"],     "commands": ["editor.action.commentLine"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
 
         // Pane navigation
         { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
@@ -186,18 +189,135 @@
         { "before": ["leader", "x"], "commands": ["workbench.panel.chat.view.copilot.focus"] },
 
         // Text object motions
+        // ===> Selection
+        { "before": ["v", "a", "f"], "commands": ["vscode-textobjects.select.next.outer.function.start"] },
         { "before": ["v", "i", "f"], "commands": ["vscode-textobjects.select.next.inner.function.start"] },
-        { "before": ["v", "a", "f"], "commands": ["vscode-textobjects.select.next.outer.function.start"]},
-        { "before": ["c", "i", "f"], "commands": ["vscode-textobjects.change.next.inner.function.start"] },
+        { "before": ["v", "a", "l"], "commands": ["vscode-textobjects.select.next.outer.loop.start"] },
+        { "before": ["v", "i", "l"], "commands": ["vscode-textobjects.select.next.inner.loop.start"] },
+        { "before": ["v", "a", "i"], "commands": ["vscode-textobjects.select.next.outer.conditional.start"] },
+        { "before": ["v", "i", "i"], "commands": ["vscode-textobjects.select.next.inner.conditional.start"] },
+        { "before": ["v", "a", "r"], "commands": ["vscode-textobjects.select.next.outer.rhs.start"] },
+        { "before": ["v", "i", "r"], "commands": ["vscode-textobjects.select.next.inner.rhs.start"] },
+        { "before": ["v", "a", "h"], "commands": ["vscode-textobjects.select.next.outer.lhs.start"] },
+        { "before": ["v", "i", "h"], "commands": ["vscode-textobjects.select.next.inner.lhs.start"] },
+        { "before": ["v", "a", "v"], "commands": ["vscode-textobjects.select.next.outer.variable.start"] },
+        { "before": ["v", "a", "q"], "commands": ["vscode-textobjects.select.next.outer.string.start"] },
+        { "before": ["v", "i", "q"], "commands": ["vscode-textobjects.select.next.inner.string.start"] },
+        { "before": ["v", "a", "k"], "commands": ["vscode-textobjects.select.next.outer.class.start"] },
+        { "before": ["v", "i", "k"], "commands": ["vscode-textobjects.select.next.inner.class.start"] },
+        { "before": ["v", "a", "a"], "commands": ["vscode-textobjects.select.next.outer.array.start"] },
+        { "before": ["v", "i", "a"], "commands": ["vscode-textobjects.select.next.inner.array.start"] },
+        { "before": ["v", "a", "o"], "commands": ["vscode-textobjects.select.next.outer.object.start"] },
+        { "before": ["v", "i", "o"], "commands": ["vscode-textobjects.select.next.inner.object.start"] },
+        { "before": ["v", "a", "e"], "commands": ["vscode-textobjects.select.next.outer.parameters.start"] },
+        { "before": ["v", "i", "e"], "commands": ["vscode-textobjects.select.next.inner.parameters.start"] },
+        { "before": ["v", "a", "m"], "commands": ["vscode-textobjects.select.next.outer.call.start"] },
+        { "before": ["v", "i", "m"], "commands": ["vscode-textobjects.select.next.inner.call.start"] },
+        { "before": ["v", "a", "t"], "commands": ["vscode-textobjects.select.next.outer.type.start"] },
+        { "before": ["v", "i", "t"], "commands": ["vscode-textobjects.select.next.inner.type.start"] },
+        { "before": ["v", "a", "c"], "commands": ["vscode-textobjects.select.next.outer.comment.start"] },
+        { "before": ["v", "i", "c"], "commands": ["vscode-textobjects.select.next.inner.comment.start"] },
+
+        // ==> Moving
+        { "before": ["[", "f"], "commands": ["vscode-textobjects.goTo.next.outer.function.start"] },
+        { "before": ["[", "F"], "commands": ["vscode-textobjects.goTo.next.inner.function.start"] },
+        { "before": ["[", "q"], "commands": ["vscode-textobjects.goTo.next.outer.string.start"] },
+        { "before": ["[", "Q"], "commands": ["vscode-textobjects.goTo.next.inner.string.start"] },
+        { "before": ["]", "f"], "commands": ["vscode-textobjects.goTo.previous.outer.function.start"] },
+        { "before": ["]", "F"], "commands": ["vscode-textobjects.goTo.previous.inner.function.start"] },
+        { "before": ["]", "q"], "commands": ["vscode-textobjects.goTo.previous.outer.string.start"] },
+        { "before": ["]", "Q"], "commands": ["vscode-textobjects.goTo.previous.inner.string.start"] },
+
+        // ==> Deleting
+        { "before": ["d", "a", "f"], "commands": ["vscode-textobjects.delete.next.outer.function.start"] },
+        { "before": ["d", "i", "f"], "commands": ["vscode-textobjects.delete.next.inner.function.start"] },
+        { "before": ["d", "a", "l"], "commands": ["vscode-textobjects.delete.next.outer.loop.start"] },
+        { "before": ["d", "i", "l"], "commands": ["vscode-textobjects.delete.next.inner.loop.start"] },
+        { "before": ["d", "a", "i"], "commands": ["vscode-textobjects.delete.next.outer.conditional.start"] },
+        { "before": ["d", "i", "i"], "commands": ["vscode-textobjects.delete.next.inner.conditional.start"] },
+        { "before": ["d", "a", "r"], "commands": ["vscode-textobjects.delete.next.outer.rhs.start"] },
+        { "before": ["d", "i", "r"], "commands": ["vscode-textobjects.delete.next.inner.rhs.start"] },
+        { "before": ["d", "a", "h"], "commands": ["vscode-textobjects.delete.next.outer.lhs.start"] },
+        { "before": ["d", "i", "h"], "commands": ["vscode-textobjects.delete.next.inner.lhs.start"] },
+        { "before": ["d", "a", "v"], "commands": ["vscode-textobjects.delete.next.outer.variable.start"] },
+        { "before": ["d", "a", "q"], "commands": ["vscode-textobjects.delete.next.outer.string.start"] },
+        { "before": ["d", "i", "q"], "commands": ["vscode-textobjects.delete.next.inner.string.start"] },
+        { "before": ["d", "a", "k"], "commands": ["vscode-textobjects.delete.next.outer.class.start"] },
+        { "before": ["d", "i", "k"], "commands": ["vscode-textobjects.delete.next.inner.class.start"] },
+        { "before": ["d", "a", "a"], "commands": ["vscode-textobjects.delete.next.outer.array.start"] },
+        { "before": ["d", "i", "a"], "commands": ["vscode-textobjects.delete.next.inner.array.start"] },
+        { "before": ["d", "a", "o"], "commands": ["vscode-textobjects.delete.next.outer.object.start"] },
+        { "before": ["d", "i", "o"], "commands": ["vscode-textobjects.delete.next.inner.object.start"] },
+        { "before": ["d", "a", "e"], "commands": ["vscode-textobjects.delete.next.outer.parameters.start"] },
+        { "before": ["d", "i", "e"], "commands": ["vscode-textobjects.delete.next.inner.parameters.start"] },
+        { "before": ["d", "a", "m"], "commands": ["vscode-textobjects.delete.next.outer.call.start"] },
+        { "before": ["d", "i", "m"], "commands": ["vscode-textobjects.delete.next.inner.call.start"] },
+        { "before": ["d", "a", "t"], "commands": ["vscode-textobjects.delete.next.outer.type.start"] },
+        { "before": ["d", "i", "t"], "commands": ["vscode-textobjects.delete.next.inner.type.start"] },
+        { "before": ["d", "a", "c"], "commands": ["vscode-textobjects.delete.next.outer.comment.start"] },
+        { "before": ["d", "i", "c"], "commands": ["vscode-textobjects.delete.next.inner.comment.start"] },
+        { "before": ["d", "a", "n"], "commands": ["vscode-textobjects.delete.next.outer.node.start"] },
+
+        // ==> Yanking (copying)
+        { "before": ["y", "a", "f"], "commands": ["vscode-textobjects.yank.next.outer.function.start"] },
+        { "before": ["y", "i", "f"], "commands": ["vscode-textobjects.yank.next.inner.function.start"] },
+        { "before": ["y", "a", "l"], "commands": ["vscode-textobjects.yank.next.outer.loop.start"] },
+        { "before": ["y", "i", "l"], "commands": ["vscode-textobjects.yank.next.inner.loop.start"] },
+        { "before": ["y", "a", "i"], "commands": ["vscode-textobjects.yank.next.outer.conditional.start"] },
+        { "before": ["y", "i", "i"], "commands": ["vscode-textobjects.yank.next.inner.conditional.start"] },
+        { "before": ["y", "a", "r"], "commands": ["vscode-textobjects.yank.next.outer.rhs.start"] },
+        { "before": ["y", "i", "r"], "commands": ["vscode-textobjects.yank.next.inner.rhs.start"] },
+        { "before": ["y", "a", "h"], "commands": ["vscode-textobjects.yank.next.outer.lhs.start"] },
+        { "before": ["y", "i", "h"], "commands": ["vscode-textobjects.yank.next.inner.lhs.start"] },
+        { "before": ["y", "a", "v"], "commands": ["vscode-textobjects.yank.next.outer.variable.start"] },
+        { "before": ["y", "a", "q"], "commands": ["vscode-textobjects.yank.next.outer.string.start"] },
+        { "before": ["y", "i", "q"], "commands": ["vscode-textobjects.yank.next.inner.string.start"] },
+        { "before": ["y", "a", "k"], "commands": ["vscode-textobjects.yank.next.outer.class.start"] },
+        { "before": ["y", "i", "k"], "commands": ["vscode-textobjects.yank.next.inner.class.start"] },
+        { "before": ["y", "a", "a"], "commands": ["vscode-textobjects.yank.next.outer.array.start"] },
+        { "before": ["y", "i", "a"], "commands": ["vscode-textobjects.yank.next.inner.array.start"] },
+        { "before": ["y", "a", "o"], "commands": ["vscode-textobjects.yank.next.outer.object.start"] },
+        { "before": ["y", "i", "o"], "commands": ["vscode-textobjects.yank.next.inner.object.start"] },
+        { "before": ["y", "a", "e"], "commands": ["vscode-textobjects.yank.next.outer.parameters.start"] },
+        { "before": ["y", "i", "e"], "commands": ["vscode-textobjects.yank.next.inner.parameters.start"] },
+        { "before": ["y", "a", "m"], "commands": ["vscode-textobjects.yank.next.outer.call.start"] },
+        { "before": ["y", "i", "m"], "commands": ["vscode-textobjects.yank.next.inner.call.start"] },
+        { "before": ["y", "a", "t"], "commands": ["vscode-textobjects.yank.next.outer.type.start"] },
+        { "before": ["y", "i", "t"], "commands": ["vscode-textobjects.yank.next.inner.type.start"] },
+        { "before": ["y", "a", "c"], "commands": ["vscode-textobjects.yank.next.outer.comment.start"] },
+        { "before": ["y", "i", "c"], "commands": ["vscode-textobjects.yank.next.inner.comment.start"] },
+        { "before": ["y", "a", "n"], "commands": ["vscode-textobjects.yank.next.outer.node.start"] },
+        { "before": ["y", "i", "n"], "commands": ["vscode-textobjects.yank.next.inner.node.start"] },
+
+        // ==> Changing (replacing)
         { "before": ["c", "a", "f"], "commands": ["vscode-textobjects.change.next.outer.function.start"] },
-        { "before": ["d", "i", "f"], "commands": ["vscode-textobjects.delete.next.inner.function.start"]},
-        { "before": ["d", "a", "f"],"commands": ["vscode-textobjects.delete.next.outer.function.start"] },
-        { "before": ["v", "i", "c"], "commands": ["vscode-textobjects.select.next.inner.class.start"] },
-        { "before": ["v", "a", "c"], "commands": ["vscode-textobjects.select.next.outer.class.start"] },
-        { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.class.start"] },
-        { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.class.start"] },
-        { "before": ["d", "i", "c"], "commands": ["vscode-textobjects.delete.next.inner.class.start"] },
-        { "before": ["d", "a", "c"], "commands": ["vscode-textobjects.delete.next.outer.class.start"] },
+        { "before": ["c", "i", "f"], "commands": ["vscode-textobjects.change.next.inner.function.start"] },
+        { "before": ["c", "a", "l"], "commands": ["vscode-textobjects.change.next.outer.loop.start"] },
+        { "before": ["c", "i", "l"], "commands": ["vscode-textobjects.change.next.inner.loop.start"] },
+        { "before": ["c", "a", "i"], "commands": ["vscode-textobjects.change.next.outer.conditional.start"] },
+        { "before": ["c", "i", "i"], "commands": ["vscode-textobjects.change.next.inner.conditional.start"] },
+        { "before": ["c", "a", "r"], "commands": ["vscode-textobjects.change.next.outer.rhs.start"] },
+        { "before": ["c", "i", "r"], "commands": ["vscode-textobjects.change.next.inner.rhs.start"] },
+        { "before": ["c", "a", "h"], "commands": ["vscode-textobjects.change.next.outer.lhs.start"] },
+        { "before": ["c", "i", "h"], "commands": ["vscode-textobjects.change.next.inner.lhs.start"] },
+        { "before": ["c", "a", "v"], "commands": ["vscode-textobjects.change.next.outer.variable.start"] },
+        { "before": ["c", "a", "q"], "commands": ["vscode-textobjects.change.next.outer.string.start"] },
+        { "before": ["c", "i", "q"], "commands": ["vscode-textobjects.change.next.inner.string.start"] },
+        { "before": ["c", "a", "k"], "commands": ["vscode-textobjects.change.next.outer.class.start"] },
+        { "before": ["c", "i", "k"], "commands": ["vscode-textobjects.change.next.inner.class.start"] },
+        { "before": ["c", "a", "a"], "commands": ["vscode-textobjects.change.next.outer.array.start"] },
+        { "before": ["c", "i", "a"], "commands": ["vscode-textobjects.change.next.inner.array.start"] },
+        { "before": ["c", "a", "o"], "commands": ["vscode-textobjects.change.next.outer.object.start"] },
+        { "before": ["c", "i", "o"], "commands": ["vscode-textobjects.change.next.inner.object.start"] },
+        { "before": ["c", "a", "e"], "commands": ["vscode-textobjects.change.next.outer.parameters.start"] },
+        { "before": ["c", "i", "e"], "commands": ["vscode-textobjects.change.next.inner.parameters.start"] },
+        { "before": ["c", "a", "m"], "commands": ["vscode-textobjects.change.next.outer.call.start"] },
+        { "before": ["c", "i", "m"], "commands": ["vscode-textobjects.change.next.inner.call.start"] },
+        { "before": ["c", "a", "t"], "commands": ["vscode-textobjects.change.next.outer.type.start"] },
+        { "before": ["c", "i", "t"], "commands": ["vscode-textobjects.change.next.inner.type.start"] },
+        { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.comment.start"] },
+        { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.comment.start"] },
+        { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] },
 
         // Harpoon
         { "before": ["leader", "m"], "commands": ["vscode-harpoon.addEditor"] },
@@ -212,21 +332,6 @@
 
     // Custom styling
     "custom-ui-style.external.imports": [
-        // assume the script is ESM format
-        // "file://D:/data/test.js",
-        // "file:///Users/yourname/test.js",
-
-        // Variable supports:
-        // Load from user home dir
         "file://${userHome}/.config/vscode/custom.css"
-        // Load from environment variable (with optional fallback value)
-        // "file://${env:your_env_name:optional_fallback_value}/other.js",
-    ],
-    "workbench.sideBar.location": "right",
-    "workbench.activityBar.location": "hidden",
-    "php.problems.exclude": {
-        "**/*": [
-            "PHP6602"
-        ]
-    }
+    ]
 }
