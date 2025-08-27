@@ -59,6 +59,7 @@ packages=(
     stow
     stripe/stripe-cli/stripe # Stripe CLI
     thefuck
+    tldr
     trash
     wp-cli
     xh # CURL alternative

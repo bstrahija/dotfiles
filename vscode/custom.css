@@ -24,18 +24,24 @@
 }
 
 .tabs-container .tab {
-    font-family: "IBM Plex Sans", monospace !important;
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
     font-size: 11px !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .tabs-container .tab .label-name {
-    font-family: "IBM Plex Sans", monospace !important;
-    font-size: 12px !important;
+    padding-left: 8px;
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
+    font-size: 11px !important;
 }
 
 .tabs-container .monaco-icon-label::before {
     display: none !important;
+}
+
+.tabs-container .tab-actions {
+    transform: scale(0.8);
+    transform-origin: left center;
 }
 
 .explorer-viewlet .monaco-list .monaco-list-row {
