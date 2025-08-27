@@ -4,8 +4,8 @@
     { "key": "cmd+b", "command": "workbench.action.toggleAuxiliaryBar" },
 
     // Navigate tabs
-    { "key": "ctrl+[", "command": "workbench.action.previousEditor" },
-    { "key": "ctrl+]", "command": "workbench.action.nextEditor" },
+    { "key": "ctrl+[",    "command": "workbench.action.previousEditor" },
+    { "key": "ctrl+]",    "command": "workbench.action.nextEditor" },
 
     // Toggle sidebar
     { "key": "space e", "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.action.focusActiveEditorGroup"] }, "when": "sideBarFocus && !inputFocus" },

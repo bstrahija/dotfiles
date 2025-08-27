@@ -47,14 +47,24 @@
     // AI
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "laravel-pint.enable": true,
 
-    // ==> PHP
+    // PHP
+    "php.version": "v8.4",
+    "intelephense.environment.phpVersion": "8.4.0",
     "php.codeLens.enabled": false,
+    "php.executables": {
+        "v7.4": "/Users/bstrahija/Library/Application Support/Herd/bin/php74",
+        "v8.0": "/Users/bstrahija/Library/Application Support/Herd/bin/php80",
+        "v8.1": "/Users/bstrahija/Library/Application Support/Herd/bin/php81",
+        "v8.2": "/Users/bstrahija/Library/Application Support/Herd/bin/php82",
+        "v8.3": "/Users/bstrahija/Library/Application Support/Herd/bin/php83",
+        "v8.4": "/Users/bstrahija/Library/Application Support/Herd/bin/php84",
+        "v8.5": "/Users/bstrahija/Library/Application Support/Herd/bin/php85"
+    },
+    "laravel-pint.enable": true,
     "editor.formatOnSave": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
-    "intelephense.environment.phpVersion": "8.4.0",
     "[php]": {
         "editor.defaultFormatter": "open-southeners.laravel-pint",
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
@@ -147,6 +157,7 @@
         { "before": [":"],               "commands": ["workbench.action.showCommands"], "silent": true },
         { "before": ["<C-n>"],           "commands": [":nohl"] },
         { "before": ["leader", "w"],     "commands": ["workbench.action.files.save"] },
+        { "before": ["leader", ","],     "commands": ["workbench.action.showAllEditors"] },
 
         // Splits
         { "before": ["leader", "s"], "commands": [":vsplit"] },
@@ -348,5 +359,9 @@
     // Custom styling
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
-    ]
+    ],
+
+    // PHP Versions
+
+
 }
