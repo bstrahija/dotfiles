@@ -9,7 +9,11 @@ cursor/globalStorage
 cursor/History
 cursor/workspaceStorage
 
+vscode/_bak
+nvim.custom
+nvim.bak
 vscode.old
+vscode.nvim
 vscode/globalStorage/*
 !vscode/globalStorage/alefragnani.project-manager
 vscode/History

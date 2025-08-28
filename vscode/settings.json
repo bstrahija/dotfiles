@@ -18,7 +18,7 @@
     "workbench.layoutControl.enabled": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "window.zoomLevel": 0.2,
+    "window.zoomLevel": 0,
     "editor.rulers": [
         120
     ],
@@ -32,7 +32,6 @@
     "files.exclude": {
         "**/.idea": true
     },
-    "workbench.view.showTitle": false,
 
     // Search
     "search.mode": "reuseEditor",
@@ -48,7 +47,10 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.inlineSuggest.enabled": true,
 
-    // PHP
+    // LSP's
+    "editor.codeLens": false,
+
+    // ==> PHP
     "php.version": "v8.4",
     "intelephense.environment.phpVersion": "8.4.0",
     "php.codeLens.enabled": false,
@@ -66,12 +68,12 @@
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
     "[php]": {
-        "editor.defaultFormatter": "open-southeners.laravel-pint",
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
     },
     "[blade]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
     },
     "php.suggest.basic": false,
     "php.validate.enable": false,
@@ -82,6 +84,7 @@
     },
 
     // ==> Other LSP's
+    "json.format.enable": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -134,62 +137,17 @@
     "vscode-textobjects.vimEnabled": true, // Vim text objects
 
     // Vim keybindings
+
     // ==> Insert mode
     "vim.insertModeKeyBindings": [
         { "before": ["j", "j"], "after": ["<Esc>"] },
         { "before": ["j", "k"], "after": ["<Esc>"] },
-
-        // Move left/right in insert mode
-        { "before": ["<C-h>"], "after": ["<Left>"] },
-        { "before": ["<C-l>"], "after": ["<Right>"] },
-
-        // Move to start/end of line in isert mode
-        { "before": ["<C-e>"], "after": ["<Esc>", "A"] },
-        { "before": ["<C-a>"], "after": ["<Esc>", "I"] },
     ],
 
-    // ==> Normal mode
+     // ==> Normal mode
     "vim.normalModeKeyBindings": [
-        // { "before": ["leader", "space"], "commands": ["workbench.action.quickOpen"],         "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
-        { "before": ["leader", "f"],     "commands": ["workbench.action.quickOpen"],         "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
-        { "before": ["leader", "o"],     "commands": ["workbench.action.closeOtherEditors"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
-        { "before": ["leader", "e"],     "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"]},
-        { "before": [":"],               "commands": ["workbench.action.showCommands"], "silent": true },
-        { "before": ["<C-n>"],           "commands": [":nohl"] },
-        { "before": ["leader", "w"],     "commands": ["workbench.action.files.save"] },
-        { "before": ["leader", ","],     "commands": ["workbench.action.showAllEditors"] },
-
-        // Splits
-        { "before": ["leader", "s"], "commands": [":vsplit"] },
-        { "before": ["leader", "S"], "commands": [":split"] },
-
-        // Code navigation
-        { "before": ["g","d"],           "commands": ["editor.action.revealDefinition"],        "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus) && editorHasDefinitionProvider "] },
-        { "before": ["g","D"],           "commands": ["editor.action.revealDeclaration"],       "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus) && editorHasDeclarationProvider"] },
-        { "before": ["g","s"],           "commands": ["tettekete.list-functions"],              "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"] },
-        { "before": ["g", "h"],          "commands": ["editor.action.showHover"],               "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus && editorHasHoverProvider"] },
-        { "before": ["g","i"],           "commands": ["editor.action.goToImplementation"],      "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus) && editorHasImplementationProvider"] },
-        { "before": ["g","t"],           "commands": ["editor.action.goToTypeDefinition"],      "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus) && editorHasTypeDefinitionProvider"] },
-        { "before": ["g", "."],          "commands": ["editor.action.quickFix"],                "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus && editorHasCodeActionProvider"] },
-        { "before": ["leader", "."],     "commands": ["editor.action.quickFix"],                "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus && editorHasCodeActionProvider"] },
-        { "before": ["g","r"],           "commands": ["editor.action.referenceSearch.trigger"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus) && editorHasReferenceProvider"] },
-        { "before": ["g", "R"],          "commands": ["editor.action.rename"],                  "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus && editorHasRenameProvider"] },
-
-        // Show all errors/warnings
-        { "before": ["leader", "d"],     "commands": ["workbench.action.problems.focus"] },
-
-        // Toggle comments
-        { "before": ["g", "c"],     "commands": ["editor.action.commentLine"], "when": ["(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus"] },
-
-        // Pane navigation
-        { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
-        { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
-        { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
-        { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
-        { "before": ["<C-h>"],       "commands": ["workbench.action.focusLeftGroup"] },
-        { "before": ["<C-j>"],       "commands": ["workbench.action.focusBelowGroup"] },
-        { "before": ["<C-k>"],       "commands": ["workbench.action.focusAboveGroup"] },
-        { "before": ["<C-l>"],       "commands": ["workbench.action.focusRightGroup"] },
+        { "before": [":"],     "commands": ["workbench.action.showCommands"], "silent": true },
+        { "before": ["<C-n>"], "commands": [":nohl"] },
 
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
@@ -200,13 +158,6 @@
 
         // Copy until end of line
         { "before": ["Y"], "after": ["y", "$"] },
-
-        // Open up Git panel
-        { "before": ["leader", "g"], "commands": ["workbench.view.scm"] },
-
-        // Open up AI panel
-        { "before": ["leader", "a"], "commands": ["workbench.panel.chat.view.copilot.focus"] },
-        { "before": ["leader", "x"], "commands": ["workbench.panel.chat.view.copilot.focus"] },
 
         // Text object motions
         // ===> Selection
@@ -339,6 +290,10 @@
         { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.comment.start"] },
         { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] },
 
+        // Indenting lines
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+
         // Harpoon
         { "before": ["leader", "m"], "commands": ["vscode-harpoon.addEditor"] },
         { "before": ["leader", "M"], "commands": ["vscode-harpoon.editEditors"] },
@@ -360,8 +315,5 @@
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
     ],
-
-    // PHP Versions
-
-
+    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000
 }
