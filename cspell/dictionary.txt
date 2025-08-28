@@ -42,6 +42,7 @@ opfl
 opflow
 optimizementor
 optimizepress
+opui
 phpactor
 phpe
 phpunit
