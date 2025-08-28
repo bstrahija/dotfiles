@@ -64,7 +64,6 @@
         "v8.5": "/Users/bstrahija/Library/Application Support/Herd/bin/php85"
     },
     "laravel-pint.enable": true,
-    "editor.formatOnSave": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
     "[php]": {
@@ -294,15 +293,7 @@
         { "before": [">"], "commands": ["editor.action.indentLines"] },
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
 
-        // Harpoon
-        { "before": ["leader", "m"], "commands": ["vscode-harpoon.addEditor"] },
-        { "before": ["leader", "M"], "commands": ["vscode-harpoon.editEditors"] },
-        { "before": ["leader", "b"], "commands": ["vscode-harpoon.editorQuickPick"] },
-        { "before": ["leader", "1"], "commands": ["vscode-harpoon.gotoEditor1"] },
-        { "before": ["leader", "2"], "commands": ["vscode-harpoon.gotoEditor2"] },
-        { "before": ["leader", "3"], "commands": ["vscode-harpoon.gotoEditor3"] },
-        { "before": ["leader", "4"], "commands": ["vscode-harpoon.gotoEditor4"] },
-        { "before": ["leader", "5"], "commands": ["vscode-harpoon.gotoEditor5"] }
+
     ],
 
     // ==> Visual mode
@@ -315,5 +306,6 @@
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
     ],
-    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000
+    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000,
+    "editor.formatOnSave": true
 }
