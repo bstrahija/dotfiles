@@ -1,13 +1,23 @@
 [
     // Files, tabs, search
     { "key": "space space", "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space f",     "command": "workbench.action.showAllEditorsByMostRecentlyUsed", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space f",     "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space tab",   "command": "workbench.action.showAllEditorsByMostRecentlyUsed", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space w",     "command": "workbench.action.files.save",                       "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space q",     "command": "workbench.action.closeActiveEditor",                "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space ,",     "command": "workbench.action.showAllEditors",                   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space p",     "command": "workbench.action.showCommands",                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space m",     "command": "markdown.showPreviewToSide",                        "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId == 'markdown'" },
     { "key": "space /",     "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+
+    // Tapping tab twice in normal mode sitches to last tab
+    { "key": "tab tab", "command": "runCommands", "args": {
+        "commands": [
+            "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+            "workbench.action.acceptSelectedQuickOpenItem"
+        ]
+    }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+
 
     // Add new cursor below/above alt + vim keys
     { "key": "alt+j", "command": "editor.action.insertCursorBelow",  "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert')" },

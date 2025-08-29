@@ -4,7 +4,7 @@
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.fontSize": 13,
+    "editor.fontSize": 12,
     "editor.fontWeight": "400",
     "editor.lineHeight": 2.6,
     "editor.cursorBlinking": "solid",
@@ -18,7 +18,7 @@
     "workbench.layoutControl.enabled": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 0.2,
     "editor.rulers": [
         120
     ],
@@ -49,6 +49,7 @@
 
     // LSP's
     "editor.codeLens": false,
+    "editor.formatOnSave": true,
 
     // ==> PHP
     "php.version": "v8.4",
@@ -109,6 +110,7 @@
     "editor.semanticTokenColorCustomizations": {},
 
     // Spell Check
+    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000,
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.customDictionaries": {
         "custom-dictionary-user": {
@@ -305,7 +307,5 @@
     // Custom styling
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
-    ],
-    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000,
-    "editor.formatOnSave": true
+    ]
 }

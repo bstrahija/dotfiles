@@ -47,14 +47,16 @@
 .explorer-viewlet .monaco-list .monaco-list-row {
     /* font-family: "IBM Plex Sans", monospace; */
     font-family: "MonaspiceKr Nerd Font", monospace !important;
-    font-size: 13px !important;
+    /* font-size: 13px !important; */
     line-height: 28px !important;
-    opacity: 0.8 !important;
+    /* opacity: 0.8 !important; */
 }
 
 .explorer-viewlet .monaco-icon-label .label-name {
-    font-size: 13px !important;
-    opacity: 0.8 !important;
+    font-size: 12px !important;
+    font-weight: 200 !important;
+    opacity: 0.9 !important;
+    height: 40px !important;
 }
 
 .quick-input-widget {
