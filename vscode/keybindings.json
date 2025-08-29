@@ -101,9 +101,9 @@
     { "key": "ctrl+l", "command": "cursorLineEnd",       "when": "editorTextFocus && vim.mode == 'Insert'" },
     { "key": "ctrl+h", "command": "cursorLineStart",     "when": "editorTextFocus && vim.mode == 'Insert'" },
 
-    // Move current line up/down with vim arows
-    { "key": "shift+j", "command": "editor.action.moveLinesDownAction",  "when": "editorTextFocus" },
-    { "key": "shift+k", "command": "editor.action.moveLinesUpAction",    "when": "editorTextFocus" },
+    // Move current line up/down with vim arrows
+    { "key": "shift+j", "command": "editor.action.moveLinesDownAction",  "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
+    { "key": "shift+k", "command": "editor.action.moveLinesUpAction",    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
 
     // File explorer
     { "key": "space e", "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"] }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus" },
