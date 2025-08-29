@@ -9,6 +9,7 @@
     { "key": "space p",     "command": "workbench.action.showCommands",                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space m",     "command": "markdown.showPreviewToSide",                        "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId == 'markdown'" },
     { "key": "space /",     "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "g g",         "command": "cursorTop",                                         "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // Tapping tab twice in normal mode sitches to last tab
     { "key": "tab tab", "command": "runCommands", "args": {

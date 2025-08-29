@@ -26,6 +26,7 @@
     "editor.inlayHints.enabled": "off",
     "breadcrumbs.enabled": false,
 	"workbench.editor.tabSizing": "fit",
+    "catppuccin-icons.hidesExplorerArrows": true,
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
@@ -141,8 +142,8 @@
 
     // ==> Insert mode
     "vim.insertModeKeyBindings": [
-        { "before": ["j", "j"], "after": ["<Esc>"] },
-        { "before": ["j", "k"], "after": ["<Esc>"] },
+        { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
     ],
 
      // ==> Normal mode
@@ -308,4 +309,5 @@
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
     ]
+
 }
