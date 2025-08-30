@@ -27,6 +27,7 @@ HELPDESK
 HELPSCOUT
 highlevel
 Icontact
+inertiajs
 infusionsoft
 IPAPI
 keap
@@ -45,6 +46,7 @@ opflow
 optimizementor
 optimizepress
 opui
+pestphp
 phpactor
 phpe
 phpunit
@@ -57,6 +59,7 @@ Spatie
 stylesheet
 taggings
 THRIVECART
+tightenco
 vite
 webinarjam
 WEBINARJAM

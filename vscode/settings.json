@@ -46,7 +46,7 @@
 
     // AI
     "github.copilot.nextEditSuggestions.enabled": true,
-    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.enabled": false,
 
     // LSP's
     "editor.codeLens": false,
@@ -101,6 +101,8 @@
 
     // Git
     "gitblame.inlineMessageEnabled": true,
+    "git.decorations.enabled": false,
+    "scm.diffDecorations": "gutter",
 
     // Other
     "files.autoSave": "onFocusChange",
@@ -295,8 +297,13 @@
         // Indenting lines
         { "before": [">"], "commands": ["editor.action.indentLines"] },
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    ],
 
-
+    // Flash search
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["s"], "commands": ["flash-vscode.start"] },
+        { "before": ["S"], "commands": ["flash-vscode.startSelection"] },
+        { "before": [ "<BS>" ], "commands": [ "flash-vscode.backspace" ] },
     ],
 
     // ==> Visual mode
