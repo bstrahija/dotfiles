@@ -40,6 +40,7 @@ leadlovers
 livewire
 madmimi
 Monaspice
+nvim
 oklch
 opfl
 opflow
