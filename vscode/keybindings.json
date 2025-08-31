@@ -79,7 +79,9 @@
     { "key": "g s",       "command": "tettekete.list-functions",              "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)" },
 
     // Show all erors and warnings
-    { "key": "space d", "command": "workbench.action.problems.focus", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space d p", "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space d n", "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space d d", "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // AI
     { "key": "space a",       "command": "workbench.panel.chat.view.copilot.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
@@ -102,10 +104,11 @@
     { "key": "ctrl+h", "command": "cursorLineStart",     "when": "editorTextFocus && vim.mode == 'Insert'" },
 
     // Move current line up/down with vim arrows
-    { "key": "shift+j", "command": "editor.action.moveLinesDownAction",  "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
-    { "key": "shift+k", "command": "editor.action.moveLinesUpAction",    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
+    { "key": "shift+j", "command": "editor.action.moveLinesDownAction",  "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
+    { "key": "shift+k", "command": "editor.action.moveLinesUpAction",    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
 
     // File explorer
+    { "key": "cmd+r",   "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"] }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus" },
     { "key": "space e", "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"] }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus" },
     { "key": "space e", "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.action.focusActiveEditorGroup"] },   "when": "sideBarFocus && !inputFocus" },
     { "key": "space e", "command": "workbench.action.toggleSidebarVisibility", "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible" },

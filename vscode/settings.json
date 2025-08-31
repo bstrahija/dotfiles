@@ -28,6 +28,23 @@
     "catppuccin-icons.hidesExplorerArrows": true,
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
+    "editor.matchBrackets": "near",
+    "editor.lightbulb.enabled": "off",
+    "editor.renderLineHighlight": "gutter",
+    "editor.occurrencesHighlight": "off",
+    "editor.selectionHighlight": true,
+    "editor.hideCursorInOverviewRuler": true,
+
+    // Autosuggestions for editor
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "emmet.triggerExpansionOnTab": true,
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
@@ -163,6 +180,14 @@
 
         // Copy until end of line
         { "before": ["Y"], "after": ["y", "$"] },
+
+        // Up/down half page
+        { "before": ["<C-d>"], "after": ["<C-d>", "zz"] },
+        { "before": ["<C-u>"], "after": ["<C-u>", "zz"] },
+
+        // Delete without affecting the clipboard
+        { "before": ["x"], "commands": ["deleteRight"] },
+        { "before": ["X"], "commands": ["deleteLeft"] },
 
         // Text object motions
         // ===> Selection
