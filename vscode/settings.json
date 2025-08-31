@@ -15,18 +15,19 @@
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "window.zoomLevel": 0.2,
     "editor.rulers": [
         120
     ],
-    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.editor.editorActionsLocation": "hidden",
     "editor.inlayHints.enabled": "off",
     "breadcrumbs.enabled": false,
 	"workbench.editor.tabSizing": "fit",
     "catppuccin-icons.hidesExplorerArrows": true,
+    "chat.commandCenter.enabled": false,
+    "workbench.layoutControl.enabled": false,
 
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
