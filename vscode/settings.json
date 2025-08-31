@@ -6,7 +6,7 @@
     "workbench.fontAliasing": "auto",
     "editor.fontSize": 12,
     "editor.fontWeight": "400",
-    "editor.lineHeight": 2.6,
+    "editor.lineHeight": 2.5,
     "editor.cursorBlinking": "solid",
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
@@ -19,7 +19,7 @@
     "editor.guides.bracketPairs": "active",
     "window.zoomLevel": 0.2,
     "editor.rulers": [
-        120
+        320
     ],
     "workbench.editor.editorActionsLocation": "hidden",
     "editor.inlayHints.enabled": "off",
