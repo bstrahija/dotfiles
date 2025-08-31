@@ -11,6 +11,9 @@
     { "key": "space /",     "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "g g",         "command": "cursorTop",                                         "when": "vim.mode == 'Normal' && editorTextFocus" },
 
+    // Remap cmd+f to vim /
+    { "key": "cmd+f", "command": "vim.remap", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert' || vim.mode == 'Visual')", "args": { "after": ["esc",  "/"] } },
+
     // Tapping tab twice in normal mode sitches to last tab
     { "key": "tab tab", "command": "runCommands", "args": {
         "commands": [

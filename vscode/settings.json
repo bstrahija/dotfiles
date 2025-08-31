@@ -105,7 +105,7 @@
     // ==> Other LSP's
     "json.format.enable": false,
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -341,6 +341,9 @@
     // Custom styling
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
-    ]
+    ],
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
+    }
 
 }
