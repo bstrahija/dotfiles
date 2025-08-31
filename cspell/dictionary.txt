@@ -55,6 +55,7 @@ Recalc
 RECAPTCHA
 sendfox
 SERVERURL
+Sluggable
 Spatie
 stylesheet
 taggings

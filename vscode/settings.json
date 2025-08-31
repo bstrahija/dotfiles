@@ -70,12 +70,12 @@
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
     "Laravel.phpEnvironment": "herd",
     "[php]": {
-        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
     },
     "[blade]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
     },
     "php.suggest.basic": false,
     "php.validate.enable": false,
