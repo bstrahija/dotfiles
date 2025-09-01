@@ -116,6 +116,13 @@
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
+    },
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        ".env*": "dotenv"
+    },
 
     // Git
     "gitblame.inlineMessageEnabled": true,
@@ -180,10 +187,6 @@
 
         // Copy until end of line
         { "before": ["Y"], "after": ["y", "$"] },
-
-        // Up/down half page
-        { "before": ["<C-d>"], "after": ["<C-d>", "zz"] },
-        { "before": ["<C-u>"], "after": ["<C-u>", "zz"] },
 
         // Delete without affecting the clipboard
         { "before": ["x"], "commands": ["deleteRight"] },
@@ -325,11 +328,15 @@
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     ],
 
-    // Flash search
     "vim.normalModeKeyBindingsNonRecursive": [
+        // Flash search
         { "before": ["s"], "commands": ["flash-vscode.start"] },
         { "before": ["S"], "commands": ["flash-vscode.startSelection"] },
         { "before": [ "<BS>" ], "commands": [ "flash-vscode.backspace" ] },
+
+        // Scroll up/down and
+        { "before": ["<C-d>"], "after": ["<C-d>", "z","z"] },
+        { "before": ["<C-u>"], "after": ["<C-u>", "z","z"] }
     ],
 
     // ==> Visual mode
@@ -342,8 +349,15 @@
     "custom-ui-style.external.imports": [
         "file://${userHome}/.config/vscode/custom.css"
     ],
-    "[lua]": {
-        "editor.defaultFormatter": "sumneko.lua"
+
+    // Env
+    "dotenv.enableAutocloaking": true,
+    "dotenv.cloakColor": "#fcc",
+    "dotenv.cloakIcon": "*",
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#000" } } ] },
+        "[*Dark*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#fff" } } ] },
+        "textMateRules": [ { "scope": "keyword.other.dotenv", "settings": { "foreground": "#FF000000" } } ]
     }
 
 }
