@@ -367,6 +367,13 @@
         "[*Dark*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#fff" } } ] },
         "textMateRules": [ { "scope": "keyword.other.dotenv", "settings": { "foreground": "#FF000000" } } ]
     },
-    "php.format.codeStyle": "Laravel"
+    "php.format.codeStyle": "Laravel",
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.showTabs": "none",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontalScrollbarSize": 6,
+    "editor.scrollbar.verticalScrollbarSize": 7
 
 }

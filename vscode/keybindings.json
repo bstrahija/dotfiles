@@ -141,6 +141,9 @@
     { "key": "space 4",       "command": "vscode-harpoon.gotoEditor4",     "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "space 5",       "command": "vscode-harpoon.gotoEditor5",     "when": "vim.mode == 'Normal' && editorTextFocus" },
 
+    // Zen mode
+    { "key": "space z", "command": "workbench.action.toggleZenMode", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+
 
 
     // ==========================================
