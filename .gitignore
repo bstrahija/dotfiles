@@ -12,6 +12,7 @@ cursor/workspaceStorage
 vscode/_bak
 nvim.custom
 nvim.bak
+nvim.laravel
 vscode.old
 vscode.nvim
 vscode/globalStorage/*

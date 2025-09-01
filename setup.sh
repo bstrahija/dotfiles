@@ -63,6 +63,7 @@ packages=(
     trash
     wp-cli
     xh # CURL alternative
+    yarn
     zellij # Terminal multiplexer
     zoxide # Smart directory navigation
     zsh-syntax-highlighting # ZSH syntax highlighting

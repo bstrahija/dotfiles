@@ -67,7 +67,9 @@ alias grep='grep --color=auto'
 # Apps
 # -------------------------------------------------------------------
 alias edit='code'
+alias vim='nvim'
 alias reamp='open -a reAmp'
+alias winamp='open -a reAmp'
 alias subl='subl -n'
 
 # -------------------------------------------------------------------
