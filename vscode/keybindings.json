@@ -83,7 +83,7 @@
 
     // Code navigation and actions
     { "key": "g d",       "command": "editor.action.revealDefinition",        "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g shift+D", "command": "editor.action.revealDeclaration",       "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "g shift+d", "command": "editor.action.revealDefinitionAside",   "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "g i",       "command": "editor.action.goToImplementation",      "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "g h",       "command": "editor.action.showHover",               "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "g t",       "command": "editor.action.goToTypeDefinition",      "when": "vim.mode == 'Normal' && editorTextFocus" },

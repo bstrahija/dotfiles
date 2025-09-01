@@ -49,7 +49,10 @@
     // Project pane (file explorer)
     "workbench.tree.indent": 18,
     "files.exclude": {
-        "**/.idea": true
+        "**/.idea": true,
+        "**/_ide_helper*": true,
+        "**/_ide_helper_models*": true,
+        "**/.phpstorm.meta.php": true
     },
 
     // Search
@@ -85,6 +88,11 @@
     },
     "laravel-pint.enable": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
+    "intelephense.files.exclude": [
+        "**/_ide_helper*",
+        "**/_ide_helper_models*",
+        "**/.phpstorm.meta.php"
+    ],
     "Laravel.phpEnvironment": "herd",
     "[php]": {
         "editor.defaultFormatter": "open-southeners.laravel-pint",
@@ -358,6 +366,7 @@
         "[*Light*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#000" } } ] },
         "[*Dark*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#fff" } } ] },
         "textMateRules": [ { "scope": "keyword.other.dotenv", "settings": { "foreground": "#FF000000" } } ]
-    }
+    },
+    "php.format.codeStyle": "Laravel"
 
 }
