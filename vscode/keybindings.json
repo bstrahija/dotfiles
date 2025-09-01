@@ -93,11 +93,11 @@
     { "key": "g s",       "command": "tettekete.list-functions",              "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)" },
 
     // Errors and warnings
-    // { "key": "[ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    // { "key": "] t",     "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    // { "key": "[ d",     "command": "editor.action.marker.prev", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    // { "key": "] d",     "command": "editor.action.marker.next", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    // { "key": "space d", "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "[ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "] t",     "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "[ d",     "command": "editor.action.marker.prev", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "] d",     "command": "editor.action.marker.next", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space d", "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // AI
     { "key": "space a",       "command": "workbench.panel.chat.view.copilot.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
