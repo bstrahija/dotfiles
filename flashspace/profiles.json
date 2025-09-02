@@ -259,6 +259,78 @@
           "symbolIconName" : "music.microphone"
         },
         {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "notion.id",
+              "iconPath" : "/Applications/Notion.app/Contents/Resources/electron.icns",
+              "name" : "Notion"
+            },
+            {
+              "bundleIdentifier" : "com.linear",
+              "iconPath" : "/Applications/Linear.app/Contents/Resources/icon.icns",
+              "name" : "Linear"
+            },
+            {
+              "bundleIdentifier" : "com.apple.reminders",
+              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name" : "Reminders"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iCal",
+              "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
+              "name" : "Calendar"
+            },
+            {
+              "bundleIdentifier" : "com.apple.AddressBook",
+              "iconPath" : "/System/Applications/Contacts.app/Contents/Resources/Contacts.icns",
+              "name" : "Contacts"
+            },
+            {
+              "bundleIdentifier" : "com.google.drivefs.shortcuts.docs",
+              "iconPath" : "/Applications/Google Docs.app/Contents/Resources/docs.icns",
+              "name" : "Google Docs"
+            },
+            {
+              "bundleIdentifier" : "com.google.drivefs.shortcuts.sheets",
+              "iconPath" : "/Applications/Google Sheets.app/Contents/Resources/sheets.icns",
+              "name" : "Google Sheets"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iWork.Numbers",
+              "iconPath" : "/Applications/Numbers.app/Contents/Resources/AppIcon.icns",
+              "name" : "Numbers"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iWork.Pages",
+              "iconPath" : "/Applications/Pages.app/Contents/Resources/AppIcon.icns",
+              "name" : "Pages"
+            },
+            {
+              "bundleIdentifier" : "md.obsidian",
+              "iconPath" : "/Applications/Obsidian.app/Contents/Resources/icon.icns",
+              "name" : "Obsidian"
+            },
+            {
+              "bundleIdentifier" : "com.culturedcode.ThingsMac",
+              "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
+              "name" : "Things"
+            },
+            {
+              "bundleIdentifier" : "com.todoist.mac.Todoist",
+              "iconPath" : "/Applications/Todoist.app/Contents/Resources/icon.icns",
+              "name" : "Todoist"
+            }
+          ],
+          "display" : "DELL U2312HM",
+          "id" : "1D42F3B4-3974-4FE1-BD4A-C4F3F9D08781",
+          "name" : "Plan"
+        },
+        {
           "appToFocus" : {
             "bundleIdentifier" : "com.openai.chat",
             "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
