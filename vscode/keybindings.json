@@ -9,7 +9,6 @@
     { "key": "space p",     "command": "workbench.action.showCommands",                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
     { "key": "space m",     "command": "markdown.showPreviewToSide",                        "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId == 'markdown'" },
     { "key": "space /",     "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "g g",         "command": "cursorTop",                                         "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // Remap cmd+f to vim /
     { "key": "cmd+f", "command": "vim.remap", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert' || vim.mode == 'Visual')", "args": { "after": ["esc",  "/"] } },
@@ -33,6 +32,9 @@
     // Sidebars
     { "key": "cmd+r", "command": "workbench.action.toggleSidebarVisibility" },
     { "key": "cmd+b", "command": "workbench.action.toggleAuxiliaryBar" },
+
+    // Multi-cursor with ctrl+n
+    { "key": "ctrl+n", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
 
     // Navigate tabs
     { "key": "ctrl+[", "command": "workbench.action.previousEditorInGroup" },
@@ -74,23 +76,13 @@
     { "key": "s",       "command": "explorer.openToSide",       "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
     { "key": "enter",   "command": "explorer.openAndPassFocus", "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus" },
     { "key": "enter",   "command": "list.toggleExpand",         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus" },
+    { "key": "space .", "command": "editor.action.quickFix",    "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // Navigate quick input with tab key
     { "key": "tab", "command": "quickInput.next", "when": "inQuickInput && quickInputType == 'quickPick'" },
 
-    // Toggle comments in normal and visual mode
-    { "key": "g c", "command": "editor.action.commentLine", "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
-
-    // Code navigation and actions
-    { "key": "g d",       "command": "editor.action.revealDefinition",        "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g shift+d", "command": "editor.action.revealDefinitionAside",   "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g i",       "command": "editor.action.goToImplementation",      "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g h",       "command": "editor.action.showHover",               "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g t",       "command": "editor.action.goToTypeDefinition",      "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g r",       "command": "editor.action.referenceSearch.trigger", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g shift-r", "command": "editor.action.rename",                  "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space .",   "command": "editor.action.quickFix",                "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "g s",       "command": "tettekete.list-functions",              "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)" },
+    // Show quick suggestions
+    { "key": "ctrl+.", "command": "editor.action.triggerSuggest", "when": "vim.mode == 'Insert' && editorTextFocus" },
 
     // Errors and warnings
     { "key": "[ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },

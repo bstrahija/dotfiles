@@ -1,5 +1,4 @@
 {
-    // Looks
     "workbench.colorTheme": "Nord",
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
@@ -34,6 +33,13 @@
     "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": true,
     "editor.hideCursorInOverviewRuler": true,
+    "workbench.editor.enablePreview": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontalScrollbarSize": 6,
+    "editor.scrollbar.verticalScrollbarSize": 1,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
 
     // Autosuggestions for editor
     "editor.suggestOnTriggerCharacters": false,
@@ -93,6 +99,7 @@
         "**/_ide_helper_models*",
         "**/.phpstorm.meta.php"
     ],
+    "php.problems.excludeGitIgnore": true,
     "Laravel.phpEnvironment": "herd",
     "[php]": {
         "editor.defaultFormatter": "open-southeners.laravel-pint",
@@ -172,6 +179,7 @@
         "asvetliakov.vscode-neovim": 1
     },
     "vscode-textobjects.vimEnabled": true, // Vim text objects
+    "flash-vscode.caseSensitive": true,
 
     // Vim keybindings
 
@@ -179,12 +187,20 @@
     "vim.insertModeKeyBindings": [
         { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
         { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+
+        // Undo breakpoints
+        { "before": ["."], "after": [".", "<C-g>", "u"] },
+        { "before": [","], "after": [",", "<C-g>", "u"] },
+        { "before": [";"], "after": [";", "<C-g>", "u"] },
+        { "before": ["!"], "after": [";", "<C-g>", "u"] },
+        { "before": ["?"], "after": [";", "<C-g>", "u"] },
+        { "before": ["<"], "after": [";", "<C-g>", "u"] },
+        { "before": [">"], "after": [";", "<C-g>", "u"] },
     ],
 
      // ==> Normal mode
     "vim.normalModeKeyBindings": [
         { "before": [":"],     "commands": ["workbench.action.showCommands"], "silent": true },
-        { "before": ["<C-n>"], "commands": [":nohl"] },
 
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
@@ -193,8 +209,22 @@
         { "before": ["-"], "after": ["$"] },
         { "before": ["B"], "after": ["^"] },
 
-        // Copy until end of line
+        // Copying
         { "before": ["Y"], "after": ["y", "$"] },
+        { "before": ["g", "y"], "after": ["m", "y", "g", "g", "V", "G", "y", "`", "y", "z", "z"] },
+
+        // Toggle comments in normal and visual mode
+        { "before": ["g", "c"], "commands": ["editor.action.commentLine"], "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
+
+        // Code navigation and actions creolabx
+        { "before": ["g", "d"],       "commands": ["editor.action.revealDefinition"],        "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "shift+d"], "commands": ["editor.action.revealDefinitionAside"],   "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "i"],       "commands": ["editor.action.goToImplementation"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "h"],       "commands": ["editor.action.showHover"],               "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "t"],       "commands": ["editor.action.goToTypeDefinition"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "r"],       "commands": ["editor.action.referenceSearch.trigger"], "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "shift-r"], "commands": ["editor.action.rename"],                  "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "s"],       "commands": ["tettekete.list-functions"],              "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)" },
 
         // Delete without affecting the clipboard
         { "before": ["x"], "commands": ["deleteRight"] },
@@ -363,17 +393,40 @@
     "dotenv.cloakColor": "#fcc",
     "dotenv.cloakIcon": "*",
     "editor.tokenColorCustomizations": {
-        "[*Light*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#000" } } ] },
-        "[*Dark*]": { "textMateRules": [ { "scope": "ref.matchtext", "settings": { "foreground": "#fff" } } ] },
-        "textMateRules": [ { "scope": "keyword.other.dotenv", "settings": { "foreground": "#FF000000" } } ]
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": [
+            {
+                "scope": "keyword.other.dotenv",
+                "settings": {
+                    "foreground": "#FF000000"
+                }
+            }
+        ]
     },
     "php.format.codeStyle": "Laravel",
+
+    // Zen mode
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "none",
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollbar.horizontalScrollbarSize": 6,
-    "editor.scrollbar.verticalScrollbarSize": 7
+    "zenMode.showTabs": "none"
 
 }
