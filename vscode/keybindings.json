@@ -119,8 +119,6 @@
     { "key": "ctrl+h", "command": "cursorLineStart",     "when": "editorTextFocus && vim.mode == 'Insert'" },
 
     // Move current line up/down with vim arrows
-    { "key": "shift+j", "command": "editor.action.moveLinesDownAction",  "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
-    { "key": "shift+k", "command": "editor.action.moveLinesUpAction",    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
     { "key": "alt+j", "command": "editor.action.moveLinesDownAction",    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
     { "key": "alt+k", "command": "editor.action.moveLinesUpAction",      "when": "(vim.mode == 'Normal' || vim.mode == 'Visual' || vim.mode == 'VisualLine') && editorTextFocus" },
 
