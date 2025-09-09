@@ -1,16 +1,16 @@
 [
     // Files, tabs, search
-    { "key": "space space", "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space f",     "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space tab",   "command": "workbench.action.showAllEditorsByMostRecentlyUsed", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space w",     "command": "workbench.action.files.save",                       "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space q",     "command": "workbench.action.closeActiveEditor",                "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space ,",     "command": "workbench.action.showAllEditors",                   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space p",     "command": "workbench.action.showCommands",                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space m",     "command": "markdown.showPreviewToSide",                        "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId == 'markdown'" },
-    { "key": "space /",     "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-    { "key": "space =",     "command": "editor.action.formatDocument",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-
+    { "key": "space space",   "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space f",       "command": "workbench.action.quickOpen",                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space tab",     "command": "workbench.action.showAllEditorsByMostRecentlyUsed", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space w",       "command": "workbench.action.files.save",                       "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space q",       "command": "workbench.action.closeActiveEditor",                "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space shift+q", "command": "workbench.action.closeWindow",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space ,",       "command": "workbench.action.showAllEditors",                   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space p",       "command": "workbench.action.showCommands",                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space m",       "command": "markdown.showPreviewToSide",                        "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId == 'markdown'" },
+    { "key": "space /",       "command": "workbench.action.findInFiles",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+    { "key": "space =",       "command": "editor.action.formatDocument",                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
 
     // Remap cmd+f to vim /
     { "key": "cmd+f", "command": "vim.remap", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert' || vim.mode == 'Visual')", "args": { "after": ["esc",  "/"] } },
@@ -22,7 +22,6 @@
             "workbench.action.acceptSelectedQuickOpenItem"
         ]
     }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
-
 
     // Add new cursor below/above alt + vim keys
     { "key": "alt+j", "command": "editor.action.insertCursorBelow",  "when": "editorTextFocus && vim.mode == 'Insert'" },
@@ -68,6 +67,10 @@
     { "key": "ctrl+j", "command": "workbench.action.navigateDown",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
     { "key": "ctrl+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
 
+    // Select auto suggest with j/k
+    { "key": "shift+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+    { "key": "shift+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+
     // Project pane (file explorer) file management
     { "key": "r",       "command": "renameFile",                "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
     { "key": "c",       "command": "filesExplorer.copy",        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
@@ -89,10 +92,10 @@
     { "key": "ctrl+.", "command": "editor.action.triggerSuggest", "when": "vim.mode == 'Insert' && editorTextFocus" },
 
     // Errors and warnings
-    // { "key": "space [ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    // { "key": "space ] t",     "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space [",     "command": "editor.action.marker.prev", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space ]",     "command": "editor.action.marker.next", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space [ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space ] t",     "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space [ [",     "command": "editor.action.marker.prev", "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space ] ]",     "command": "editor.action.marker.next", "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "space d", "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // AI

@@ -15,7 +15,7 @@
     "window.commandCenter": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "window.zoomLevel": 0.1,
+    "window.zoomLevel": 0,
     "editor.rulers": [
         320
     ],
@@ -237,6 +237,10 @@
         // Delete without affecting the clipboard
         { "before": ["x"], "commands": ["deleteRight"] },
         { "before": ["X"], "commands": ["deleteLeft"] },
+
+        // Numbers
+        { "before": ["+"], "commands": ["editor.emmet.action.incrementNumberByOne"] },
+        { "before": ["-"], "commands": ["editor.emmet.action.decrementNumberByOne"] },
 
         // Text object motions
         // ===> Selection

@@ -70,6 +70,7 @@ alias grep='grep --color=auto'
 # -------------------------------------------------------------------
 alias edit='code'
 alias vim='nvim'
+alias n='nvim .'
 alias reamp='open -a reAmp'
 alias winamp='open -a reAmp'
 alias subl='subl -n'
