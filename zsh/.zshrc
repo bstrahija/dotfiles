@@ -41,7 +41,6 @@ source ~/.config/wordpress/wordpress.zsh
 # ZSH plugins
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_PREFIX/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # Starship
 eval "$(starship init zsh)"
@@ -78,3 +77,5 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/81/"
+export PATH="/Users/bstrahija/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/bstrahija/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

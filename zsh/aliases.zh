@@ -12,7 +12,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 # TMUX
 # -------------------------------------------------------------------
 alias tx="tmux"
+alias txl="tmux ls"
 alias txn="tmux new -s"
+alias txk="tmux kill-server"
 alias txa="tmux attach"
 alias txm="tmuxinator start"
 alias txdot="tmuxinator start dotfiles"
