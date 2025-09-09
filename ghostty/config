@@ -1,25 +1,29 @@
+#########################
+# Looks and font
+#########################
 theme = nord
-font-family = Hack Nerd Font Mono
-font-size = 13
+font-family = MonaspiceKr Nerd Font
+font-size = 12
 font-thicken = true
-background = #2d353b
+background-opacity = 0.85
+background-blur-radius = 30
+cursor-style = block
+cursor-style-blink = false
 
+#########################
+# WINDOW
+#########################
+macos-titlebar-style = hidden
+confirm-close-surface = false
+window-decoration = auto
+window-padding-x = 12
+window-padding-y = 4
+window-padding-balance = false
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
 adjust-cell-height = 30%
-cursor-style = block
-cursor-style-blink = false
-background-opacity = 0.9
-background-blur-radius = 30
-
-window-width = 83
-window-height = 23
-window-padding-x = 20
-window-padding-y = 5
-
 confirm-close-surface = false
 clipboard-paste-protection = false
-macos-titlebar-style=tabs
 
 # Use option key as meta in TMUX
 macos-option-as-alt = true
@@ -28,18 +32,22 @@ macos-option-as-alt = true
 # This is disabled due to it is replaced by Raycast
 # keybind = global:ctrl+<=toggle_visibility
 
+#########################
+# KEYBINDS
+#########################
+
 # Global toggle the quick terminal
-keybind = global:ctrl+f1=toggle_quick_terminal
+# keybind = global:ctrl+f1=toggle_quick_terminal
 
 # Move between panes in terminal (not TMUX)
-keybind = option+command+up=goto_split:top
-keybind = option+command+down=goto_split:bottom
-keybind = option+command+left=goto_split:left
-keybind = option+command+right=goto_split:right
-keybind = option+shift+<=text:~
+# keybind = option+command+up=goto_split:top
+# keybind = option+command+down=goto_split:bottom
+# keybind = option+command+left=goto_split:left
+# keybind = option+command+right=goto_split:right
+# keybind = option+shift+<=text:~
 
 # Unbind stuff for TMUX
-keybind = opt+left=unbind
-keybind = opt+right=unbind
-keybind = grave_accent=unbind
-keybind = grave_accent=unbind
+# keybind = opt+left=unbind
+# keybind = opt+right=unbind
+# keybind = grave_accent=unbind
+# keybind = grave_accent=unbind
