@@ -4,6 +4,7 @@ composer/auth.json
 composer/vendor
 license.*
 licence.*
+_old
 
 cursor/globalStorage
 cursor/History
