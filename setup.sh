@@ -59,6 +59,9 @@ packages=(
     stow
     stripe/stripe-cli/stripe # Stripe CLI
     thefuck
+    tmux
+    tmuxinator
+    tpm
     tldr
     trash
     wp-cli
@@ -107,6 +110,17 @@ echo "======================================================================="
 rm ~/Code
 ln -s "$CODE_DIR" ~/Code
 echo "--- Done. ---" && echo ""
+
+# tmux
+ECHO "======================================================================="
+ECHO "==> tMUX pLUGINS"
+ECHO "======================================================================="
+IF [ ! -D ~/.TMUX/PLUGINS/TPM ]; THEN
+    GIT CLONE HTTPS://GITHUB.COM/TMUX-PLUGINS/TPM ~/.TMUX/PLUGINS/TPM
+    echo "--- Done installing TPM. ---" && echo ""
+else
+    echo "--- TPM already exists, skipping installation. ---" && echo ""
+fi
 
 # Link up editor configs
 echo "======================================================================="
@@ -173,6 +187,7 @@ apps=(
     reaper # Digital audio workstation
     reflex-app # forward play key to Spotify
     rocket # Emojis
+    sesh # Tmux sessions
     setapp
     signal # Secure messaging
     slack
@@ -184,6 +199,7 @@ apps=(
     viber
     virtualbox
     visual-studio-code
+    yq
     zed
     zen-browser
     zoom

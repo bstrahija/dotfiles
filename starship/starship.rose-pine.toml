@@ -1,11 +1,11 @@
-# Nord
+# Rose Pine
 
 format = """
-[░▒▓](#93aed2)\
-[  ](bg:#93aed2 fg:#090c0c)\
-[](bg:#88bfd0 fg:#93aed2)\
+[░▒▓](#e99b97)\
+[  ](bg:#ebbcba fg:#090c0c)\
+[](bg:#e99b97 fg:#ebbcba)\
 $directory\
-[](fg:#88bfd0 bg:#394260)\
+[](fg:#e99b97 bg:#394260)\
 $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
@@ -19,7 +19,7 @@ $time\
 \n$character"""
 
 [directory]
-style = "fg:#262626 bg:#88bfd0"
+style = "fg:#262626 bg:#e99b97"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
