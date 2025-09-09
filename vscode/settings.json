@@ -1,11 +1,10 @@
 {
-    "workbench.colorTheme": "Nord",
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
     "editor.fontWeight": "400",
-    "editor.lineHeight": 2.5,
+    "editor.lineHeight": 2.6,
     "editor.cursorBlinking": "solid",
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
@@ -16,14 +15,14 @@
     "window.commandCenter": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "window.zoomLevel": 0.2,
+    "window.zoomLevel": 0.1,
     "editor.rulers": [
         320
     ],
     "workbench.editor.editorActionsLocation": "hidden",
     "editor.inlayHints.enabled": "off",
     "breadcrumbs.enabled": false,
-	"workbench.editor.tabSizing": "fit",
+	"workbench.editor.tabsizing": "fit",
     "catppuccin-icons.hidesExplorerArrows": true,
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
@@ -34,25 +33,27 @@
     "editor.selectionHighlight": true,
     "editor.hideCursorInOverviewRuler": true,
     "workbench.editor.enablePreview": false,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "auto",
     "editor.scrollbar.horizontalScrollbarSize": 6,
-    "editor.scrollbar.verticalScrollbarSize": 1,
+    "editor.scrollbar.verticalScrollbarSize": 4,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never",
+    "git.blame.statusBarItem.enabled": false,
 
     // Autosuggestions for editor
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.quickSuggestions": {
-        "other": "off",
-        "comments": "off",
-        "strings": "off"
-    },
+    // "editor.suggestOnTriggerCharacters": true,
+    // "editor.quickSuggestions": {
+    //     "other": "off",
+    //     "comments": "off",
+    //     "strings": "off"
+    // },
     "editor.tabCompletion": "on",
     "editor.snippetSuggestions": "top",
     "emmet.triggerExpansionOnTab": true,
 
     // Project pane (file explorer)
+    "explorer.compactFolders": false,
     "workbench.tree.indent": 18,
     "files.exclude": {
         "**/.idea": true,
@@ -138,15 +139,15 @@
         "*.embeddedhtml": "html",
         ".env*": "dotenv"
     },
-
-    // Git
-    "gitblame.inlineMessageEnabled": true,
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
     "git.decorations.enabled": false,
     "scm.diffDecorations": "gutter",
 
     // Other
     "files.autoSave": "onFocusChange",
-    "files.autoSaveDelay": 300,
+    "files.autoSaveDelay": 0,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "editor.linkedEditing": true,
@@ -162,6 +163,11 @@
             "addWords": true,
             "scope": "user"
         }
+    },
+    "cSpell.enabledNotifications": {
+        "Average Word Length too Long": false,
+        "Lines too Long": false,
+        "Maximum Word Length Exceeded": false
     },
 
     // Vim
@@ -180,22 +186,24 @@
     },
     "vscode-textobjects.vimEnabled": true, // Vim text objects
     "flash-vscode.caseSensitive": true,
+    "flash-vscode.labelKeys": "hjklgfdsaabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:'\",.<>/`~\\",
 
     // Vim keybindings
 
     // ==> Insert mode
     "vim.insertModeKeyBindings": [
-        { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-        { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        // { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        // { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
 
         // Undo breakpoints
         { "before": ["."], "after": [".", "<C-g>", "u"] },
         { "before": [","], "after": [",", "<C-g>", "u"] },
         { "before": [";"], "after": [";", "<C-g>", "u"] },
-        { "before": ["!"], "after": [";", "<C-g>", "u"] },
-        { "before": ["?"], "after": [";", "<C-g>", "u"] },
-        { "before": ["<"], "after": [";", "<C-g>", "u"] },
-        { "before": [">"], "after": [";", "<C-g>", "u"] },
+        { "before": ["!"], "after": ["!", "<C-g>", "u"] },
+        { "before": ["?"], "after": ["?", "<C-g>", "u"] },
+        { "before": ["<"], "after": ["<", "<C-g>", "u"] },
+        { "before": [">"], "after": [">", "<C-g>", "u"] },
     ],
 
      // ==> Normal mode
@@ -374,7 +382,13 @@
 
         // Scroll up/down and
         { "before": ["<C-d>"], "after": ["<C-d>", "z","z"] },
-        { "before": ["<C-u>"], "after": ["<C-u>", "z","z"] }
+        { "before": ["<C-u>"], "after": ["<C-u>", "z","z"] },
+
+        // Disable arrow keyy in normal to practice hj
+        { "before": ["<up>"], "commands": [":echo 'Use k instead of ↑'"] },
+        { "before": ["<down>"], "commands": [":echo 'Use j instead of ↓'"] },
+        { "before": ["<left>"], "commands": [":echo 'Use h instead of ←'"] },
+        { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] }
     ],
 
     // ==> Visual mode
@@ -427,6 +441,7 @@
     // Zen mode
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "none"
+    "zenMode.showTabs": "none",
+    "workbench.colorTheme": "Nord",
 
 }
