@@ -50,8 +50,10 @@ oklch
 OPCD
 opfl
 opflow
+optimizecheckouts
 optimizementor
 optimizepress
+optimizesubscriber
 opui
 pestphp
 phpactor

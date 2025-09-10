@@ -43,6 +43,7 @@ packages=(
     fzf # Fuzzy finder
     git
     helix # Helix editor
+    jj # Source control
     jq # JSON processor
     lnav # Log file viewer
     mailpit # Local email testing
