@@ -68,8 +68,10 @@
     { "key": "ctrl+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
 
     // Select auto suggest with j/k
-    { "key": "shift+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
-    { "key": "shift+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+    { "key": "ctrl+j", "command": "selectNextCodeAction", "when": "codeActionMenuVisible'" },
+    { "key": "ctrl+k", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
+    { "key": "ctrl+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+    { "key": "ctrl+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
 
     // Project pane (file explorer) file management
     { "key": "r",       "command": "renameFile",                "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus" },
@@ -87,6 +89,8 @@
 
     // Navigate quick input with tab key
     { "key": "tab", "command": "quickInput.next", "when": "inQuickInput && quickInputType == 'quickPick'" },
+    { "key": "ctrl+j", "command": "quickInput.next", "when": "inQuickInput && quickInputType == 'quickPick'" },
+    { "key": "ctrl+k", "command": "quickInput.previous", "when": "inQuickInput && quickInputType == 'quickPick'" },
 
     // Show quick suggestions
     { "key": "ctrl+.", "command": "editor.action.triggerSuggest", "when": "vim.mode == 'Insert' && editorTextFocus" },
@@ -94,9 +98,9 @@
     // Errors and warnings
     { "key": "space [ t",     "command": "editor.action.marker.prevInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
     { "key": "space ] t",     "command": "editor.action.marker.nextInFiles", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space [ [",     "command": "editor.action.marker.prev", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space ] ]",     "command": "editor.action.marker.next", "when": "vim.mode == 'Normal' && editorTextFocus" },
-    { "key": "space d", "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space [ [",     "command": "editor.action.marker.prev",        "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space ] ]",     "command": "editor.action.marker.next",        "when": "vim.mode == 'Normal' && editorTextFocus" },
+    { "key": "space d",       "command": "workbench.action.problems.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },
 
     // AI
     { "key": "space a",       "command": "workbench.panel.chat.view.copilot.focus",  "when": "vim.mode == 'Normal' && editorTextFocus" },

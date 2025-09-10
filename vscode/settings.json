@@ -208,8 +208,6 @@
 
      // ==> Normal mode
     "vim.normalModeKeyBindings": [
-        { "before": [":"],     "commands": ["workbench.action.showCommands"], "silent": true },
-
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
         { "before": ["H"], "after": ["^"] },
@@ -227,7 +225,7 @@
         // Code navigation and actions creolabx
         { "before": ["g", "d"],       "commands": ["editor.action.revealDefinition"],        "when": "vim.mode == 'Normal' && editorTextFocus" },
         { "before": ["g", "shift+d"], "commands": ["editor.action.revealDefinitionAside"],   "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "i"],       "commands": ["editor.action.goToImplementation"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["g", "I"],       "commands": ["editor.action.goToImplementation"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
         { "before": ["g", "h"],       "commands": ["editor.action.showHover"],               "when": "vim.mode == 'Normal' && editorTextFocus" },
         { "before": ["g", "t"],       "commands": ["editor.action.goToTypeDefinition"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
         { "before": ["g", "r"],       "commands": ["editor.action.referenceSearch.trigger"], "when": "vim.mode == 'Normal' && editorTextFocus" },
