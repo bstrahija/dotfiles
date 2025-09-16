@@ -199,7 +199,6 @@ apps=(
     viber
     virtualbox
     visual-studio-code
-    yq
     zed
     zen-browser
     zoom
