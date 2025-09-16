@@ -119,9 +119,9 @@ ECHO "======================================================================="
 IF [ ! -D ~/.TMUX/PLUGINS/TPM ]; THEN
     GIT CLONE HTTPS://GITHUB.COM/TMUX-PLUGINS/TPM ~/.TMUX/PLUGINS/TPM
     echo "--- Done installing TPM. ---" && echo ""
-else
+ELSE
     echo "--- TPM already exists, skipping installation. ---" && echo ""
-fi
+FI
 
 # Link up editor configs
 echo "======================================================================="
@@ -188,7 +188,6 @@ apps=(
     reaper # Digital audio workstation
     reflex-app # forward play key to Spotify
     rocket # Emojis
-    sesh # Tmux sessions
     setapp
     signal # Secure messaging
     slack
@@ -200,7 +199,6 @@ apps=(
     viber
     virtualbox
     visual-studio-code
-    yq
     zed
     zen-browser
     zoom
