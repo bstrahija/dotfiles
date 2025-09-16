@@ -188,7 +188,6 @@ apps=(
     reaper # Digital audio workstation
     reflex-app # forward play key to Spotify
     rocket # Emojis
-    sesh # Tmux sessions
     setapp
     signal # Secure messaging
     slack
