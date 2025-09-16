@@ -119,9 +119,9 @@ ECHO "======================================================================="
 IF [ ! -D ~/.TMUX/PLUGINS/TPM ]; THEN
     GIT CLONE HTTPS://GITHUB.COM/TMUX-PLUGINS/TPM ~/.TMUX/PLUGINS/TPM
     echo "--- Done installing TPM. ---" && echo ""
-else
+ELSE
     echo "--- TPM already exists, skipping installation. ---" && echo ""
-fi
+FI
 
 # Link up editor configs
 echo "======================================================================="
