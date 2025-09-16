@@ -25,14 +25,14 @@
 
 .tabs-container .tab {
     font-family: "MonaspiceKr Nerd Font", monospace !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .tabs-container .tab .label-name {
     padding-left: 8px;
     font-family: "MonaspiceKr Nerd Font", monospace !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
 }
 
 .tabs-container .monaco-icon-label::before {
@@ -53,7 +53,7 @@
 }
 
 .explorer-viewlet .monaco-icon-label .label-name {
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: 200 !important;
     opacity: 0.9 !important;
     height: 40px !important;
@@ -61,5 +61,5 @@
 
 .quick-input-widget {
     font-family: "MonaspiceKr Nerd Font", monospace !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
 }

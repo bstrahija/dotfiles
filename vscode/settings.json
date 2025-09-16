@@ -1,8 +1,9 @@
 {
+    "workbench.colorTheme": "Tokyo Night Storm",
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.fontWeight": "400",
     "editor.lineHeight": 2.6,
     "editor.cursorBlinking": "solid",
@@ -12,7 +13,6 @@
     "workbench.activityBar.location": "hidden",
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
-    "window.commandCenter": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "window.zoomLevel": 0,
@@ -37,8 +37,8 @@
     "editor.scrollbar.vertical": "auto",
     "editor.scrollbar.horizontalScrollbarSize": 6,
     "editor.scrollbar.verticalScrollbarSize": 4,
-    "editor.autoClosingBrackets": "never",
-    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
     "git.blame.statusBarItem.enabled": false,
 
     // Autosuggestions for editor
@@ -179,7 +179,9 @@
     "vim.highlightedyank.enable": true,
     "vim.smartRelativeLine": true,
     "vim.surround": true,
-    "vim.easymotion": true, // Search with "\\f"
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
     "extensions.experimental.affinity": { // Vim - make if more performant
         "vscode.vim": 1,
         "asvetliakov.vscode-neovim": 1
@@ -190,24 +192,23 @@
 
     // Vim keybindings
 
-    // ==> Insert mode
-    "vim.insertModeKeyBindings": [
-        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-        // { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-        // { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-
-        // Undo breakpoints
-        { "before": ["."], "after": [".", "<C-g>", "u"] },
-        { "before": [","], "after": [",", "<C-g>", "u"] },
-        { "before": [";"], "after": [";", "<C-g>", "u"] },
-        { "before": ["!"], "after": ["!", "<C-g>", "u"] },
-        { "before": ["?"], "after": ["?", "<C-g>", "u"] },
-        { "before": ["<"], "after": ["<", "<C-g>", "u"] },
-        { "before": [">"], "after": [">", "<C-g>", "u"] },
-    ],
-
      // ==> Normal mode
     "vim.normalModeKeyBindings": [
+        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+
+        // Files, tabs, search
+        { "before": ["leader", "space"],   "commands": ["workbench.action.quickOpen"],                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "f"],       "commands": ["workbench.action.quickOpen"],                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "tab"],     "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"], "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "w"],       "commands": ["workbench.action.files.save"],                       "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "q"],       "commands": ["workbench.action.closeActiveEditor"],                "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "Q"],       "commands": ["workbench.action.closeWindow"],                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", ","],       "commands": ["workbench.action.showAllEditors"],                   "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "p"],       "commands": ["workbench.action.showCommands"],                     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "/"],       "commands": ["workbench.action.findInFiles"],                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "="],       "commands": ["editor.action.formatDocument"],                      "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+        { "before": ["leader", "t"],       "commands": ["terminal.focus"],                                    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
+
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
         { "before": ["H"], "after": ["^"] },
@@ -218,19 +219,6 @@
         // Copying
         { "before": ["Y"], "after": ["y", "$"] },
         { "before": ["g", "y"], "after": ["m", "y", "g", "g", "V", "G", "y", "`", "y", "z", "z"] },
-
-        // Toggle comments in normal and visual mode
-        { "before": ["g", "c"], "commands": ["editor.action.commentLine"], "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
-
-        // Code navigation and actions creolabx
-        { "before": ["g", "d"],       "commands": ["editor.action.revealDefinition"],        "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "shift+d"], "commands": ["editor.action.revealDefinitionAside"],   "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "I"],       "commands": ["editor.action.goToImplementation"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "h"],       "commands": ["editor.action.showHover"],               "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "t"],       "commands": ["editor.action.goToTypeDefinition"],      "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "r"],       "commands": ["editor.action.referenceSearch.trigger"], "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "shift-r"], "commands": ["editor.action.rename"],                  "when": "vim.mode == 'Normal' && editorTextFocus" },
-        { "before": ["g", "s"],       "commands": ["tettekete.list-functions"],              "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)" },
 
         // Delete without affecting the clipboard
         { "before": ["x"], "commands": ["deleteRight"] },
@@ -378,9 +366,9 @@
 
     "vim.normalModeKeyBindingsNonRecursive": [
         // Flash search
-        { "before": ["s"], "commands": ["flash-vscode.start"] },
-        { "before": ["S"], "commands": ["flash-vscode.startSelection"] },
-        { "before": [ "<BS>" ], "commands": [ "flash-vscode.backspace" ] },
+        // { "before": ["s"], "commands": ["flash-vscode.start"] },
+        // { "before": ["S"], "commands": ["flash-vscode.startSelection"] },
+        // { "before": [ "<BS>" ], "commands": [ "flash-vscode.backspace" ] },
 
         // Scroll up/down and
         { "before": ["<C-d>"], "after": ["<C-d>", "z","z"] },
@@ -390,7 +378,33 @@
         { "before": ["<up>"], "commands": [":echo 'Use k instead of ↑'"] },
         { "before": ["<down>"], "commands": [":echo 'Use j instead of ↓'"] },
         { "before": ["<left>"], "commands": [":echo 'Use h instead of ←'"] },
-        { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] }
+        { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] },
+
+        // Harpoon
+        { "before": ["leader", "m"],       "commands": ["vscode-harpoon.addEditor"],       "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "b"],       "commands": ["vscode-harpoon.editorQuickPick"], "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "shift+m"], "commands": ["vscode-harpoon.editEditors"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "1"],       "commands": ["vscode-harpoon.gotoEditor1"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "2"],       "commands": ["vscode-harpoon.gotoEditor2"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "3"],       "commands": ["vscode-harpoon.gotoEditor3"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "4"],       "commands": ["vscode-harpoon.gotoEditor4"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+        { "before": ["leader", "5"],       "commands": ["vscode-harpoon.gotoEditor5"],     "when": "vim.mode == 'Normal' && editorTextFocus" },
+    ],
+
+    // ==> Insert mode
+    "vim.insertModeKeyBindings": [
+        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        // { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        // { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+
+        // Undo breakpoints
+        { "before": ["."], "after": [".", "<C-g>", "u"] },
+        { "before": [","], "after": [",", "<C-g>", "u"] },
+        { "before": [";"], "after": [";", "<C-g>", "u"] },
+        { "before": ["!"], "after": ["!", "<C-g>", "u"] },
+        { "before": ["?"], "after": ["?", "<C-g>", "u"] },
+        { "before": ["<"], "after": ["<", "<C-g>", "u"] },
+        { "before": [">"], "after": [">", "<C-g>", "u"] },
     ],
 
     // ==> Visual mode
@@ -444,6 +458,7 @@
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.showTabs": "none",
-    "workbench.colorTheme": "Nord",
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false
 
 }
