@@ -26,6 +26,7 @@ Hashids
 HELPDESK
 HELPSCOUT
 highlevel
+Hyperkey
 Icontact
 inertiajs
 infusionsoft
@@ -64,6 +65,7 @@ phpx
 Recalc
 RECAPTCHA
 relativenumber
+Samcart
 sendfox
 SERVERURL
 showmode

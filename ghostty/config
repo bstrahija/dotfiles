@@ -1,11 +1,11 @@
 #########################
 # Looks and font
 #########################
-theme = nord
+theme = tokyonight_moon
 font-family = MonaspiceKr Nerd Font
 font-size = 12
 font-thicken = true
-background-opacity = 0.85
+background-opacity = 0.75
 background-blur-radius = 30
 cursor-style = block
 cursor-style-blink = false
@@ -17,11 +17,11 @@ macos-titlebar-style = hidden
 confirm-close-surface = false
 window-decoration = auto
 window-padding-x = 12
-window-padding-y = 4
+window-padding-y = 8
 window-padding-balance = false
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
-adjust-cell-height = 30%
+adjust-cell-height = 60%
 confirm-close-surface = false
 clipboard-paste-protection = false
 
