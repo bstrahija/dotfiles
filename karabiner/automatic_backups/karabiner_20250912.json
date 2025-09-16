@@ -3,8 +3,8 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.to_if_alone_timeout_milliseconds": 200,
-                    "basic.to_if_held_down_threshold_milliseconds": 200
+                    "basic.to_if_alone_timeout_milliseconds": 170,
+                    "basic.to_if_held_down_threshold_milliseconds": 170
                 },
                 "rules": [
                     {
@@ -60,7 +60,6 @@
                     },
                     {
                         "description": "Change spacebar to left_control. (Post spacebar if pressed alone)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
@@ -75,7 +74,7 @@
                         ]
                     },
                     {
-                        "description": "Change R-OPT+HJKL to arrow keys",
+                        "description": "Change right_option+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {

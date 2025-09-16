@@ -75,7 +75,7 @@
                         ]
                     },
                     {
-                        "description": "Change R-OPT+HJKL to arrow keys",
+                        "description": "Change right_option+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
