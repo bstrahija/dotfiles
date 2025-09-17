@@ -50,7 +50,7 @@
     { "key": "ctrl+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
 
     // Select auto suggest with j/k
-    { "key": "ctrl+j", "command": "selectNextCodeAction", "when": "codeActionMenuVisible'" },
+    { "key": "ctrl+j", "command": "selectNextCodeAction", "when": "codeActionMenuVisible" },
     { "key": "ctrl+k", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
     { "key": "ctrl+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
     { "key": "ctrl+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },

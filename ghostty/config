@@ -1,7 +1,7 @@
 #########################
 # Looks and font
 #########################
-theme = tokyonight_moon
+theme = Tokyonight Moon
 font-family = MonaspiceKr Nerd Font
 font-size = 12
 font-thicken = true
