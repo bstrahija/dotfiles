@@ -128,6 +128,11 @@
     // Zen mode
     { "key": "g z", "command": "workbench.action.toggleZenMode", "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
 
+    // Accepting suggestions
+    { "key": "ctrl+y", "command": "editor.action.inlineSuggest.commit",     "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editor.hasSelection && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editor.hasSelection && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible" },
+    { "key": "ctrl+y", "command": "editor.action.inlineSuggest.commit",     "when": "inInlineEditsPreviewEditor" },
+    { "key": "ctrl+y", "command": "editor.emmet.action.expandAbbreviation", "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus" },
+    { "key": "ctrl+y", "command": "acceptSelectedSuggestion",               "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
 
     // ==========================================
     // These are removed
@@ -142,5 +147,10 @@
     { "key": "alt+cmd+b", "command": "-workbench.action.toggleAuxiliaryBar" },
     { "key": "ctrl+]", "command": "-extension.vim_ctrl+]", "when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl" },
     { "key": "alt+cmd+right", "command": "-workbench.action.nextEditor" },
-    { "key": "ctrl+x", "command": "-extension.vim_ctrl+x", "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl" }
+    { "key": "ctrl+x", "command": "-extension.vim_ctrl+x", "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl" },
+    { "key": "tab", "command": "-editor.action.inlineSuggest.jump", "when": "inlineEditIsVisible && tabShouldJumpToInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible" },
+    { "key": "tab", "command": "-insertBestCompletion", "when": "atEndOfWord && textInputFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'" },
+    { "key": "tab", "command": "-insertNextSuggestion", "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'" },
+    { "key": "tab", "command": "-insertSnippet", "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+    }
 ]
