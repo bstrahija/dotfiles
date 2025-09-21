@@ -40,6 +40,9 @@
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "git.blame.statusBarItem.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "security.workspace.trust.untrustedFiles": "open",
 
     // Autosuggestions for editor
     // "editor.suggestOnTriggerCharacters": true,
@@ -83,7 +86,6 @@
     // ==> PHP
     "php.version": "v8.4",
     "intelephense.environment.phpVersion": "8.4.0",
-    "php.codeLens.enabled": false,
     "php.executables": {
         "v7.4": "/Users/bstrahija/Library/Application Support/Herd/bin/php74",
         "v8.0": "/Users/bstrahija/Library/Application Support/Herd/bin/php80",
@@ -100,6 +102,7 @@
         "**/_ide_helper_models*",
         "**/.phpstorm.meta.php"
     ],
+    "php.completion.showParameters": true,
     "php.problems.excludeGitIgnore": true,
     "Laravel.phpEnvironment": "herd",
     "[php]": {
@@ -187,14 +190,14 @@
         "asvetliakov.vscode-neovim": 1
     },
     "vscode-textobjects.vimEnabled": true, // Vim text objects
-    "flash-vscode.caseSensitive": true,
-    "flash-vscode.labelKeys": "hjklgfdsaabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:'\",.<>/`~\\",
+    "vim.sneakReplacesF": true,
+    "vim.targets.enable": true,
 
     // Vim keybindings
 
      // ==> Normal mode
     "vim.normalModeKeyBindings": [
-        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
+        { "before": ["<Esc>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
 
         // Files, tabs, search
         { "before": ["leader", "space"],   "commands": ["workbench.action.quickOpen"],                        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)" },
@@ -365,19 +368,14 @@
     ],
 
     "vim.normalModeKeyBindingsNonRecursive": [
-        // Flash search
-        // { "before": ["s"], "commands": ["flash-vscode.start"] },
-        // { "before": ["S"], "commands": ["flash-vscode.startSelection"] },
-        // { "before": [ "<BS>" ], "commands": [ "flash-vscode.backspace" ] },
-
         // Scroll up/down and
         { "before": ["<C-d>"], "after": ["<C-d>", "z","z"] },
         { "before": ["<C-u>"], "after": ["<C-u>", "z","z"] },
 
         // Disable arrow keyy in normal to practice hj
-        { "before": ["<up>"], "commands": [":echo 'Use k instead of ↑'"] },
-        { "before": ["<down>"], "commands": [":echo 'Use j instead of ↓'"] },
-        { "before": ["<left>"], "commands": [":echo 'Use h instead of ←'"] },
+        { "before": ["<up>"],    "commands": [":echo 'Use k instead of ↑'"] },
+        { "before": ["<down>"],  "commands": [":echo 'Use j instead of ↓'"] },
+        { "before": ["<left>"],  "commands": [":echo 'Use h instead of ←'"] },
         { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] },
 
         // Harpoon
@@ -393,10 +391,6 @@
 
     // ==> Insert mode
     "vim.insertModeKeyBindings": [
-        { "before": ["<Ecs>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-        // { "before": ["j", "j"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-        // { "before": ["j", "k"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
-
         // Undo breakpoints
         { "before": ["."], "after": [".", "<C-g>", "u"] },
         { "before": [","], "after": [",", "<C-g>", "u"] },
@@ -457,8 +451,6 @@
     // Zen mode
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "none",
-    "workbench.navigationControl.enabled": false,
-    "window.commandCenter": false
+    "zenMode.showTabs": "none"
 
 }
