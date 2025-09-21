@@ -79,3 +79,6 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 export HERD_PHP_81_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/81/"
 export PATH="/Users/bstrahija/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/bstrahija/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# opencode
+export PATH=/Users/bstrahija/.opencode/bin:$PATH
