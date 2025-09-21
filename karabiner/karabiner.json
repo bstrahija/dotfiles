@@ -59,8 +59,7 @@
                         ]
                     },
                     {
-                        "description": "Change spacebar to left_control. (Post spacebar if pressed alone)",
-                        "enabled": false,
+                        "description": "Change spacebar to left_cmd. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
                                 "from": {
@@ -68,7 +67,7 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {},
-                                "to": [{ "key_code": "left_control" }],
+                                "to": [{ "key_code": "left_command" }],
                                 "to_if_alone": [{ "key_code": "spacebar" }],
                                 "type": "basic"
                             }
