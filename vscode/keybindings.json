@@ -44,16 +44,22 @@
     { "key": "ctrl+backspace", "command": "deleteRight", "when": "editorTextFocus && vim.mode == 'Insert'" },
 
     // Navigate panes with vim keys
-    { "key": "ctrl+h", "command": "workbench.action.navigateLeft",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
-    { "key": "ctrl+l", "command": "workbench.action.navigateRight", "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
-    { "key": "ctrl+j", "command": "workbench.action.navigateDown",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
-    { "key": "ctrl+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    // I set it up in karabiner, so use arrows
+    // { "key": "ctrl+h", "command": "workbench.action.navigateLeft",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    // { "key": "ctrl+l", "command": "workbench.action.navigateRight", "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    // { "key": "ctrl+j", "command": "workbench.action.navigateDown",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    // { "key": "ctrl+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    { "key": "cmd+alt+h", "command": "workbench.action.navigateLeft",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    { "key": "cmd+alt+l", "command": "workbench.action.navigateRight", "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    { "key": "cmd+alt+j", "command": "workbench.action.navigateDown",  "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
+    { "key": "cmd+alt+k", "command": "workbench.action.navigateUp",    "when": "(vim.mode == 'Normal || vim.mode == 'Visual) && editorTextFocus" },
 
     // Select auto suggest with j/k
-    { "key": "ctrl+j", "command": "selectNextCodeAction", "when": "codeActionMenuVisible" },
-    { "key": "ctrl+k", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
-    { "key": "ctrl+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
-    { "key": "ctrl+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+    // Since I have it setup in karabiner, we dont need this
+    // { "key": "ctrl+j", "command": "selectNextCodeAction", "when": "codeActionMenuVisible" },
+    // { "key": "ctrl+k", "command": "selectPrevCodeAction", "when": "codeActionMenuVisible" },
+    // { "key": "ctrl+j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
+    // { "key": "ctrl+k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && textInputFocus" },
 
     // Project pane (file explorer) file management
     { "key": "cmd+r",   "command": "runCommands", "args": { "commands": ["workbench.action.toggleSidebarVisibility", "workbench.files.action.focusFilesExplorer"] }, "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus" },
@@ -72,8 +78,8 @@
 
     // Navigate quick input with tab key
     { "key": "tab",    "command": "quickInput.next",     "when": "inQuickInput && quickInputType == 'quickPick'" },
-    { "key": "ctrl+j", "command": "quickInput.next",     "when": "inQuickInput && quickInputType == 'quickPick'" },
-    { "key": "ctrl+k", "command": "quickInput.previous", "when": "inQuickInput && quickInputType == 'quickPick'" },
+    // { "key": "ctrl+j", "command": "quickInput.next",     "when": "inQuickInput && quickInputType == 'quickPick'" },
+    // { "key": "ctrl+k", "command": "quickInput.previous", "when": "inQuickInput && quickInputType == 'quickPick'" },
 
     // Show quick suggestions
     { "key": "ctrl+.", "command": "editor.action.triggerSuggest", "when": "vim.mode == 'Insert' && editorTextFocus" },

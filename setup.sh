@@ -11,6 +11,7 @@ MOUNTPOINT=$(df -P "$SCRIPT_PATH" | tail -1 | awk '{print $6}')
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HOME_DIR="$(cd ~ && pwd)"
 CODE_DIR="$MOUNTPOINT/Code"
+BREWFILE_PATH="$DOTFILES_DIR/Brewfile"
 
 ## Install Homebrew
 if ! command -v brew &> /dev/null; then
@@ -29,53 +30,12 @@ echo "======================================================================="
 /bin/bash -c "$(curl -fsSL https://php.new/install/mac)"
 echo "--- Done installing PHP. ---" && echo ""
 
-# Install Homebrew packages
-
-echo "==> Installing homebrew packages..."
+# Install Homebrew packages and apps
 echo "======================================================================="
-packages=(
-    bat # Better cat
-    btop # Better top
-    dust # Better du
-    eza # Better ls
-    fastfetch
-    flashspace # Spaces replacement
-    fzf # Fuzzy finder
-    git
-    helix # Helix editor
-    jj # Source control
-    jq # JSON processor
-    lnav # Log file viewer
-    mailpit # Local email testing
-    mysql-client
-    nano
-    nanorc
-    nvim # Neovim
-    nvm
-    php-cs-fixer
-    prettyping # Better ping
-    ripgrep
-    speedtest-cli
-    starship
-    stow
-    stripe/stripe-cli/stripe # Stripe CLI
-    thefuck
-    tmux
-    tmuxinator
-    tpm
-    tldr
-    trash
-    wp-cli
-    xh # CURL alternative
-    yarn
-    zellij # Terminal multiplexer
-    zoxide # Smart directory navigation
-    zsh-syntax-highlighting # ZSH syntax highlighting
-    zsh-autosuggestions # ZSH command suggestions
-    zsh-completions # ZSH completions
-)
-brew install "${packages[@]}"
-echo "--- Done installing Homebrew packages. ---" && echo ""
+echo "==> Installing homebrew packages and apps from Brewfile..."
+echo "======================================================================="
+brew bundle
+echo "--- Done installing Homebrew packages and apps. ---" && echo ""
 
 # Git
 echo "======================================================================="
@@ -113,15 +73,15 @@ ln -s "$CODE_DIR" ~/Code
 echo "--- Done. ---" && echo ""
 
 # tmux
-ECHO "======================================================================="
-ECHO "==> tMUX pLUGINS"
-ECHO "======================================================================="
-IF [ ! -D ~/.TMUX/PLUGINS/TPM ]; THEN
-    GIT CLONE HTTPS://GITHUB.COM/TMUX-PLUGINS/TPM ~/.TMUX/PLUGINS/TPM
+echo "======================================================================="
+echo "==> Tmux Plugins"
+echo "======================================================================="
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     echo "--- Done installing TPM. ---" && echo ""
-ELSE
+else
     echo "--- TPM already exists, skipping installation. ---" && echo ""
-FI
+fi
 
 # Link up editor configs
 echo "======================================================================="
@@ -137,74 +97,6 @@ rm -rf "$HOME_DIR/Library/Application Support/Windsurf/User"
 ln -s "$DOTFILES_DIR/windsurf" "$HOME_DIR/Library/Application Support/Windsurf/User"
 echo "--- Done linking Windsurf config. ---" && echo ""
 
-# Install fonts
-echo "======================================================================="
-echo "==> Installing fonts..."
-echo "======================================================================="
-apps=(
-    font-caskaydia-cove-nerd-font
-    font-caskaydia-mono-nerd-font
-    font-fira-code-nerd-font
-    font-jetbrains-mono-nerd-font
-    font-meslo-lg-nerd-font
-    font-monaspace-nerd-font
-    font-roboto-mono-nerd-font
-    font-ubuntu-mono-nerd-font
-)
-brew install "${apps[@]}" --cask
-echo "--- Done installing fonts. ---" && echo ""
-
-# Install apps
-echo "======================================================================="
-echo "==> Installing apps..."
-echo "======================================================================="
-apps=(
-    alt-tab
-    coconutbattery
-    dbngin # Database management
-    dockey
-    dropbox
-    eqmac
-    ghostty
-    gimp
-    github
-    google-chrome
-    google-drive
-    handbrake-app # Video transcoder
-    herd # Laravel development
-    iina # Media player
-    imageoptim # Image optimization
-    jordanbaird-ice
-    karabiner-elements
-    linear-linear
-    notion # Note-taking app
-    mechvibes # Keyboard sound effects
-    obsidian # Note-taking app
-    ollama-app # Local AI model hosting
-    pearcleaner
-    postman # API development
-    raycast
-    reamp # Winamp cl
-    reaper # Digital audio workstation
-    reflex-app # forward play key to Spotify
-    rocket # Emojis
-    setapp
-    signal # Secure messaging
-    slack
-    stats
-    steam
-    stremio
-    sublime-text
-    transmission
-    viber
-    virtualbox
-    visual-studio-code
-    zed
-    zen-browser
-    zoom
-)
-brew install "${apps[@]}" --cask
-echo "--- Done installing apps. ---" && echo ""
 
 echo "======================================================================="
 echo "==> Done!"
