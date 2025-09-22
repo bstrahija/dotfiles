@@ -24,6 +24,7 @@ brew 'nvim'  # Text editor
 brew 'tmux'  # Term multiplexer
 
 # CLI Basics
+brew 'atuin'                   # Shell history with search and more
 brew 'bat'                     # Output highlighting (better cat)
 brew 'btop'                    # Resource monitor (better top)
 brew 'duf'                     # Get info on mounted disks (better df)
@@ -77,10 +78,8 @@ brew 'wp-cli'                    # WordPress command line tools
 brew 'cowsay'       # Have an ASCII cow say your message
 brew 'figlet'       # Output text as big ASCII art text
 brew 'lolcat'       # Make console output rainbow colored
-brew 'fastfetch'    # Show system data and ditstro info
+brew 'fastfetch'    # Show system data and distribution info
 brew 'pipes-sh'     # Cool terminal pipe screen saver
-brew 'pv'           # Pipe viewer, with animation options
-
 
 #############################################################
 # Desktop Applications                                      #

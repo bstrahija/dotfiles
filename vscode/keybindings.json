@@ -102,8 +102,9 @@
     // Toggle comments in normal and visual mode
     { "key": "g c", "command": "editor.action.commentLine", "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && editorTextFocus" },
 
-    // Search
+    // Search (open links)
     { "key": "ctrl+enter", "command": "editor.action.openLink", "when": "editorTextFocus" },
+    { "key": "g l",        "command": "editor.action.openLink", "when": "editorTextFocus" },
 
     // Code navigation and actions
     { "key": "g d",       "command": "editor.action.revealDefinition",        "when": "vim.mode == 'Normal' && editorTextFocus" },

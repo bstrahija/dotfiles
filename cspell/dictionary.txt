@@ -1,6 +1,7 @@
 activecampaign
 apikey
 APPNAME
+atuin
 AWEBER
 birdsend
 brevo
@@ -80,6 +81,7 @@ phpe
 phpunit
 phpx
 prettyping
+reamp
 Recalc
 RECAPTCHA
 relativenumber
@@ -90,6 +92,7 @@ showmode
 Sluggable
 Spatie
 Strahija
+stremio
 stylesheet
 symfony
 taggings
