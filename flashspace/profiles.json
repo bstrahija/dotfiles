@@ -5,17 +5,7 @@
       "name" : "Default",
       "workspaces" : [
         {
-          "appToFocus" : {
-            "bundleIdentifier" : "app.zen-browser.zen",
-            "iconPath" : "/Applications/Zen Browser.app/Contents/Resources/firefox.icns",
-            "name" : "Zen"
-          },
           "apps" : [
-            {
-              "bundleIdentifier" : "app.zen-browser.zen",
-              "iconPath" : "/Applications/Zen Browser.app/Contents/Resources/firefox.icns",
-              "name" : "Zen"
-            },
             {
               "bundleIdentifier" : "com.binarynights.forklift-setapp",
               "iconPath" : "/Applications/Setapp/ForkLift.app/Contents/Resources/AppIcon.icns",
@@ -25,6 +15,11 @@
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
               "name" : "Ghostty"
+            },
+            {
+              "bundleIdentifier" : "app.zen-browser.zen",
+              "iconPath" : "/Applications/Zen Browser.app/Contents/Resources/firefox.icns",
+              "name" : "Zen"
             }
           ],
           "display" : "DELL U2719D",
@@ -44,11 +39,6 @@
               "bundleIdentifier" : "com.microsoft.VSCode",
               "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
               "name" : "Code"
-            },
-            {
-              "bundleIdentifier" : "com.mitchellh.ghostty",
-              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
-              "name" : "Ghostty"
             },
             {
               "bundleIdentifier" : "com.github.GitHubClient",
@@ -94,6 +84,11 @@
               "bundleIdentifier" : "dev.zed.Zed",
               "iconPath" : "/Applications/Zed.app/Contents/Resources/Zed.icns",
               "name" : "Zed"
+            },
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
             }
           ],
           "display" : "DELL U2719D",
