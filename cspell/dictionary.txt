@@ -58,6 +58,7 @@ madmimi
 mailpit
 mapleader
 maplocalleader
+Merch
 Monaspice
 nanorc
 neofetch
@@ -108,4 +109,5 @@ wezterm
 woocommerce
 wpdb
 wpforms
+Zimsko
 zoomnew
