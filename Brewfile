@@ -134,6 +134,7 @@ cask 'flashspace'                                   # Better workspaces
 cask 'google-chrome', args: { require_sha: false }  # Web browser
 cask 'google-drive'                                 # Cloud storage
 cask 'jordanbaird-ice'                              # Clean menu bar
+cask 'localsend'                                    # Local file sharing
 cask 'karabiner-elements'                           # Keyboard remap
 cask 'pearcleaner'                                  # Uninstall apps
 cask 'raycast'                                      # Productivity launcher
