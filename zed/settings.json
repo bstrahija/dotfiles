@@ -1,178 +1,123 @@
 {
-    // VIM
-    "vim_mode": true,
+  // VIM
+  "vim_mode": true,
 
-    // Looks
-    "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "Tokyo Night Storm"
-    },
-    "buffer_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 14,
-    "ui_font_size": 16,
-    "icon_theme": "Bearded Icon Theme",
-    "buffer_line_height": { "custom": 2.6 },
-    "cursor_blink": false,
-    "show_whitespaces": "selection",
-    "project_panel": {
-        "dock": "right",
-        "default_width": 360
-    },
-    "terminal": {
-        "font_size": 13,
-        "line_height": {
-            "custom": 1.6
-        }
-    },
+  // Looks
+  "icon_theme": "Bearded Icon Theme",
+  "buffer_font_family": "MonaspiceKr Nerd Font",
+  "buffer_font_size": 14,
+  "ui_font_size": 16,
+  "minimap": { "show": "never" },
+  "buffer_font_features": { "calt": 0 },
+  "buffer_line_height": { "custom": 2.6 },
+  "relative_line_numbers": true,
+  "theme": { "mode": "system", "light": "Tokyo Night Storm", "dark": "Tokyo Night Storm" },
+  "show_whitespaces": "selection",
+  "project_panel": { "dock": "right", "default_width": 360 },
+  "terminal": { "font_size": 13, "line_height": { "custom": 1.6 } },
 
-    // Other
-    "autosave": "on_focus_change",
-    "base_keymap": "VSCode",
-    "relative_line_numbers": true,
-    "telemetry": {
-        "metrics": false,
-        "diagnostics": false
-    },
+  // Other
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "VSCode",
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
 
-    // Files, indexing, etc.
-    "file_scan_exclusions": ["_model_helpers.php"],
-    "file_types": {
-        "PHP": ["*.php", "_ide_helper.php"],
-        "Blade": ["*.blade.php"]
-    },
+  // Files, indexing, etc.
+  "file_scan_exclusions": ["_model_helpers.php"],
+  "file_types": {
+      "PHP": ["*.php", "_ide_helper.php"],
+      "Blade": ["*.blade.php"]
+  },
 
-    // Cleaup of UI
-    "preview_tabs": {
-        "enabled": false
-    },
-    "tabs": {
-        "file_icons": false,
-        "git_status": true
-    },
-    "tab_bar": {
-        "show": true,
-        "show_tab_bar_buttons": false,
-        "show_nav_history_buttons": false
-    },
-    "toolbar": {
-        "breadcrumbs": false,
-        "selections_menu": false,
-        "quick_actions": false
-    },
+  // Cleanup of UI
+  "preview_tabs": {
+      "enabled": false
+  },
+  "tabs": {
+      "file_icons": false,
+      "git_status": true
+  },
+  "tab_bar": {
+      "show": true,
+      "show_tab_bar_buttons": false,
+      "show_nav_history_buttons": false
+  },
+  "toolbar": {
+      "breadcrumbs": false,
+      "selections_menu": false,
+      "quick_actions": false
+  },
 
-    // Indentation and wrapping
-    "tab_size": 4,
-    "wrap_guides": [120],
-    "indent_guides": {
-        "enabled": true,
-        "coloring": "fixed",
-        "active_line_width": 2
-    },
+  // Indentation and wrapping
+  "tab_size": 4,
+  "wrap_guides": [120],
+  "indent_guides": {
+      "enabled": true,
+      "coloring": "fixed",
+      "active_line_width": 2
+  },
 
-    // AI
-    "show_edit_predictions": true,
-    "features": {
-        "edit_prediction_provider": "copilot"
-    },
-    "agent": {
-        "always_allow_tool_actions": true,
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4"
-        },
-        "dock": "left"
-    },
-    "language_models": {
-        "ollama": {
-            "api_url": "http://localhost:11434"
-        }
-    },
-    "context_servers": {
-        "laravel-boost": {
-            "source": "custom",
-            "enabled": true,
-            "command": "php",
-            "args": ["artisan", "boost:mcp"],
-            "env": {}
-        },
-        "wordpress-mcp": {
-            "source": "custom",
-            "enabled": true,
-            "command": "npx",
-            "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
-            "env": {
-                "JWT_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dvcmRwcmVzcy50ZXN0IiwiaWF0IjoxNzU1Nzg0OTQ3LCJleHAiOjE3NTU3ODg1NDcsInVzZXJfaWQiOjEsImp0aSI6ImIyTHBKTkFtejF3Y1VPeWlJMjROR01QQkV3cTQxNEtVIn0.upJGRXMy-vHv9O94sN3UVNvszdV_udcJDhzz9ASxAAk",
-                "WP_API_URL": "https://wordpress.test/"
-            }
-        }
-    },
+  // Languages settings
+  "inlay_hints": {
+      "enabled": false
+  },
 
-    // Languages settings
-    "inlay_hints": {
-        "enabled": false
-    },
-    "languages": {
-        "PHP": {
-            "language_servers": [
-                "intelephense",
-                "!phpactor",
-                "phptools",
-                "phpdocs",
-                "..."
-            ],
-            "format_on_save": "on",
-            "formatter": {
-                "external": {
-                    "command": "bash",
-                    "arguments": [
-                        "-c",
-                        "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
-                    ]
-                }
-            }
-            // "formatter": "language_server"
-        },
-        "Blade": {
-            "format_on_save": "on",
-            "formatter": {
-                "external": {
-                    "command": "npx",
-                    "arguments": [
-                        "prettier",
-                        "--stdin-filepath",
-                        "{buffer_path}",
-                        "--plugin=/opt/homebrew/lib/node_modules/prettier-plugin-blade/plugin.js",
-                        "--parser=blade"
-                    ]
-                }
-            }
-        }
-    },
+  "languages": {
+      "PHP": {
+          "language_servers": [
+              "!intelephense",
+              "!phpactor",
+              "phptools",
+              "phpdocs",
+              "..."
+          ],
+          "format_on_save": "on",
+          "formatter": {
+              "external": {
+                  "command": "bash",
+                  "arguments": [
+                      "-c",
+                      "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
+                  ]
+              }
+          }
+      },
+      "Blade": {
+          "format_on_save": "on",
+          "formatter": {
+              "external": {
+                  "command": "npx",
+                  "arguments": [
+                      "prettier",
+                      "--stdin-filepath",
+                      "{buffer_path}",
+                      "--plugin=/opt/homebrew/lib/node_modules/prettier-plugin-blade/plugin.js",
+                      "--parser=blade"
+                  ]
+              }
+          }
+      }
+  },
 
-    // LSP settings
-    "lsp": {
-        "intelephense": {
-            "initialization_options": {
-                "licenceKey": "~/.config/intelephense/licence.txt"
-            },
-            "settings": {
-                "environment": {
-                    "phpVersion": "8.4.0"
-                }
-            }
-        },
-        "phptools": {
-            "initialization_options": {
-                "0": "~/.config/phptools/license.json"
-            }
-        },
-        "phpactor": {
-            "initialization_options": {
-                "language_server_php_cs_fixer.enabled": true,
-                "language_server_php_cs_fixer.bin": "/opt/homebrew/bin/php-cs-fixer",
-                "language_server_completion.trim_leading_dollar": false
-            }
-        }
-    }
+  // LSP settings
+  "lsp": {
+      "intelephense": {
+          "initialization_options": {
+              "licenceKey": "~/.config/intelephense/licence.txt"
+          },
+          "settings": {
+              "environment": {
+                  "phpVersion": "8.4.0"
+              }
+          }
+      },
+      "phptools": {
+          "initialization_options": {
+              "0": "~/.config/phptools/license.json"
+          }
+      }
+  }
 }

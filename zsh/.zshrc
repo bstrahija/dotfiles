@@ -49,9 +49,16 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
 
+# opencode
+export PATH=/Users/bstrahija/.opencode/bin:$PATH
+export PATH="/opt/homebrew/sbin:$PATH"
+
+
+
 # Herd injected NVM configuration
 export NVM_DIR="/Users/bstrahija/Library/Application Support/Herd/config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 [[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
 
 # Herd injected PHP binary.
@@ -77,8 +84,3 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/81/"
-export PATH="/Users/bstrahija/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/Users/bstrahija/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-
-# opencode
-export PATH=/Users/bstrahija/.opencode/bin:$PATH
