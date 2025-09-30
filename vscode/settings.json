@@ -1,6 +1,6 @@
 {
+    "workbench.colorTheme": "Rosé Pine Moon",
     "workbench.iconTheme": "bearded-icons",
-    "workbench.colorTheme": "Tokyo Night Storm",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
     "editor.fontSize": 14,
@@ -198,8 +198,12 @@
     "vim.normalModeKeyBindings": [
         { "before": ["<Esc>"], "after": ["<Esc>"], "commands": [":nohl"], "silent": true },
 
-        // Command mode without shift
-        { "before": [";"], "after": [":"] },
+        // Nicer redo
+        { "before": ["U"], "after": ["<C-r>"] },
+
+        // Navigate tabs with the tab key
+        { "before": ["<Tab>"],   "commands": ["workbench.action.nextEditor"] },
+        { "before": ["<S-Tab>"], "commands": ["workbench.action.previousEditor"] },
 
         // Projects
         { "before": ["g", "p"], "commands": ["projectManager.listProjects"] },
@@ -227,6 +231,14 @@
         { "before": ["g", "s"],       "commands": ["tettekete.list-functions"] },
         { "before": ["g", "o"],       "commands": ["workbench.action.gotoSymbol"] },
 
+        // Errors and warnings
+        { "before": ["g", "e", "["], "commands": ["editor.action.marker.prevInFiles"] },
+        { "before": ["g", "e", "]"], "commands": ["editor.action.marker.nextInFiles"] },
+        { "before": ["g", "["],      "commands": ["editor.action.marker.prev"] },
+        { "before": ["g", "]"],      "commands": ["editor.action.marker.next"] },
+        { "before": ["g", "e", "a"], "commands": ["workbench.action.problems.focus"] },
+        { "before": ["g", "e", "e"], "commands": ["workbench.action.problems.focus"] },
+
         // Zen mode
         { "before": ["g", "z"], "commands": ["workbench.action.toggleZenMode"] },
 
@@ -235,7 +247,7 @@
         { "before": ["leader", "f"],       "commands": ["workbench.action.quickOpen"] },
         { "before": ["leader", "tab"],     "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"] },
         { "before": ["leader", "w"],       "commands": ["workbench.action.files.save"] },
-        { "before": ["leader", "q"],       "commands": ["workbench.action.closeActiveEditor"] },
+        { "before": ["leader", "q", "q"],  "commands": ["workbench.action.closeActiveEditor"] },
         { "before": ["leader", "Q"],       "commands": ["workbench.action.closeWindow"] },
         { "before": ["leader", ","],       "commands": ["workbench.action.showAllEditors"] },
         { "before": ["leader", "c"],       "commands": ["workbench.action.showCommands"] },
@@ -244,17 +256,11 @@
         { "before": ["leader", "t"],       "commands": ["terminal.focus"] },
         { "before": ["leader", "p"],       "commands": ["projectManager.listProjects"] },
 
-        // Open JSON settings and keyboard shortcuts
+        // Open JSON settings and keyboard shortcuts, and themes and icons
         { "before": ["leader", "s", "s"], "commands": ["workbench.action.openSettingsJson"] },
         { "before": ["leader", "s", "k"], "commands": ["workbench.action.openGlobalKeybindingsFile"] },
-
-        // Errors and warnings
-        { "before": ["g", "e", "["], "commands": ["editor.action.marker.prevInFiles"] },
-        { "before": ["g", "e", "]"], "commands": ["editor.action.marker.nextInFiles"] },
-        { "before": ["g", "["],      "commands": ["editor.action.marker.prev"] },
-        { "before": ["g", "]"],      "commands": ["editor.action.marker.next"] },
-        { "before": ["g", "e", "a"], "commands": ["workbench.action.problems.focus"] },
-        { "before": ["g", "e", "e"], "commands": ["workbench.action.problems.focus"] },
+        { "before": ["leader", "s", "t"], "commands": ["workbench.action.selectTheme"] },
+        { "before": ["leader", "s", "i"], "commands": ["workbench.action.selectIconTheme"] },
 
         // Go to links
         { "before": ["g", "l"], "commands": ["editor.action.openLink"] },
@@ -462,7 +468,7 @@
     ],
 
     // Env
-    "dotenv.enableAutocloaking": true,
+    "dotenv.enableAutocloaking": false,
     "dotenv.cloakColor": "#fcc",
     "dotenv.cloakIcon": "*",
     "editor.tokenColorCustomizations": {
@@ -486,14 +492,7 @@
                 }
             ]
         },
-        "textMateRules": [
-            {
-                "scope": "keyword.other.dotenv",
-                "settings": {
-                    "foreground": "#FF000000"
-                }
-            }
-        ]
+        "textMateRules": []
     },
     "php.format.codeStyle": "Laravel",
 
