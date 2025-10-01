@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Rosé Pine Moon",
+    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
@@ -28,7 +28,7 @@
     "workbench.layoutControl.enabled": false,
     "editor.matchBrackets": "near",
     "editor.lightbulb.enabled": "off",
-    "editor.renderLineHighlight": "gutter",
+    "editor.renderLineHighlight": "all",
     "editor.occurrencesHighlight": "off",
     "editor.selectionHighlight": true,
     "editor.hideCursorInOverviewRuler": true,
@@ -145,7 +145,7 @@
     "Lua.diagnostics.globals": [
         "vim"
     ],
-    "git.decorations.enabled": false,
+    "git.decorations.enabled": true,
     "scm.diffDecorations": "gutter",
 
     // Other
@@ -180,7 +180,6 @@
     "vim.hlsearch": true,
     "vim.useSystemClipboard": false,
     "vim.highlightedyank.enable": true,
-    "vim.smartRelativeLine": true,
     "vim.surround": true,
     "vim.sneak": true,
     "vim.sneakUseIgnorecaseAndSmartcase": true,
@@ -204,6 +203,9 @@
         // Navigate tabs with the tab key
         { "before": ["<Tab>"],   "commands": ["workbench.action.nextEditor"] },
         { "before": ["<S-Tab>"], "commands": ["workbench.action.previousEditor"] },
+
+        // Easy change upper/lower case
+        { "before": ["`"], "after": ["~"] },
 
         // Projects
         { "before": ["g", "p"], "commands": ["projectManager.listProjects"] },
@@ -281,6 +283,10 @@
         // Numbers
         { "before": ["+"], "commands": ["editor.emmet.action.incrementNumberByOne"] },
         { "before": ["-"], "commands": ["editor.emmet.action.decrementNumberByOne"] },
+
+        // Indenting lines
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
 
         // Text object motions
         // ===> Selection
@@ -412,10 +418,6 @@
         { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.comment.start"] },
         { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.comment.start"] },
         { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] },
-
-        // Indenting lines
-        { "before": [">"], "commands": ["editor.action.indentLines"] },
-        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     ],
 
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -456,6 +458,9 @@
     "vim.visualModeKeyBindings": [
         // Command mode without shift
         { "before": [";"], "after": [":"] },
+
+        // Easy change upper/lower case
+        { "before": ["`"], "after": ["~"] },
 
         // Indentin lines
         { "before": [">"], "commands": ["editor.action.indentLines"] },
@@ -499,6 +504,9 @@
     // Zen mode
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
-    "zenMode.showTabs": "none"
+    "zenMode.showTabs": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 
 }
