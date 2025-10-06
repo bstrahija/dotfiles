@@ -46,6 +46,7 @@ brew 'sd'                      # RegEx find and replace (better sed)
 brew 'speedtest-cli'           # Speedtest from the CLI
 brew 'starship'                # Cross-shell prompt
 brew 'stow'                    # Manage dotfiles
+brew 'gromgit/brewtils/taproom' # Brew tap management
 brew 'thefuck'                 # Auto-correct miss-typed commands
 brew 'tmuxinator'              # Manage complex tmux sessions
 brew 'tpm'                     # Tmux plugin manager
