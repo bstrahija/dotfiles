@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
+    "workbench.colorTheme": "Nord Deep",
     "workbench.iconTheme": "bearded-icons",
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
@@ -270,7 +270,7 @@
         // Move to line start/end
         { "before": ["L"], "after": ["$"] },
         { "before": ["H"], "after": ["^"] },
-        { "before": ["0"], "after": ["^"] },
+        // { "before": ["0"], "after": ["^"] },
 
         // Copying
         { "before": ["Y"], "after": ["y", "$"] },

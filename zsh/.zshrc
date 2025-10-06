@@ -53,8 +53,6 @@ eval $(thefuck --alias)
 export PATH=/Users/bstrahija/.opencode/bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 
-
-
 # Herd injected NVM configuration
 export NVM_DIR="/Users/bstrahija/Library/Application Support/Herd/config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
