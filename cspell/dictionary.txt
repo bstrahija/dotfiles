@@ -34,6 +34,7 @@ gotowebinar
 Hashids
 HELPDESK
 HELPSCOUT
+heroicon
 highlevel
 Hyperkey
 Icontact
@@ -63,6 +64,7 @@ Monaspice
 nanorc
 neofetch
 ngrok
+nobold
 nord
 nvim
 oklch
