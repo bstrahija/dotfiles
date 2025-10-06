@@ -8,6 +8,152 @@
                 },
                 "rules": [
                     {
+                        "description": "`left_option` + `[` = `š`",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.US" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
+                                "to_after_key_up": [
+                                    { "key_code": "open_bracket" },
+                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "`left_option` + `]` = `đ`",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.US" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
+                                "to_after_key_up": [
+                                    { "key_code": "close_bracket" },
+                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "`left_option` + `\\` = `ž`",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.US" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "backslash",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
+                                "to_after_key_up": [
+                                    { "key_code": "backslash" },
+                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "`left_option ` + `;` = `č`",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.US" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
+                                "to_after_key_up": [
+                                    { "key_code": "semicolon" },
+                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "`left_option ` + `'` = `ć`",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.US" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
+                                "to_after_key_up": [
+                                    { "key_code": "quote" },
+                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "ANSI chars with option to Croatian characters",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": ["left_option"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "semicolon" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "CTRL+Backspace to Delete",
                         "manipulators": [
                             {

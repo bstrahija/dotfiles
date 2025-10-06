@@ -1,11 +1,11 @@
 #########################
 # Looks and font
 #########################
-theme = Rose Pine Moon
+theme = Nord Wave
 font-family = MonaspiceKr Nerd Font
 font-size = 12
 font-thicken = true
-background-opacity = 0.75
+background-opacity = 0.85
 background-blur-radius = 30
 cursor-style = block
 cursor-style-blink = false
