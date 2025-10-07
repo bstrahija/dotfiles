@@ -11,10 +11,12 @@ cakovec
 campaignmonitor
 campaignrefinery
 catppuccin
+classmap
 constantcontact
 constantcontactnew
 convertkit
 cowsay
+debugbar
 demio
 egoi
 egoiv
@@ -31,6 +33,7 @@ GETGIST
 getresponse
 globetka
 gotowebinar
+guzzlehttp
 Hashids
 HELPDESK
 HELPSCOUT
@@ -59,6 +62,7 @@ madmimi
 mailpit
 mapleader
 maplocalleader
+medialibrary
 Merch
 Monaspice
 nanorc
@@ -72,9 +76,11 @@ OPCD
 opfl
 opflow
 optimizecheckouts
+optimizeleads
 optimizementor
 optimizepress
 optimizesubscriber
+optpl
 opui
 Peharda
 pestphp
@@ -83,6 +89,7 @@ phpdoc
 phpe
 phpunit
 phpx
+pinia
 prettyping
 reamp
 Recalc
