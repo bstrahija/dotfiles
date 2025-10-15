@@ -13,6 +13,9 @@
     // Multi-cursor with ctrl+n
     { "key": "ctrl+n", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },
 
+    // Comments
+    { "key": "ctrl+/", "command": "editor.action.commentLine", "when": "editorFocus" },
+
     // Navigate tabs
     { "key": "ctrl+[", "command": "workbench.action.previousEditorInGroup" },
     { "key": "ctrl+]", "command": "workbench.action.nextEditorInGroup" },
@@ -57,7 +60,6 @@
     { "key": "ctrl+.", "command": "editor.action.triggerSuggest", "when": "vim.mode == 'Insert' && editorTextFocus" },
 
     // AI
-    { "key": "ctrl+x ctrl+s", "command": "workbench.panel.chat.view.copilot.focus" },
     { "key": "ctrl+x ctrl+x", "command": "editor.action.inlineSuggest.trigger",      "when": "vim.mode == 'Insert' && editorTextFocus && vim.active" },
     { "key": "ctrl+x ctrl+n", "command": "editor.action.inlineSuggest.showNext",     "when": "vim.mode == 'Insert' && editorTextFocus" },
     { "key": "ctrl+x ctrl+p", "command": "editor.action.inlineSuggest.showPrevious", "when": "vim.mode == 'Insert' && editorTextFocus" },
@@ -108,5 +110,9 @@
     { "key": "tab", "command": "-insertNextSuggestion", "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'" },
     { "key": "tab", "command": "-editor.action.inlineSuggest.commit", "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editor.hasSelection && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editor.hasSelection && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible" },
     { "key": "tab", "command": "-editor.action.inlineSuggest.commit", "when": "inInlineEditsPreviewEditor" },
-    { "key": "tab", "command": "-acceptSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" }
+    { "key": "tab", "command": "-acceptSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
+    { "key": "cmd+/", "command": "-notebook.commentSelectedCells", "when": "notebookEditable && notebookEditorFocused && !inputFocus" },
+    { "key": "cmd+/", "command": "-terminalSuggestToggleExplainMode", "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible" },
+    { "key": "cmd+/", "command": "-toggleExplainMode", "when": "suggestWidgetVisible" },
+    { "key": "cmd+/", "command": "-workbench.action.chat.attachContext", "when": "inChatInput && chatLocation == 'panel'" }
 ]

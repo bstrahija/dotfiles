@@ -52,7 +52,7 @@
     //     "strings": "off"
     // },
     "editor.tabCompletion": "on",
-    "editor.snippetSuggestions": "top",
+    "editor.snippetSuggestions": "inline",
     "emmet.triggerExpansionOnTab": true,
 
     // Project pane (file explorer)
@@ -77,7 +77,7 @@
 
     // AI
     "github.copilot.nextEditSuggestions.enabled": true,
-    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.enabled": true,
 
     // LSP's
     "editor.codeLens": false,
@@ -210,9 +210,8 @@
         // Projects
         { "before": ["g", "p"], "commands": ["projectManager.listProjects"] },
 
-        // Closing tabs
-        { "before": ["g", "w", "w"], "commands": ["workbench.action.closeActiveEditor"] },
-        { "before": ["g", "w", "o"], "commands": ["workbench.action.closeOtherEditors"] },
+        // AI
+        { "before": ["leader", "x"], "commands": ["workbench.panel.chat.view.copilot.focus"] },
 
         // Splits
         { "before": ["g", "\\"], "commands": ["workbench.action.splitEditor"] },
@@ -250,6 +249,8 @@
         { "before": ["leader", "tab"],     "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"] },
         { "before": ["leader", "w"],       "commands": ["workbench.action.files.save"] },
         { "before": ["leader", "q", "q"],  "commands": ["workbench.action.closeActiveEditor"] },
+        { "before": ["leader", "q", "o"],  "commands": ["workbench.action.closeOtherEditors"] },
+        { "before": ["<C-w>"],             "commands": ["workbench.action.closeActiveEditor"] },
         { "before": ["leader", "Q"],       "commands": ["workbench.action.closeWindow"] },
         { "before": ["leader", ","],       "commands": ["workbench.action.showAllEditors"] },
         { "before": ["leader", "c"],       "commands": ["workbench.action.showCommands"] },
@@ -263,6 +264,12 @@
         { "before": ["leader", "s", "k"], "commands": ["workbench.action.openGlobalKeybindingsFile"] },
         { "before": ["leader", "s", "t"], "commands": ["workbench.action.selectTheme"] },
         { "before": ["leader", "s", "i"], "commands": ["workbench.action.selectIconTheme"] },
+
+        // Jumplist (a bit different, but the vim extension doesn't remember when navigating symbols)
+        { "before": ["<C-o>"], "commands": ["workbench.action.navigateBack"] },
+        { "before": ["<C-i>"], "commands": ["workbench.action.navigateForward"] },
+        { "before": ["leader", "j", "j"], "commands": [":jumps"] },
+        { "before": ["leader", "j", "c"], "commands": [":clearjumps"] },
 
         // Go to links
         { "before": ["g", "l"], "commands": ["editor.action.openLink"] },
