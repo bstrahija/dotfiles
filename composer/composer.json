@@ -3,6 +3,7 @@
         "beyondcode/expose": "^2.6",
         "laravel/installer": "^5.13",
         "statamic/cli": "^3.6",
-        "laravel/pint": "^1.24"
+        "laravel/pint": "^1.24",
+        "exposedev/expose": "^3.0"
     }
 }
