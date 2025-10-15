@@ -1,0 +1,42 @@
+{
+	"php": {
+		"prefix": "php",
+		"body": [
+			"<?php $0 ?>"
+		],
+		"description": "PHP opening and closing tags"
+	},
+	"phpe": {
+		"prefix": "phpe",
+		"body": [
+			"<?php echo $0; ?>"
+		],
+		"description": "PHP echo"
+	},
+	"phpx": {
+		"prefix": "phpx",
+		"body": [
+			"<?php",
+			"$0"
+		],
+		"description": "Open PHP file with tags"
+	},
+	"phpc": {
+		"prefix": "phpc",
+		"body": [
+			"<?php\n",
+			"${1:namespace ${2:App};}\n",
+			"class ${3:myClass}\n{",
+			"    ${4:public function __construct()\n    {\n        ${5:// My code}\n    }}",
+			"}"
+		],
+		"description": "Open PHP file with tags"
+	},
+	"clog": {
+		"prefix": "clog",
+		"body": [
+			"console.log($0);"
+		],
+		"description": "JS console log"
+	},
+}

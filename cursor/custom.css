@@ -1,0 +1,65 @@
+.part.editor .content {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidebar.right .composite.title {
+    display: none !important;
+}
+
+.sidebar.right {
+    height: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidebar.right .content {
+    height: 100% !important
+}
+
+.split-view-view .sidebar.right .content {
+    height: 100% !important;
+}
+
+.tabs-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tabs-container .tab {
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
+    font-size: 13px !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.tabs-container .tab .label-name {
+    padding-left: 8px;
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
+    font-size: 13px !important;
+}
+
+.tabs-container .monaco-icon-label::before {
+    display: none !important;
+}
+
+.tabs-container .tab-actions {
+    transform: scale(0.8);
+    transform-origin: left center;
+}
+
+.explorer-viewlet .monaco-list .monaco-list-row {
+    /* font-family: "IBM Plex Sans", monospace; */
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
+    /* font-size: 13px !important; */
+    line-height: 28px !important;
+    /* opacity: 0.8 !important; */
+}
+
+.explorer-viewlet .monaco-icon-label .label-name {
+    font-size: 13px !important;
+    font-weight: 200 !important;
+    opacity: 0.9 !important;
+    height: 40px !important;
+}
+
+.quick-input-widget {
+    font-family: "MonaspiceKr Nerd Font", monospace !important;
+    font-size: 13px !important;
+}

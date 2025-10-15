@@ -12,6 +12,7 @@ campaignmonitor
 campaignrefinery
 catppuccin
 classmap
+clearjumps
 constantcontact
 constantcontactnew
 convertkit
@@ -21,6 +22,7 @@ demio
 egoi
 egoiv
 endphp
+endsection
 everwebinar
 exif
 exiftool
@@ -45,6 +47,7 @@ inertiajs
 infusionsoft
 IPAPI
 jdupes
+Jumplist
 keap
 keybind
 KEYBINDS

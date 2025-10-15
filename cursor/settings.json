@@ -1,28 +1,57 @@
 {
-    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "bearded-icons",
+    "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "Dank Mono, JetBrains Mono, Fira Code, Monaspace Neon Medium, Menlo, Cascadia Code, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 15,
-    "editor.lineHeight": 38,
-    "workbench.productIconTheme": "fluent-icons",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
-    "editor.linkedEditing": true,
-    "workbench.tree.indent": 18,
-    "files.exclude": {
-        "**/.idea": true
-    },
-    "files.autoSave": "onFocusChange",
-    "files.autoSaveDelay": 300,
-    "editor.rulers": [
-        160
-    ],
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 2.6,
+    "editor.cursorBlinking": "solid",
     "editor.smoothScrolling": true,
     "workbench.list.smoothScrolling": true,
-    "editor.cursorBlinking": "phase",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "window.zoomLevel": 0,
+    "editor.rulers": [
+        320
+    ],
+    "workbench.editor.editorActionsLocation": "hidden",
+    "editor.inlayHints.enabled": "off",
+    "breadcrumbs.enabled": false,
+    "workbench.editor.tabsizing": "fit",
+    "catppuccin-icons.hidesExplorerArrows": true,
+    "chat.commandCenter.enabled": false,
+    "editor.matchBrackets": "near",
+    "editor.lightbulb.enabled": "off",
+    "editor.renderLineHighlight": "all",
+    "editor.occurrencesHighlight": "off",
+    "editor.selectionHighlight": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.editor.enablePreview": false,
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontalScrollbarSize": 6,
+    "editor.scrollbar.verticalScrollbarSize": 4,
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "git.blame.statusBarItem.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.compactFolders": false,
+    "workbench.tree.indent": 18,
+    "files.exclude": {
+        "**/.idea": true,
+        "**/_ide_helper*": true,
+        "**/_ide_helper_models*": true,
+        "**/.phpstorm.meta.php": true
+    },
     "search.mode": "reuseEditor",
     "search.exclude": {
         "**/.git": true,
@@ -31,144 +60,53 @@
         "**/tmp": true,
         "**/wp-content/**/public": true
     },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.codeLens": false,
+    "editor.formatOnSave": true,
+    "php.version": "v8.4",
+    "intelephense.environment.phpVersion": "8.4.0",
+    "php.executables": {
+        "v7.4": "/Users/bstrahija/Library/Application Support/Herd/bin/php74",
+        "v8.0": "/Users/bstrahija/Library/Application Support/Herd/bin/php80",
+        "v8.1": "/Users/bstrahija/Library/Application Support/Herd/bin/php81",
+        "v8.2": "/Users/bstrahija/Library/Application Support/Herd/bin/php82",
+        "v8.3": "/Users/bstrahija/Library/Application Support/Herd/bin/php83",
+        "v8.4": "/Users/bstrahija/Library/Application Support/Herd/bin/php84",
+        "v8.5": "/Users/bstrahija/Library/Application Support/Herd/bin/php85"
+    },
+    "laravel-pint.enable": true,
+    "intelephense.files.associations": [
+        "*.blade.php",
+        "*.php",
+        "*.phtml"
+    ],
+    "intelephense.files.exclude": [
+        "**/_ide_helper*",
+        "**/_ide_helper_models*",
+        "**/.phpstorm.meta.php"
+    ],
+    "php.completion.showParameters": true,
+    "php.problems.excludeGitIgnore": true,
+    "Laravel.phpEnvironment": "herd",
     "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint",
         "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
     },
-    "editor.suggest.insertMode": "replace",
-    "editor.suggest.showStatusBar": true,
-    "workbench.startupEditor": "none",
+    "[blade]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    },
     "php.suggest.basic": false,
     "php.validate.enable": false,
-    "editor.fontWeight": "300",
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "cSpell.diagnosticLevel": "Hint",
-    "cSpell.userWords": [
-        "aapmnav",
-        "ABSPATH",
-        "acceptables",
-        "activecampaign",
-        "adminemail",
-        "apmnav",
-        "Arrayable",
-        "astro",
-        "autoload",
-        "bloginfo",
-        "bpmnav",
-        "catppuccin",
-        "checkmark",
-        "classmap",
-        "corvuspay",
-        "cpmnav",
-        "Creo",
-        "Creolab",
-        "datepicker",
-        "dbdelta",
-        "demio",
-        "dpmnav",
-        "draggable",
-        "endforeach",
-        "Fabien",
-        "Faktoor",
-        "flatpickr",
-        "fullwidth",
-        "generalsoftwareinc",
-        "Getresponse",
-        "guzzlehttp",
-        "HELPDESK",
-        "HRFF",
-        "Hubspot",
-        "icontact",
-        "infusionsoft",
-        "isnotset",
-        "kourses",
-        "laravel",
-        "lukapeharda",
-        "macchiato",
-        "Macroable",
-        "mailchimp",
-        "mailerlite",
-        "mailpoet",
-        "mainvideo",
-        "mautic",
-        "mediumint",
-        "meetdemio",
-        "meforma",
-        "memberpress",
-        "mizanur",
-        "mmdb",
-        "moosend",
-        "mpdf",
-        "mpociot",
-        "nohover",
-        "notcontains",
-        "notequals",
-        "numberposts",
-        "offcanvas",
-        "ohmyemma",
-        "ontraport",
-        "opdash",
-        "opdashboard",
-        "OPPROTECT",
-        "optimizecart",
-        "optimizecheckouts",
-        "OPTIMIZEFLOW",
-        "optimizemember",
-        "optimizepress",
-        "optimizeprotect",
-        "Optin",
-        "optins",
-        "opui",
-        "phpcs",
-        "phpe",
-        "phpunit",
-        "phpx",
-        "pickr",
-        "pinia",
-        "playsinline",
-        "pmnav",
-        "pngquant",
-        "popoverlay",
-        "Potencier",
-        "quentn",
-        "Rexlia",
-        "Sendgrid",
-        "sendinblue",
-        "sendlane",
-        "sendreach",
-        "Sensefly",
-        "sfly",
-        "shortcode",
-        "shortcodes",
-        "sidenav",
-        "spinkit",
-        "Strahija",
-        "subline",
-        "submenu",
-        "subnavigation",
-        "symfony",
-        "synthwave",
-        "tareq",
-        "Thrivecart",
-        "tinyint",
-        "toplevel",
-        "trailingslashit",
-        "Uids",
-        "userdata",
-        "varchar",
-        "vite",
-        "vueform",
-        "vueuse",
-        "vuex",
-        "woocommerce",
-        "wpbody",
-        "wpcontent",
-        "wpdb",
-        "yoast",
-        "zimsko"
-    ],
+    "php.problems.exclude": {
+        "**/*": [
+            "PHP6602"
+        ]
+    },
+    "json.format.enable": false,
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -179,21 +117,2031 @@
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "intelephense.environment.phpVersion": "8.4.0",
-    "workbench.activityBar.location": "hidden",
-    "git.blame.editorDecoration.enabled": true,
-    "workbench.sideBar.location": "right",
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.formatOnSave": true,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
     },
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "workbench.navigationControl.enabled": false,
-    "window.commandCenter": false,
-    "breadcrumbs.enabled": false,
-    "color-highlight.markerType": "dot-after",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        ".env*": "dotenv"
+    },
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    "git.decorations.enabled": true,
+    "scm.diffDecorations": "gutter",
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 0,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.linkedEditing": true,
+    "editor.semanticTokenColorCustomizations": {},
+    "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000,
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.customDictionaries": {
+        "custom-dictionary-user": {
+            "name": "My Dictionary",
+            "path": "~/.config/cspell/dictionary.txt",
+            "addWords": true,
+            "scope": "user"
+        }
+    },
+    "cSpell.enabledNotifications": {
+        "Average Word Length too Long": false,
+        "Lines too Long": false,
+        "Maximum Word Length Exceeded": false
+    },
     "editor.lineNumbers": "relative",
-    "cursor.composer.textSizeScale": 1.15,
-    "Devdb.colorTheme": "dark"
+    "vim.leader": "<space>",
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.highlightedyank.enable": true,
+    "vim.surround": true,
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.camelCaseMotion.enable": true,
+    "extensions.experimental.affinity": {
+        "vscode.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-textobjects.vimEnabled": true,
+    "vim.targets.enable": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "after": [
+                "<Esc>"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "U"
+            ],
+            "after": [
+                "<C-r>"
+            ]
+        },
+        {
+            "before": [
+                "<Tab>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "<S-Tab>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
+                "`"
+            ],
+            "after": [
+                "~"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "p"
+            ],
+            "commands": [
+                "projectManager.listProjects"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "w",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "w",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "\\"
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "-"
+            ],
+            "commands": [
+                "workbench.action.splitEditorDown"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "c"
+            ],
+            "commands": [
+                "editor.action.commentLine"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "shift+d"
+            ],
+            "commands": [
+                "editor.action.revealDefinitionAside"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "shift+r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "s"
+            ],
+            "commands": [
+                "tettekete.list-functions"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "e",
+                "["
+            ],
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "e",
+                "]"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "["
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "]"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "e",
+                "a"
+            ],
+            "commands": [
+                "workbench.action.problems.focus"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "e",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.problems.focus"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "space"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "tab"
+            ],
+            "commands": [
+                "workbench.action.showAllEditorsByMostRecentlyUsed"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                ","
+            ],
+            "commands": [
+                "workbench.action.showAllEditors"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "/"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "="
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "t"
+            ],
+            "commands": [
+                "terminal.focus"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "p"
+            ],
+            "commands": [
+                "projectManager.listProjects"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.openSettingsJson"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.openGlobalKeybindingsFile"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.selectTheme"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s",
+                "i"
+            ],
+            "commands": [
+                "workbench.action.selectIconTheme"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "l"
+            ],
+            "commands": [
+                "editor.action.openLink"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "0"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "Y"
+            ],
+            "after": [
+                "y",
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "y"
+            ],
+            "after": [
+                "m",
+                "y",
+                "g",
+                "g",
+                "V",
+                "G",
+                "y",
+                "`",
+                "y",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "x"
+            ],
+            "commands": [
+                "deleteRight"
+            ]
+        },
+        {
+            "before": [
+                "X"
+            ],
+            "commands": [
+                "deleteLeft"
+            ]
+        },
+        {
+            "before": [
+                "+"
+            ],
+            "commands": [
+                "editor.emmet.action.incrementNumberByOne"
+            ]
+        },
+        {
+            "before": [
+                "-"
+            ],
+            "commands": [
+                "editor.emmet.action.decrementNumberByOne"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "v"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.variable.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.class.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.class.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.array.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.array.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.object.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.object.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.call.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.call.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.type.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.type.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.outer.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.select.next.inner.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.next.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "F"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.next.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.next.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "Q"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.next.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.previous.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "F"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.previous.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.previous.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "Q"
+            ],
+            "commands": [
+                "vscode-textobjects.goTo.previous.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "v"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.variable.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.class.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.class.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.array.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.array.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.object.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.object.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.call.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.call.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.type.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.type.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "i",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.inner.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "a",
+                "n"
+            ],
+            "commands": [
+                "vscode-textobjects.delete.next.outer.node.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "v"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.variable.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.class.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.class.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.array.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.array.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.object.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.object.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.call.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.call.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.type.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.type.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "a",
+                "n"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.outer.node.start"
+            ]
+        },
+        {
+            "before": [
+                "y",
+                "i",
+                "n"
+            ],
+            "commands": [
+                "vscode-textobjects.yank.next.inner.node.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.function.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "f"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.function.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "l"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.loop.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "i"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.conditional.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "r"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.rhs.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "h"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.lhs.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "v"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.variable.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.string.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "q"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.string.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.class.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "k"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.class.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.array.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "a"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.array.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.object.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "o"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.object.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "e"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.parameters.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.call.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "m"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.call.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.type.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "t"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.type.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "i",
+                "c"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.inner.comment.start"
+            ]
+        },
+        {
+            "before": [
+                "c",
+                "a",
+                "n"
+            ],
+            "commands": [
+                "vscode-textobjects.change.next.outer.node.start"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-d>"
+            ],
+            "after": [
+                "<C-d>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<C-u>"
+            ],
+            "after": [
+                "<C-u>",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "<up>"
+            ],
+            "commands": [
+                ":echo 'Use k instead of ↑'"
+            ]
+        },
+        {
+            "before": [
+                "<down>"
+            ],
+            "commands": [
+                ":echo 'Use j instead of ↓'"
+            ]
+        },
+        {
+            "before": [
+                "<left>"
+            ],
+            "commands": [
+                ":echo 'Use h instead of ←'"
+            ]
+        },
+        {
+            "before": [
+                "<right>"
+            ],
+            "commands": [
+                ":echo 'Use l instead of →'"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "m"
+            ],
+            "commands": [
+                "vscode-harpoon.addEditor"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "b"
+            ],
+            "commands": [
+                "vscode-harpoon.editorQuickPick"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "shift+m"
+            ],
+            "commands": [
+                "vscode-harpoon.editEditors"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "1"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor1"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "2"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor2"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "3"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor3"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "4"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor4"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "5"
+            ],
+            "commands": [
+                "vscode-harpoon.gotoEditor5"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "."
+            ],
+            "after": [
+                ".",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "after": [
+                ",",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ";",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                "!"
+            ],
+            "after": [
+                "!",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                "?"
+            ],
+            "after": [
+                "?",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "after": [
+                "<",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "after": [
+                ">",
+                "<C-g>",
+                "u"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                "`"
+            ],
+            "after": [
+                "~"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        }
+    ],
+    "custom-ui-style.external.imports": [
+        "file://${userHome}/.config/vscode/custom.css"
+    ],
+    "dotenv.enableAutocloaking": false,
+    "dotenv.cloakColor": "#fcc",
+    "dotenv.cloakIcon": "*",
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": []
+    },
+    "php.format.codeStyle": "Laravel",
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.showTabs": "none",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.colorTheme": "Rosé Pine Moon (no italics)"
 }
