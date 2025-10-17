@@ -20,11 +20,6 @@
                                             "^com\\.mitchellh\\.ghostty$"
                                         ],
                                         "type": "frontmost_application_unless"
-                                    },
-                                    {
-                                        "name": "hyper_active",
-                                        "type": "variable_if",
-                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -51,11 +46,6 @@
                                             "^io\\.alacritty$"
                                         ],
                                         "type": "frontmost_application_unless"
-                                    },
-                                    {
-                                        "name": "hyper_active",
-                                        "type": "variable_if",
-                                        "value": 0
                                     }
                                 ],
                                 "from": {

@@ -514,6 +514,7 @@
     "zenMode.showTabs": "none",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "vim.sneakReplacesF": true
 
 }
