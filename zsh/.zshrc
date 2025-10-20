@@ -46,10 +46,14 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+# Vi mode
+source ~/.config/zsh /vi.zsh
+
+# Aliases
 eval "$(atuin init zsh)"
 eval $(thefuck --alias)
 
-# opencode
+# OpenCode
 export PATH=/Users/bstrahija/.opencode/bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 

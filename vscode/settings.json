@@ -178,7 +178,7 @@
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": true,
-    "vim.useSystemClipboard": false,
+    "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
     "vim.surround": true,
     "vim.sneak": true,
@@ -439,14 +439,20 @@
         { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] },
 
         // Harpoon
-        { "before": ["leader", "m"],       "commands": ["vscode-harpoon.addEditor"] },
-        { "before": ["leader", "b"],       "commands": ["vscode-harpoon.editorQuickPick"] },
-        { "before": ["leader", "shift+m"], "commands": ["vscode-harpoon.editEditors"] },
-        { "before": ["leader", "1"],       "commands": ["vscode-harpoon.gotoEditor1"] },
-        { "before": ["leader", "2"],       "commands": ["vscode-harpoon.gotoEditor2"] },
-        { "before": ["leader", "3"],       "commands": ["vscode-harpoon.gotoEditor3"] },
-        { "before": ["leader", "4"],       "commands": ["vscode-harpoon.gotoEditor4"] },
-        { "before": ["leader", "5"],       "commands": ["vscode-harpoon.gotoEditor5"] },
+        // { "before": ["leader", "m"],       "commands": ["vscode-harpoon.addEditor"] },
+        // { "before": ["leader", "b"],       "commands": ["vscode-harpoon.editorQuickPick"] },
+        // { "before": ["leader", "shift+m"], "commands": ["vscode-harpoon.editEditors"] },
+        // { "before": ["leader", "1"],       "commands": ["vscode-harpoon.gotoEditor1"] },
+        // { "before": ["leader", "2"],       "commands": ["vscode-harpoon.gotoEditor2"] },
+        // { "before": ["leader", "3"],       "commands": ["vscode-harpoon.gotoEditor3"] },
+        // { "before": ["leader", "4"],       "commands": ["vscode-harpoon.gotoEditor4"] },
+        // { "before": ["leader", "5"],       "commands": ["vscode-harpoon.gotoEditor5"] },
+
+        // Marks
+        { "before": ["'", "a"],       "after": ["`", "a"] },
+        { "before": ["'", "s"],       "after": ["`", "s"] },
+       { "before": ["leader", "m", "m"],       "commands": [":marks"] },
+       { "before": ["leader", "m", "c"],       "commands": [":delmarks a-zA-Z0-9"] },
     ],
 
     // ==> Insert mode
