@@ -9,7 +9,6 @@
                 "rules": [
                     {
                         "description": "Ctrl+C/V behave like Cmd+C/V except in Terminal, iTerm2, and Alacritty",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
