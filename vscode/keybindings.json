@@ -1,4 +1,7 @@
 [
+    // Focus editor with cmd+e
+    { "key": "cmd+e", "command": "workbench.action.focusActiveEditorGroup" },
+
     // Remap cmd+f to vim /
     { "key": "cmd+f", "command": "vim.remap", "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Insert' || vim.mode == 'Visual')", "args": { "after": ["esc",  "/"] } },
 
@@ -9,6 +12,9 @@
     // Sidebars
     { "key": "cmd+r", "command": "workbench.action.toggleSidebarVisibility" },
     { "key": "cmd+b", "command": "workbench.action.toggleAuxiliaryBar" },
+
+    // Toggle zen mode
+    { "key": "shift+escape", "command": "workbench.action.toggleZenMode" },
 
     // Multi-cursor with ctrl+n
     { "key": "ctrl+n", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" },

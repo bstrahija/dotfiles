@@ -214,8 +214,8 @@
         { "before": ["leader", "x"], "commands": ["workbench.panel.chat.view.copilot.focus"] },
 
         // Splits
-        { "before": ["g", "\\"], "commands": ["workbench.action.splitEditor"] },
-        { "before": ["g", "-"],  "commands": ["workbench.action.splitEditorDown"] },
+        { "before": ["leader", "\\"], "commands": ["workbench.action.splitEditor"] },
+        { "before": ["leader", "-"],  "commands": ["workbench.action.splitEditorDown"] },
 
         // Toggle comments in normal and visual mode
         { "before": ["g", "c"], "commands": ["editor.action.commentLine"] },
@@ -241,7 +241,7 @@
         { "before": ["g", "e", "e"], "commands": ["workbench.action.problems.focus"] },
 
         // Zen mode
-        { "before": ["g", "z"], "commands": ["workbench.action.toggleZenMode"] },
+        { "before": ["leader", "z"], "commands": ["workbench.action.toggleZenMode"] },
 
         // Files, tabs, search
         { "before": ["leader", "space"],   "commands": ["workbench.action.quickOpen"] },
@@ -320,8 +320,6 @@
         { "before": ["v", "i", "e"], "commands": ["vscode-textobjects.select.next.inner.parameters.start"] },
         { "before": ["v", "a", "m"], "commands": ["vscode-textobjects.select.next.outer.call.start"] },
         { "before": ["v", "i", "m"], "commands": ["vscode-textobjects.select.next.inner.call.start"] },
-        { "before": ["v", "a", "t"], "commands": ["vscode-textobjects.select.next.outer.type.start"] },
-        { "before": ["v", "i", "t"], "commands": ["vscode-textobjects.select.next.inner.type.start"] },
         { "before": ["v", "a", "c"], "commands": ["vscode-textobjects.select.next.outer.comment.start"] },
         { "before": ["v", "i", "c"], "commands": ["vscode-textobjects.select.next.inner.comment.start"] },
 
@@ -359,8 +357,6 @@
         { "before": ["d", "i", "e"], "commands": ["vscode-textobjects.delete.next.inner.parameters.start"] },
         { "before": ["d", "a", "m"], "commands": ["vscode-textobjects.delete.next.outer.call.start"] },
         { "before": ["d", "i", "m"], "commands": ["vscode-textobjects.delete.next.inner.call.start"] },
-        { "before": ["d", "a", "t"], "commands": ["vscode-textobjects.delete.next.outer.type.start"] },
-        { "before": ["d", "i", "t"], "commands": ["vscode-textobjects.delete.next.inner.type.start"] },
         { "before": ["d", "a", "c"], "commands": ["vscode-textobjects.delete.next.outer.comment.start"] },
         { "before": ["d", "i", "c"], "commands": ["vscode-textobjects.delete.next.inner.comment.start"] },
         { "before": ["d", "a", "n"], "commands": ["vscode-textobjects.delete.next.outer.node.start"] },
@@ -389,8 +385,6 @@
         { "before": ["y", "i", "e"], "commands": ["vscode-textobjects.yank.next.inner.parameters.start"] },
         { "before": ["y", "a", "m"], "commands": ["vscode-textobjects.yank.next.outer.call.start"] },
         { "before": ["y", "i", "m"], "commands": ["vscode-textobjects.yank.next.inner.call.start"] },
-        { "before": ["y", "a", "t"], "commands": ["vscode-textobjects.yank.next.outer.type.start"] },
-        { "before": ["y", "i", "t"], "commands": ["vscode-textobjects.yank.next.inner.type.start"] },
         { "before": ["y", "a", "c"], "commands": ["vscode-textobjects.yank.next.outer.comment.start"] },
         { "before": ["y", "i", "c"], "commands": ["vscode-textobjects.yank.next.inner.comment.start"] },
         { "before": ["y", "a", "n"], "commands": ["vscode-textobjects.yank.next.outer.node.start"] },
@@ -420,8 +414,6 @@
         { "before": ["c", "i", "e"], "commands": ["vscode-textobjects.change.next.inner.parameters.start"] },
         { "before": ["c", "a", "m"], "commands": ["vscode-textobjects.change.next.outer.call.start"] },
         { "before": ["c", "i", "m"], "commands": ["vscode-textobjects.change.next.inner.call.start"] },
-        { "before": ["c", "a", "t"], "commands": ["vscode-textobjects.change.next.outer.type.start"] },
-        { "before": ["c", "i", "t"], "commands": ["vscode-textobjects.change.next.inner.type.start"] },
         { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.comment.start"] },
         { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.comment.start"] },
         { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] },
@@ -439,24 +431,36 @@
         { "before": ["<right>"], "commands": [":echo 'Use l instead of →'"] },
 
         // Harpoon
-        // { "before": ["leader", "m"],       "commands": ["vscode-harpoon.addEditor"] },
-        // { "before": ["leader", "b"],       "commands": ["vscode-harpoon.editorQuickPick"] },
-        // { "before": ["leader", "shift+m"], "commands": ["vscode-harpoon.editEditors"] },
-        // { "before": ["leader", "1"],       "commands": ["vscode-harpoon.gotoEditor1"] },
-        // { "before": ["leader", "2"],       "commands": ["vscode-harpoon.gotoEditor2"] },
-        // { "before": ["leader", "3"],       "commands": ["vscode-harpoon.gotoEditor3"] },
-        // { "before": ["leader", "4"],       "commands": ["vscode-harpoon.gotoEditor4"] },
-        // { "before": ["leader", "5"],       "commands": ["vscode-harpoon.gotoEditor5"] },
+        { "before": ["leader", "m", "a"],       "commands": ["vscode-harpoon.addEditor"] },
+        { "before": ["leader", "m", "1"],       "commands": ["vscode-harpoon.addEditor1"] },
+        { "before": ["leader", "m", "2"],       "commands": ["vscode-harpoon.addEditor2"] },
+        { "before": ["leader", "m", "3"],       "commands": ["vscode-harpoon.addEditor3"] },
+        { "before": ["leader", "m", "4"],       "commands": ["vscode-harpoon.addEditor4"] },
+        { "before": ["leader", "m", "5"],       "commands": ["vscode-harpoon.addEditor5"] },
+        { "before": ["leader", "m", "m"],       "commands": ["vscode-harpoon.editorQuickPick"] },
+        { "before": ["leader", "m", "e"],       "commands": ["vscode-harpoon.editEditors"] },
+        { "before": ["leader", "1"],       "commands": ["vscode-harpoon.gotoEditor1"] },
+        { "before": ["leader", "2"],       "commands": ["vscode-harpoon.gotoEditor2"] },
+        { "before": ["leader", "3"],       "commands": ["vscode-harpoon.gotoEditor3"] },
+        { "before": ["leader", "4"],       "commands": ["vscode-harpoon.gotoEditor4"] },
+        { "before": ["leader", "5"],       "commands": ["vscode-harpoon.gotoEditor5"] },
 
         // Marks
-        { "before": ["'", "a"],       "after": ["`", "a"] },
-        { "before": ["'", "s"],       "after": ["`", "s"] },
-       { "before": ["leader", "m", "m"],       "commands": [":marks"] },
-       { "before": ["leader", "m", "c"],       "commands": [":delmarks a-zA-Z0-9"] },
+        { "before": ["'", "a"],           "after": ["`", "a"] },
+        { "before": ["'", "s"],           "after": ["`", "s"] },
+        { "before": ["leader", "m", "M"], "commands": [":marks"] },
+        { "before": ["leader", "m", "c"], "commands": [":delmarks a-zA-Z0-9"] },
     ],
 
     // ==> Insert mode
     "vim.insertModeKeyBindings": [
+        // Back to normal mode
+        { "before": ["j", "j"], "after": ["<Esc>"] },
+
+        // Easy insert of trailing ; and ,
+        { "before": [";", ";"], "after": ["<Esc>", "A", ";"] },
+        { "before": [",", ","], "after": ["<Esc>", "A", ","] },
+
         // Undo breakpoints
         { "before": ["."], "after": [".", "<C-g>", "u"] },
         { "before": [","], "after": [",", "<C-g>", "u"] },
