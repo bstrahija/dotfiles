@@ -2,6 +2,7 @@ activecampaign
 apikey
 APPNAME
 atuin
+autofocus
 AWEBER
 birdsend
 brevo
@@ -19,6 +20,7 @@ convertkit
 cowsay
 debugbar
 demio
+downsells
 egoi
 egoiv
 endphp
@@ -76,6 +78,7 @@ nord
 nvim
 oklch
 OPCD
+opdash
 opfl
 opflow
 optimizecheckouts
@@ -95,6 +98,7 @@ phpunit
 phpx
 pinia
 prettyping
+Reactivations
 reamp
 Recalc
 RECAPTCHA
@@ -104,6 +108,7 @@ sendfox
 SERVERURL
 showmode
 Sluggable
+Sonos
 Spatie
 Strahija
 stremio
@@ -115,11 +120,14 @@ THRIVECART
 tightenco
 titlebar
 tmuxinator
+upsells
 vite
 webinarjam
 WEBINARJAM
 wezterm
 woocommerce
+wpbody
+wpcontent
 wpdb
 wpforms
 Zimsko

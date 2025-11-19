@@ -86,3 +86,4 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/81/"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

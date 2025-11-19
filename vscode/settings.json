@@ -133,7 +133,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "Vue.volar"
     },
     "[lua]": {
         "editor.defaultFormatter": "sumneko.lua"
@@ -245,7 +245,7 @@
 
         // Files, tabs, search
         { "before": ["leader", "space"],   "commands": ["workbench.action.quickOpen"] },
-        { "before": ["leader", "f"],       "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "f"],       "commands": ["editor.action.formatDocument"] },
         { "before": ["leader", "tab"],     "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"] },
         { "before": ["leader", "w"],       "commands": ["workbench.action.files.save"] },
         { "before": ["leader", "q", "q"],  "commands": ["workbench.action.closeActiveEditor"] },
@@ -525,6 +525,9 @@
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "vim.sneakReplacesF": true
+    "vim.sneakReplacesF": true,
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    }
 
 }
