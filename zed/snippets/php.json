@@ -1,72 +1,117 @@
 {
-  "log": {
-    "prefix": "log",
-    "body": "error_log(${1:$VAR});",
-    "description": "Log variable to PHP error log"
-  },
-  "Debug Print_r": {
-    "prefix": "pr",
-    "body": "print_r(${1:/*debug*/});",
-    "description": "Print variable using print_r"
-  },
-  "Debug var_dump": {
-    "prefix": "vd",
-    "body": "var_dump(${1:/*debug*/});",
-    "description": "Debug var_dump"
-  },
-  "Debug Print_r formatted": {
-    "prefix": "ppr",
-    "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>';",
-    "description": "Print variable using print_r"
-  },
-  "Namespace": {
-    "prefix": "ns",
-    "body": "namespace ${1:App\\Namespace};\n\n",
-    "description": "PHP Namespace declaration"
-  },
-  "Use statement": {
-    "prefix": "use",
-    "body": "use ${1:App\\Namespace\\ClassName};\n",
-    "description": "PHP Use statement"
-  },
-  "Class": {
-    "prefix": "class",
-    "body": "<?php\n\nnamespace ${1:App\\Namespace};\n\nclass ${2:ClassName}\n{\n    ${3:// Properties}\n\n    public function __construct(${4:args})\n    {\n        ${5:// Constructor code}\n    }\n\n    ${6:// Methods}\n}\n",
-    "description": "PHP Class declaration"
-  },
-  "Public method": {
-    "prefix": "pf",
-    "body": "public function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
-    "description": "New public function"
-  },
-  "Public static method": {
-    "prefix": "psf",
-    "body": "public static function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
-    "description": "New public static function"
-  },
-  "Private method": {
-    "prefix": "pvf",
-    "body": "private function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
-    "description": "New private function"
-  },
-  "Protected method": {
-    "prefix": "prf",
-    "body": "protected function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
-    "description": "New protected function"
-  },
-  "Foreach": {
-    "prefix": "feach",
-    "body": "foreach (${1:items}) {\n    ${2:\/\/ Code}\n}",
-    "description": "Foreach loop"
-  },
-  "If statement": {
-    "prefix": "pif",
-    "body": "if (${1:condition}) {\n    ${2:\/\/ Code}\n}",
-    "description": "Foreach loop"
-  },
-  "Method comment": {
-    "prefix": "cm",
-    "body": "/**\n * ${1:Method}\n */",
-    "description": "Foreach loop"
-  }
+    "log": {
+        "prefix": "log",
+        "body": "error_log(${1:$VAR});",
+        "description": "Log variable to PHP error log"
+    },
+    "Debug Print_r": {
+        "prefix": "pr",
+        "body": "print_r(${1:/*debug*/});",
+        "description": "Print variable using print_r"
+    },
+    "Debug var_dump": {
+        "prefix": "vd",
+        "body": "var_dump(${1:/*debug*/});",
+        "description": "Debug var_dump"
+    },
+    "Debug Print_r formatted and die": {
+        "prefix": "pprd",
+        "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>'; die();",
+        "description": "Print variable using print_r"
+    },
+    "Debug Print_r formatted": {
+        "prefix": "ppr",
+        "body": "echo '<pre>'; print_r(${1:/*debug*/}); echo '</pre>';",
+        "description": "Print variable using print_r"
+    },
+    "Namespace": {
+        "prefix": "ns",
+        "body": "namespace ${1:App\\Namespace};\n\n",
+        "description": "PHP Namespace declaration"
+    },
+    "Use statement": {
+        "prefix": "use",
+        "body": "use ${1:App\\Namespace\\ClassName};\n",
+        "description": "PHP Use statement"
+    },
+    "Class": {
+        "prefix": "phpc",
+        "body": "<?php\n\nnamespace ${1:App};\n\nclass ${2:ClassName}\n{\n    ${3:// code}\n}\n",
+        "description": "Basic PHP class structure"
+    },
+    "PHP Interface": {
+        "prefix": "phpi",
+        "body": "<?php\n\nnamespace ${1:App\\Contracts};\n\ninterface ${2:NameInterface}\n{\n    public function ${3:method}(${4:args});\n}\n",
+        "description": "Create interface"
+    },
+    "PHP Trait": {
+        "prefix": "phpt",
+        "body": "<?php\n\nnamespace ${1:App\\Traits};\n\ntrait ${2:NameTrait}\n{\n    ${3:// code}\n}\n",
+        "description": "PHP trait template"
+    },
+    "PHP Enum": {
+        "prefix": "enum",
+        "body": "<?php\n\nenum ${1:Status}: string\n{\n    case ${2:Active} = '${3:active}';\n    case ${4:Inactive} = '${5:inactive}';\n}\n",
+        "description": "PHP 8.1 Enum"
+    },
+    "Laravel Controller": {
+        "prefix": "lc",
+        "body": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass ${1:ExampleController} extends Controller\n{\n    public function ${2:index}()\n    {\n        ${3://}\n        return view('${4:view}');\n    }\n}\n",
+        "description": "Laravel controller template"
+    },
+    "Laravel Model": {
+        "prefix": "lm",
+        "body": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass ${1:ModelName} extends Model\n{\n    protected $fillable = [${2:'column'}];\n}\n",
+        "description": "Laravel model template"
+    },
+    "Laravel Route": {
+        "prefix": "lr",
+        "body": "Route::${1:get}('${2:/}', [${3:Controller}::class, '${4:method}']);",
+        "description": "Laravel route"
+    },
+    "Dump and Die": {
+        "prefix": "dd",
+        "body": "dd(${1:var});",
+        "description": "Laravel dd()"
+    },
+    "Public method": {
+        "prefix": "pf",
+        "body": "public function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+        "description": "New public function"
+    },
+    "Public static method": {
+        "prefix": "psf",
+        "body": "public static function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+        "description": "New public static function"
+    },
+    "Private method": {
+        "prefix": "pvf",
+        "body": "private function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+        "description": "New private function"
+    },
+    "Protected method": {
+        "prefix": "prf",
+        "body": "protected function ${1:functionName}(${2:args})\n{\n    ${3:\/\/ Code}\n}\n",
+        "description": "New protected function"
+    },
+    "Foreach": {
+        "prefix": "feach",
+        "body": "foreach (${1:items}) {\n    ${2:\/\/ Code}\n}",
+        "description": "Foreach loop"
+    },
+    "If statement": {
+        "prefix": "pif",
+        "body": "if (${1:condition}) {\n    ${2:\/\/ Code}\n}",
+        "description": "Foreach loop"
+    },
+    "Method comment": {
+        "prefix": "cm",
+        "body": "/**\n * ${1:Method}\n */",
+        "description": "Foreach loop"
+    },
+    "Try Catch": {
+        "prefix": "tryc",
+        "body": "try {\n    ${1:// code}\n} catch (\\Exception $e) {\n    ${2:// handle}\n}",
+        "description": "PHP try catch"
+    }
 }

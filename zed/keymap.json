@@ -1,164 +1,90 @@
 [
-    // Global keybindings
+    // Global
     {
         "context": "Workspace",
         "bindings": {
             "shift shift": "file_finder::Toggle",
+            "cmd-e": "project_panel::ToggleFocus",
+            "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
+            "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+            "ctrl-x ctrl-x": "agent::ToggleFocus"
+        }
+    },
 
-            // Focus on Git panel
-            "alt-cmd-g": "git_panel::ToggleFocus",
+    {
+        "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert",
+        "bindings": {
+            "space space": "file_finder::Toggle",
+            "space s s": "zed::OpenSettingsFile",
+            "space s k": "zed::OpenKeymapFile",
+            "space w": "workspace::Save",
+            "space q q": "pane::CloseActiveItem",
+            "space q o": "pane::CloseOtherItems",
+            "space Q": "workspace::CloseWindow",
+            "space l": "language_selector::Toggle",
+            "space s t": "theme_selector::Toggle",
+            "space s i": "icon_theme_selector::Toggle",
+            "space g g": "git_panel::ToggleFocus",
+            "space g b": "git::Blame",
+            "space g i": "editor::ToggleGitBlameInline",
+            "space f": "editor::ToggleFold",
+            "space F F": "editor::FoldAll",
+            "space F U": "editor::UnfoldAll",
+            "space e a": "diagnostics::Deploy",
+            "space e ]": "editor::GoToDiagnostic",
+            "space e [": "editor::GoToPreviousDiagnostic",
+            "space z": "workspace::ToggleZoom",
+            "space c": "vim::ToggleComments",
+            "space a": "pane::AlternateFile",
+            "space b b": "pane::AlternateFile",
+            "space b n": "pane::ActivateNextItem",
+            "space b p": "pane::ActivatePreviousItem",
+            "space \\": "pane::SplitAndMoveRight",
+            "space -": "pane::SplitAndMoveDown",
+            "space t": "tab_switcher::Toggle",
+            "g r": "editor::FindAllReferences",
+            "g i": "editor::GoToImplementation",
+            "g o": "outline_panel::ToggleFocus",
+            "g a": "editor::ToggleCodeActions",
+            "g =": "editor::Format",
+            "g m": "vim::Matching",
+            "space p": ["projects::OpenRecent", { "create_new_window": false }],
+            "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
+            "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }]
+        }
+    },
 
-            // Focus on AI panel
-            "alt-cmd-a": "agent::ToggleFocus",
-
-            // Opent recent projects in same window
-            "alt-cmd-p": [
-                "projects::OpenRecent",
-                { "create_new_window": false }
-            ]
+    // Line stuff
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == insert)",
+        "bindings": {
+            "shift-enter": "editor::NewlineBelow",
+            "ctrl-shift-enter": "editor::NewlineAbove",
+            "alt-h": "vim::StartOfLineDownward",
+            "alt-l": "vim::EndOfLineDownward"
         }
     },
     {
-        "context": "Pane",
+        "context": "Editor && vim_mode == insert",
         "bindings": {
-            "cmd-1": ["pane::ActivateItem", 0],
-            "cmd-2": ["pane::ActivateItem", 1],
-            "cmd-3": ["pane::ActivateItem", 2],
-            "cmd-4": ["pane::ActivateItem", 3],
-            "cmd-5": ["pane::ActivateItem", 4],
-            "cmd-6": ["pane::ActivateItem", 5],
-            "cmd-7": ["pane::ActivateItem", 6],
-            "cmd-8": ["pane::ActivateItem", 7],
-            "cmd-9": ["pane::ActivateItem", 8],
-            "cmd-0": ["pane::ActivateItem", 9]
+            "j j": "vim::NormalBefore"
+        }
+    },
+    {
+        "context": "(Editor && mode == full)",
+        "bindings": {
+            "cmd-e": "project_panel::ToggleFocus"
         }
     },
     {
         "context": "Editor",
         "bindings": {
-            // Cycle tabs
+            "ctrl-n": ["editor::SelectNext", { "replace_newest": false }],
+            "ctrl-/": "vim::ToggleComments",
+            "alt-j": "editor::MoveLineDown",
+            "alt-k": "editor::MoveLineUp",
             "ctrl-]": "pane::ActivateNextItem",
             "ctrl-[": "pane::ActivatePreviousItem"
-        }
-    },
-    {
-        "context": "VimControl || !Editor && !Terminal",
-        "bindings": {
-            // Activate panes/docks with vim arrows
-            "ctrl-h": "workspace::ActivatePaneLeft",
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown",
-
-            // Focus on project panel
-            "cmd-e": "project_panel::ToggleFocus"
-        }
-    },
-
-    // Normal mode
-    {
-        "context": "Editor && vim_mode == normal",
-        "bindings": {
-            // 0 and $ dont make sense, so go to begining and end of line
-            "0": "vim::StartOfLineDownward",
-            "B": "vim::StartOfLineDownward",
-            "-": "vim::EndOfLineDownward",
-            "_": "vim::PreviousLineStart",
-
-            // Finding files
-            "space space": "file_finder::Toggle",
-            "space f": "file_finder::Toggle",
-            "space e": "project_panel::ToggleFocus",
-
-            // Copy until end of line
-            "shift-y": ["workspace::SendKeystrokes", "y $"],
-
-            // Select next match
-            "g n": "editor::SelectNext",
-
-            // Code navigation and actions
-            "g d": "editor::GoToDefinition",
-            "g shift-d": "editor::GoToDeclaration",
-            "g y": "editor::GoToTypeDefinition",
-            "g i": "editor::GoToImplementation",
-            "space .": "editor::ToggleCodeActions",
-
-            // Show all errors
-            "space d": "diagnostics::Deploy",
-
-            // Comments
-            "g c": ["editor::ToggleComments", { "advance_downwards": false }],
-
-            // Lines
-            "shift-enter": "editor::NewlineBelow",
-            "ctrl-shift-enter": "editor::NewlineAbove",
-
-            // Spliting panes
-            "space s": "pane::SplitRight",
-            "space S": "pane::SplitDown",
-
-            // Git
-            "space g": "git_panel::ToggleFocus",
-
-            // AI Agent
-            "space a": "agent::ToggleFocus",
-
-            // Close all other files
-            "space o": "pane::CloseOtherItems"
-        }
-    },
-    {
-        "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-        "bindings": {
-            // Move between tabs
-            "H": "pane::ActivatePreviousItem",
-            "L": "pane::ActivateNextItem"
-        }
-    },
-
-    // Insert mode
-    {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            "j k": "vim::NormalBefore",
-            "j j": "vim::NormalBefore",
-
-            // AI suggestion and incline editing
-            "ctrl-x ctrl-x": "editor::ShowEditPrediction",
-            "ctrl-x ctrl-a": "assistant::InlineAssist",
-            "ctrl-x ctrl-c": "editor::ShowCompletions",
-            "ctrl-c": "editor::Cancel",
-
-            // Moves to end of line in insert mode
-            "ctrl-e": "editor::MoveToEndOfLine",
-
-            // Move and select in insert mode
-            "alt-h": "editor::MoveLeft",
-            "alt-l": "editor::MoveRight",
-            "alt-k": "editor::MoveUp",
-            "alt-j": "editor::MoveDown",
-            "alt-shift-h": "editor::SelectLeft",
-            "alt-shift-l": "editor::SelectRight",
-            "alt-shift-k": "editor::SelectUp",
-            "alt-shift-j": "editor::SelectDown"
-        }
-    },
-    {
-        "context": "vim_mode == insert && editor_has_snippet_completions",
-        "bindings": {
-            "tab": "editor::ShowWordCompletions"
-        }
-    },
-
-    // Visual mode
-    {
-        "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-        "bindings": {
-            // Moving lines around in visual mode
-            "shift-K": "editor::MoveLineUp",
-            "shift-J": "editor::MoveLineDown",
-            "shift-up": "editor::MoveLineUp",
-            "shift-down": "editor::MoveLineDown"
         }
     },
 
@@ -175,10 +101,7 @@
             "r": "project_panel::Rename",
             "d": "project_panel::Trash",
             "l": "project_panel::Open",
-            "shift-d": "project_panel::Delete",
-
-            // Close
-            "space e": "workspace::ToggleRightDock"
+            "shift-d": "project_panel::Delete"
         }
     },
 
@@ -199,6 +122,40 @@
             "space f": "file_finder::Toggle",
             "space space": "file_finder::Toggle",
             "shift-shift": "file_finder::Toggle"
+        }
+    },
+
+    // AI
+    // 1. Accept AI suggestion with Ctrl-Y (non-conflict context)
+    {
+        "context": "Editor && edit_prediction",
+        "bindings": {
+            "ctrl-y": "editor::AcceptEditPrediction"
+        }
+    },
+
+    // 2. Accept AI suggestion with Ctrl-Y (conflict context - when LSP menu is also visible)
+    {
+        "context": "Editor && edit_prediction_conflict",
+        "bindings": {
+            "ctrl-y": "editor::AcceptEditPrediction"
+        }
+    },
+
+    // 3. Prevent TAB from accepting the suggestion (restores normal indent)
+    // This must be a specific override to beat the default binding.
+    {
+        "context": "Editor && edit_prediction",
+        "bindings": {
+            "tab": "editor::Tab"
+        }
+    },
+
+    // 4. Prevent TAB from accepting the suggestion in the conflict context
+    {
+        "context": "Editor && edit_prediction_conflict",
+        "bindings": {
+            "tab": "editor::Tab"
         }
     }
 ]

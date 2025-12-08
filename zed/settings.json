@@ -1,123 +1,208 @@
 {
-  // VIM
-  "vim_mode": true,
+    // Vim
+    "title_bar": {
+        "show_menus": false,
+        "show_sign_in": true,
+        "show_user_picture": false,
+        "show_onboarding_banner": false,
+        "show_project_items": true,
+        "show_branch_name": true,
+        "show_branch_icon": false
+    },
+    "debugger": {
+        "button": false
+    },
+    "vim_mode": true,
 
-  // Looks
-  "icon_theme": "Bearded Icon Theme",
-  "buffer_font_family": "MonaspiceKr Nerd Font",
-  "buffer_font_size": 14,
-  "ui_font_size": 16,
-  "minimap": { "show": "never" },
-  "buffer_font_features": { "calt": 0 },
-  "buffer_line_height": { "custom": 2.6 },
-  "relative_line_numbers": true,
-  "theme": { "mode": "system", "light": "Tokyo Night Storm", "dark": "Tokyo Night Storm" },
-  "show_whitespaces": "selection",
-  "project_panel": { "dock": "right", "default_width": 360 },
-  "terminal": { "font_size": 13, "line_height": { "custom": 1.6 } },
+    // Looks / Editor
+    "ui_font_size": 15.0,
+    "buffer_font_size": 14.0,
+    "ui_font_family": "MonaspiceKr Nerd Font Mono",
+    "buffer_font_family": "MonaspiceKr Nerd Font Mono",
+    "icon_theme": "Catppuccin Mocha",
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "Tokyo Night Moon"
+    },
+    "buffer_line_height": { "custom": 2.4 },
+    "cursor_blink": false,
+    "show_whitespaces": "selection",
+    "preferred_line_length": 120,
+    "autosave": "on_focus_change",
+    "format_on_save": "on",
+    "vertical_scroll_margin": 4.0,
+    "relative_line_numbers": "enabled",
+    "when_closing_with_no_tabs": "keep_window_open",
+    "show_wrap_guides": false,
+    "colorize_brackets": true,
 
-  // Other
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "base_keymap": "VSCode",
-  "format_on_save": "on",
-  "autosave": "on_focus_change",
+    // Indentation and wrapping
+    "tab_size": 4,
+    "wrap_guides": [120],
+    "indent_guides": {
+        "enabled": true,
+        "coloring": "fixed",
+        "active_line_width": 2
+    },
 
-  // Files, indexing, etc.
-  "file_scan_exclusions": ["_model_helpers.php"],
-  "file_types": {
-      "PHP": ["*.php", "_ide_helper.php"],
-      "Blade": ["*.blade.php"]
-  },
+    // Terminal
+    "terminal": {
+        "button": false,
+        "font_size": 13,
+        "line_height": { "custom": 1.8 }
+    },
 
-  // Cleanup of UI
-  "preview_tabs": {
-      "enabled": false
-  },
-  "tabs": {
-      "file_icons": false,
-      "git_status": true
-  },
-  "tab_bar": {
-      "show": true,
-      "show_tab_bar_buttons": false,
-      "show_nav_history_buttons": false
-  },
-  "toolbar": {
-      "breadcrumbs": false,
-      "selections_menu": false,
-      "quick_actions": false
-  },
+    // Files, indexing, etc.
+    "file_scan_exclusions": ["_model_helpers.php", ".DS_Store"],
+    "file_types": {
+        "Blade": ["*.blade.php"]
+    },
 
-  // Indentation and wrapping
-  "tab_size": 4,
-  "wrap_guides": [120],
-  "indent_guides": {
-      "enabled": true,
-      "coloring": "fixed",
-      "active_line_width": 2
-  },
+    // Layouts
+    "project_panel": {
+        "hide_hidden": false,
+        "hide_root": true,
+        "indent_guides": {
+            "show": "never"
+        },
+        "show_diagnostics": "errors",
+        "auto_fold_dirs": true,
+        "starts_open": true,
+        "indent_size": 24.0,
+        "folder_icons": true,
+        "file_icons": true,
+        "entry_spacing": "comfortable",
+        "button": false,
+        "dock": "right",
+        "default_width": 360
+    },
+    "notification_panel": { "dock": "left" },
 
-  // Languages settings
-  "inlay_hints": {
-      "enabled": false
-  },
+    // Clean UI
+    "preview_tabs": { "enabled": false },
+    "tabs": {
+        "show_close_button": "hover",
+        "close_position": "right",
+        "file_icons": false,
+        "git_status": false
+    },
+    "tab_bar": {
+        "show": true,
+        "show_tab_bar_buttons": false,
+        "show_nav_history_buttons": false
+    },
+    "toolbar": {
+        "code_actions": false,
+        "agent_review": false,
+        "breadcrumbs": false,
+        "selections_menu": false,
+        "quick_actions": false
+    },
 
-  "languages": {
-      "PHP": {
-          "language_servers": [
-              "!intelephense",
-              "!phpactor",
-              "phptools",
-              "phpdocs",
-              "..."
-          ],
-          "format_on_save": "on",
-          "formatter": {
-              "external": {
-                  "command": "bash",
-                  "arguments": [
-                      "-c",
-                      "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
-                  ]
-              }
-          }
-      },
-      "Blade": {
-          "format_on_save": "on",
-          "formatter": {
-              "external": {
-                  "command": "npx",
-                  "arguments": [
-                      "prettier",
-                      "--stdin-filepath",
-                      "{buffer_path}",
-                      "--plugin=/opt/homebrew/lib/node_modules/prettier-plugin-blade/plugin.js",
-                      "--parser=blade"
-                  ]
-              }
-          }
-      }
-  },
+    // Statusbar
+    "status_bar": {
+        "line_endings_button": false,
+        "active_language_button": true,
+        "cursor_position_button": false
+    },
+    "git_panel": { "button": false },
+    "collaboration_panel": { "button": false },
+    "search": { "button": false },
+    "outline_panel": { "button": false },
 
-  // LSP settings
-  "lsp": {
-      "intelephense": {
-          "initialization_options": {
-              "licenceKey": "~/.config/intelephense/licence.txt"
-          },
-          "settings": {
-              "environment": {
-                  "phpVersion": "8.4.0"
-              }
-          }
-      },
-      "phptools": {
-          "initialization_options": {
-              "0": "~/.config/phptools/license.json"
-          }
-      }
-  }
+    // Scrollbar
+    "scrollbar": {
+        "axes": {
+            "horizontal": true,
+            "vertical": true
+        },
+        "selected_symbol": false,
+        "selected_text": false,
+        "search_results": true,
+        "cursors": true,
+        "git_diff": false
+    },
+
+    // Languages, LSP
+    "languages": {
+        "JSONC": { "tab_size": 4 },
+        "JSON": { "tab_size": 4 },
+        "PHP": {
+            "format_on_save": "on",
+            // "formatter": "language_server",
+            "language_servers": ["phptools", "!phpactor"],
+            "formatter": {
+                "external": {
+                    "command": "bash",
+                    "arguments": [
+                        "-c",
+                        "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
+                    ]
+                }
+            }
+        },
+        "Blade": {
+            "format_on_save": "on",
+            "formatter": {
+                "external": {
+                    "command": "blade-formatter",
+                    "arguments": ["--stdin", "--wrap-line-length", "9999", "--wrap-attributes", "preserve-aligned"]
+                }
+            }
+        },
+        "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } }
+    },
+    "lsp": {
+        "phptools": {
+            "initialization_options": {
+                "php.format.codeStyle": "Laravel",
+                "php.format.rules.addCommaAfterLastArrayElement": true,
+                "php.format.rules.alignConsecutiveAssignments": true,
+                "php.format.rules.alignConstants": true,
+                "php.format.rules.alignEnumCases": true,
+                "php.format.rules.alignMatchArmBodies": true,
+                "php.format.rules.alignProperties": true,
+                "php.format.rules.arrayInitializersAlignKeyValuePairs": true,
+                "php.format.rules.spaceAfterUnaryNot": true
+            }
+        }
+    },
+    "inlay_hints": {
+        "show_background": true,
+        "enabled": false
+    },
+
+    // Git, source control
+    "git": {
+        "inline_blame": { "enabled": false },
+        "git_gutter": "tracked_files"
+    },
+
+    // AI
+    "show_edit_predictions": true,
+    "features": {
+        "edit_prediction_provider": "copilot"
+    },
+    "agent": {
+        "default_profile": "ask",
+        "always_allow_tool_actions": true,
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "claude-sonnet-4.5"
+        },
+        "dock": "left"
+    },
+    "language_models": {
+        "ollama": {
+            "api_url": "http://localhost:11434"
+        }
+    },
+
+    // Other
+    "inline_code_actions": false,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    }
 }
