@@ -339,9 +339,7 @@
                                         "optional": ["shift"]
                                     }
                                 },
-                                "to": [
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }
-                                ],
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
                                 "to_after_key_up": [
                                     { "key_code": "open_bracket" },
                                     { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
@@ -367,9 +365,7 @@
                                         "optional": ["shift"]
                                     }
                                 },
-                                "to": [
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }
-                                ],
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
                                 "to_after_key_up": [
                                     { "key_code": "close_bracket" },
                                     { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
@@ -395,9 +391,7 @@
                                         "optional": ["shift"]
                                     }
                                 },
-                                "to": [
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }
-                                ],
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
                                 "to_after_key_up": [
                                     { "key_code": "backslash" },
                                     { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
@@ -423,9 +417,7 @@
                                         "optional": ["shift"]
                                     }
                                 },
-                                "to": [
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }
-                                ],
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
                                 "to_after_key_up": [
                                     { "key_code": "semicolon" },
                                     { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
@@ -451,9 +443,7 @@
                                         "optional": ["shift"]
                                     }
                                 },
-                                "to": [
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }
-                                ],
+                                "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Croatian" } }],
                                 "to_after_key_up": [
                                     { "key_code": "quote" },
                                     { "select_input_source": { "input_source_id": "com.apple.keylayout.US" } }
@@ -659,9 +649,7 @@
                             {
                                 "from": {
                                     "key_code": "t",
-                                    "modifiers": {
-                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"]
-                                    }
+                                    "modifiers": { "mandatory": ["left_control", "left_shift", "left_option", "left_command"] }
                                 },
                                 "to": [
                                     {
