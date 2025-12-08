@@ -81,6 +81,12 @@
         }
     },
     {
+        "context": "Editor && (vim_mode == visual || vim_mode == insert)",
+        "bindings": {
+            "alt-w": "editor::WrapSelectionsInTag"
+        }
+    },
+    {
         "context": "(Editor && mode == full)",
         "bindings": {
             "cmd-e": "project_panel::ToggleFocus"
