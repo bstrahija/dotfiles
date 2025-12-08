@@ -135,6 +135,7 @@ alias show-merged='git branch --merged | grep -v "\*"'
 alias grm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gsm='git branch --merged | grep -v "\*"'
 alias nah='git reset --hard;git clean -df;'
+alias lg='lazygit'
 
 # -------------------------------------------------------------------
 # Laravel

@@ -87,3 +87,27 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/He
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR="/Users/bstrahija/Library/Application Support/Herd/config/php/81/"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by Antigravity
+export PATH="/Users/bstrahija/.antigravity/antigravity/bin:$PATH"
+
+# FZF
+export FZF_DEFAULT_OPTS="
+  --preview 'if [[ -d {} ]]; then
+                eza --tree --color=always --level=2 {};
+              else
+                bat --style=numbers --color=always {} 2>/dev/null ||
+                cat {} 2>/dev/null;
+              fi'
+  --preview-window=right:60%
+"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# bun completions
+[ -s "/Users/bstrahija/.bun/_bun" ] && source "/Users/bstrahija/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
