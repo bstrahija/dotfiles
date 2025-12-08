@@ -41,7 +41,8 @@
             "space b p": "pane::ActivatePreviousItem",
             "space \\": "pane::SplitAndMoveRight",
             "space -": "pane::SplitAndMoveDown",
-            "space t": "tab_switcher::Toggle",
+            "space t t": "tab_switcher::Toggle",
+            "space t g": "editor::ToggleTabBar",
             "g r": "editor::FindAllReferences",
             "g i": "editor::GoToImplementation",
             "g o": "outline_panel::ToggleFocus",
@@ -51,6 +52,15 @@
             "space p": ["projects::OpenRecent", { "create_new_window": false }],
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
             "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }]
+        }
+    },
+
+    // Vim sneak
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "s": "vim::PushSneak",
+            "S": "vim::PushSneakBackward"
         }
     },
 
