@@ -4,6 +4,7 @@
         "context": "Workspace",
         "bindings": {
             "shift shift": "file_finder::Toggle",
+            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }],
             "cmd-e": "project_panel::ToggleFocus",
             "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
             "ctrl-g ctrl-g": "git_panel::ToggleFocus",
@@ -30,7 +31,7 @@
             "space f": "editor::ToggleFold",
             "space F F": "editor::FoldAll",
             "space F U": "editor::UnfoldAll",
-            "space e a": "diagnostics::Deploy",
+            "space e e": "diagnostics::Deploy",
             "space e ]": "editor::GoToDiagnostic",
             "space e [": "editor::GoToPreviousDiagnostic",
             "space z": "workspace::ToggleZoom",
@@ -51,7 +52,8 @@
             "g m": "vim::Matching",
             "space p": ["projects::OpenRecent", { "create_new_window": false }],
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
-            "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }]
+            "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
+            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }]
         }
     },
 
@@ -134,7 +136,6 @@
     {
         "context": "EmptyPane || SharedScreen",
         "bindings": {
-            "space e": "project_panel::ToggleFocus",
             "space f": "file_finder::Toggle",
             "space space": "file_finder::Toggle",
             "shift-shift": "file_finder::Toggle"

@@ -1,17 +1,5 @@
 {
     // Vim
-    "title_bar": {
-        "show_menus": false,
-        "show_sign_in": true,
-        "show_user_picture": false,
-        "show_onboarding_banner": false,
-        "show_project_items": true,
-        "show_branch_name": true,
-        "show_branch_icon": false
-    },
-    "debugger": {
-        "button": false
-    },
     "vim_mode": true,
 
     // Looks / Editor
@@ -36,6 +24,18 @@
     "when_closing_with_no_tabs": "keep_window_open",
     "show_wrap_guides": false,
     "colorize_brackets": true,
+    "title_bar": {
+        "show_menus": false,
+        "show_sign_in": true,
+        "show_user_picture": false,
+        "show_onboarding_banner": false,
+        "show_project_items": true,
+        "show_branch_name": true,
+        "show_branch_icon": false
+    },
+    "debugger": {
+        "button": false
+    },
 
     // Indentation and wrapping
     "tab_size": 4,

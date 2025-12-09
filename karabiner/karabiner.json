@@ -500,24 +500,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "HRM: a to shift",
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [{ "key_code": "a" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
                                 "description": "HRM: Quote to ctrl",
                                 "from": {
                                     "key_code": "quote",
