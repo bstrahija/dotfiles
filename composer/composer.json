@@ -1,5 +1,6 @@
 {
     "require": {
-        "laravel/pint": "^1.25"
+        "laravel/pint": "^1.25",
+        "php-stubs/wordpress-stubs": "^6.9"
     }
 }
