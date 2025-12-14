@@ -185,6 +185,10 @@
         "edit_prediction_provider": "zed"
     },
     "agent": {
+        "inline_assistant_model": {
+            "provider": "zed.dev",
+            "model": "claude-sonnet-4-5"
+        },
         "default_profile": "ask",
         "always_allow_tool_actions": true,
         "default_model": {

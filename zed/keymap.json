@@ -28,6 +28,7 @@
             "space g g": "git_panel::ToggleFocus",
             "space g b": "git::Blame",
             "space g i": "editor::ToggleGitBlameInline",
+            "space g h": "git::FileHistory",
             "space f": "editor::ToggleFold",
             "space F F": "editor::FoldAll",
             "space F U": "editor::UnfoldAll",
@@ -42,11 +43,13 @@
             "space b p": "pane::ActivatePreviousItem",
             "space \\": "pane::SplitAndMoveRight",
             "space -": "pane::SplitAndMoveDown",
+            "space w j": "pane::JoinAll",
             "space t t": "tab_switcher::Toggle",
             "space t g": "editor::ToggleTabBar",
             "g i": "editor::GoToImplementation",
             "g o": "outline_panel::ToggleFocus",
             "g a": "editor::ToggleCodeActions",
+            "g D": "editor::GoToDefinitionSplit",
             "g =": "editor::Format",
             "g m": "vim::Matching",
             "g l": "editor::OpenSelectedFilename",
@@ -61,6 +64,10 @@
     {
         "context": "Editor && vim_mode == normal",
         "bindings": {
+            "alt-h": "vim::StartOfLineDownward",
+            "H": "vim::StartOfLineDownward",
+            "alt-l": "vim::EndOfLineDownward",
+            "L": "vim::EndOfLineDownward",
             "s": "vim::PushSneak",
             "S": "vim::PushSneakBackward"
         }
@@ -71,11 +78,7 @@
         "context": "Editor && (vim_mode == normal || vim_mode == insert)",
         "bindings": {
             "shift-enter": "editor::NewlineBelow",
-            "ctrl-shift-enter": "editor::NewlineAbove",
-            "alt-h": "vim::StartOfLineDownward",
-            "H": "vim::StartOfLineDownward",
-            "alt-l": "vim::EndOfLineDownward",
-            "L": "vim::EndOfLineDownward"
+            "ctrl-shift-enter": "editor::NewlineAbove"
         }
     },
     {
