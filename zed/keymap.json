@@ -8,8 +8,8 @@
             "cmd-e": "project_panel::ToggleFocus",
             "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
             "ctrl-g ctrl-g": "git_panel::ToggleFocus",
-            "ctrl-x ctrl-x": "agent::ToggleFocus"
-        }
+            "ctrl-x ctrl-x": "agent::ToggleFocus",
+        },
     },
 
     {
@@ -18,6 +18,7 @@
             "space space": "file_finder::Toggle",
             "space s s": "zed::OpenSettingsFile",
             "space s k": "zed::OpenKeymapFile",
+            "space s x": "zed::OpenTasks",
             "space w": "workspace::Save",
             "space q q": "pane::CloseActiveItem",
             "space q o": "pane::CloseOtherItems",
@@ -26,6 +27,7 @@
             "space s t": "theme_selector::Toggle",
             "space s i": "icon_theme_selector::Toggle",
             "space g g": "git_panel::ToggleFocus",
+            "space g l": ["task::Spawn", { "task_name": "lazygit" }],
             "space g b": "git::Blame",
             "space g i": "editor::ToggleGitBlameInline",
             "space g h": "git::FileHistory",
@@ -34,7 +36,9 @@
             "space F U": "editor::UnfoldAll",
             "space e e": "diagnostics::Deploy",
             "space e ]": "editor::GoToDiagnostic",
+            "space e n": "editor::GoToDiagnostic",
             "space e [": "editor::GoToPreviousDiagnostic",
+            "space e p": "editor::GoToPreviousDiagnostic",
             "space z": "workspace::ToggleZoom",
             "space c": "vim::ToggleComments",
             "space a": "pane::AlternateFile",
@@ -53,11 +57,33 @@
             "g =": "editor::Format",
             "g m": "vim::Matching",
             "g l": "editor::OpenSelectedFilename",
-            "space p": ["projects::OpenRecent", { "create_new_window": false }],
+            "space p p": ["projects::OpenRecent", { "create_new_window": false }],
+            "space p d": ["task::Spawn", { "task_name": "project_dotfiles" }],
+            "space p h": ["task::Spawn", { "task_name": "project_ophub" }],
+            "space p k": ["task::Spawn", { "task_name": "project_kourses" }],
+            "space p m": ["task::Spawn", { "task_name": "project_opmy" }],
+            "space p o": ["task::Spawn", { "task_name": "project_optimizepress" }],
+            "space p z": ["task::Spawn", { "task_name": "project_zimsko" }],
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
             "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
-            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }]
-        }
+            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }],
+        },
+    },
+
+    // Tabs
+    {
+        "context": "Editor && VimControl && !VimWaiting && !menu",
+        "bindings": {
+            "space 1": ["pane::ActivateItem", 0],
+            "space 2": ["pane::ActivateItem", 1],
+            "space 3": ["pane::ActivateItem", 2],
+            "space 4": ["pane::ActivateItem", 3],
+            "space 5": ["pane::ActivateItem", 4],
+            "space 6": ["pane::ActivateItem", 5],
+            "space 7": ["pane::ActivateItem", 6],
+            "space 8": ["pane::ActivateItem", 7],
+            "space 9": ["pane::ActivateItem", 8],
+        },
     },
 
     // Vim sneak
@@ -69,8 +95,8 @@
             "alt-l": "vim::EndOfLineDownward",
             "L": "vim::EndOfLineDownward",
             "s": "vim::PushSneak",
-            "S": "vim::PushSneakBackward"
-        }
+            "S": "vim::PushSneakBackward",
+        },
     },
 
     // Line stuff
@@ -78,26 +104,26 @@
         "context": "Editor && (vim_mode == normal || vim_mode == insert)",
         "bindings": {
             "shift-enter": "editor::NewlineBelow",
-            "ctrl-shift-enter": "editor::NewlineAbove"
-        }
+            "ctrl-shift-enter": "editor::NewlineAbove",
+        },
     },
     {
         "context": "Editor && vim_mode == insert",
         "bindings": {
-            "j j": "vim::NormalBefore"
-        }
+            "j j": "vim::NormalBefore",
+        },
     },
     {
         "context": "Editor && (vim_mode == visual || vim_mode == insert)",
         "bindings": {
-            "alt-w": "editor::WrapSelectionsInTag"
-        }
+            "alt-w": "editor::WrapSelectionsInTag",
+        },
     },
     {
         "context": "(Editor && mode == full)",
         "bindings": {
-            "cmd-e": "project_panel::ToggleFocus"
-        }
+            "cmd-e": "project_panel::ToggleFocus",
+        },
     },
     {
         "context": "Editor",
@@ -107,8 +133,8 @@
             "alt-j": "editor::MoveLineDown",
             "alt-k": "editor::MoveLineUp",
             "ctrl-]": "pane::ActivateNextItem",
-            "ctrl-[": "pane::ActivatePreviousItem"
-        }
+            "ctrl-[": "pane::ActivatePreviousItem",
+        },
     },
 
     // Manage files in project panel ()
@@ -124,8 +150,8 @@
             "r": "project_panel::Rename",
             "d": "project_panel::Trash",
             "l": "project_panel::Open",
-            "shift-d": "project_panel::Delete"
-        }
+            "shift-d": "project_panel::Delete",
+        },
     },
 
     // Markdown
@@ -133,8 +159,8 @@
         "context": "Editor && (vim_mode == normal || vim_mode == visual) && vim_operator == none && !VimWaiting",
         "bindings": {
             "space m p": "markdown::OpenPreview",
-            "space m P": "markdown::OpenPreviewToTheSide"
-        }
+            "space m P": "markdown::OpenPreviewToTheSide",
+        },
     },
 
     // Empty screen
@@ -143,25 +169,28 @@
         "bindings": {
             "space f": "file_finder::Toggle",
             "space space": "file_finder::Toggle",
-            "shift-shift": "file_finder::Toggle"
-        }
+            "shift-shift": "file_finder::Toggle",
+        },
     },
+
+    // Marks
+    {},
 
     // AI
     // 1. Accept AI suggestion with Ctrl-Y (non-conflict context)
     {
         "context": "Editor && edit_prediction",
         "bindings": {
-            "ctrl-y": "editor::AcceptEditPrediction"
-        }
+            "ctrl-y": "editor::AcceptEditPrediction",
+        },
     },
 
     // 2. Accept AI suggestion with Ctrl-Y (conflict context - when LSP menu is also visible)
     {
         "context": "Editor && edit_prediction_conflict",
         "bindings": {
-            "ctrl-y": "editor::AcceptEditPrediction"
-        }
+            "ctrl-y": "editor::AcceptEditPrediction",
+        },
     },
 
     // 3. Prevent TAB from accepting the suggestion (restores normal indent)
@@ -169,15 +198,27 @@
     {
         "context": "Editor && edit_prediction",
         "bindings": {
-            "tab": "editor::Tab"
-        }
+            "tab": "editor::Tab",
+        },
     },
 
     // 4. Prevent TAB from accepting the suggestion in the conflict context
     {
         "context": "Editor && edit_prediction_conflict",
         "bindings": {
-            "tab": "editor::Tab"
-        }
-    }
+            "tab": "editor::Tab",
+        },
+    },
+    {
+        "context": "(Editor && !edit_prediction)",
+        "bindings": {
+            "alt-x": "editor::ShowEditPrediction",
+        },
+    },
+    {
+        "context": "((Editor && mode == full) && edit_prediction)",
+        "bindings": {
+            "alt-x": "editor::NextEditPrediction",
+        },
+    },
 ]

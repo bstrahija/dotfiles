@@ -1,5 +1,8 @@
 {
     // Vim
+    "edit_predictions": {
+        "mode": "eager"
+    },
     "vim_mode": true,
 
     // Looks / Editor
@@ -182,7 +185,7 @@
     // AI
     "show_edit_predictions": true,
     "features": {
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "copilot"
     },
     "agent": {
         "inline_assistant_model": {
