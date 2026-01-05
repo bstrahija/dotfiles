@@ -18,7 +18,7 @@
             },
             {
               "bundleIdentifier" : "app.zen-browser.zen",
-              "iconPath" : "/Applications/Zen Browser.app/Contents/Resources/firefox.icns",
+              "iconPath" : "/Applications/Zen.app/Contents/Resources/firefox.icns",
               "name" : "Zen"
             }
           ],
@@ -164,8 +164,8 @@
               "name" : "Notion"
             },
             {
-              "bundleIdentifier" : "com.apple.Safari.WebApp.DD53E0AF-A0A7-4A80-B01D-D53562FE7380",
-              "iconPath" : "/Users/bstrahija/Applications/Gmail.app/Contents/Resources/ApplicationIcon.icns",
+              "bundleIdentifier" : "com.apple.Safari.WebApp.C3670D4C-47ED-4BC9-B7FA-68E179B457E7",
+              "iconPath" : "/Users/boris/Applications/Gmail.app/Contents/Resources/ApplicationIcon.icns",
               "name" : "Gmail"
             }
           ],
@@ -326,17 +326,7 @@
           "name" : "Plan"
         },
         {
-          "appToFocus" : {
-            "bundleIdentifier" : "com.openai.chat",
-            "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
-            "name" : "ChatGPT"
-          },
           "apps" : [
-            {
-              "bundleIdentifier" : "com.openai.chat",
-              "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
-              "name" : "ChatGPT"
-            },
             {
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
@@ -366,6 +356,16 @@
               "bundleIdentifier" : "com.apple.Safari.WebApp.1ACB683A-0D2C-46FA-A609-1C9E87DF5A18",
               "iconPath" : "/Applications/T3 Chat.app/Contents/Resources/ApplicationIcon.icns",
               "name" : "T3 Chat"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.7A39C8D5-D1B2-4F4E-863D-90BA6EEDE95E",
+              "iconPath" : "/Users/boris/Applications/ChatGPT.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "ChatGPT"
+            },
+            {
+              "bundleIdentifier" : "com.openai.chat",
+              "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
+              "name" : "ChatGPT"
             }
           ],
           "display" : "DELL U2719D",
