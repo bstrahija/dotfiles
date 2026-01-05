@@ -163,6 +163,15 @@
         },
     },
 
+    // Indenting
+    {
+        "context": "Editor && vim_mode == visual",
+        "bindings": {
+            "tab": "editor::Indent",
+            "shift-tab": "editor::Outdent",
+        },
+    },
+
     // Empty screen
     {
         "context": "EmptyPane || SharedScreen",
@@ -196,7 +205,7 @@
     // 3. Prevent TAB from accepting the suggestion (restores normal indent)
     // This must be a specific override to beat the default binding.
     {
-        "context": "Editor && edit_prediction",
+        "context": "Editor && edit_prediction && vim_mode != visual",
         "bindings": {
             "tab": "editor::Tab",
         },

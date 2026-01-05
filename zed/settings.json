@@ -1,8 +1,5 @@
 {
     // Vim
-    "edit_predictions": {
-        "mode": "eager"
-    },
     "vim_mode": true,
 
     // Looks / Editor
@@ -13,10 +10,10 @@
     "icon_theme": "Catppuccin Mocha",
     "theme": {
         "mode": "dark",
-        "light": "One Light",
-        "dark": "Rosé Pine Moon"
+        "light": "Rosé Pine Dawn",
+        "dark": "Rosé Pine Moon",
     },
-    "buffer_line_height": { "custom": 2.4 },
+    "buffer_line_height": { "custom": 2.6 },
     "cursor_blink": false,
     "show_whitespaces": "selection",
     "preferred_line_length": 120,
@@ -34,10 +31,10 @@
         "show_onboarding_banner": false,
         "show_project_items": true,
         "show_branch_name": true,
-        "show_branch_icon": false
+        "show_branch_icon": false,
     },
     "debugger": {
-        "button": false
+        "button": false,
     },
 
     // Indentation and wrapping
@@ -46,20 +43,20 @@
     "indent_guides": {
         "enabled": true,
         "coloring": "fixed",
-        "active_line_width": 2
+        "active_line_width": 2,
     },
 
     // Terminal
     "terminal": {
         "button": false,
         "font_size": 13,
-        "line_height": { "custom": 1.8 }
+        "line_height": { "custom": 1.8 },
     },
 
     // Files, indexing, etc.
     "file_scan_exclusions": ["_model_helpers.php", ".DS_Store"],
     "file_types": {
-        "Blade": ["*.blade.php"]
+        "Blade": ["*.blade.php"],
     },
 
     // Layouts
@@ -67,7 +64,7 @@
         "hide_hidden": false,
         "hide_root": true,
         "indent_guides": {
-            "show": "never"
+            "show": "never",
         },
         "show_diagnostics": "errors",
         "auto_fold_dirs": true,
@@ -78,7 +75,7 @@
         "entry_spacing": "comfortable",
         "button": false,
         "dock": "right",
-        "default_width": 360
+        "default_width": 360,
     },
     "notification_panel": { "dock": "left" },
 
@@ -88,26 +85,26 @@
         "show_close_button": "hover",
         "close_position": "right",
         "file_icons": false,
-        "git_status": false
+        "git_status": false,
     },
     "tab_bar": {
         "show": true,
         "show_tab_bar_buttons": false,
-        "show_nav_history_buttons": false
+        "show_nav_history_buttons": false,
     },
     "toolbar": {
         "code_actions": false,
         "agent_review": false,
         "breadcrumbs": false,
         "selections_menu": false,
-        "quick_actions": false
+        "quick_actions": false,
     },
 
     // Statusbar
     "status_bar": {
         "line_endings_button": false,
         "active_language_button": true,
-        "cursor_position_button": false
+        "cursor_position_button": false,
     },
     "git_panel": { "button": false },
     "collaboration_panel": { "button": false },
@@ -118,13 +115,13 @@
     "scrollbar": {
         "axes": {
             "horizontal": true,
-            "vertical": true
+            "vertical": true,
         },
         "selected_symbol": false,
         "selected_text": false,
         "search_results": true,
         "cursors": true,
-        "git_diff": false
+        "git_diff": false,
     },
 
     // Languages, LSP
@@ -134,27 +131,41 @@
         "PHP": {
             "format_on_save": "on",
             // "formatter": "language_server",
-            "language_servers": ["phptools", "!phpactor"],
+            "language_servers": ["phptools", "!phpactor", "!intelephense"],
             "formatter": {
                 "external": {
                     "command": "bash",
                     "arguments": [
                         "-c",
-                        "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp"
-                    ]
-                }
-            }
+                        "temp=$(mktemp) && cat > $temp && pint --quiet --config ~/.config/pint/laravel.json $temp && cat $temp",
+                    ],
+                },
+            },
         },
         "Blade": {
             "format_on_save": "on",
             "formatter": {
                 "external": {
                     "command": "blade-formatter",
-                    "arguments": ["--stdin", "--wrap-line-length", "9999", "--wrap-attributes", "preserve-aligned"]
-                }
-            }
+                    "arguments": [
+                        "--stdin",
+                        "--wrap-line-length",
+                        "9999",
+                        "--wrap-attributes",
+                        "preserve-aligned",
+                        "--sort-tailwindcss-classes",
+                    ],
+                },
+            },
+
+            // "formatter": {
+            //     "external": {
+            //         "command": "blade-formatter",
+            //         "arguments": ["--stdin", "--wrap-line-length", "9999", "--wrap-attributes", "preserve-aligned"],
+            //     },
+            // },
         },
-        "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } }
+        "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } },
     },
     "lsp": {
         "phptools": {
@@ -167,49 +178,52 @@
                 "php.format.rules.alignMatchArmBodies": true,
                 "php.format.rules.alignProperties": true,
                 "php.format.rules.arrayInitializersAlignKeyValuePairs": true,
-                "php.format.rules.spaceAfterUnaryNot": true
-            }
-        }
+                "php.format.rules.spaceAfterUnaryNot": true,
+            },
+        },
     },
     "inlay_hints": {
         "show_background": true,
-        "enabled": false
+        "enabled": false,
     },
 
     // Git, source control
     "git": {
         "inline_blame": { "enabled": false },
-        "git_gutter": "tracked_files"
+        "git_gutter": "tracked_files",
     },
 
     // AI
     "show_edit_predictions": true,
+    "edit_predictions": {
+        "mode": "eager",
+    },
     "features": {
-        "edit_prediction_provider": "copilot"
+        "edit_prediction_provider": "copilot",
     },
     "agent": {
         "inline_assistant_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-5"
+            "model": "claude-sonnet-4-5",
         },
         "default_profile": "ask",
         "always_allow_tool_actions": true,
         "default_model": {
             "provider": "zed.dev",
-            "model": "claude-sonnet-4-5"
+            "model": "claude-sonnet-4-5",
         },
-        "dock": "left"
+        "dock": "left",
     },
     "language_models": {
         "ollama": {
-            "api_url": "http://localhost:11434"
-        }
+            "api_url": "http://localhost:11434",
+        },
     },
 
     // Other
     "inline_code_actions": false,
     "telemetry": {
         "diagnostics": false,
-        "metrics": false
-    }
+        "metrics": false,
+    },
 }
