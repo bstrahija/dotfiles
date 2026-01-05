@@ -13,6 +13,14 @@
     { "key": "cmd+r", "command": "workbench.action.toggleSidebarVisibility" },
     { "key": "cmd+b", "command": "workbench.action.toggleAuxiliaryBar" },
 
+    // Switch focus between sidebar and editor
+    { "key": "cmd+e", "command": "workbench.action.focusActiveEditorGroup", "when": "sideBarFocus" },
+    { "key": "cmd+e", "command": "workbench.action.focusSideBar",           "when": "editorFocus" },
+
+    // Jumps (disable for now, use vim extension jumps, just it doesnt work with navigating symbols)
+    { "key": "ctrl+o", "command": "workbench.action.navigateBack" },
+    { "key": "ctrl+i", "command": "workbench.action.navigateForward" },
+
     // Toggle zen mode
     { "key": "shift+escape", "command": "workbench.action.toggleZenMode" },
 

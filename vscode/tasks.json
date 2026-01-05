@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run lazygit",
+            "type": "shell",
+            "command": "lazygit",
+            "presentation": {
+            "panel": "new",
+            "focus": true,
+            "reveal": "always"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
