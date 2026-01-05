@@ -9,7 +9,6 @@
 cask_args appdir: '/Applications', require_sha: true
 
 # Taps
-tap 'homebrew/services'
 tap 'browsh-org/homebrew-browsh'
 tap 'jesseduffield/lazygit'
 

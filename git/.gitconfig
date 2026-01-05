@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/bstrahija/.gitignore
+	excludesfile = /Users/boris/.gitignore
 	quotepath = false
 	autocrlf = input
 	editor = subl -w
