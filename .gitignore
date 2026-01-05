@@ -5,6 +5,8 @@ composer/vendor
 license.*
 licence.*
 _old
+*.old*
+kickstart
 
 cursor/globalStorage
 cursor/History
