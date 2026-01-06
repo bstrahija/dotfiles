@@ -1,16 +1,23 @@
 {
+    // Theme
     "workbench.colorTheme": "Rosé Pine Moon (no italics)",
     "workbench.iconTheme": "catppuccin-macchiato",
+
+    // Font
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.fontSize": 14,
+    "editor.fontSize": 13,
     "editor.fontWeight": "400",
-    "editor.lineHeight": 2.6,
+    "editor.lineHeight": 3,
+    "fontshortcuts.defaultFontSize": 14,
+    "fontshortcuts.defaultTerminalFontSize": 14,
+    "fontshortcuts.step": 1,
+
+    // Misc UI
     "editor.cursorBlinking": "solid",
     "editor.smoothScrolling": false,
     "workbench.list.smoothScrolling": false,
     "workbench.sideBar.location": "right",
-    "workbench.activityBar.location": "hidden",
     "workbench.startupEditor": "none",
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": true,
@@ -19,7 +26,7 @@
     "editor.rulers": [320],
     "workbench.editor.editorActionsLocation": "hidden",
     "editor.inlayHints.enabled": "off",
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "workbench.editor.tabsizing": "fit",
     "catppuccin-icons.hidesExplorerArrows": true,
     "chat.commandCenter.enabled": false,
@@ -82,6 +89,11 @@
     "editor.codeLens": false,
     "editor.formatOnSave": true,
 
+    // Git/SCM
+    "git.blame.editorDecoration.enabled": false,
+    "git.decorations.enabled": true,
+    "scm.diffDecorations": "gutter",
+
     // ==> PHP
     "php.version": "v8.4",
     "intelephense.environment.phpVersion": "8.4.0",
@@ -136,8 +148,8 @@
         ".env*": "dotenv"
     },
     "Lua.diagnostics.globals": ["vim"],
-    "git.decorations.enabled": true,
-    "scm.diffDecorations": "gutter",
+    "prettier.printWidth": 400,
+    "prettier.tabWidth": 4,
 
     // Other
     "files.autoSave": "onFocusChange",
@@ -192,6 +204,10 @@
 
         // Nicer redo
         { "before": ["U"], "after": ["<C-r>"] },
+
+        // Markdown preview
+        { "before": ["leader", "m", "p"], "commands": ["markdown.showPreviewToSide"] },
+        { "before": ["leader", "m", "P"], "commands": ["markdown.showPreview"] },
 
         // Navigate tabs
         { "before": ["g", "t"], "commands": ["workbench.action.nextEditor"] },
@@ -266,6 +282,11 @@
         // Git
         { "before": ["leader", "g", "l"], "commands": ["workbench.action.tasks.runTask"], "args": ["Run lazygit"] },
         { "before": ["leader", "g", "g"], "commands": ["workbench.view.scm"] },
+
+        // Folding code
+        { "before": ["leader", "f"], "commands": ["editor.toggleFold"] },
+        { "before": ["leader", "F", "F"], "commands": ["editor.foldAll"] },
+        { "before": ["leader", "F", "U"], "commands": ["editor.unfoldAll"] },
 
         // Projects
         { "before": ["leader", "p", "p"], "commands": ["projectManager.listProjects"] },
@@ -484,9 +505,13 @@
         // Easy change upper/lower case
         { "before": ["`"], "after": ["~"] },
 
-        // Indentin lines
+        // Indenting lines
         { "before": [">"], "commands": ["editor.action.indentLines"] },
-        { "before": ["<"], "commands": ["editor.action.outdentLines"] }
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+
+        // Expand/shrink selection to parents
+        { "before": ["shift+k"], "commands": ["editor.action.smartSelect.expand"] },
+        { "before": ["shift+j"], "commands": ["editor.action.smartSelect.shrink"] }
     ],
 
     // Custom styling
@@ -532,5 +557,19 @@
     "[scss]": {
         "editor.defaultFormatter": "vscode.css-language-features"
     },
-    "git.blame.editorDecoration.enabled": false
+    "workbench.activityBar.location": "hidden",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    }
 }
