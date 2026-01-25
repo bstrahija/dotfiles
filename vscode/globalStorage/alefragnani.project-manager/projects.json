@@ -1,107 +1,100 @@
 [
 	{
-		"name": "Creo Comments",
+		"name": "creo-comments",
 		"rootPath": "/Volumes/Superhero/Code/creo/creo-comments",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "DotFiles",
+		"name": "dotfiles",
 		"rootPath": "/Volumes/Superhero/DotFiles",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Creo Appointer",
+		"name": "creo-appointer",
 		"rootPath": "/Volumes/Superhero/Code/creo/appointer",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Creo Icons",
+		"name": "creo-icons",
 		"rootPath": "/Volumes/Superhero/Code/creo/creo-icons",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Honorarac",
-		"rootPath": "/Volumes/Superhero/Code/creo/honorarac",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Creolab.hr",
+		"name": "creolab",
 		"rootPath": "/Volumes/Superhero/Code/creo/creolab",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "OptimizePress Hub",
+		"name": "optimizepress-hub",
 		"rootPath": "/Volumes/Superhero/Code/influendo/hub.optimizepress",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Kourses",
+		"name": "kourses",
 		"rootPath": "/Volumes/Superhero/Code/influendo/kourses",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "My OptimizePress",
+		"name": "my-optimizepress",
 		"rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "OptimizeLeads",
+		"name": "optimizeleads",
 		"rootPath": "/Volumes/Superhero/Code/influendo/optimizeleads",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "OptimizePress",
+		"name": "optimizepress",
 		"rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Dead Dog Summer",
+		"name": "dead-dog-summer",
 		"rootPath": "/Volumes/Superhero/Code/personal/dds",
 		"paths": [],
 		"tags": [],
-		"enabled": true
+		"enabled": true,
+		"profile": ""
 	},
 	{
-		"name": "Zimsko",
+		"name": "zimsko",
 		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
 		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Laravel Test",
-		"rootPath": "/Volumes/Superhero/Code/test/laravel",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "Vim Game",
-		"rootPath": "/Volumes/Superhero/Code/personal/vim-game",
-		"paths": [],
-		"tags": [],
-		"enabled": true
+		"tags": [
+			"Personal"
+		],
+		"enabled": true,
+		"profile": ""
 	}
 ]

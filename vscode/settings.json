@@ -1,12 +1,13 @@
 {
     // Theme
-    "workbench.colorTheme": "Rosé Pine Moon (no italics)",
-    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.colorTheme": "Rosé Pine Moon",
+    "workbench.iconTheme": "charmed-warm",
 
     // Font
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
-    "editor.fontSize": 13,
+    "window.zoomLevel": 0.5,
+    "editor.fontSize": 12,
     "editor.fontWeight": "400",
     "editor.lineHeight": 3,
     "fontshortcuts.defaultFontSize": 14,
@@ -22,12 +23,11 @@
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "window.zoomLevel": 0,
     "editor.rulers": [320],
     "workbench.editor.editorActionsLocation": "hidden",
     "editor.inlayHints.enabled": "off",
-    "breadcrumbs.enabled": true,
-    "workbench.editor.tabsizing": "fit",
+    "breadcrumbs.enabled": false,
+    "workbench.editor.tabSizing": "fit",
     "catppuccin-icons.hidesExplorerArrows": true,
     "chat.commandCenter.enabled": false,
     "workbench.layoutControl.enabled": false,
@@ -49,6 +49,8 @@
     "window.commandCenter": false,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.editor.navigationScope": "editorGroup",
+    "workbench.tree.renderIndentGuides": "onHover",
+    "editor.guides.indentation": false,
 
     // Autosuggestions for editor
     // "editor.suggestOnTriggerCharacters": true,
@@ -68,7 +70,7 @@
         "**/.idea": true,
         "**/_ide_helper*": true,
         "**/_ide_helper_models*": true,
-        "**/.phpstorm.meta.php": true
+        "**/.phpstorm.meta.php": true,
     },
 
     // Search
@@ -78,7 +80,7 @@
         "**/*.log": true,
         "**/node_modules": true,
         "**/tmp": true,
-        "**/wp-content/**/public": true
+        "**/wp-content/**/public": true,
     },
 
     // AI
@@ -104,7 +106,7 @@
         "v8.2": "/Users/boris/Library/Application Support/Herd/bin/php82",
         "v8.3": "/Users/boris/Library/Application Support/Herd/bin/php83",
         "v8.4": "/Users/boris/Library/Application Support/Herd/bin/php84",
-        "v8.5": "/Users/boris/Library/Application Support/Herd/bin/php85"
+        "v8.5": "/Users/boris/Library/Application Support/Herd/bin/php85",
     },
     "laravel-pint.enable": true,
     "intelephense.files.associations": ["*.blade.php", "*.php", "*.phtml"],
@@ -114,38 +116,38 @@
     "Laravel.phpEnvironment": "herd",
     "[php]": {
         "editor.defaultFormatter": "open-southeners.laravel-pint",
-        "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?"
+        "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\"-,.<>/?",
     },
     "[blade]": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
     },
     "php.suggest.basic": false,
     "php.validate.enable": false,
     "php.problems.exclude": {
-        "**/*": ["PHP6602"]
+        "**/*": ["PHP6602"],
     },
 
     // ==> Other LSP's
     "json.format.enable": false,
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "[vue]": {
-        "editor.defaultFormatter": "Vue.volar"
+        "editor.defaultFormatter": "Vue.volar",
     },
     "[lua]": {
-        "editor.defaultFormatter": "sumneko.lua"
+        "editor.defaultFormatter": "sumneko.lua",
     },
     "files.associations": {
         "*.embeddedhtml": "html",
-        ".env*": "dotenv"
+        ".env*": "dotenv",
     },
     "Lua.diagnostics.globals": ["vim"],
     "prettier.printWidth": 400,
@@ -167,13 +169,13 @@
             "name": "My Dictionary",
             "path": "~/.config/cspell/dictionary.txt",
             "addWords": true,
-            "scope": "user"
-        }
+            "scope": "user",
+        },
     },
     "cSpell.enabledNotifications": {
         "Average Word Length too Long": false,
         "Lines too Long": false,
-        "Maximum Word Length Exceeded": false
+        "Maximum Word Length Exceeded": false,
     },
 
     // Vim
@@ -190,7 +192,7 @@
     "extensions.experimental.affinity": {
         // Vim - make if more performant
         "vscode.vim": 1,
-        "asvetliakov.vscode-neovim": 1
+        "asvetliakov.vscode-neovim": 1,
     },
     "vscode-textobjects.vimEnabled": true,
     "vim.targets.enable": true,
@@ -321,6 +323,12 @@
         { "before": [">"], "commands": ["editor.action.indentLines"] },
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
 
+        // Projects
+        { "before": ["leader", "p", "o"], "commands": ["projectManager.listProjects"], "args": { "projectName": "optimizepress", "openInNewWindow": false } },
+        { "before": ["leader", "p", "z"], "commands": ["projectManager.listProjects"], "args": { "projectName": "zimsko", "openInNewWindow": false } },
+        { "before": ["leader", "p", "k"], "commands": ["projectManager.listProjects"], "args": { "projectName": "kourses", "openInNewWindow": false } },
+        { "before": ["leader", "p", "h"], "commands": ["projectManager.listProjects"], "args": { "projectName": "optimizepress-hub", "openInNewWindow": false } },
+
         // Text object motions
         // ===> Selection
         { "before": ["v", "a", "f"], "commands": ["vscode-textobjects.select.next.outer.function.start"] },
@@ -442,7 +450,7 @@
         { "before": ["c", "i", "m"], "commands": ["vscode-textobjects.change.next.inner.call.start"] },
         { "before": ["c", "a", "c"], "commands": ["vscode-textobjects.change.next.outer.comment.start"] },
         { "before": ["c", "i", "c"], "commands": ["vscode-textobjects.change.next.inner.comment.start"] },
-        { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] }
+        { "before": ["c", "a", "n"], "commands": ["vscode-textobjects.change.next.outer.node.start"] },
     ],
 
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -475,7 +483,7 @@
         { "before": ["'", "a"], "after": ["`", "a"] },
         { "before": ["'", "s"], "after": ["`", "s"] },
         { "before": ["leader", "m", "M"], "commands": [":marks"] },
-        { "before": ["leader", "m", "c"], "commands": [":delmarks a-zA-Z0-9"] }
+        { "before": ["leader", "m", "c"], "commands": [":delmarks a-zA-Z0-9"] },
     ],
 
     // ==> Insert mode
@@ -494,7 +502,7 @@
         { "before": ["!"], "after": ["!", "<C-g>", "u"] },
         { "before": ["?"], "after": ["?", "<C-g>", "u"] },
         { "before": ["<"], "after": ["<", "<C-g>", "u"] },
-        { "before": [">"], "after": [">", "<C-g>", "u"] }
+        { "before": [">"], "after": [">", "<C-g>", "u"] },
     ],
 
     // ==> Visual mode
@@ -511,7 +519,7 @@
 
         // Expand/shrink selection to parents
         { "before": ["shift+k"], "commands": ["editor.action.smartSelect.expand"] },
-        { "before": ["shift+j"], "commands": ["editor.action.smartSelect.shrink"] }
+        { "before": ["shift+j"], "commands": ["editor.action.smartSelect.shrink"] },
     ],
 
     // Custom styling
@@ -527,22 +535,22 @@
                 {
                     "scope": "ref.matchtext",
                     "settings": {
-                        "foreground": "#000"
-                    }
-                }
-            ]
+                        "foreground": "#000",
+                    },
+                },
+            ],
         },
         "[*Dark*]": {
             "textMateRules": [
                 {
                     "scope": "ref.matchtext",
                     "settings": {
-                        "foreground": "#fff"
-                    }
-                }
-            ]
+                        "foreground": "#fff",
+                    },
+                },
+            ],
         },
-        "textMateRules": []
+        "textMateRules": [],
     },
     "php.format.codeStyle": "Laravel",
 
@@ -551,11 +559,11 @@
     "zenMode.hideLineNumbers": false,
     "zenMode.showTabs": "none",
     "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "vscode.typescript-language-features",
     },
     "vim.sneakReplacesF": true,
     "[scss]": {
-        "editor.defaultFormatter": "vscode.css-language-features"
+        "editor.defaultFormatter": "vscode.css-language-features",
     },
     "workbench.activityBar.location": "hidden",
     "explorer.fileNesting.patterns": {
@@ -570,6 +578,6 @@
         "*.sqlite3": "${capture}.${extname}-*",
         "*.db3": "${capture}.${extname}-*",
         "*.sdb": "${capture}.${extname}-*",
-        "*.s3db": "${capture}.${extname}-*"
-    }
+        "*.s3db": "${capture}.${extname}-*",
+    },
 }

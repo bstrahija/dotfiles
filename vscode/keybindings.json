@@ -51,6 +51,15 @@
     { "key": "cmd+7", "command": "workbench.action.openEditorAtIndex7" },
     { "key": "cmd+8", "command": "workbench.action.openEditorAtIndex8" },
     { "key": "cmd+9", "command": "workbench.action.openEditorAtIndex9" },
+    { "key": "alt+1", "command": "workbench.action.openEditorAtIndex1" },
+    { "key": "alt+2", "command": "workbench.action.openEditorAtIndex2" },
+    { "key": "alt+3", "command": "workbench.action.openEditorAtIndex3" },
+    { "key": "alt+4", "command": "workbench.action.openEditorAtIndex4" },
+    { "key": "alt+5", "command": "workbench.action.openEditorAtIndex5" },
+    { "key": "alt+6", "command": "workbench.action.openEditorAtIndex6" },
+    { "key": "alt+7", "command": "workbench.action.openEditorAtIndex7" },
+    { "key": "alt+8", "command": "workbench.action.openEditorAtIndex8" },
+    { "key": "alt+9", "command": "workbench.action.openEditorAtIndex9" },
 
     // Ctrl-backspace to act as delete key
     { "key": "ctrl+backspace", "command": "deleteRight", "when": "editorTextFocus && vim.mode == 'Insert'" },
@@ -86,7 +95,7 @@
     { "key": "ctrl+x ctrl+x", "command": "editor.action.inlineSuggest.trigger", "when": "vim.mode == 'Insert' && editorTextFocus && vim.active" },
     { "key": "ctrl+x ctrl+n", "command": "editor.action.inlineSuggest.showNext", "when": "vim.mode == 'Insert' && editorTextFocus" },
     { "key": "ctrl+x ctrl+p", "command": "editor.action.inlineSuggest.showPrevious", "when": "vim.mode == 'Insert' && editorTextFocus" },
-    { "key": "ctrl+x ctrl+a", "command": "inlineChat.start", "when": "vim.mode == 'Insert' && editorTextFocus && vim.active" },
+    { "key": "ctrl+x ctrl+a", "command": "inlineChat.start", "when": "(vim.mode == 'Insert' || vim.mode == 'Visual') && editorTextFocus && vim.active" },
 
     // Search (open links)
     { "key": "ctrl+enter", "command": "editor.action.openLink", "when": "editorTextFocus" },
