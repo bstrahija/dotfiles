@@ -7,3 +7,6 @@
 --ignore=raycast/*
 --ignore=git/*
 --ignore=test/*
+--ignore=*.old*
+--ignore=Brewfile
+--ignore=pint.json

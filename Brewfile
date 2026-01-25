@@ -127,6 +127,7 @@ cask 'zoom'    # Video conferencing
 
 # Other
 cask 'alt-tab'                                      # App switcher
+cask 'caffeine'                                     # Prevents Mac from sleeping
 cask 'coconutbattery'                               # Battery health monitor
 cask 'dockey'                                       # Manage mac dock
 cask 'firefox'                                      # Web browser
