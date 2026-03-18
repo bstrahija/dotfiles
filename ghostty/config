@@ -26,7 +26,7 @@ confirm-close-surface = false
 clipboard-paste-protection = false
 
 # Use option key as meta in TMUX
-macos-option-as-alt = true
+# macos-option-as-alt = true
 
 # Global toggle the terminal
 # This is disabled due to it is replaced by Raycast
@@ -45,6 +45,10 @@ macos-option-as-alt = true
 # keybind = option+command+left=goto_split:left
 # keybind = option+command+right=goto_split:right
 # keybind = option+shift+<=text:~
+keybind = option+j=goto_split:bottom
+keybind = option+k=goto_split:top
+keybind = option+h=goto_split:left
+keybind = option+l=goto_split:right
 
 # Unbind stuff for TMUX
 # keybind = opt+left=unbind
