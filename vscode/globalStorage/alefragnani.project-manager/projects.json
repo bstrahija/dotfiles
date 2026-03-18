@@ -1,100 +1,106 @@
 [
-	{
-		"name": "creo-comments",
-		"rootPath": "/Volumes/Superhero/Code/creo/creo-comments",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "dotfiles",
-		"rootPath": "/Volumes/Superhero/DotFiles",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "creo-appointer",
-		"rootPath": "/Volumes/Superhero/Code/creo/appointer",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "creo-icons",
-		"rootPath": "/Volumes/Superhero/Code/creo/creo-icons",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "creolab",
-		"rootPath": "/Volumes/Superhero/Code/creo/creolab",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "optimizepress-hub",
-		"rootPath": "/Volumes/Superhero/Code/influendo/hub.optimizepress",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "kourses",
-		"rootPath": "/Volumes/Superhero/Code/influendo/kourses",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "my-optimizepress",
-		"rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "optimizeleads",
-		"rootPath": "/Volumes/Superhero/Code/influendo/optimizeleads",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "optimizepress",
-		"rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "dead-dog-summer",
-		"rootPath": "/Volumes/Superhero/Code/personal/dds",
-		"paths": [],
-		"tags": [],
-		"enabled": true,
-		"profile": ""
-	},
-	{
-		"name": "zimsko",
-		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
-		"paths": [],
-		"tags": [
-			"Personal"
-		],
-		"enabled": true,
-		"profile": ""
-	}
+    {
+        "name": "creo-comments",
+        "rootPath": "/Volumes/Superhero/Code/creo/creo-comments",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "dotfiles",
+        "rootPath": "/Users/bstrahija/DotFiles",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "creo-appointer",
+        "rootPath": "/Volumes/Superhero/Code/creo/appointer",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "creo-icons",
+        "rootPath": "/Volumes/Superhero/Code/creo/creo-icons",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "creolab",
+        "rootPath": "/Volumes/Superhero/Code/creo/creolab",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "optimizepress-hub",
+        "rootPath": "/Volumes/Superhero/Code/influendo/hub.optimizepress",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "kourses",
+        "rootPath": "/Volumes/Superhero/Code/influendo/kourses",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "my-optimizepress",
+        "rootPath": "/Volumes/Superhero/Code/influendo/my.optimizepress",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "optimizeleads",
+        "rootPath": "/Volumes/Superhero/Code/influendo/optimizeleads",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "optimizepress",
+        "rootPath": "/Volumes/Superhero/Code/influendo/optimizepress",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "dead-dog-summer",
+        "rootPath": "/Volumes/Superhero/Code/personal/dds",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "zimsko",
+        "rootPath": "/Users/bstrahija/Code/personal/zimsko",
+        "paths": [],
+        "tags": ["Personal"],
+        "enabled": true,
+        "profile": ""
+    },
+    {
+        "name": "efd-frontend",
+        "rootPath": "/Users/bstrahija/Code/efd/efd-frontend",
+        "paths": [],
+        "tags": [],
+        "enabled": true,
+        "profile": ""
+    }
 ]

@@ -86,6 +86,8 @@ export FZF_DEFAULT_OPTS="
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Herd
 export PATH="/Users/boris/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/boris/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
@@ -112,3 +114,6 @@ export HERD_PHP_80_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/c
 
 # Herd injected PHP 7.4 configuration.
 export HERD_PHP_74_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/config/php/74/"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
