@@ -133,6 +133,11 @@
               "bundleIdentifier" : "org.whispersystems.signal-desktop",
               "iconPath" : "/Applications/Signal.app/Contents/Resources/icon.icns",
               "name" : "Signal"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.teams2",
+              "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
+              "name" : "Microsoft Teams"
             }
           ],
           "display" : "DELL U2719D",
@@ -167,6 +172,11 @@
               "bundleIdentifier" : "com.apple.Safari.WebApp.C3670D4C-47ED-4BC9-B7FA-68E179B457E7",
               "iconPath" : "/Users/boris/Applications/Gmail.app/Contents/Resources/ApplicationIcon.icns",
               "name" : "Gmail"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.Outlook",
+              "iconPath" : "/Applications/Microsoft Outlook.app/Contents/Resources/Outlook_macOS.icns",
+              "name" : "Microsoft Outlook"
             }
           ],
           "display" : "DELL U2719D",
