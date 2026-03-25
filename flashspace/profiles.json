@@ -376,6 +376,16 @@
               "bundleIdentifier" : "com.openai.chat",
               "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
               "name" : "ChatGPT"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari.WebApp.0DF986F3-A800-407E-B046-ED4EA65024C7",
+              "iconPath" : "/Users/bstrahija/Applications/Google Gemini.app/Contents/Resources/ApplicationIcon.icns",
+              "name" : "Google Gemini"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.copilot-mac",
+              "iconPath" : "/Applications/Copilot.app/Contents/Resources/AppIcon.icns",
+              "name" : "Copilot"
             }
           ],
           "display" : "DELL U2719D",
