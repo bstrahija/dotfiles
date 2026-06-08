@@ -1,13 +1,13 @@
 {
     // Theme
-    "workbench.colorTheme": "Rosé Pine Moon",
-    "workbench.iconTheme": "charmed-warm",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "charmed-soft",
 
     // Font
     "editor.fontFamily": "MonaspiceKr Nerd Font",
     "workbench.fontAliasing": "auto",
     "window.zoomLevel": 0.5,
-    "editor.fontSize": 12,
+    "editor.fontSize": 12.5,
     "editor.fontWeight": "400",
     "editor.lineHeight": 3,
     "fontshortcuts.defaultFontSize": 14,
@@ -40,8 +40,8 @@
     "workbench.editor.enablePreview": false,
     "editor.scrollbar.horizontal": "auto",
     "editor.scrollbar.vertical": "auto",
-    "editor.scrollbar.horizontalScrollbarSize": 6,
-    "editor.scrollbar.verticalScrollbarSize": 4,
+    "editor.scrollbar.horizontalScrollbarSize": 12,
+    "editor.scrollbar.verticalScrollbarSize": 12,
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "git.blame.statusBarItem.enabled": false,
@@ -50,7 +50,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.editor.navigationScope": "editorGroup",
     "workbench.tree.renderIndentGuides": "onHover",
-    "editor.guides.indentation": false,
+    "editor.guides.indentation": true,
 
     // Autosuggestions for editor
     // "editor.suggestOnTriggerCharacters": true,
@@ -86,10 +86,11 @@
     // AI
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.inlineSuggest.enabled": true,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
 
     // LSP's
     "editor.codeLens": false,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
 
     // Git/SCM
     "git.blame.editorDecoration.enabled": false,
@@ -125,7 +126,10 @@
     "php.suggest.basic": false,
     "php.validate.enable": false,
     "php.problems.exclude": {
-        "**/*": ["PHP6602"],
+        "**/*": [
+            "PHP6602",
+            "PHP6613"
+        ]
     },
 
     // ==> Other LSP's
@@ -160,6 +164,7 @@
     "files.insertFinalNewline": true,
     "editor.linkedEditing": true,
     "editor.semanticTokenColorCustomizations": {},
+    "todo-tree.ripgrep": "/opt/homebrew/bin/rg",
 
     // Spell Check
     "cSpell.blockCheckingWhenLineLengthGreaterThan": 100000,
@@ -213,8 +218,6 @@
 
         // Navigate tabs
         { "before": ["g", "t"], "commands": ["workbench.action.nextEditor"] },
-        { "before": ["<Tab>"], "commands": ["workbench.action.nextEditor"] },
-        { "before": ["<S-Tab>"], "commands": ["workbench.action.previousEditor"] },
         { "before": ["leader", "1"], "commands": ["workbench.action.openEditorAtIndex1"] },
         { "before": ["leader", "2"], "commands": ["workbench.action.openEditorAtIndex2"] },
         { "before": ["leader", "3"], "commands": ["workbench.action.openEditorAtIndex3"] },
@@ -490,6 +493,8 @@
     "vim.insertModeKeyBindings": [
         // Back to normal mode
         { "before": ["j", "j"], "after": ["<Esc>"] },
+        { "before": ["j", "k"], "after": ["<Esc>"] },
+        { "before": ["k", "j"], "after": ["<Esc>"] },
 
         // Easy insert of trailing ; and ,
         { "before": [";", ";"], "after": ["<Esc>", "A", ";"] },
@@ -565,7 +570,6 @@
     "[scss]": {
         "editor.defaultFormatter": "vscode.css-language-features",
     },
-    "workbench.activityBar.location": "hidden",
     "explorer.fileNesting.patterns": {
         "*.ts": "${capture}.js",
         "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -580,4 +584,236 @@
         "*.sdb": "${capture}.${extname}-*",
         "*.s3db": "${capture}.${extname}-*",
     },
+    "github.copilot.editor.enableCodeActions": false,
+    "chat.tools.terminal.autoApprove": {
+        "/^npx nx test cp-feature-crm-history --testPathPattern=filter\\.mappers\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan route:list$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test tests/Feature$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/EventMediaUploadTest\\.php tests/Feature/FilamentResourcesTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "vendor/bin/pint": true,
+        "/^php artisan test --compact tests/Feature/FilamentResourcesTest\\.php tests/Feature/EventMediaUploadTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan migrate --no-interaction$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test sm-feature-offer-contract-common --testFile=libs/sales/sm-feature-offer-contract-common/src/lib/components/price-calculation/price-calculation\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test sm-feature-offer-contract-common --skipNxCache --testFile=libs/sales/sm-feature-offer-contract-common/src/lib/components/price-calculation/price-calculation\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test sm-feature-offer-contract-common --skipNxCache --testFile=libs/sales/sm-feature-offer-contract-common/src/lib/components/price-calculation-hr/price-calculation-hr\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test sm-feature-offer-contract-common --skipNxCache --codeCoverage --testFile=libs/sales/sm-feature-offer-contract-common/src/lib/components/price-calculation/price-calculation\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^awk 'BEGIN\\{p=0\\} /SF:libs\\\\/sales\\\\/sm-feature-offer-contract-common\\\\/src\\\\/lib\\\\/components\\\\/price-calculation\\\\/price-calculation\\.component\\.ts/\\{p=1\\} p\\{print\\} /end_of_record/\\{if\\(p\\)\\{exit\\}\\}' coverage/libs/sales/sm-feature-offer-contract-common/lcov\\.info \\| tail -n 220$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test sm-feature-offer-contract-common --testPathPattern=price-calculation\\.component\\.spec\\.ts --skip-nx-cache$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-offer-contract-common --ci --runInBand --testPathPattern='price-calculation\\\\\\.component\\\\\\.spec' --coverage --skip-nx-cache 2>&1 \\| tail -5 && grep \"\\^DA:620,\" coverage/libs/sales/sm-feature-offer-contract-common/lcov\\.info && grep \"\\^DA:1293,\" coverage/libs/sales/sm-feature-offer-contract-common/lcov\\.info$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-offer-contract-common --ci --runInBand --skip-nx-cache 2>&1 \\| grep -E \"PASS\\|FAIL\\|Tests:\\|Test Suites:\\|✓\\|✕\\|×\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/HomepageTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/StatsPageTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/TvStatusTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/SchedulePageTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/MatchesPageTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^php artisan test --compact tests/Feature/OverlayTest\\.php$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nx test vp-stock-overview-component --skip-nx-cache$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test vp-vehicle-details-info-tab --skip-nx-cache$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test vp-stock-overview-component --skip-nx-cache$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test vp-vehicle-details-info-tab --skip-nx-cache --runInBand --testPathPattern=group-stock-widget\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test vp-stock-overview-component --skip-nx-cache --runInBand --testPathPattern=key-performance-indicator-info\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "nvm": true,
+        "npx playwright": true,
+        "/^source ~/\\.nvm/nvm\\.sh && nvm use 20 && npx playwright test -c apps/hub apps/hub/e2e/integration/sales/feature-vehicle-details/cycles/vehicle-details\\.spec\\.ts apps/hub/e2e/integration/sales/feature-stock-overview-vp/cycles/stock-overview-vp\\.spec\\.ts --grep \"SAL-T761\\|SAL-T766\" --workers=1 --reporter=line,html$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^source ~/\\.nvm/nvm\\.sh && nvm use 20 && cd /Users/boris/Code/efd/efd-frontend && npx nx test vp-vehicle-details-info-tab --runInBand$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^source ~/\\.nvm/nvm\\.sh && nvm use 20 && cd /Users/boris/Code/efd/efd-frontend && npx nx test vp-stock-overview-component --runInBand --testPathPattern=key-performance-indicator-info\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^source ~/\\.nvm/nvm\\.sh && nvm use 20 && cd /Users/boris/Code/efd/efd-frontend && npx nx test vp-stock-overview-component --runInBand$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx test vp-stock-overview-component --runInBand --testPathPattern=key-performance-indicator-info\\.component\\.spec\\.ts$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-accessory-search-select-dialog --coverage --coverageReporters=text 2>&1 \\| tail -60$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-accessory-search-select-dialog --coverage --coverageReporters=text 2>&1 \\| tail -40$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx run sm-feature-accessory-search-select-dialog:test && npx nx run ef-ng-sm-client:test 2>&1 \\| tail -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx run ef-ng-sm-client:test 2>&1 \\| grep -E \"PASS\\|FAIL\\|Tests:\\|Test Suites:\\|●\" \\| head -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx run sm-feature-accessory-search-select-dialog:test --no-coverage 2>&1 \\| grep -E \"Tests:\\|PASS\\|FAIL\\|●\" \\| head -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-accessory-search-select-dialog --no-cache --coverage 2>&1 \\| tail -80$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx test sm-feature-accessory-search-select-dialog --no-cache --coverage --coverageReporters=text 2>&1 \\| grep -A 50 \"File\\\\\\|Uncovered\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx build sm-feature-efit-price-edit-dialog --no-cache 2>&1 \\| tail -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx run-many --target=test --projects=sm-feature-accessory-search-select-dialog,ef-ng-sm-client,sm-feature-efit-price-edit-dialog --no-coverage 2>&1 \\| grep -E \"Tests:\\|PASS\\|FAIL\\|●\" \\| head -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage 2>&1 \\| grep -E \"FAIL\\|●\\|error\\|Error\" \\| head -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage 2>&1 \\| grep -E \"● \\[A-Z\\]\\|FAIL\\|expect\\|received\\|Cannot\\|import\" \\| grep -v \"console\" \\| head -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage 2>&1 \\| tail -50$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage 2>&1 \\| grep -E \"Tests:\\|Test Suites:\\|passed\\|failed\" \\| tail -10$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage --verbose 2>&1 \\| grep -E \"✓\\|✗\\|×\\|PASS\\|FAIL\\|Tests:\\|passed\\|failed\\|●  \" \\| head -30$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage --verbose 2>&1 \\| grep -E \"✗\\|×\\|✕\\|FAIL\\|failed\" \\| grep -v \"NX\\\\\\|target\\\\\\|task\" \\| head -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run sm-feature-offer-contract-common:test --no-coverage --verbose 2>&1 \\| grep -A 20 \"should not open dialog when canAddPredefinedAccessories\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run-many --target=test --projects=sm-feature-accessory-search-select-dialog,ef-ng-sm-client,sm-feature-offer-contract-common,sm-feature-efit-price-edit-dialog --no-coverage 2>&1 \\| grep -E \"PASS\\|FAIL\\|Tests:\" \\| head -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npx nx run-many --target=test --projects=sm-feature-offer-contract-common,sm-feature-efit-price-edit-dialog --coverage --coverageReporters=text 2>&1 \\| grep -E \"price-calculation-hr\\.component\\.ts\\|efit-price-edit-dialog-container\\.component\\.ts\" \\| head -10$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && npx nx run sm-feature-accessory-search-select-dialog:test --no-coverage 2>&1 \\| grep -E \"PASS\\|FAIL\\|Tests:\" \\| head -10$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && nx lint sm-feature-accessory-search-select-dialog$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && nx lint sm-feature-offer-contract-common$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && set -o pipefail && nx test sm-feature-offer-contract-common --coverage --runInBand 2>&1 \\| tail -n 120$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && set -o pipefail && nx lint sm-feature-offer-contract-common 2>&1 \\| tail -n 120$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^nvm use 20 && php artisan test --compact --filter=Booking$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "chat.mcp.gallery.enabled": true,
+    "redhat.telemetry.enabled": true,
+    "sonarlint.automaticAnalysis": false,
+    "workbench.activityBar.location": "top",
+    "sonarlint.focusOnNewCode": true,
+    "chat.viewSessions.orientation": "stacked",
+    "git.openRepositoryInParentFolders": "never",
+    "claudeCode.preferredLocation": "panel",
+    "playwright.reuseBrowser": false,
+    "dart.flutterSdkPath": "/Users/boris/Code/flutter",
 }

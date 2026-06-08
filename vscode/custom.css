@@ -1,27 +1,29 @@
 .part.editor .content {
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.1) !important; */
 }
 
-.sidebar.right .composite.title {
+/* .sidebar.right .composite.title {
     display: none !important;
-}
+} */
 
-.sidebar.right {
+/* .sidebar.right {
     height: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .sidebar.right .content {
     height: 100% !important;
-}
+} */
 
-.split-view-view .sidebar.right .content {
+/* .split-view-view .sidebar.right .content {
     height: 100% !important;
-}
+} */
 
 .tabs-container {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important; */
+    border-top: none;
+    background: #1E2030;
 }
 
 .tabs-container .tab {
