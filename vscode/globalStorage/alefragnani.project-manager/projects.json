@@ -9,7 +9,7 @@
 	},
 	{
 		"name": "dotfiles",
-		"rootPath": "/Volumes/Superhero/DotFiles",
+		"rootPath": "/Users/boris/DotFiles",
 		"paths": [],
 		"tags": [],
 		"enabled": true,
@@ -89,11 +89,67 @@
 	},
 	{
 		"name": "zimsko",
-		"rootPath": "/Volumes/Superhero/Code/personal/zimsko",
+		"rootPath": "/Users/boris/Code/personal/zimsko",
 		"paths": [],
 		"tags": [
 			"Personal"
 		],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "efd-frontend",
+		"rootPath": "/Users/boris/Code/efd/efd-frontend",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "dpp",
+		"rootPath": "/Users/boris/Code/creo/dpp",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "efd-hub-auth",
+		"rootPath": "/Users/boris/Code/efd/efd-hub-auth",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "squash-marathon",
+		"rootPath": "/Users/boris/Code/personal/squash-marathon",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "efd-sales-module",
+		"rootPath": "/Users/boris/Code/efd/efd-sales-module",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "efd-gitops",
+		"rootPath": "/Users/boris/Code/efd/efd-gitops",
+		"paths": [],
+		"tags": [],
+		"enabled": true,
+		"profile": ""
+	},
+	{
+		"name": "skvosh",
+		"rootPath": "/Users/boris/Code/creo/skvosh",
+		"paths": [],
+		"tags": [],
 		"enabled": true,
 		"profile": ""
 	}

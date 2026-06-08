@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Copilot",
+		"vendor": "copilot",
+		"settings": {
+			"claude-opus-4.6": {
+				"reasoningEffort": "medium"
+			},
+			"claude-sonnet-4.6": {
+				"reasoningEffort": "medium"
+			}
+		}
+	}
+]

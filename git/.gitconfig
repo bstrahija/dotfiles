@@ -2,7 +2,7 @@
 	excludesfile = /Users/boris/.gitignore
 	quotepath = false
 	autocrlf = input
-	editor = subl -w
+	editor = code -w
 	safecrlf = false
 	fileMode = false
 	filemode = false
@@ -51,31 +51,6 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
 	g = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
-	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
-	plu = pull -u
-	fcm = !git fetch && git co master
-	fcd = !git fetch && git co develop
-	fetchreset = !git fetch && git reset --hard origin/master
-	fetchresetdev = !git fetch && git reset --hard origin/develop
-	type = cat-file -t
-	dump = cat-file -p
-	aa = add .
-	amend = commit --amend -C HEAD
-	rma = ls-files -deleted | xargs git rm
-	addremove = add -A
-	addrem = add -A
-	addrm = add -A
-	pom = push -u origin master
-	pod = push -u origin develop
-	pot = push -u origin test
-	md2m = !git checkout master && git merge develop && git checkout develop
-	md2t = !git checkout test && git merge develop && git checkout develop
-	mm2d = !git checkout develop && git merge master && git checkout master
-	mm2t = !git checkout test && git merge master && git checkout master
-	mt2m = !git checkout master && git merge test && git checkout test
-	mt2d = !git checkout develop && git merge test && git checkout test
-	today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
-	this = !git init && git add . && git commmit -m \"Initial commit.\"
 	nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
 [format]
 	pretty = "format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
@@ -99,19 +74,6 @@
   whitespace = nowarn
 [help]
 	autocorrect = 1
-
-
-[url "https://github.com/"]
-	insteadOf = gh:
-
-[url "https://gist.github.com/"]
-	insteadOf = gist:
-
-[url "https://bitbucket.org/"]
-	insteadOf = bb:
-
-[url "https://git.loc.ch:8444/"]
-	insteadOf = nth:
 [filter "media"]
 	required = true
 	clean = git media clean %f

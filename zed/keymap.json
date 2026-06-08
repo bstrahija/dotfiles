@@ -1,72 +1,144 @@
 [
-    // Global
     {
         "context": "Workspace",
         "bindings": {
             "shift shift": "file_finder::Toggle",
-            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }],
             "cmd-e": "project_panel::ToggleFocus",
-            "alt-cmd-p": ["projects::OpenRecent", { "create_new_window": false }],
-            "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+            "ctrl-e ctrl-e": "project_panel::ToggleFocus",
+            "cmd-i": "agent::ToggleFocus",
             "ctrl-x ctrl-x": "agent::ToggleFocus",
+            "alt-cmd-p": "projects::OpenRecent",
+            "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+        },
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j j": "vim::NormalBefore",
+            "j k": "vim::NormalBefore",
         },
     },
 
+    // Buffers / tabs
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-1": ["pane::ActivateItem", 0],
+            "cmd-2": ["pane::ActivateItem", 1],
+            "cmd-3": ["pane::ActivateItem", 2],
+            "cmd-4": ["pane::ActivateItem", 3],
+            "cmd-5": ["pane::ActivateItem", 4],
+            "cmd-6": ["pane::ActivateItem", 5],
+            "cmd-7": ["pane::ActivateItem", 6],
+            "cmd-8": ["pane::ActivateItem", 7],
+            "cmd-9": ["pane::ActivateItem", 8],
+        },
+    },
+
+    // Editor / leader
     {
         "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert",
         "bindings": {
             "space space": "file_finder::Toggle",
-            "space s s": "zed::OpenSettingsFile",
-            "space s k": "zed::OpenKeymapFile",
-            "space s x": "zed::OpenTasks",
-            "space w": "workspace::Save",
-            "space q q": "pane::CloseActiveItem",
-            "space q o": "pane::CloseOtherItems",
-            "space Q": "workspace::CloseWindow",
-            "space l": "language_selector::Toggle",
-            "space s t": "theme_selector::Toggle",
-            "space s i": "icon_theme_selector::Toggle",
-            "space g g": "git_panel::ToggleFocus",
-            "space g l": ["task::Spawn", { "task_name": "lazygit" }],
-            "space g b": "git::Blame",
-            "space g i": "editor::ToggleGitBlameInline",
-            "space g h": "git::FileHistory",
-            "space f": "editor::ToggleFold",
-            "space F F": "editor::FoldAll",
-            "space F U": "editor::UnfoldAll",
-            "space e e": "diagnostics::Deploy",
-            "space e ]": "editor::GoToDiagnostic",
-            "space e n": "editor::GoToDiagnostic",
-            "space e [": "editor::GoToPreviousDiagnostic",
-            "space e p": "editor::GoToPreviousDiagnostic",
-            "space z": "workspace::ToggleZoom",
-            "space c": "vim::ToggleComments",
+
+            // Multicursor
+            "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
+            "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
+
+            // Navigate tabs / alternate file
             "space a": "pane::AlternateFile",
             "space b b": "pane::AlternateFile",
             "space b n": "pane::ActivateNextItem",
+            "space ]": "pane::ActivateNextItem",
             "space b p": "pane::ActivatePreviousItem",
+            "space [": "pane::ActivatePreviousItem",
+            "space t t": "tab_switcher::Toggle",
+            "space t g": "editor::ToggleTabBar",
+
+            // Splits
             "space \\": "pane::SplitAndMoveRight",
             "space -": "pane::SplitAndMoveDown",
             "space w j": "pane::JoinAll",
-            "space t t": "tab_switcher::Toggle",
-            "space t g": "editor::ToggleTabBar",
-            "g i": "editor::GoToImplementation",
+
+            // Zoom / Zen
+            "space z": "workspace::ToggleZoom",
+
+            // Folding
+            "space f": "editor::ToggleFold",
+            "space F F": "editor::FoldAll",
+            "space F U": "editor::UnfoldAll",
+
+            // Comments
+            "space c": "editor::ToggleComments",
+
+            // Closing
+            "space q q": "pane::CloseActiveItem",
+            "space q o": "pane::CloseOtherItems",
+            "space q a": "pane::CloseAllItems",
+            "space O": "workspace::CloseWindow",
+
+            // Git
+            "space g g": "git_panel::ToggleFocus",
+            "space g B": "git::Blame",
+            "space g b": "editor::ToggleGitBlameInline",
+            "space g h": "git::FileHistory",
+            "space g l": ["task::Spawn", { "task_name": "lazygit" }],
+
+            // Errors / diagnostics
+            "space e e": "diagnostics::Deploy",
+            "space e n": "editor::GoToDiagnostic",
+            "space e ]": "editor::GoToDiagnostic",
+            "space e p": "editor::GoToPreviousDiagnostic",
+            "space e [": "editor::GoToPreviousDiagnostic",
+
+            // Code
             "g o": "outline_panel::ToggleFocus",
-            "g a": "editor::ToggleCodeActions",
+            "g i": "editor::GoToImplementationSplit",
             "g D": "editor::GoToDefinitionSplit",
             "g =": "editor::Format",
             "g m": "vim::Matching",
             "g l": "editor::OpenSelectedFilename",
-            "space p p": ["projects::OpenRecent", { "create_new_window": false }],
+
+            // Tasks / projects
             "space p d": ["task::Spawn", { "task_name": "project_dotfiles" }],
-            "space p h": ["task::Spawn", { "task_name": "project_ophub" }],
-            "space p k": ["task::Spawn", { "task_name": "project_kourses" }],
-            "space p m": ["task::Spawn", { "task_name": "project_opmy" }],
-            "space p o": ["task::Spawn", { "task_name": "project_optimizepress" }],
+            "space p e": ["task::Spawn", { "task_name": "project_efd_frontend" }],
             "space p z": ["task::Spawn", { "task_name": "project_zimsko" }],
-            "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
-            "cmd-alt-k": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
-            "ctrl-f": ["projects::OpenRecent", { "create_new_window": false }],
+
+            // Settings
+            "space s s": "zed::OpenSettingsFile",
+            "space s k": "zed::OpenKeymapFile",
+            "space s t": "theme_selector::Toggle",
+            "space s i": "icon_theme_selector::Toggle",
+            "space s x": "zed::OpenTasks",
+        },
+    },
+
+    {
+        "context": "Editor",
+        "bindings": {
+            "ctrl-n": ["editor::SelectNext", { "replace_newest": false }],
+            "ctrl-/": "vim::PushToggleComments",
+            "alt-j": "editor::MoveLineDown",
+            "alt-k": "editor::MoveLineUp",
+            "ctrl-]": "pane::ActivateNextItem",
+            "ctrl-[": "pane::ActivatePreviousItem",
+        },
+    },
+
+    // Manage files in project panel ()
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "p": "project_panel::Paste",
+            "x": "project_panel::Cut",
+            "s": "project_panel::Open",
+            "c": "project_panel::Copy",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Trash",
+            "l": "project_panel::Open",
+            "shift-d": "project_panel::Delete",
         },
     },
 
@@ -99,58 +171,11 @@
         },
     },
 
-    // Line stuff
+    // AI / Agents
     {
-        "context": "Editor && (vim_mode == normal || vim_mode == insert)",
+        "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
         "bindings": {
-            "shift-enter": "editor::NewlineBelow",
-            "ctrl-shift-enter": "editor::NewlineAbove",
-        },
-    },
-    {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            "j j": "vim::NormalBefore",
-        },
-    },
-    {
-        "context": "Editor && (vim_mode == visual || vim_mode == insert)",
-        "bindings": {
-            "alt-w": "editor::WrapSelectionsInTag",
-        },
-    },
-    {
-        "context": "(Editor && mode == full)",
-        "bindings": {
-            "cmd-e": "project_panel::ToggleFocus",
-        },
-    },
-    {
-        "context": "Editor",
-        "bindings": {
-            "ctrl-n": ["editor::SelectNext", { "replace_newest": false }],
-            "ctrl-/": "vim::ToggleComments",
-            "alt-j": "editor::MoveLineDown",
-            "alt-k": "editor::MoveLineUp",
-            "ctrl-]": "pane::ActivateNextItem",
-            "ctrl-[": "pane::ActivatePreviousItem",
-        },
-    },
-
-    // Manage files in project panel ()
-    {
-        "context": "ProjectPanel && not_editing",
-        "bindings": {
-            "a": "project_panel::NewFile",
-            "A": "project_panel::NewDirectory",
-            "p": "project_panel::Paste",
-            "x": "project_panel::Cut",
-            "s": "project_panel::Open",
-            "c": "project_panel::Copy",
-            "r": "project_panel::Rename",
-            "d": "project_panel::Trash",
-            "l": "project_panel::Open",
-            "shift-d": "project_panel::Delete",
+            "ctrl-y": "editor::AcceptEditPrediction",
         },
     },
 
@@ -172,19 +197,6 @@
         },
     },
 
-    // Empty screen
-    {
-        "context": "EmptyPane || SharedScreen",
-        "bindings": {
-            "space f": "file_finder::Toggle",
-            "space space": "file_finder::Toggle",
-            "shift-shift": "file_finder::Toggle",
-        },
-    },
-
-    // Marks
-    {},
-
     // AI
     // 1. Accept AI suggestion with Ctrl-Y (non-conflict context)
     {
@@ -196,7 +208,7 @@
 
     // 2. Accept AI suggestion with Ctrl-Y (conflict context - when LSP menu is also visible)
     {
-        "context": "Editor && edit_prediction_conflict",
+        "context": "Editor && (edit_prediction && (showing_completions || in_leading_whitespace))",
         "bindings": {
             "ctrl-y": "editor::AcceptEditPrediction",
         },
@@ -213,7 +225,7 @@
 
     // 4. Prevent TAB from accepting the suggestion in the conflict context
     {
-        "context": "Editor && edit_prediction_conflict",
+        "context": "Editor && (edit_prediction && (showing_completions || in_leading_whitespace))",
         "bindings": {
             "tab": "editor::Tab",
         },
@@ -228,6 +240,44 @@
         "context": "((Editor && mode == full) && edit_prediction)",
         "bindings": {
             "alt-x": "editor::NextEditPrediction",
+        },
+    },
+
+    // Unbind overriden stuff
+    {
+        "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+        "unbind": {
+            "tab": "editor::AcceptEditPrediction",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "cmd-?": "agent::ToggleFocus",
+        },
+    },
+    {
+        "context": "Editor && mode == full",
+        "unbind": {
+            "cmd-e": "buffer_search::UseSelectionForFind",
+        },
+    },
+    {
+        "context": "KeymapEditor",
+        "unbind": {
+            "cmd-e": "zed::OpenKeymapFile",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-i": "editor::ShowSignatureHelp",
+        },
+    },
+    {
+        "context": "DebugPanel",
+        "unbind": {
+            "cmd-i": "debugger::ToggleSessionPicker",
         },
     },
 ]

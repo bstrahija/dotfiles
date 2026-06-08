@@ -17,8 +17,6 @@ else
   export EDITOR='nvim'
 fi
 
-alias zshconfig="code ~/.zshrc"
-
 # Add my aliases
 source ~/.config/zsh/aliases.zh
 
@@ -47,7 +45,7 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # Vi mode
-source ~/.config/zsh /vi.zsh
+source ~/.config/zsh/vi.zsh
 
 # Aliases
 eval "$(atuin init zsh)"
@@ -86,11 +84,10 @@ export FZF_DEFAULT_OPTS="
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="/Users/boris/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/Users/boris/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 # Herd injected PHP binary.
-export PATH="/Users/boris/Library/Application Support/Herd/bin/":$PATH
+export PATH="/Users/boris/Library/Application Support/Herd/bin/:/Users/boris/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/boris/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 # Herd injected PHP 8.5 configuration.
 export HERD_PHP_85_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/config/php/85/"
@@ -112,3 +109,12 @@ export HERD_PHP_80_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/c
 
 # Herd injected PHP 7.4 configuration.
 export HERD_PHP_74_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/config/php/74/"
+
+# opencode
+export PATH=/Users/boris/.opencode/bin:$PATH
+
+# Disable automatic nvm switching
+add-zsh-hook -d chpwd load-nvmrc 2>/dev/null
+
+# Worktrunk
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
