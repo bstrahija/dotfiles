@@ -176,17 +176,7 @@
           "symbolIconName" : "envelope.fill"
         },
         {
-          "appToFocus" : {
-            "bundleIdentifier" : "com.spotify.client",
-            "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
-            "name" : "Spotify"
-          },
           "apps" : [
-            {
-              "bundleIdentifier" : "com.spotify.client",
-              "iconPath" : "/Applications/Spotify.app/Contents/Resources/Icon.icns",
-              "name" : "Spotify"
-            },
             {
               "bundleIdentifier" : "com.apple.Music",
               "iconPath" : "/System/Applications/Music.app/Contents/Resources/AppIcon.icns",
@@ -203,14 +193,19 @@
               "name" : "ForkLift"
             },
             {
-              "bundleIdentifier" : "com.smartcodeltd.stremio",
-              "iconPath" : "/Applications/Stremio.app/Contents/Resources/stremio.icns",
-              "name" : "Stremio"
-            },
-            {
               "bundleIdentifier" : "com.valvesoftware.steam",
               "iconPath" : "/Applications/Steam.app/Contents/Resources/Steam.icns",
               "name" : "Steam"
+            },
+            {
+              "bundleIdentifier" : "com.westbridge.stremio5-mac",
+              "iconPath" : "/Applications/Stremio.app/Contents/Resources/stremio-dock.icns",
+              "name" : "Stremio"
+            },
+            {
+              "bundleIdentifier" : "com.spotify.client",
+              "iconPath" : "/Applications/Spotify.app/Contents/Resources/AppIcon.icns",
+              "name" : "Spotify"
             }
           ],
           "display" : "DELL U2719D",

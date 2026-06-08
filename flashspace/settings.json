@@ -1,10 +1,15 @@
 {
   "activeWorkspaceOnFocusChange" : true,
   "alternativeDisplays" : "",
+  "autoAssignAlreadyAssignedApps" : false,
+  "autoAssignAppsToWorkspaces" : false,
   "centerCursorOnFocusChange" : false,
   "centerCursorOnWorkspaceChange" : true,
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
+  "cornerHiddenApps" : [
+
+  ],
   "displayMode" : "static",
   "enableFocusManagement" : false,
   "enableIntegrations" : true,
@@ -13,6 +18,7 @@
   "enableSpaceControlAnimations" : true,
   "enableSpaceControlTilesAnimations" : true,
   "enableSwipeGestures" : true,
+  "enableWorkspaceSwitcher" : false,
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
@@ -24,6 +30,7 @@
   "focusFrontmostWindow" : false,
   "keepUnassignedAppsOnSwitch" : false,
   "loopWorkspaces" : true,
+  "loopWorkspacesOnAllDisplays" : false,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
   "pipApps" : [
@@ -32,16 +39,20 @@
   "pipScreenCornerOffset" : 15,
   "restartAppOnWakeUp" : true,
   "restoreHiddenAppsOnSwitch" : true,
+  "runScriptAfterWorkspaceChange" : "",
   "runScriptOnLaunch" : "brew services start sketchybar",
   "runScriptOnProfileChange" : "/opt/homebrew/bin/sketchybar/sketchybar --reload",
   "runScriptOnWorkspaceChange" : "/opt/homebrew/bin/sketchybar/sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
   "showMenuBarTitle" : false,
+  "showRecentWorkspaceWhenActivatedTwice" : false,
   "showSpaceControl" : "f12",
+  "showWorkspaceSwitcher" : "opt+tab",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : false,
-  "spaceControlMaxColumns" : 6,
+  "spaceControlHideEmptyWorkspaces" : false,
+  "spaceControlNumberOfColumns" : 0,
   "spaceControlUpdateScreenshotsOnOpen" : false,
   "swipeDown3FingerAction" : "none",
   "swipeDown4FingerAction" : "none",
@@ -52,7 +63,12 @@
   "swipeThreshold" : 0.2,
   "swipeUp3FingerAction" : "none",
   "swipeUp4FingerAction" : "none",
+  "switchWorkspaceOnCursorScreen" : false,
   "switchWorkspaceWhenPipCloses" : true,
+  "workspaceSwitcherCurrentDisplayWorkspaces" : true,
+  "workspaceSwitcherShowScreenshots" : true,
+  "workspaceSwitcherSortByLastActivation" : false,
+  "workspaceSwitcherVisibleWorkspaces" : 5,
   "workspaceTransitionDimming" : 0.5,
   "workspaceTransitionDuration" : 0.5
 }
