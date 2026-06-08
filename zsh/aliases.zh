@@ -1,8 +1,8 @@
 # -------------------------------------------------------------------
 # ZSH/Machine
 # -------------------------------------------------------------------
-alias dotfiles="code /Volumes/Superhero/DotFiles"
-alias zshconfig="code ~/.zsh"
+alias dotfiles="code ~/.dotfiles"
+alias zshconfig="code ~/.zshrc"
 alias aliases="code ~/.config/zsh/aliases.zh"
 alias hosts="code /etc/hosts"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -29,13 +29,7 @@ alias txz="tmuxinator start zimsko"
 # -------------------------------------------------------------------
 alias zj="zellij"
 alias zz="zellij attach _default"
-alias zzopb="zellij --layout ~/.config/zellij/layouts/op-builder.kdl"
-alias zzopc="zellij --layout ~/.config/zellij/layouts/op-checkouts.kdl"
-alias zzopd="zellij --layout ~/.config/zellij/layouts/op-dashboard.kdl"
-alias zzopf="zellij --layout ~/.config/zellij/layouts/op-funnels.kdl"
-alias zzopm="zellij --layout ~/.config/zellij/layouts/op-mentor.kdl"
-alias zzopu="zellij --layout ~/.config/zellij/layouts/op-urgency.kdl"
-alias zzopl="zellij --layout ~/.config/zellij/layouts/op-leads.kdl"
+alias zzeff="zellij --layout ~/.config/zellij/layouts/efd-frontend.kdl"
 alias zzz="zellij --layout ~/.config/zellij/layouts/zimsko.kdl"
 
 # -------------------------------------------------------------------
@@ -94,11 +88,6 @@ alias p="z ~/Code"
 alias pc="z ~/Code/creo"
 alias pp="z ~/Code/personal"
 alias pt="z ~/Code/test"
-alias pi="z ~/Code/influendo"
-alias po="z ~/Code/influendo/optimizepress"
-alias pop="z ~/Code/influendo/optimizepress/public/wp-content/plugins"
-alias pil="z ~/Code/influendo/optimizeleads"
-alias psl="z ~/Code/influendo/hub.optimizepress"
 
 # -------------------------------------------------------------------
 # More Shortcuts
@@ -136,6 +125,10 @@ alias grm='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias gsm='git branch --merged | grep -v "\*"'
 alias nah='git reset --hard;git clean -df;'
 alias lg='lazygit'
+alias gw='git worktree'
+alias gwa='git worktree add'
+alias gwl='git worktree list'
+alias gwr='git worktree remove'
 
 # -------------------------------------------------------------------
 # Laravel
@@ -153,7 +146,6 @@ alias t="./vendor/bin/phpunit --testdox"
 alias test="./vendor/bin/phpunit --testdox"
 alias phpspec=vendor/bin/phpspec
 alias tinker='php artisan tinker'
-alias gw='gulp watch'
 alias npmd='npm run dev'
 alias npmw='npm run watch'
 alias npmw='npm run build'
@@ -171,3 +163,8 @@ alias cmpu='composer update'
 alias cu='composer update'
 alias cmpd='composer dump-autoload --optimize'
 alias co='composer dump-autoload --optimize'
+
+# -------------------------------------------------------------------
+# EFD - Angular, Playwright, Jest
+# -------------------------------------------------------------------
+alias pwreport='npx playwright show-report apps/hub/playwright-report'
