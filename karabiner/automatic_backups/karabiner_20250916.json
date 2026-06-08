@@ -41,24 +41,6 @@
                         ]
                     },
                     {
-                        "description": "Hyperkey + T to open terminal, trigger Raycast hotkey",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": { "mandatory": ["left_control", "left_shift", "left_option", "left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["left_control", "left_shift", "left_option", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change spacebar to left_control. (Post spacebar if pressed alone)",
                         "enabled": false,
                         "manipulators": [

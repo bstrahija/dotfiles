@@ -13,7 +13,7 @@ cursor-style-blink = false
 #########################
 # WINDOW
 #########################
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 confirm-close-surface = false
 window-decoration = auto
 window-padding-x = 12
@@ -24,6 +24,9 @@ adjust-underline-thickness = -60%
 adjust-cell-height = 50%
 confirm-close-surface = false
 clipboard-paste-protection = false
+window-save-state = always
+unfocused-split-opacity = 0.4
+unfocused-split-fill = #333333
 
 # Use option key as meta in TMUX
 # macos-option-as-alt = true

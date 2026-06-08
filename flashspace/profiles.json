@@ -105,11 +105,6 @@
           },
           "apps" : [
             {
-              "bundleIdentifier" : "net.whatsapp.WhatsApp",
-              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIconCatalystRelease.icns",
-              "name" : "‎WhatsApp"
-            },
-            {
               "bundleIdentifier" : "com.viber.osx",
               "iconPath" : "/Applications/Viber.app/Contents/Resources/Viber.icns",
               "name" : "Rakuten Viber"
@@ -138,6 +133,11 @@
               "bundleIdentifier" : "com.microsoft.teams2",
               "iconPath" : "/Applications/Microsoft Teams.app/Contents/Resources/AppIcon.icns",
               "name" : "Microsoft Teams"
+            },
+            {
+              "bundleIdentifier" : "net.whatsapp.WhatsApp",
+              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIcon.icns",
+              "name" : "‎WhatsApp"
             }
           ],
           "display" : "DELL U2719D",
@@ -379,7 +379,7 @@
             },
             {
               "bundleIdentifier" : "com.apple.Safari.WebApp.0DF986F3-A800-407E-B046-ED4EA65024C7",
-              "iconPath" : "/Users/bstrahija/Applications/Google Gemini.app/Contents/Resources/ApplicationIcon.icns",
+              "iconPath" : "/Users/boris/Applications/Google Gemini.app/Contents/Resources/ApplicationIcon.icns",
               "name" : "Google Gemini"
             },
             {
