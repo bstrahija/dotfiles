@@ -1,31 +1,32 @@
 {
     // Vim
-    "vim_mode": true,
-    "vim": {
-        "use_smartcase_find": true,
-        "toggle_relative_line_numbers": true,
+    "sticky_scroll": {
+        "enabled": true
     },
+    "vim_mode": true,
 
     // Looks / Editor
-    "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 15,
-    "ui_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 13,
-    "buffer_line_height": { "custom": 2.5 },
-    "buffer_font_family": "MonaspiceKr Nerd Font",
+    "ui_font_size": 15.0,
+    "buffer_font_size": 14.0,
+    "ui_font_family": "MonaspiceKr Nerd Font Mono",
+    "buffer_font_family": "MonaspiceKr Nerd Font Mono",
+    "icon_theme": "Warm Charmed Icons",
     "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "Rosé Pine Moon",
+        "mode": "dark",
+        "light": "Rosé Pine Dawn",
+        "dark": "Catppuccin Macchiato",
     },
+    "buffer_line_height": { "custom": 2.6 },
     "cursor_blink": false,
     "show_whitespaces": "selection",
+    "preferred_line_length": 120,
     "autosave": "on_focus_change",
     "format_on_save": "on",
-    "vertical_scroll_margin": 4,
+    "vertical_scroll_margin": 4.0,
+    "relative_line_numbers": "enabled",
     "when_closing_with_no_tabs": "keep_window_open",
+    "show_wrap_guides": false,
     "colorize_brackets": true,
-    "code_lens": "on",
     "title_bar": {
         "show_menus": false,
         "show_sign_in": true,
@@ -33,6 +34,7 @@
         "show_onboarding_banner": false,
         "show_project_items": true,
         "show_branch_name": true,
+        "show_branch_icon": false,
     },
     "debugger": {
         "button": false,
@@ -41,8 +43,6 @@
     // Indentation and wrapping
     "tab_size": 4,
     "wrap_guides": [120],
-    "preferred_line_length": 120,
-    "show_wrap_guides": false,
     "indent_guides": {
         "enabled": true,
         "coloring": "fixed",
@@ -53,12 +53,11 @@
     "terminal": {
         "button": false,
         "font_size": 13,
-        "font_family": "MonaspiceKr Nerd Font",
         "line_height": { "custom": 1.8 },
     },
 
     // Files, indexing, etc.
-    "file_scan_exclusions": ["_model_helpers.php", ".DB_Store"],
+    "file_scan_exclusions": ["_model_helpers.php", ".DS_Store"],
     "file_types": {
         "Blade": ["*.blade.php"],
     },
@@ -67,22 +66,29 @@
     "project_panel": {
         "hide_hidden": false,
         "hide_root": true,
+        "indent_guides": {
+            "show": "never",
+        },
         "show_diagnostics": "errors",
         "auto_fold_dirs": true,
         "starts_open": true,
-        "indent_size": 20,
+        "indent_size": 24.0,
+        "folder_icons": true,
+        "file_icons": true,
         "entry_spacing": "comfortable",
         "button": false,
         "dock": "right",
         "default_width": 360,
     },
+    "notification_panel": { "dock": "left" },
 
     // Clean UI
     "preview_tabs": { "enabled": false },
     "tabs": {
         "show_close_button": "hover",
         "close_position": "right",
-        "git_status": true,
+        "file_icons": false,
+        "git_status": false,
     },
     "tab_bar": {
         "show": true,
@@ -97,56 +103,28 @@
         "quick_actions": false,
     },
 
-    // Statubar
+    // Statusbar
     "status_bar": {
         "line_endings_button": false,
-        "active_language_button": false,
+        "active_language_button": true,
         "cursor_position_button": false,
     },
-    "collaboration_panel": { "dock": "right", "button": false },
+    "git_panel": { "button": false },
+    "collaboration_panel": { "button": false },
     "search": { "button": false },
-    "outline_panel": { "dock": "right", "button": false },
-    "diagnostics": { "button": false },
+    "outline_panel": { "button": false },
 
     // Scrollbar
     "scrollbar": {
-        "show": "auto",
+        "axes": {
+            "horizontal": true,
+            "vertical": true,
+        },
         "selected_symbol": false,
         "selected_text": false,
         "search_results": true,
-        "cursors": false,
-        "git_diff": true,
-    },
-
-    // Other
-    "session": {
-        "trust_all_worktrees": true,
-    },
-    "inline_code_actions": false,
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false,
-    },
-
-    // AI / Agents
-    "show_edit_predictions": true,
-    "agent": {
-        "button": false,
-        "dock": "right",
-        "sidebar_side": "right",
-        "favorite_models": [],
-        "model_parameters": [],
-    },
-    "agent_servers": {
-        "codex-acp": {
-            "default_config_options": {
-                "model": "gpt-5.4-mini",
-            },
-            "type": "registry",
-        },
-        "github-copilot-cli": {
-            "type": "registry",
-        },
+        "cursors": true,
+        "git_diff": false,
     },
 
     // Languages, LSP
@@ -156,7 +134,7 @@
         "PHP": {
             "format_on_save": "on",
             // "formatter": "language_server",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp"],
+            "language_servers": ["phptools", "!phpactor", "!intelephense"],
             "formatter": {
                 "external": {
                     "command": "bash",
@@ -169,7 +147,6 @@
         },
         "Blade": {
             "format_on_save": "on",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp"],
             "formatter": {
                 "external": {
                     "command": "blade-formatter",
@@ -214,9 +191,42 @@
     },
 
     // Git, source control
-    "git_panel": { "dock": "right", "button": false },
     "git": {
         "inline_blame": { "enabled": false },
         "git_gutter": "tracked_files",
+    },
+
+    // AI
+    "show_edit_predictions": true,
+    "edit_predictions": {
+        "mode": "eager",
+    },
+    "features": {
+        "edit_prediction_provider": "copilot",
+    },
+    "agent": {
+        "inline_assistant_model": {
+            "provider": "zed.dev",
+            "model": "claude-sonnet-4-5",
+        },
+        "default_profile": "ask",
+        "always_allow_tool_actions": true,
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4.1",
+        },
+        "dock": "left",
+    },
+    "language_models": {
+        "ollama": {
+            "api_url": "http://localhost:11434",
+        },
+    },
+
+    // Other
+    "inline_code_actions": false,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
     },
 }
