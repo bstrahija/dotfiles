@@ -132,8 +132,8 @@
     "show_edit_predictions": true,
     "agent": {
         "button": false,
-        "dock": "right",
-        "sidebar_side": "right",
+        "dock": "left",
+        "sidebar_side": "left",
         "favorite_models": [],
         "model_parameters": [],
     },
@@ -145,6 +145,9 @@
             "type": "registry",
         },
         "github-copilot-cli": {
+            "default_config_options": {
+                "model": "gpt-5.3-codex",
+            },
             "type": "registry",
         },
     },
