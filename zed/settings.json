@@ -8,10 +8,10 @@
 
     // Looks / Editor
     "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 15,
+    "ui_font_size": 14,
     "ui_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 13,
-    "buffer_line_height": { "custom": 2.5 },
+    "buffer_font_size": 12,
+    "buffer_line_height": { "custom": 2.7 },
     "buffer_font_family": "MonaspiceKr Nerd Font",
     "theme": {
         "mode": "system",

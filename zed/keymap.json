@@ -9,6 +9,7 @@
             "ctrl-x ctrl-x": "agent::ToggleFocus",
             "alt-cmd-p": "projects::OpenRecent",
             "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+            "cmd-B": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
     {
@@ -96,6 +97,7 @@
             "g i": "editor::GoToImplementationSplit",
             "g D": "editor::GoToDefinitionSplit",
             "g =": "editor::Format",
+            "space =": "editor::Format",
             "g m": "vim::Matching",
             "g l": "editor::OpenSelectedFilename",
 
@@ -117,7 +119,7 @@
         "context": "Editor",
         "bindings": {
             "ctrl-n": ["editor::SelectNext", { "replace_newest": false }],
-            "ctrl-/": "vim::PushToggleComments",
+            "ctrl-/": "vim::ToggleComments",
             "alt-j": "editor::MoveLineDown",
             "alt-k": "editor::MoveLineUp",
             "ctrl-]": "pane::ActivateNextItem",
@@ -278,6 +280,18 @@
         "context": "DebugPanel",
         "unbind": {
             "cmd-i": "debugger::ToggleSessionPicker",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "cmd-shift-b": "outline_panel::ToggleFocus",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "alt-cmd-j": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
 ]
