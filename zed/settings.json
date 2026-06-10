@@ -8,9 +8,9 @@
 
     // Looks / Editor
     "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 14,
+    "ui_font_size": 15,
     "ui_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 12,
+    "buffer_font_size": 13,
     "buffer_line_height": { "custom": 2.7 },
     "buffer_font_family": "MonaspiceKr Nerd Font",
     "theme": {
@@ -195,6 +195,9 @@
             // },
         },
         "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } },
+        "CSS": {
+            "language_servers": ["tailwindcss-language-server"],
+        },
     },
     "lsp": {
         "phptools": {

@@ -16,12 +16,10 @@ alias txl="tmux ls"
 alias txn="tmux new -s"
 alias txk="tmux kill-server"
 alias txa="tmux attach"
+alias txd="tmux detach"
 alias txm="tmuxinator start"
 alias txs="tmuxinator start"
 alias txdot="tmuxinator start dotfiles"
-alias txopl="tmuxinator start optimizeleads"
-alias txop="tmuxinator start optimizepress"
-alias txopp="tmuxinator start oppackages"
 alias txz="tmuxinator start zimsko"
 
 # -------------------------------------------------------------------
