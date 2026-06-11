@@ -124,6 +124,7 @@
             "alt-k": "editor::MoveLineUp",
             "ctrl-]": "pane::ActivateNextItem",
             "ctrl-[": "pane::ActivatePreviousItem",
+            "alt-t": "vim::Increment",
         },
     },
 
@@ -196,6 +197,7 @@
         "bindings": {
             "tab": "editor::Indent",
             "shift-tab": "editor::Outdent",
+            "y": ["workspace::SendKeystrokes", "y ` >"],
         },
     },
 

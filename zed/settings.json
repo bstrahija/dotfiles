@@ -8,10 +8,10 @@
 
     // Looks / Editor
     "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 15,
+    "ui_font_size": 14,
     "ui_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 13,
-    "buffer_line_height": { "custom": 2.7 },
+    "buffer_font_size": 12,
+    "buffer_line_height": { "custom": 2.8 },
     "buffer_font_family": "MonaspiceKr Nerd Font",
     "theme": {
         "mode": "system",
@@ -25,7 +25,7 @@
     "vertical_scroll_margin": 4,
     "when_closing_with_no_tabs": "keep_window_open",
     "colorize_brackets": true,
-    "code_lens": "on",
+    "code_lens": "off",
     "title_bar": {
         "show_menus": false,
         "show_sign_in": true,
@@ -61,14 +61,18 @@
     "file_scan_exclusions": ["_model_helpers.php", ".DB_Store"],
     "file_types": {
         "Blade": ["*.blade.php"],
+        "INI": ["*.conf"],
+        "Ruby": ["Brewfile"],
     },
 
     // Layouts
     "project_panel": {
+        "auto_fold_dirs": true,
+        "auto_reveal_entries": true,
         "hide_hidden": false,
         "hide_root": true,
         "show_diagnostics": "errors",
-        "auto_fold_dirs": true,
+        "git_status": false,
         "starts_open": true,
         "indent_size": 20,
         "entry_spacing": "comfortable",
