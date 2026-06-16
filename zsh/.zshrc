@@ -83,13 +83,12 @@ export FZF_DEFAULT_OPTS="
 # =========================================================
 
 # macOS / Homebrew (Apple Silicon)
-if [[ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ]]; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-  source /opt/homebrew/opt/fzf/shell/completion.zsh
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
 fi
 
 # fzf configuration
-source source ~/.config/zsh/fzf.zsh
+source ~/.config/zsh/fzf.zsh
 
 # bun completions
 [ -s "/Users/boris/.bun/_bun" ] && source "/Users/boris/.bun/_bun"
