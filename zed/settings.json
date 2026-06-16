@@ -8,9 +8,9 @@
 
     // Looks / Editor
     "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 14,
+    "ui_font_size": 15,
     "ui_font_family": "MonaspiceKr Nerd Font",
-    "buffer_font_size": 12,
+    "buffer_font_size": 13,
     "buffer_line_height": { "custom": 2.8 },
     "buffer_font_family": "MonaspiceKr Nerd Font",
     "theme": {
@@ -141,20 +141,36 @@
         "favorite_models": [],
         "model_parameters": [],
     },
+    "edit_predictions": {
+        "mode": "eager",
+    },
     "agent_servers": {
-        "codex-acp": {
-            "default_config_options": {
-                "model": "gpt-5.4-mini",
-            },
-            "type": "registry",
-        },
         "github-copilot-cli": {
             "default_config_options": {
                 "model": "gpt-5.3-codex",
             },
             "type": "registry",
         },
+        "codex-acp": {
+            "default_config_options": {
+                "model": "gpt-5.4-mini",
+            },
+            "type": "registry",
+        },
     },
+    "language_models": {
+        "ollama": {
+            "context_window": 65536,
+        },
+    },
+    "context_servers": {
+        "laravel-boost": {
+            "enabled": true,
+            "remote": false,
+            "settings": {},
+        },
+    },
+    "disable_ai": false,
 
     // Languages, LSP
     "languages": {

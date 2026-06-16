@@ -171,6 +171,9 @@
             "L": "vim::EndOfLineDownward",
             "s": "vim::PushSneak",
             "S": "vim::PushSneakBackward",
+            "space y": ["workspace::SendKeystrokes", "\" + y"],
+            "space shift-y": ["workspace::SendKeystrokes", "\" + shift-y"],
+            "space d": ["workspace::SendKeystrokes", "\" _ d"],
         },
     },
 
@@ -191,13 +194,16 @@
         },
     },
 
-    // Indenting
+    // Indenting, pasting, deleting
     {
         "context": "Editor && vim_mode == visual",
         "bindings": {
             "tab": "editor::Indent",
             "shift-tab": "editor::Outdent",
             "y": ["workspace::SendKeystrokes", "y ` >"],
+            "p": ["workspace::SendKeystrokes", "\" _ d P"],
+            "space y": ["workspace::SendKeystrokes", "\" + y"],
+            "space d": ["workspace::SendKeystrokes", "\" _ d"],
         },
     },
 
