@@ -69,7 +69,8 @@
 
             // Folding
             "space f": "editor::ToggleFold",
-            "space F F": "editor::FoldAll",
+            "space F F": "editor::ToggleFoldAll",
+            "space F A": "editor::FoldAll",
             "space F U": "editor::UnfoldAll",
 
             // Comments
