@@ -41,6 +41,7 @@
         "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert",
         "bindings": {
             "space space": "file_finder::Toggle",
+            "space w w": "workspace::Save",
 
             // Multicursor
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
@@ -60,6 +61,8 @@
             "space \\": "pane::SplitAndMoveRight",
             "space -": "pane::SplitAndMoveDown",
             "space w j": "pane::JoinAll",
+            "space w h": "pane::SplitDown",
+            "space w v": "pane::SplitRight",
 
             // Zoom / Zen
             "space z": "workspace::ToggleZoom",
