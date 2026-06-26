@@ -97,6 +97,9 @@ source ~/.config/zsh/fzf.zsh
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# PHPDevTools
+export DEVSENSE_PHP_LS_LICENSE="$(< ~/phpdevtools/licence.txt)"
+
 # Herd injected PHP binary.
 export PATH="/Users/boris/Library/Application Support/Herd/bin/:/Users/boris/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/boris/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

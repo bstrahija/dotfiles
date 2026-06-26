@@ -1,0 +1,38 @@
+onboarding = false
+[theme]
+# Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord, gruvbox, one-dark, solarized, kanagawa, rose-pine, vesper
+name = "catppuccin"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+f"
+
+# Prefix-mode actions
+previous_tab = "prefix+[" # optional, unset by default
+next_tab = "prefix+]"     # optional, unset by default
+previous_workspace = "prefix+p" # optional, unset by default
+next_workspace = "prefix+n"     # optional, unset by default
+split_vertical = "prefix+backslash"
+split_horizontal = "prefix+minus"
+switch_workspace = "prefix+1..9"   # optional indexed binding, e.g. "prefix+shift+1..9"
+navigate_workspace_up = "k"     # optional, unset by default
+navigate_workspace_down = "j" # optional, unset by default
+
+[[keys.command]]
+key = "prefix+o"
+type = "plugin_action"
+command = "cloudmanic.herdr-plus.projects"
+description = "herdr-plus: quick actions"
+
+[ui]
+# Sidebar width (auto-scaled based on workspace names, this sets the default)
+sidebar_width = 26
+
+# Maximum sidebar width when expanded (columns)
+ sidebar_max_width = 36
+
+# Draw borders around split panes.
+pane_borders = true
+
+# Keep split panes visually separated instead of sharing divider borders.
+pane_gaps = true

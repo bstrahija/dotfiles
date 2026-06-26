@@ -140,6 +140,10 @@
         "sidebar_side": "left",
         "favorite_models": [],
         "model_parameters": [],
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-5.3-codex",
+        },
     },
     "edit_predictions": {
         "mode": "eager",
