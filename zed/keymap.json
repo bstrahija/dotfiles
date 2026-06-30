@@ -4,12 +4,10 @@
         "bindings": {
             "shift shift": "file_finder::Toggle",
             "cmd-e": "project_panel::ToggleFocus",
-            "ctrl-e ctrl-e": "project_panel::ToggleFocus",
             "cmd-i": "agent::ToggleFocus",
-            "ctrl-x ctrl-x": "agent::ToggleFocus",
-            "ctrl-x ctrl-a": "assistant::InlineAssist",
+            "cmd-k": "assistant::InlineAssist",
             "alt-cmd-p": "projects::OpenRecent",
-            "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+            "cmd-g": "git_panel::ToggleFocus",
             "cmd-B": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
@@ -311,4 +309,10 @@
             "alt-cmd-j": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
+    {
+        "context": "Pane",
+        "unbind": {
+            "cmd-g": "search::SelectNextMatch"
+        }
+    }
 ]

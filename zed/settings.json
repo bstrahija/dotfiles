@@ -26,6 +26,9 @@
     "when_closing_with_no_tabs": "keep_window_open",
     "colorize_brackets": true,
     "code_lens": "off",
+    "sticky_scroll": {
+        "enabled": true,
+    },
     "title_bar": {
         "show_menus": false,
         "show_sign_in": true,
