@@ -31,6 +31,7 @@ brew 'dust'                    # Disk usage with a nicer UI (better du)
 brew 'eza'                     # Listing files with info (better ls)
 brew 'exiftool'                # Read, write and modify exif data
 brew 'fzf'                     # Fuzzy file finder and filtering
+brew 'herdr'                   # AI TMUX alternative
 brew 'jdupes'                  # Duplicate file finder
 brew 'jq'                      # JSON parser, output and query files
 brew 'lnav'                    # Log file viewer
@@ -126,7 +127,7 @@ cask 'viber'   # Messaging and calls
 cask 'zoom'    # Video conferencing
 
 # Other
-cask 'alt-tab'                                      # App switcher
+cask 'bettercmdtab'                                 # Better cmd/alt tab
 cask 'caffeine'                                     # Prevents Mac from sleeping
 cask 'coconutbattery'                               # Battery health monitor
 cask 'dockey'                                       # Manage mac dock

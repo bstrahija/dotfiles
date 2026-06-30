@@ -6,11 +6,15 @@ license.*
 licence.*
 _old
 *.old*
+*.log
 kickstart
 
 cursor/globalStorage
 cursor/History
 cursor/workspaceStorage
+
+herdr/session.json
+herdr/plugins/github
 
 vscode/_bak
 nvim.custom
@@ -21,8 +25,11 @@ vscode.nvim
 vscode/globalStorage/*
 !vscode/globalStorage/alefragnani.project-manager
 vscode/History
+vscode/profiles/builtin
 vscode/sync
 vscode/workspaceStorage
+vscode/mcp
+
 
 windsurf/globalStorage
 windsurf/History

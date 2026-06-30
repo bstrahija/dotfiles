@@ -63,7 +63,6 @@
                     },
                     {
                         "description": "`left_option` + `[` = `š`",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -90,7 +89,6 @@
                     },
                     {
                         "description": "`left_option` + `]` = `đ`",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -117,7 +115,6 @@
                     },
                     {
                         "description": "`left_option` + `\\` = `ž`",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -144,7 +141,6 @@
                     },
                     {
                         "description": "`left_option ` + `;` = `č`",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -171,7 +167,6 @@
                     },
                     {
                         "description": "`left_option ` + `'` = `ć`",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
