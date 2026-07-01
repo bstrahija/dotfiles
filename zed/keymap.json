@@ -58,6 +58,10 @@
             "space t t": "tab_switcher::Toggle",
             "space t g": "editor::ToggleTabBar",
 
+            // Copy/yank/paste
+            "space p": ["workspace::SendKeystrokes", "\" 0 p"],
+            "space P": ["workspace::SendKeystrokes", "\" 0 P"],
+
             // Splits
             "space \\": "pane::SplitAndMoveRight",
             "space -": "pane::SplitAndMoveDown",
@@ -107,11 +111,6 @@
             "space =": "editor::Format",
             "g m": "vim::Matching",
             "g l": "editor::OpenSelectedFilename",
-
-            // Tasks / projects
-            "space p d": ["task::Spawn", { "task_name": "project_dotfiles" }],
-            "space p e": ["task::Spawn", { "task_name": "project_efd_frontend" }],
-            "space p z": ["task::Spawn", { "task_name": "project_zimsko" }],
 
             // Settings
             "space s s": "zed::OpenSettingsFile",
