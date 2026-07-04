@@ -1,66 +1,70 @@
--- ════════════════════════════════════════════════════════════════════════════
--- Essential Operations
--- ════════════════════════════════════════════════════════════════════════════
+local map = vim.keymap.set
+local projects = require("core.projects")
 
--- Save
-vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save File" })
+map("n", "<leader>w", "<cmd>w<cr>", { desc = "Save File" })
+map("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
+map("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit All" })
+map("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear Search Highlight", silent = true })
 
--- Quit
-vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit" })
-vim.keymap.set("n", "<leader>Q", "<cmd>qa<cr>", { desc = "Quit All" })
+map("n", "<C-h>", "<C-w>h", { desc = "Window Left" })
+map("n", "<C-j>", "<C-w>j", { desc = "Window Down" })
+map("n", "<C-k>", "<C-w>k", { desc = "Window Up" })
+map("n", "<C-l>", "<C-w>l", { desc = "Window Right" })
 
--- Clear search highlight
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear Highlight", silent = true })
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Lines Down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Lines Up" })
+map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Up (Wrapped)" })
+map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, desc = "Down (Wrapped)" })
+map({ "n", "x", "o" }, "H", "^", { desc = "Start of Line" })
+map({ "n", "x", "o" }, "L", "g_", { desc = "End of Line" })
+map("n", "n", "nzzzv", { desc = "Next Search Result" })
+map("n", "N", "Nzzzv", { desc = "Prev Search Result" })
+map("n", "*", "*zzzv", { desc = "Search Word" })
+map("n", "#", "#zzzv", { desc = "Search Word Back" })
 
--- ════════════════════════════════════════════════════════════════════════════
--- Line Movement (Visual Mode)
--- ════════════════════════════════════════════════════════════════════════════
+map("v", "<", "<gv", { desc = "Indent Left" })
+map("v", ">", ">gv", { desc = "Indent Right" })
+map("v", "p", '"_dP', { desc = "Paste Without Yank" })
+map("n", "YY", "va{Vy", { desc = "Yank Block" })
+map("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { desc = "Split Line", silent = true })
+map("n", "<C-a>", "ggVG", { desc = "Select All" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Lines Down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Lines Up" })
+map("i", "jj", "<Esc>", { desc = "Exit Insert" })
+map("i", "jk", "<Esc>", { desc = "Exit Insert" })
 
--- ════════════════════════════════════════════════════════════════════════════
--- Better Navigation
--- ════════════════════════════════════════════════════════════════════════════
+map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep" })
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
+map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Recent Files" })
+map("n", "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Search Buffer" })
+map("n", "<leader>fp", "<cmd>Telescope git_files<cr>", { desc = "Git Files" })
+map("n", "<leader>fe", "<cmd>Telescope resume<cr>", { desc = "Resume Picker" })
+map("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "Diagnostics" })
 
--- Wrapped line navigation
-vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, desc = "Up (wrapped)" })
-vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, desc = "Down (wrapped)" })
+map("n", "<leader>o", "<cmd>Oil<cr>", { desc = "File Explorer" })
+map("n", "<leader>bb", "<cmd>b#<cr>", { desc = "Alternate Buffer" })
+map("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+map("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
+map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 
--- Start/End of line (easier than ^ and $)
-vim.keymap.set({ "n", "x", "o" }, "H", "^", { desc = "Start of Line" })
-vim.keymap.set({ "n", "x", "o" }, "L", "g_", { desc = "End of Line" })
+map("n", "<leader>gg", "<cmd>Telescope git_status<cr>", { desc = "Git Status" })
+map("n", "<leader>gh", "<cmd>Telescope git_bcommits<cr>", { desc = "Buffer History" })
+map("n", "<leader>gl", "<cmd>Telescope git_commits<cr>", { desc = "Git Commits" })
+map("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", { desc = "Blame Line" })
+map("n", "<leader>gB", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Toggle Blame" })
 
--- Keep search results centered
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next Match (centered)" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev Match (centered)" })
-vim.keymap.set("n", "*", "*zzzv", { desc = "Search Word (centered)" })
-vim.keymap.set("n", "#", "#zzzv", { desc = "Search Word Back (centered)" })
+map("n", "<leader>ee", "<cmd>Telescope diagnostics<cr>", { desc = "Diagnostics" })
+map("n", "<leader>en", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
+map("n", "<leader>ep", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
+map("n", "<leader>e]", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
+map("n", "<leader>e[", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
 
--- ════════════════════════════════════════════════════════════════════════════
--- Better Editing
--- ════════════════════════════════════════════════════════════════════════════
+map("n", "<leader>tg", function()
+    vim.o.showtabline = vim.o.showtabline == 0 and 2 or 0
+end, { desc = "Toggle Tab Bar" })
 
--- Better indenting (stay in visual mode)
-vim.keymap.set("v", "<", "<gv", { desc = "Indent Left" })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent Right" })
-
--- Paste over selection without yanking
-vim.keymap.set("v", "p", '"_dP', { desc = "Paste (no yank)" })
-
--- Yank block
-vim.keymap.set("n", "YY", "va{Vy", { desc = "Yank Block {}" })
-
--- Split line (opposite of J)
-vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>",
-    { desc = "Split Line", silent = true })
-
--- Select all
-vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select All" })
-
--- ════════════════════════════════════════════════════════════════════════════
--- Insert Mode Escapes
--- ════════════════════════════════════════════════════════════════════════════
-
-vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit Insert" })
-vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit Insert" })
+map("n", "<leader>pp", projects.pick, { desc = "Switch Project" })
+map("n", "<leader>pr", projects.recent, { desc = "Recent Projects" })
+map("n", "<leader>pf", projects.find_files, { desc = "Project Files" })
+map("n", "<leader>po", projects.pick_current_root, { desc = "Project Root" })
