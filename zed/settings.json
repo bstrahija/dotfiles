@@ -1,5 +1,6 @@
 {
     // Vim
+    "helix_mode": false,
     "vim_mode": true,
     "vim": {
         "use_smartcase_find": true,
@@ -142,7 +143,7 @@
         "model_parameters": [],
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-5.3-codex",
+            "model": "gpt-5.4",
         },
     },
     "edit_predictions": {
@@ -183,7 +184,7 @@
         "PHP": {
             "format_on_save": "on",
             // "formatter": "language_server",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp"],
+            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp", "emmet-language-server"],
             "formatter": {
                 "external": {
                     "command": "bash",
@@ -196,7 +197,7 @@
         },
         "Blade": {
             "format_on_save": "on",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp"],
+            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp", "emmet-language-server"],
             "formatter": {
                 "external": {
                     "command": "blade-formatter",
