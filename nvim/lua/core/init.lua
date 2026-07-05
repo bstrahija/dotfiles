@@ -1,6 +1,0 @@
-require("core.options")
-require("core.keymaps")
-require("core.treesitter")
-require("core.lsp")
-require("core.projects")
-require("core.hooks")
