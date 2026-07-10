@@ -250,7 +250,10 @@
     // Git, source control
     "git_panel": { "dock": "right", "button": false },
     "git": {
-        "inline_blame": { "enabled": false },
+        "inline_blame": {
+            "enabled": false,
+            "location": "inline",
+        },
         "git_gutter": "tracked_files",
     },
 }
