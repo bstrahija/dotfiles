@@ -1,0 +1,25 @@
+2026-06-28T20:43:56.783243Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=256 target=8192
+2026-06-28T20:43:56.784097Z  INFO herdr::api::server: api server listening path=/Users/boris/.config/herdr/herdr.sock
+2026-06-28T20:43:56.784335Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-06-28T20:43:56.799192Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T20:43:56.800205Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-06-28T20:43:56.802609Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=94322
+2026-06-28T20:43:56.802745Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-06-28T20:43:56.802753Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-06-28T20:43:56.802762Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-06-28T20:43:56.802768Z  INFO herdr::server::headless: created startup workspace cwd=/Users/boris/.config
+2026-06-28T20:43:56.802865Z  INFO herdr::server::headless: client protocol socket listening path=/Users/boris/.config/herdr/herdr-client.sock
+2026-06-28T20:43:56.802925Z  INFO herdr::server::headless: herdr server started api_socket=/Users/boris/.config/herdr/herdr.sock client_socket=/Users/boris/.config/herdr/herdr-client.sock
+2026-06-28T20:43:56.802938Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=94285
+2026-06-28T20:43:57.056841Z  INFO herdr::server::headless: client connected client_id=2 cols=198 rows=41 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-06-28T20:44:01.809938Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/boris/.config/herdr/session.json workspaces=1
+2026-06-28T21:09:42.265943Z  INFO herdr::server::headless: client detach requested via keybind client_id=2
+2026-06-28T21:09:42.270690Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-06-28T21:13:56.804411Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T21:46:09.329528Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-28T22:16:09.333816Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-29T05:41:21.169790Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-29T17:28:01.904698Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-29T19:44:29.405815Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-30T20:46:19.264662Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-06-30T21:16:19.236760Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"

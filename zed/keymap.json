@@ -4,12 +4,11 @@
         "bindings": {
             "shift shift": "file_finder::Toggle",
             "cmd-e": "project_panel::ToggleFocus",
-            "ctrl-e ctrl-e": "project_panel::ToggleFocus",
             "cmd-i": "agent::ToggleFocus",
             "cmd-l": "agent::ToggleFocus",
             "ctrl-enter": "assistant::InlineAssist",
             "alt-cmd-p": "projects::OpenRecent",
-            "ctrl-g ctrl-g": "git_panel::ToggleFocus",
+            "cmd-g": "git_panel::ToggleFocus",
             "cmd-B": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
@@ -373,6 +372,12 @@
         "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
         "unbind": {
             "cmd-l": "pane::SplitRight",
+        },
+    },
+    {
+        "context": "Pane",
+        "unbind": {
+            "cmd-g": "search::SelectNextMatch",
         },
     },
 ]
