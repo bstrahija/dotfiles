@@ -109,6 +109,7 @@
             "space g b": "editor::ToggleGitBlameInline",
             "space g h": "git::FileHistory",
             "space g l": ["task::Spawn", { "task_name": "lazygit" }],
+            "space g n": "editor::GoToHunk",
 
             // Errors / diagnostics
             "space e e": "diagnostics::Deploy",
@@ -229,17 +230,17 @@
 
             // Surrounding in visual mode
             "shift-s": ["vim::PushAddSurrounds", {}],
-            "space '": ["workspace::SendKeystrokes", "S '"],
-            "space `": ["workspace::SendKeystrokes", "S `"],
-            "space \"": ["workspace::SendKeystrokes", "S \""],
-            "space <": ["workspace::SendKeystrokes", "S <"],
-            "space >": ["workspace::SendKeystrokes", "S >"],
-            "space {": ["workspace::SendKeystrokes", "S {"],
-            "space }": ["workspace::SendKeystrokes", "S }"],
-            "space [": ["workspace::SendKeystrokes", "S ["],
-            "space ]": ["workspace::SendKeystrokes", "S ]"],
-            "space (": ["workspace::SendKeystrokes", "S ("],
-            "space )": ["workspace::SendKeystrokes", "S )"],
+            "space s '": ["workspace::SendKeystrokes", "S '"],
+            "space s `": ["workspace::SendKeystrokes", "S `"],
+            "space s \"": ["workspace::SendKeystrokes", "S \""],
+            "space s <": ["workspace::SendKeystrokes", "S <"],
+            "space s >": ["workspace::SendKeystrokes", "S >"],
+            "space s {": ["workspace::SendKeystrokes", "S {"],
+            "space s }": ["workspace::SendKeystrokes", "S }"],
+            "space s [": ["workspace::SendKeystrokes", "S ["],
+            "space s ]": ["workspace::SendKeystrokes", "S ]"],
+            "space s (": ["workspace::SendKeystrokes", "S ("],
+            "space s )": ["workspace::SendKeystrokes", "S )"],
         },
     },
 
