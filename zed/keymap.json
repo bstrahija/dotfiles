@@ -61,6 +61,7 @@
             "space t g": "editor::ToggleTabBar",
 
             // Copy/yank/paste
+            "Y": ["workspace::SendKeystrokes", "y $"],
             "space p": ["workspace::SendKeystrokes", "\" 0 p"],
             "space P": ["workspace::SendKeystrokes", "\" 0 P"],
 
