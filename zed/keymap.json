@@ -4,6 +4,7 @@
         "bindings": {
             "shift shift": "file_finder::Toggle",
             "cmd-e": "project_panel::ToggleFocus",
+            "cmd-t": "terminal_panel::ToggleFocus",
             "cmd-i": "agent::ToggleFocus",
             "cmd-l": "agent::ToggleFocus",
             "ctrl-enter": "assistant::InlineAssist",
@@ -99,6 +100,7 @@
 
             // Closing
             "space q q": "pane::CloseActiveItem",
+            "space x": "pane::CloseActiveItem",
             "space q o": "pane::CloseOtherItems",
             "space q a": "pane::CloseAllItems",
             "space Q": "workspace::CloseWindow",
@@ -172,19 +174,20 @@
         },
     },
 
-    // Tabs
+    // Marks
     {
         "context": "Editor && VimControl && !VimWaiting && !menu",
         "bindings": {
-            "space 1": ["pane::ActivateItem", 0],
-            "space 2": ["pane::ActivateItem", 1],
-            "space 3": ["pane::ActivateItem", 2],
-            "space 4": ["pane::ActivateItem", 3],
-            "space 5": ["pane::ActivateItem", 4],
-            "space 6": ["pane::ActivateItem", 5],
-            "space 7": ["pane::ActivateItem", 6],
-            "space 8": ["pane::ActivateItem", 7],
-            "space 9": ["pane::ActivateItem", 8],
+            "space 1": ["workspace::SendKeystrokes", "' 1"],
+            "space 2": ["workspace::SendKeystrokes", "' 2"],
+            "space 3": ["workspace::SendKeystrokes", "' 3"],
+            "space 4": ["workspace::SendKeystrokes", "' 4"],
+            "space 5": ["workspace::SendKeystrokes", "' 5"],
+            "space 6": ["workspace::SendKeystrokes", "' 6"],
+            "space 7": ["workspace::SendKeystrokes", "' 7"],
+            "space 8": ["workspace::SendKeystrokes", "' 8"],
+            "space 9": ["workspace::SendKeystrokes", "' 9"],
+            "space m m": ["workspace::SendKeystrokes", ": marks enter"],
         },
     },
 
