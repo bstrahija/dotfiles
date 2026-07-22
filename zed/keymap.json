@@ -59,6 +59,7 @@
             "space b p": "pane::ActivatePreviousItem",
             "space t t": "tab_switcher::Toggle",
             "space t g": "editor::ToggleTabBar",
+            "space t p": "pane::TogglePinTab",
 
             // Copy/yank/paste
             "Y": ["workspace::SendKeystrokes", "y $"],
