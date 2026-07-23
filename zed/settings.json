@@ -113,7 +113,12 @@
     "collaboration_panel": { "dock": "right", "button": false },
     "search": { "button": false },
     "outline_panel": { "dock": "right", "button": false },
-    "diagnostics": { "button": false },
+    "diagnostics": {
+        "button": false,
+        "inline": {
+            "enabled": true,
+        },
+    },
 
     // Scrollbar
     "scrollbar": {
