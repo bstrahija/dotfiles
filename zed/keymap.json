@@ -4,8 +4,10 @@
         "bindings": {
             "shift shift": "file_finder::Toggle",
             "cmd-e": "project_panel::ToggleFocus",
+            "cmd-t": "terminal_panel::ToggleFocus",
             "cmd-i": "agent::ToggleFocus",
-            "cmd-k": "assistant::InlineAssist",
+            "cmd-l": "agent::ToggleFocus",
+            "ctrl-enter": "assistant::InlineAssist",
             "alt-cmd-p": "projects::OpenRecent",
             "cmd-g": "git_panel::ToggleFocus",
             "cmd-B": "multi_workspace::ToggleWorkspaceSidebar",
@@ -40,7 +42,11 @@
         "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert",
         "bindings": {
             "space space": "file_finder::Toggle",
-            "space w w": "workspace::Save",
+            "space f f": "file_finder::Toggle",
+            "space f s": "project_symbols::Toggle",
+            "space f t": "text_finder::Toggle",
+            "space f p": "projects::OpenRecent",
+            "space w": "workspace::Save",
 
             // Multicursor
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
@@ -50,40 +56,56 @@
             "space a": "pane::AlternateFile",
             "space b b": "pane::AlternateFile",
             "space b n": "pane::ActivateNextItem",
-            "space ]": "pane::ActivateNextItem",
             "space b p": "pane::ActivatePreviousItem",
-            "space [": "pane::ActivatePreviousItem",
             "space t t": "tab_switcher::Toggle",
             "space t g": "editor::ToggleTabBar",
+            "space t p": "pane::TogglePinTab",
 
             // Copy/yank/paste
+            "Y": ["workspace::SendKeystrokes", "y $"],
             "space p": ["workspace::SendKeystrokes", "\" 0 p"],
             "space P": ["workspace::SendKeystrokes", "\" 0 P"],
 
+            // Surround
+            "space '": ["workspace::SendKeystrokes", "y s i w '"],
+            "space `": ["workspace::SendKeystrokes", "y s i w `"],
+            "space \"": ["workspace::SendKeystrokes", "y s i w \""],
+            "space <": ["workspace::SendKeystrokes", "y s i w <"],
+            "space >": ["workspace::SendKeystrokes", "y s i w >"],
+            "space {": ["workspace::SendKeystrokes", "y s i w {"],
+            "space }": ["workspace::SendKeystrokes", "y s i w }"],
+            "space [": ["workspace::SendKeystrokes", "y s i w ["],
+            "space ]": ["workspace::SendKeystrokes", "y s i w ]"],
+            "space (": ["workspace::SendKeystrokes", "y s i w ("],
+            "space )": ["workspace::SendKeystrokes", "y s i w )"],
+
             // Splits
-            "space \\": "pane::SplitAndMoveRight",
-            "space -": "pane::SplitAndMoveDown",
-            "space w j": "pane::JoinAll",
-            "space w h": "pane::SplitDown",
-            "space w v": "pane::SplitRight",
+            "ctrl-w \\": "pane::SplitAndMoveRight",
+            "ctrl-w -": "pane::SplitAndMoveDown",
+            "ctrl-w j": "pane::JoinAll",
+            "ctrl-w h": "pane::SplitDown",
+            "ctrl-w v": "pane::SplitRight",
 
             // Zoom / Zen
             "space z": "workspace::ToggleZoom",
 
             // Folding
-            "space f": "editor::ToggleFold",
-            "space F F": "editor::ToggleFoldAll",
-            "space F A": "editor::FoldAll",
-            "space F U": "editor::UnfoldAll",
+            "ctrl-f f": "editor::ToggleFold",
+            "ctrl-f ctrl-f": "editor::ToggleFold",
+            "ctrl-f F": "editor::ToggleFoldAll",
+            "ctrl-f a": "editor::FoldAll",
+            "ctrl-f ctrl-a": "editor::FoldAll",
+            "ctrl-f ctrl-u": "editor::UnfoldAll",
 
             // Comments
             "space c": "editor::ToggleComments",
 
             // Closing
             "space q q": "pane::CloseActiveItem",
+            "space x": "pane::CloseActiveItem",
             "space q o": "pane::CloseOtherItems",
             "space q a": "pane::CloseAllItems",
-            "space O": "workspace::CloseWindow",
+            "space Q": "workspace::CloseWindow",
 
             // Git
             "space g g": "git_panel::ToggleFocus",
@@ -91,6 +113,7 @@
             "space g b": "editor::ToggleGitBlameInline",
             "space g h": "git::FileHistory",
             "space g l": ["task::Spawn", { "task_name": "lazygit" }],
+            "space g n": "editor::GoToHunk",
 
             // Errors / diagnostics
             "space e e": "diagnostics::Deploy",
@@ -105,6 +128,8 @@
             "g I": "editor::GoToImplementationSplit",
             "g D": "editor::GoToDefinitionSplit",
             "g r": "editor::GoToNextReference",
+            "g R": "editor::Rename",
+            "space r": "editor::Rename",
             "g =": "editor::Format",
             "space =": "editor::Format",
             "g m": "vim::Matching",
@@ -151,19 +176,20 @@
         },
     },
 
-    // Tabs
+    // Marks
     {
         "context": "Editor && VimControl && !VimWaiting && !menu",
         "bindings": {
-            "space 1": ["pane::ActivateItem", 0],
-            "space 2": ["pane::ActivateItem", 1],
-            "space 3": ["pane::ActivateItem", 2],
-            "space 4": ["pane::ActivateItem", 3],
-            "space 5": ["pane::ActivateItem", 4],
-            "space 6": ["pane::ActivateItem", 5],
-            "space 7": ["pane::ActivateItem", 6],
-            "space 8": ["pane::ActivateItem", 7],
-            "space 9": ["pane::ActivateItem", 8],
+            "space 1": ["workspace::SendKeystrokes", "' 1"],
+            "space 2": ["workspace::SendKeystrokes", "' 2"],
+            "space 3": ["workspace::SendKeystrokes", "' 3"],
+            "space 4": ["workspace::SendKeystrokes", "' 4"],
+            "space 5": ["workspace::SendKeystrokes", "' 5"],
+            "space 6": ["workspace::SendKeystrokes", "' 6"],
+            "space 7": ["workspace::SendKeystrokes", "' 7"],
+            "space 8": ["workspace::SendKeystrokes", "' 8"],
+            "space 9": ["workspace::SendKeystrokes", "' 9"],
+            "space m m": ["workspace::SendKeystrokes", ": marks enter"],
         },
     },
 
@@ -172,9 +198,7 @@
         "context": "Editor && vim_mode == normal",
         "bindings": {
             "alt-h": "vim::StartOfLineDownward",
-            "H": "vim::StartOfLineDownward",
             "alt-l": "vim::EndOfLineDownward",
-            "L": "vim::EndOfLineDownward",
             "s": "vim::PushSneak",
             "S": "vim::PushSneakBackward",
             "space y": ["workspace::SendKeystrokes", "\" + y"],
@@ -200,16 +224,28 @@
         },
     },
 
-    // Indenting, pasting, deleting
+    // Indenting, pasting, deleting, surrounnding
     {
-        "context": "Editor && vim_mode == visual",
+        "context": "Editor && (vim_mode == visual || vim_mode == visual_line)",
         "bindings": {
             "tab": "editor::Indent",
             "shift-tab": "editor::Outdent",
-            "y": ["workspace::SendKeystrokes", "y ` >"],
-            "p": ["workspace::SendKeystrokes", "\" _ d P"],
             "space y": ["workspace::SendKeystrokes", "\" + y"],
             "space d": ["workspace::SendKeystrokes", "\" _ d"],
+
+            // Surrounding in visual mode
+            "shift-s": ["vim::PushAddSurrounds", {}],
+            "space s '": ["workspace::SendKeystrokes", "S '"],
+            "space s `": ["workspace::SendKeystrokes", "S `"],
+            "space s \"": ["workspace::SendKeystrokes", "S \""],
+            "space s <": ["workspace::SendKeystrokes", "S <"],
+            "space s >": ["workspace::SendKeystrokes", "S >"],
+            "space s {": ["workspace::SendKeystrokes", "S {"],
+            "space s }": ["workspace::SendKeystrokes", "S }"],
+            "space s [": ["workspace::SendKeystrokes", "S ["],
+            "space s ]": ["workspace::SendKeystrokes", "S ]"],
+            "space s (": ["workspace::SendKeystrokes", "S ("],
+            "space s )": ["workspace::SendKeystrokes", "S )"],
         },
     },
 
@@ -309,9 +345,45 @@
         },
     },
     {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "ctrl-f": "vim::PageDown",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-f": "editor::MoveRight",
+        },
+    },
+    {
+        "context": "vim_mode == literal",
+        "unbind": {
+            "ctrl-f": ["vim::Literal", ["ctrl-f", "\u0006"]],
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-l": "editor::SelectLine",
+        },
+    },
+    {
+        "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+        "unbind": {
+            "cmd-l": "pane::SplitRight",
+        },
+    },
+    {
+        "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+        "unbind": {
+            "cmd-l": "pane::SplitRight",
+        },
+    },
+    {
         "context": "Pane",
         "unbind": {
-            "cmd-g": "search::SelectNextMatch"
-        }
-    }
+            "cmd-g": "search::SelectNextMatch",
+        },
+    },
 ]

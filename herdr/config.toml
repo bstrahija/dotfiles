@@ -1,7 +1,7 @@
 onboarding = false
 [theme]
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord, gruvbox, one-dark, solarized, kanagawa, rose-pine, vesper
-name = "catppuccin"
+name = "rose-pine"
 auto_switch = false
 
 [keys]
