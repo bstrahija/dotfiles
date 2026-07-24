@@ -9,7 +9,7 @@
 
     // Looks / Editor
     "icon_theme": "Soft Charmed Icons",
-    "ui_font_size": 15,
+    "ui_font_size": 14,
     "ui_font_family": "MonaspiceKr Nerd Font",
     "buffer_font_size": 13,
     "buffer_line_height": { "custom": 2.8 },
@@ -41,6 +41,7 @@
     "debugger": {
         "button": false,
     },
+    "lsp_document_colors": "inlay",
 
     // Indentation and wrapping
     "tab_size": 4,
@@ -224,7 +225,11 @@
         },
         "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } },
         "CSS": {
-            "language_servers": ["tailwindcss-language-server"],
+            "language_servers": [
+                "tailwindcss-intellisense-css",
+                "!vscode-css-language-server",
+                "..."
+            ]
         },
         "Ruby": {
             "language_servers": ["!ruby-lsp", "!rubocop", "!solargraph"],
