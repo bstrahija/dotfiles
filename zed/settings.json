@@ -17,7 +17,7 @@
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Rosé Pine Moon",
+        "dark": "Tokyo Night Moon",
     },
     "cursor_blink": false,
     "show_whitespaces": "selection",
@@ -42,6 +42,7 @@
         "button": false,
     },
     "lsp_document_colors": "inlay",
+    "redact_private_values": false,
 
     // Indentation and wrapping
     "tab_size": 4,
@@ -91,7 +92,7 @@
     "tabs": {
         "show_close_button": "hover",
         "close_position": "right",
-        "git_status": true,
+        "git_status": false,
     },
     "tab_bar": {
         "show": true,
@@ -230,11 +231,7 @@
         },
         "Vue.js": { "formatter": { "language_server": { "name": "vue-language-server" } } },
         "CSS": {
-            "language_servers": [
-                "tailwindcss-intellisense-css",
-                "!vscode-css-language-server",
-                "..."
-            ]
+            "language_servers": ["tailwindcss-intellisense-css", "!vscode-css-language-server", "..."],
         },
         "Ruby": {
             "language_servers": ["!ruby-lsp", "!rubocop", "!solargraph"],

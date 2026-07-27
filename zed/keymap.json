@@ -233,6 +233,10 @@
             "space y": ["workspace::SendKeystrokes", "\" + y"],
             "space d": ["workspace::SendKeystrokes", "\" _ d"],
 
+            // Keep selection when indenting
+            ">": ["workspace::SendKeystrokes", "> g v"],
+            "<": ["workspace::SendKeystrokes", "< g v"],
+
             // Surrounding in visual mode
             "shift-s": ["vim::PushAddSurrounds", {}],
             "space s '": ["workspace::SendKeystrokes", "S '"],
