@@ -47,6 +47,7 @@
             "space f t": "text_finder::Toggle",
             "space f p": "projects::OpenRecent",
             "space w": "workspace::Save",
+            "space t w": "editor::ToggleSoftWrap",
 
             // Multicursor
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
