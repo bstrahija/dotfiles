@@ -121,6 +121,7 @@
             "space e ]": "editor::GoToDiagnostic",
             "space e p": "editor::GoToPreviousDiagnostic",
             "space e [": "editor::GoToPreviousDiagnostic",
+            "space e t": "editor::ToggleInlineDiagnostics",
 
             // Code
             "g o": "outline_panel::ToggleFocus",
