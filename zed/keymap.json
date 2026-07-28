@@ -47,6 +47,7 @@
             "space f t": "text_finder::Toggle",
             "space f p": "projects::OpenRecent",
             "space w": "workspace::Save",
+            "space t w": "editor::ToggleSoftWrap",
 
             // Multicursor
             "cmd-alt-j": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
@@ -233,6 +234,10 @@
             "shift-tab": "editor::Outdent",
             "space y": ["workspace::SendKeystrokes", "\" + y"],
             "space d": ["workspace::SendKeystrokes", "\" _ d"],
+
+            // Keep selection when indenting
+            ">": ["workspace::SendKeystrokes", "> g v"],
+            "<": ["workspace::SendKeystrokes", "< g v"],
 
             // Surrounding in visual mode
             "shift-s": ["vim::PushAddSurrounds", {}],
