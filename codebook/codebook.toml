@@ -1,3 +1,8 @@
+dictionaries = [
+    "de",
+    "hr_hr",
+    "en_us",
+]
 words = [
     "activecampaign",
     "analyse",
@@ -99,5 +104,6 @@ words = [
     "wishlist",
     "zapier",
     "zellij",
+    "zimsko",
     "zoomnew",
 ]
