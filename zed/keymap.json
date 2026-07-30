@@ -225,6 +225,15 @@
             "space m P": "markdown::OpenPreviewToTheSide",
         },
     },
+    {
+        "context": "Markdown",
+        "bindings": {
+            "j": "markdown::ScrollDown",
+            "k": "markdown::ScrollUp",
+            "ctrl-d": "editor::HalfPageDown",
+            "ctrl-u": "editor::HalfPageUp",
+        }
+    },
 
     // Indenting, pasting, deleting, surrounnding
     {
