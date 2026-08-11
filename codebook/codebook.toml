@@ -4,6 +4,7 @@ dictionaries = [
     "en_us",
 ]
 words = [
+    "MCP",
     "activecampaign",
     "analyse",
     "apikey",
