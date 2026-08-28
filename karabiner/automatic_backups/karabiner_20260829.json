@@ -343,9 +343,9 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Caps Lock to HyperKey (Cmd+Ctrl+Opt+Shift), ESC when tapped",
+                                "description": "Tab to HyperKey (Cmd+Ctrl+Opt+Shift), Tab when tapped",
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "tab",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -368,13 +368,12 @@
                                         }
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to_if_alone": [{ "key_code": "tab" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "description": "Caps Lock to CTRL, ESC when tapped",
