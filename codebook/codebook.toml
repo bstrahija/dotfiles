@@ -4,7 +4,13 @@ dictionaries = [
     "en_us",
 ]
 words = [
+    "CLI",
+    "CRON",
+    "Centar",
     "MCP",
+    "Polylang",
+    "SITEURL",
+    "acf",
     "activecampaign",
     "analyse",
     "apikey",
