@@ -8,6 +8,55 @@
                 },
                 "rules": [
                     {
+                        "description": "Hyper Key + hjkl to arrow keys Vim",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "command-f5 and f6 to adjust keyboard brightness, same keys as earlier macs",
                         "manipulators": [
                             {
@@ -265,6 +314,7 @@
                     },
                     {
                         "description": "Left ctrl + hjkl to arrow keys Vim",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -374,16 +424,15 @@
                         ]
                     },
                     {
-                        "enabled": false,
                         "manipulators": [
                             {
-                                "description": "Caps Lock to CTRL, ESC when tapped",
+                                "description": "Tab to CTRL, tab when tapped",
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "tab",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to_if_alone": [{ "key_code": "tab" }],
                                 "type": "basic"
                             }
                         ]
