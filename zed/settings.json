@@ -45,6 +45,7 @@
     },
     "lsp_document_colors": "inlay",
     "redact_private_values": false,
+    "extend_comment_on_newline": false,
 
     // Indentation and wrapping
     "tab_size": 4,
