@@ -1,5 +1,6 @@
 {
     // Vim
+    "cli_default_open_behavior": "existing_window",
     "helix_mode": false,
     "vim_mode": true,
     "vim": {
@@ -8,7 +9,7 @@
     },
 
     // Looks / Editor
-    "icon_theme": "Soft Charmed Icons",
+    "icon_theme": "Base Charmed Icons",
     "ui_font_size": 14,
     "ui_font_family": "MonaspiceKr Nerd Font",
     "buffer_font_size": 13,
@@ -20,6 +21,7 @@
         "dark": "Rosé Pine Moon",
     },
     "cursor_blink": false,
+    "current_line_highlight": "all",
     "show_whitespaces": "selection",
     "autosave": "on_focus_change",
     "format_on_save": "on",
@@ -54,6 +56,9 @@
         "enabled": true,
         "coloring": "fixed",
         "active_line_width": 2,
+    },
+    "prettier": {
+        "allowed": true
     },
 
     // Terminal
@@ -147,6 +152,11 @@
     // AI / Agents
     "show_edit_predictions": true,
     "agent": {
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-5.5",
+            "enable_thinking": false
+        },
         "button": false,
         "dock": "left",
         "sidebar_side": "left",
@@ -220,17 +230,27 @@
             ],
             "formatter": {
                 "external": {
-                    "command": "blade-formatter",
+                    "command": "bash",
                     "arguments": [
-                        "--stdin",
-                        "--wrap-line-length",
-                        "9999",
-                        "--wrap-attributes",
-                        "preserve-aligned",
-                        "--sort-tailwindcss-classes",
-                    ],
-                },
+                        "-c",
+                        "cat > {buffer_path} && ./vendor/bin/pint --blade --quiet {buffer_path} && cat {buffer_path}"
+                    ]
+                }
             },
+
+            // "formatter": {
+            //     "external": {
+            //         "command": "blade-formatter",
+            //         "arguments": [
+            //             "--stdin",
+            //             "--wrap-line-length",
+            //             "9999",
+            //             "--wrap-attributes",
+            //             "preserve-aligned",
+            //             "--sort-tailwindcss-classes",
+            //         ],
+            //     },
+            // },
 
             // "formatter": {
             //     "external": {
@@ -253,7 +273,11 @@
     },
 
     // Git, source control
-    "git_panel": { "dock": "right", "button": false },
+    "git_panel": {
+        "dock": "right",
+        "button": false,
+        "tree_view": true
+   },
     "git": {
         "inline_blame": {
             "enabled": false,

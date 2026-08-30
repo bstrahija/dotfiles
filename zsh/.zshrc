@@ -2,7 +2,7 @@
 export HOMEBREW_PREFIX=$(brew --prefix)
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
 # MySQL
 export PATH="$HOMEBREW_PREFIX/opt/mysql-client/bin:$PATH"

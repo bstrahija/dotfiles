@@ -8,9 +8,10 @@
             "cmd-i": "agent::ToggleFocus",
             "cmd-l": "agent::ToggleFocus",
             "ctrl-enter": "assistant::InlineAssist",
+            "cmd-k": "assistant::InlineAssist",
             "alt-cmd-p": "projects::OpenRecent",
             "cmd-g": "git_panel::ToggleFocus",
-            "cmd-B": "multi_workspace::ToggleWorkspaceSidebar",
+            "cmd-shift-b": "multi_workspace::ToggleWorkspaceSidebar",
         },
     },
     {
@@ -90,6 +91,10 @@
             // Zoom / Zen
             "space z": "workspace::ToggleZoom",
 
+            // Scrolling
+            "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+            "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+
             // Folding
             "ctrl-f f": "editor::ToggleFold",
             "ctrl-f ctrl-f": "editor::ToggleFold",
@@ -125,7 +130,8 @@
             "space e t": "editor::ToggleInlineDiagnostics",
 
             // Code
-            "g o": "outline_panel::ToggleFocus",
+            "g O": "outline_panel::ToggleFocus",
+            "g o": "outline::Toggle",
             "g i": "editor::GoToImplementation",
             "g I": "editor::GoToImplementationSplit",
             "g D": "editor::GoToDefinitionSplit",
@@ -192,6 +198,10 @@
             "space 8": ["workspace::SendKeystrokes", "' 8"],
             "space 9": ["workspace::SendKeystrokes", "' 9"],
             "space m m": ["workspace::SendKeystrokes", ": marks enter"],
+            "ctrl-h": ["terminal::SendKeystroke", "' H"],
+            "ctrl-j": ["terminal::SendKeystroke", "' J"],
+            "ctrl-k": ["terminal::SendKeystroke", "' K"],
+            "ctrl-l": ["terminal::SendKeystroke", "' L"],
         },
     },
 

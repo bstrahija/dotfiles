@@ -1,6 +1,8 @@
 {
     "require": {
         "laravel/pint": "^1.29",
-        "php-stubs/wordpress-stubs": "^6.9"
+        "php-stubs/wordpress-stubs": "^6.9",
+        "cpx/cpx": "^2.1",
+        "laravel/lsp": "^0.0.29"
     }
 }
