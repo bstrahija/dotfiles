@@ -4,20 +4,149 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b4adc3dba83e03407673c0bbca8cb53",
+    "content-hash": "88c72c96da4a6d2d2721e66cb8c07cd5",
     "packages": [
         {
-            "name": "laravel/pint",
-            "version": "v1.29.1",
+            "name": "cpx/cpx",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/pint.git",
-                "reference": "0770e9b7fafd50d4586881d456d6eb41c9247a80"
+                "url": "https://github.com/laravel/cpx.git",
+                "reference": "124b3ad19cb98ef0cf6114e56ab9f580c8376ceb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/0770e9b7fafd50d4586881d456d6eb41c9247a80",
-                "reference": "0770e9b7fafd50d4586881d456d6eb41c9247a80",
+                "url": "https://api.github.com/repos/laravel/cpx/zipball/124b3ad19cb98ef0cf6114e56ab9f580c8376ceb",
+                "reference": "124b3ad19cb98ef0cf6114e56ab9f580c8376ceb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "composer/composer": "^2.8",
+                "composer/semver": "^3.4",
+                "laravel/agent-detector": "^2.0",
+                "laravel/pao": "^1.1",
+                "laravel/pint": "^1.29",
+                "laravel/prompts": "^0.3.21",
+                "mockery/mockery": "^1.6",
+                "pestphp/pest": "^4.7",
+                "pestphp/pest-plugin-type-coverage": "^4.0",
+                "phpstan/phpstan": "^2.2",
+                "symfony/console": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0"
+            },
+            "bin": [
+                "builds/cpx"
+            ],
+            "type": "project",
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "Cpx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Run any command from any composer package, even if it's not installed in your project.",
+            "keywords": [
+                "command",
+                "composer",
+                "package",
+                "run"
+            ],
+            "support": {
+                "docs": "https://cpx.dev",
+                "issues": "https://github.com/laravel/cpx/issues",
+                "source": "https://github.com/laravel/cpx"
+            },
+            "time": "2026-08-13T20:23:26+00:00"
+        },
+        {
+            "name": "laravel/lsp",
+            "version": "v0.0.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/lsp.git",
+                "reference": "aafb3e8a6a1760b998750bd4dd5b1aa0426fd8d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/lsp/zipball/aafb3e8a6a1760b998750bd4dd5b1aa0426fd8d7",
+                "reference": "aafb3e8a6a1760b998750bd4dd5b1aa0426fd8d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2.0"
+            },
+            "require-dev": {
+                "amphp/amp": "^3.0",
+                "amphp/byte-stream": "^2.1",
+                "laravel-zero/framework": "^12.0",
+                "laravel/pint": "^1.15.2",
+                "microsoft/tolerant-php-parser": "^0.1.2",
+                "mockery/mockery": "^1.6.11",
+                "pestphp/pest": "^4.0",
+                "stillat/blade-parser": "^2.1"
+            },
+            "bin": [
+                "builds/laravel-lsp"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/"
+                },
+                "exclude-from-classmap": [
+                    "app/Lsp/Data/Templates/global.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laravel"
+                }
+            ],
+            "description": "The Laravel language server.",
+            "homepage": "https://github.com/laravel/lsp",
+            "keywords": [
+                "LSP",
+                "language-server",
+                "laravel",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/lsp/issues",
+                "source": "https://github.com/laravel/lsp"
+            },
+            "time": "2026-07-29T18:23:46+00:00"
+        },
+        {
+            "name": "laravel/pint",
+            "version": "v1.30.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "19ca6de4ce07869f61f09863e37e81562ebc0a9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/19ca6de4ce07869f61f09863e37e81562ebc0a9b",
+                "reference": "19ca6de4ce07869f61f09863e37e81562ebc0a9b",
                 "shasum": ""
             },
             "require": {
@@ -28,14 +157,16 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.95.1",
-                "illuminate/view": "^12.56.0",
-                "larastan/larastan": "^3.9.6",
+                "composer/semver": "^3.4.4",
+                "friendsofphp/php-cs-fixer": "^3.95.18",
+                "illuminate/view": "^12.64.0",
+                "larastan/larastan": "^3.10.0",
                 "laravel-zero/framework": "^12.1.0",
+                "laravel/agent-detector": "^2.0.2",
+                "laravel/prompts": "^0.3.21",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.4.0",
-                "pestphp/pest": "^3.8.6",
-                "shipfastlabs/agent-detector": "^1.1.3"
+                "pestphp/pest": "^3.8.7"
             },
             "bin": [
                 "builds/pint"
@@ -72,20 +203,20 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2026-04-20T15:26:14+00:00"
+            "time": "2026-08-02T01:28:21+00:00"
         },
         {
             "name": "php-stubs/wordpress-stubs",
-            "version": "v6.9.0",
+            "version": "v6.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "5171cb6650e6c583a96943fd6ea0dfa3e1089a8a"
+                "reference": "90a9412826b9944f93b10bf41d795b5fe68abcd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/5171cb6650e6c583a96943fd6ea0dfa3e1089a8a",
-                "reference": "5171cb6650e6c583a96943fd6ea0dfa3e1089a8a",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/90a9412826b9944f93b10bf41d795b5fe68abcd5",
+                "reference": "90a9412826b9944f93b10bf41d795b5fe68abcd5",
                 "shasum": ""
             },
             "conflict": {
@@ -95,10 +226,11 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "nikic/php-parser": "^5.5",
                 "php": "^7.4 || ^8.0",
-                "php-stubs/generator": "^0.8.3",
-                "phpdocumentor/reflection-docblock": "^5.4.1",
+                "php-stubs/generator": "^0.8.6",
+                "phpdocumentor/reflection-docblock": "^6.0",
                 "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^9.5",
+                "symfony/polyfill-php80": "*",
                 "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.1.1",
                 "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
             },
@@ -121,9 +253,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.9.0"
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.9.4"
             },
-            "time": "2025-12-03T23:06:24+00:00"
+            "time": "2026-05-01T20:36:01+00:00"
         }
     ],
     "packages-dev": [],
