@@ -13,8 +13,12 @@ cursor/globalStorage
 cursor/History
 cursor/workspaceStorage
 
+intelephense/workspace
+
+herdr/release-notes.json
 herdr/session.json
 herdr/plugins/github
+herdr/*.log
 
 vscode/_bak
 nvim.custom

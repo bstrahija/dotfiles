@@ -1,5 +1,6 @@
 style = "compact"      # Can be "full" or "compact"
 enter_accept = true
+search_mode = "daemon-fuzzy"
 
 [dotfiles]
 enabled = true
@@ -7,7 +8,11 @@ enabled = true
 [stats]
 
 [sync]
-# Enable sync v2 by default
-# This ensures that sync v2 is enabled for new installs only
-# In a later release it will become the default across the board
 records = true
+
+[ai]
+enabled = true
+
+[daemon]
+enabled = true
+autostart = true
