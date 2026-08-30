@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
 echo "======================================================================="
 echo "==> Start setting up my dotfiles..."
 echo "======================================================================="
@@ -34,7 +38,7 @@ echo "--- Done installing PHP. ---" && echo ""
 echo "======================================================================="
 echo "==> Installing homebrew packages and apps from Brewfile..."
 echo "======================================================================="
-brew bundle
+brew bundle --file "$BREWFILE_PATH"
 echo "--- Done installing Homebrew packages and apps. ---" && echo ""
 
 # Git
@@ -56,11 +60,15 @@ ln -s "$DOTFILES_DIR/zsh/.zshrc" ~/.zshrc
 echo "--- Done linking ZSH. ---" && echo ""
 
 ## Link up dotfiles
-mkdir "$HOME_DIR/.config"
+mkdir -p "$HOME_DIR/.config"
 echo "======================================================================="
 echo "==> Linking up dotfiles..."
 echo "======================================================================="
 cd "$DOTFILES_DIR"
+if ! stow --simulate --verbose .; then
+    echo "Stow preflight failed; resolve the conflicts before continuing." >&2
+    exit 1
+fi
 stow .
 echo "--- Done linking dotfiles. ---" && echo ""
 
@@ -93,9 +101,6 @@ echo "--- Done linking VS Code config. ---" && echo ""
 rm -rf "$HOME_DIR/Library/Application Support/Cursor/User"
 ln -s "$DOTFILES_DIR/cursor" "$HOME_DIR/Library/Application Support/Cursor/User"
 echo "--- Done linking Cursor config. ---" && echo ""
-rm -rf "$HOME_DIR/Library/Application Support/Windsurf/User"
-ln -s "$DOTFILES_DIR/windsurf" "$HOME_DIR/Library/Application Support/Windsurf/User"
-echo "--- Done linking Windsurf config. ---" && echo ""
 
 
 echo "======================================================================="

@@ -34,11 +34,6 @@ vscode/sync
 vscode/workspaceStorage
 vscode/mcp
 
-
-windsurf/globalStorage
-windsurf/History
-windsurf/workspaceStorage
-
 zed/keymap_backup.json
 zed/prompts
 zed.old

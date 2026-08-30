@@ -1,4 +1,0 @@
-2026-06-28T20:43:56.831705Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=94284
-2026-06-28T20:43:56.831869Z  INFO herdr::client: connecting to server path=/Users/boris/.config/herdr/herdr-client.sock
-2026-06-28T20:43:57.056830Z  INFO herdr::client: handshake succeeded version=14 encoding=SemanticFrame
-2026-06-28T21:09:42.268682Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=94284
