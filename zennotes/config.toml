@@ -27,8 +27,11 @@ fzf_path = ""  # absolute path to fzf; empty = look on $PATH
 
 [editor]
 live_preview = true  # hide markdown syntax on inactive lines
+show_heading_level_labels = false  # show H1 through H6 badges before headings
 render_tables = true  # render tables as widgets in live preview; off keeps them as plain text
+sync_title_heading_on_rename = true  # renaming a note rewrites its leading '# heading' to match
 markdown_snippets = true  # auto-close markdown delimiters while typing
+text_replacements_enabled = true  # expand configured text triggers while typing
 auto_pairs = true  # auto-insert matching [] () and {} while typing
 auto_pair_quotes_in_prose = false  # also auto-insert matching quotes outside Markdown code
 hide_builtin_templates = false  # hide the shipped templates from the pickers
@@ -36,6 +39,7 @@ tabs_enabled = true  # enable tab-based editing
 wrap_tabs = false  # wrap the tab strip instead of scrolling it
 font_size = 16  # editor + preview font size (px)
 line_height = 1.7  # line-height multiplier
+tab_size = 4  # tab width in columns, from 1 through 8
 scroll_off = 0  # vim scrolloff — lines kept above/below the cursor (0 = off)
 time_format = "12h"  # clock format for the @time macro (12h or 24h)
 preview_max_width = 920  # max reading width for the preview (px)
@@ -66,6 +70,7 @@ text_font = "MonaspiceKr Nerd Font Mono"  # editor + preview font; empty = syste
 mono_font = "MonaspiceKr Nerd Font Mono"  # code / monospace font; empty = system default
 
 [view]
+workflows_enabled = false  # opt in to the Workflows view, its sidebar row, command, and leader shortcut (off by default)
 asset_sort_order = "name-asc"  # Assets view sort: name | used | type | size | modified, each -asc or -desc
 note_sort_order = "name-asc"  # none | manual | updated-desc | updated-asc | created-desc | created-asc | name-asc | name-desc
 group_by_kind = true  # group notes by kind in the list
@@ -78,8 +83,10 @@ auto_calendar_panel = true  # auto-show the calendar for daily / weekly notes
 calendar_week_start = "monday"  # monday | sunday | locale
 calendar_show_week_numbers = true  # show ISO week numbers in the calendar
 tasks_view_mode = "list"  # list | calendar | kanban
+show_archived_tasks = false  # keep tasks from archived notes in the Tasks views
 kanban_group_by = "status"  # status | priority | folder
 kanban_statuses = []  # custom-status Kanban columns, in order — e.g. ["backlog", "in_progress", "review", "done"]
+hidden_workflow_presets = []  # built-in workflow recipes hidden from the gallery, by id — e.g. ["reading-log"]
 
 # Keymap overrides. Add or uncomment "<action.id>" = "<binding>" lines.
 # Binding syntax: "Mod+P" = Cmd/Ctrl+P, "Shift+Mod+K", "Ctrl+W", "Space",
@@ -97,6 +104,7 @@ kanban_statuses = []  # custom-status Kanban columns, in order — e.g. ["backlo
 # "global.commandPalette" = "Shift+Mod+P"  # Open command palette
 # "global.newQuickNote" = "Shift+Mod+N"  # New quick note
 # "global.openSettings" = "Mod+,"  # Open settings
+# "global.openFile" = "Mod+O"  # Open file
 # "global.toggleConnections" = "Mod+2"  # Toggle connections panel
 # "global.toggleCommentsPanel" = "Shift+Mod+C"  # Toggle comments panel
 # "global.addComment" = "Alt+Mod+M"  # Add comment to selection
@@ -117,9 +125,11 @@ kanban_statuses = []  # custom-status Kanban columns, in order — e.g. ["backlo
 # "global.zoomReset" = "Mod+0"  # Reset zoom
 # "global.historyBack" = "Alt+ArrowLeft"  # Go back in note history
 # "global.historyForward" = "Alt+ArrowRight"  # Go forward in note history
+# "global.toggleRecentNote" = "Ctrl+Tab"  # Switch to previous note
 # Vim
 # "vim.leaderPrefix" = "Space"  # Leader key
 # "vim.leaderOpenBuffers" = "o"  # Leader: open buffers
+# "vim.leaderWorkflows" = "a"  # Leader: open workflows
 # "vim.leaderSearchNotes" = "f"  # Leader: search notes
 # "vim.leaderSearchGroup" = "s"  # Leader: search…
 # "vim.leaderSearchVaultText" = "t"  # Leader search: vault text
@@ -176,10 +186,13 @@ kanban_statuses = []  # custom-status Kanban columns, in order — e.g. ["backlo
 # "nav.toggleTask" = "x"  # Toggle task
 # "tasks.moveTaskUp" = "K"  # Move task up
 # "tasks.moveTaskDown" = "J"  # Move task down
-# "editor.hopMarkerForward" = "Alt+]"  # Hop past next marker
-# "editor.hopMarkerBackward" = "Alt+["  # Hop before previous marker
+# "editor.hopMarkerForward" = "Ctrl+."  # Hop past next marker
+# "editor.hopMarkerBackward" = "Ctrl+,"  # Hop before previous marker
+# "editor.foldHeading" = "Alt+Mod+F"  # Fold heading
+# "editor.unfoldHeading" = "Alt+Mod+U"  # Unfold heading
 # "editor.moveLineUp" = "Alt+ArrowUp"  # Move line up
 # "editor.moveLineDown" = "Alt+ArrowDown"  # Move line down
+# "editor.toggleCheckbox" = "Mod+L"  # Toggle checkbox
 # "nav.localEx" = ":"  # Open local ex prompt
 # "nav.newQuickNote" = "n"  # New quick note from Quick Notes view
 # "nav.unarchive" = "u"  # Unarchive selected note
@@ -199,3 +212,7 @@ kanban_statuses = []  # custom-status Kanban columns, in order — e.g. ["backlo
 # Visual color tweaks from Settings → Appearance (token slug = color).
 # Example: "accent" = "#ff3b30"
 [tweaks]
+
+# Text replacements expanded while typing, keyed by trigger.
+# Example: "->" = "→"
+[text_replacements]
