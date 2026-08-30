@@ -4,10 +4,6 @@ dictionaries = [
     "en_us",
 ]
 words = [
-    "Chatbot",
-    "Dotmarks",
-    "Unslop",
-    "MCP",
     "activecampaign",
     "aftersales",
     "analyse",
@@ -24,6 +20,7 @@ words = [
     "bla",
     "btop",
     "campaignrefinery",
+    "Chatbot",
     "cli",
     "commenters",
     "constantcontactnew",
@@ -31,6 +28,7 @@ words = [
     "creo",
     "creolab",
     "demio",
+    "Dotmarks",
     "efd",
     "efit",
     "egoiv",
@@ -66,6 +64,7 @@ words = [
     "mailpoet",
     "matija",
     "mautic",
+    "MCP",
     "mdm",
     "memberpress",
     "mins",
@@ -132,4 +131,5 @@ words = [
     "zimsko",
     "zoomnew",
     "zoxide",
+    "Unslop",
 ]
