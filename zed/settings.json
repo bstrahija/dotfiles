@@ -17,7 +17,7 @@
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Tokyo Night Moon",
+        "dark": "Rosé Pine Moon",
     },
     "cursor_blink": false,
     "show_whitespaces": "selection",
@@ -195,7 +195,8 @@
         "PHP": {
             "format_on_save": "on",
             // "formatter": "language_server",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp", "emmet-language-server"],
+            "document_symbols": "on",
+            "language_servers": ["!phptools", "!phpactor", "intelephense", "laravel-lsp", "emmet-language-server"],
             "formatter": {
                 "external": {
                     "command": "bash",
@@ -208,7 +209,15 @@
         },
         "Blade": {
             "format_on_save": "on",
-            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp", "emmet-language-server"],
+            "document_symbols": "on",
+            "language_servers": [
+                "phptools",
+                "!phpactor",
+                "!intelephense",
+                "laravel-lsp",
+                "emmet-language-server",
+                "tailwindcss-intellisense-css",
+            ],
             "formatter": {
                 "external": {
                     "command": "blade-formatter",
@@ -236,21 +245,6 @@
         },
         "Ruby": {
             "language_servers": ["!ruby-lsp", "!rubocop", "!solargraph"],
-        },
-    },
-    "lsp": {
-        "phptools": {
-            "initialization_options": {
-                "php.format.codeStyle": "Laravel",
-                "php.format.rules.addCommaAfterLastArrayElement": true,
-                "php.format.rules.alignConsecutiveAssignments": true,
-                "php.format.rules.alignConstants": true,
-                "php.format.rules.alignEnumCases": true,
-                "php.format.rules.alignMatchArmBodies": true,
-                "php.format.rules.alignProperties": true,
-                "php.format.rules.arrayInitializersAlignKeyValuePairs": true,
-                "php.format.rules.spaceAfterUnaryNot": true,
-            },
         },
     },
     "inlay_hints": {
