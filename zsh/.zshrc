@@ -1,5 +1,5 @@
-# Homebrew
-export HOMEBREW_PREFIX=$(brew --prefix)
+# Homebrew (hardcoded to skip a `brew --prefix` subprocess on every shell start)
+export HOMEBREW_PREFIX="/opt/homebrew"
 
 # If you come from bash you might have to change your $PATH.
 export PATH="/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
@@ -36,6 +36,9 @@ function y() {
 # WordPress
 source ~/.config/wordpress/wordpress.zsh
 
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 25)
+
 # ZSH plugins
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -49,21 +52,21 @@ source ~/.config/zsh/vi.zsh
 
 # Aliases
 eval "$(atuin init zsh)"
-eval $(thefuck --alias)
 
-# OpenCode
-export PATH=/Users/boris/.opencode/bin:$PATH
+# thefuck is slow to init (Python startup), so load it lazily on first use
+fuck() {
+  unfunction fuck
+  eval "$(thefuck --alias)"
+  fuck "$@"
+}
+
+# Homebrew sbin
 export PATH="/opt/homebrew/sbin:$PATH"
 
-# Herd injected NVM configuration
+# NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
-
-# This loads nvm bash_completion
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # FZF
 export FZF_DEFAULT_OPTS="
@@ -98,7 +101,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # PHPDevTools
-export DEVSENSE_PHP_LS_LICENSE="$(< ~/phpdevtools/licence.txt)"
+[ -f ~/phpdevtools/licence.txt ] && export DEVSENSE_PHP_LS_LICENSE="$(< ~/phpdevtools/licence.txt)"
 
 # Herd injected PHP binary.
 export PATH="/Users/boris/Library/Application Support/Herd/bin/:/Users/boris/.config/herd-lite/bin:$PATH"
@@ -126,10 +129,29 @@ export HERD_PHP_80_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/c
 export HERD_PHP_74_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/config/php/74/"
 
 # opencode
-export PATH=/Users/boris/.opencode/bin:$PATH
-
-# Disable automatic nvm switching
-add-zsh-hook -d chpwd load-nvmrc 2>/dev/null
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # Worktrunk
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/boris/.docker/completions $fpath)
+autoload -Uz compinit
+(( ${+_comps[docker]} )) || compinit
+# End of Docker CLI completions
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/boris/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
+export DOCKER_HOST=unix://$HOME/.rd/docker.sock
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+# export TESTCONTAINERS_HOST_OVERRIDE=$(rdctl shell ip a show vznat | awk '/inet / {sub("/.*",""); print $2}')
+
+# efd completion
+# eval "$(_EFD_COMPLETE=zsh_source efd)"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"

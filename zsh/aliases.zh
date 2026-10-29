@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------
 # ZSH/Machine
 # -------------------------------------------------------------------
-alias dotfiles="zed ~/.dotfiles"
+alias dotfiles="zed ~/DotFiles"
 alias zshconfig="zed ~/.zshrc"
 alias aliases="zed ~/.config/zsh/aliases.zh"
 alias hosts="zed /etc/hosts"
@@ -147,12 +147,12 @@ alias serve="php artisan serve"
 alias dump="php artisan dump"
 alias routes="php artisan route:list"
 alias t="./vendor/bin/phpunit --testdox"
-alias test="./vendor/bin/phpunit --testdox"
+alias pu="./vendor/bin/phpunit --testdox"  # don't shadow the `test` builtin
 alias phpspec=vendor/bin/phpspec
 alias tinker='php artisan tinker'
 alias npmd='npm run dev'
 alias npmw='npm run watch'
-alias npmw='npm run build'
+alias npmb='npm run build'
 alias nd='npm run dev'
 alias nw='npm run watch'
 alias nb='npm run build'
