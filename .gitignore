@@ -8,6 +8,8 @@ _old
 *.old*
 *.log
 kickstart
+test/
+_nvim
 
 cursor/globalStorage
 cursor/History

@@ -2,7 +2,7 @@
 	excludesfile = /Users/boris/.gitignore
 	quotepath = false
 	autocrlf = input
-	editor = code -w
+	editor = nvim
 	safecrlf = false
 	fileMode = false
 	filemode = false
@@ -73,7 +73,7 @@
 [apply]
   whitespace = nowarn
 [help]
-	autocorrect = 1
+	autocorrect = prompt
 [filter "media"]
 	required = true
 	clean = git media clean %f

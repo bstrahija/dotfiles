@@ -2,7 +2,6 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Press v in normal mode to open the current command in $EDITOR
-export EDITOR='nvim'
 autoload edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line

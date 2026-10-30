@@ -11,11 +11,8 @@ export PATH="$HOMEBREW_PREFIX/opt/mysql-client/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/laravel/pint/builds:$PATH"
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Add my aliases
 source ~/.config/zsh/aliases.zh
