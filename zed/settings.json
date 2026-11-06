@@ -14,7 +14,7 @@
     "ui_font_family": "MonaspiceKr Nerd Font",
     "buffer_font_size": 13,
     "buffer_line_height": { "custom": 2.8 },
-    "buffer_font_family": "MonaspiceKr Nerd Font",
+    "buffer_font_family": "MonaspiceKr Nerd Font Mono",
     "theme": {
         "mode": "system",
         "light": "One Light",
@@ -22,6 +22,8 @@
     },
     "cursor_blink": false,
     "current_line_highlight": "all",
+    "lsp_document_highlight": "on",
+    "selection_highlight": true,
     "show_whitespaces": "selection",
     "autosave": "on_focus_change",
     "format_on_save": "on",
@@ -58,7 +60,7 @@
         "active_line_width": 2,
     },
     "prettier": {
-        "allowed": true
+        "allowed": true,
     },
 
     // Terminal
@@ -152,14 +154,16 @@
     // AI / Agents
     "show_edit_predictions": true,
     "agent": {
+        "threads_sidebar": {
+            "position": "left"
+        },
         "inline_assistant_model": {
             "provider": "copilot_chat",
             "model": "gpt-5.5",
-            "enable_thinking": false
+            "enable_thinking": false,
         },
         "button": false,
         "dock": "left",
-        "sidebar_side": "left",
         "favorite_models": [],
         "model_parameters": [],
         "default_model": {
@@ -206,7 +210,7 @@
             "format_on_save": "on",
             // "formatter": "language_server",
             "document_symbols": "on",
-            "language_servers": ["!phptools", "!phpactor", "intelephense", "laravel-lsp", "emmet-language-server"],
+            "language_servers": ["phptools", "!phpactor", "!intelephense", "laravel-lsp", "emmet-language-server"],
             "formatter": {
                 "external": {
                     "command": "bash",
@@ -233,9 +237,9 @@
                     "command": "bash",
                     "arguments": [
                         "-c",
-                        "cat > {buffer_path} && ./vendor/bin/pint --blade --quiet {buffer_path} && cat {buffer_path}"
-                    ]
-                }
+                        "cat > {buffer_path} && ./vendor/bin/pint --blade --quiet {buffer_path} && cat {buffer_path}",
+                    ],
+                },
             },
 
             // "formatter": {
@@ -267,6 +271,29 @@
             "language_servers": ["!ruby-lsp", "!rubocop", "!solargraph"],
         },
     },
+    "lsp": {
+        "intelephense": {
+            "settings": {
+                "intelephense": {
+                    "files": {
+                        "exclude": [
+                            "**/.git/**",
+                            "**/.svn/**",
+                            "**/.hg/**",
+                            "**/CVS/**",
+                            "**/.DS_Store/**",
+                            "**/node_modules/**",
+                            "**/bower_components/**",
+                            "**/vendor/**/{Tests,tests}/**",
+                            "**/.history/**",
+                            "**/vendor/**/vendor/**",
+                            "**/_model_helpers.php",
+                        ],
+                    },
+                },
+            },
+        },
+    },
     "inlay_hints": {
         "show_background": true,
         "enabled": false,
@@ -276,8 +303,8 @@
     "git_panel": {
         "dock": "right",
         "button": false,
-        "tree_view": true
-   },
+        "tree_view": true,
+    },
     "git": {
         "inline_blame": {
             "enabled": false,

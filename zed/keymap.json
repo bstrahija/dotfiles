@@ -211,6 +211,8 @@
         "bindings": {
             "alt-h": "vim::StartOfLineDownward",
             "alt-l": "vim::EndOfLineDownward",
+            "] ]": ["workspace::SendKeystrokes", "*"],
+            "[ [": ["workspace::SendKeystrokes", "#"],
             "s": "vim::PushSneak",
             "S": "vim::PushSneakBackward",
             "space y": ["workspace::SendKeystrokes", "\" + y"],
@@ -242,7 +244,7 @@
             "k": "markdown::ScrollUp",
             "ctrl-d": "editor::HalfPageDown",
             "ctrl-u": "editor::HalfPageUp",
-        }
+        },
     },
 
     // Indenting, pasting, deleting, surrounnding
