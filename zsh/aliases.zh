@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------
 # ZSH/Machine
 # -------------------------------------------------------------------
-alias dotfiles="zed ~/.dotfiles"
+alias dotfiles="zed ~/DotFiles"
 alias zshconfig="zed ~/.zshrc"
 alias aliases="zed ~/.config/zsh/aliases.zh"
 alias hosts="zed /etc/hosts"
@@ -57,7 +57,7 @@ alias .....='z ../../../..'
 alias ......='z ../../../../..'
 alias mkdir='mkdir -pv'
 alias du='du -ch'
-alias df='dust'
+unalias df 2>/dev/null
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipboard.'"
 alias ping='prettyping'
@@ -69,7 +69,12 @@ alias grep='grep --color=auto'
 alias edit='code'
 alias vim='nvim'
 alias n='nvim .'
-alias svim='nvim $(fzf)'
+unalias svim 2>/dev/null
+function svim() {
+  local selected
+  selected=$(fzf --no-multi) || return
+  [[ -n "$selected" ]] && nvim -- "$selected"
+}
 alias reamp='open -a reAmp'
 alias winamp='open -a reAmp'
 alias subl='subl -n'
@@ -97,7 +102,6 @@ alias pt="z ~/Code/test"
 # More Shortcuts
 # -------------------------------------------------------------------
 alias g="git"
-alias h="history"
 alias j="jobs"
 alias o="open"
 alias oo="open ."
@@ -147,12 +151,12 @@ alias serve="php artisan serve"
 alias dump="php artisan dump"
 alias routes="php artisan route:list"
 alias t="./vendor/bin/phpunit --testdox"
-alias test="./vendor/bin/phpunit --testdox"
+alias pu="./vendor/bin/phpunit --testdox"  # don't shadow the `test` builtin
 alias phpspec=vendor/bin/phpspec
 alias tinker='php artisan tinker'
 alias npmd='npm run dev'
 alias npmw='npm run watch'
-alias npmw='npm run build'
+alias npmb='npm run build'
 alias nd='npm run dev'
 alias nw='npm run watch'
 alias nb='npm run build'

@@ -1,17 +1,31 @@
 [
     {
-        "context": "Workspace",
         "bindings": {
             "shift shift": "file_finder::Toggle",
-            "cmd-e": "project_panel::ToggleFocus",
+            "cmd-p": "file_finder::Toggle",
+            "cmd-shift-f": "pane::DeploySearch",
+            "cmd-e": "editor::ToggleFocus",
             "cmd-t": "terminal_panel::ToggleFocus",
             "cmd-i": "agent::ToggleFocus",
             "cmd-l": "agent::ToggleFocus",
-            "ctrl-enter": "assistant::InlineAssist",
-            "cmd-k": "assistant::InlineAssist",
             "alt-cmd-p": "projects::OpenRecent",
             "cmd-g": "git_panel::ToggleFocus",
             "cmd-shift-b": "multi_workspace::ToggleWorkspaceSidebar",
+            "ctrl-[": "pane::ActivatePreviousItem",
+            "ctrl-]": "pane::ActivateNextItem",
+        },
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-enter": "assistant::InlineAssist",
+            "cmd-k": "assistant::InlineAssist",
+        },
+    },
+    {
+        "context": "Editor && mode == full || EmptyPane",
+        "bindings": {
+            "cmd-e": "project_panel::ToggleFocus",
         },
     },
     {
@@ -19,6 +33,15 @@
         "bindings": {
             "j j": "vim::NormalBefore",
             "j k": "vim::NormalBefore",
+        },
+    },
+
+    // Switch editor tabs even when the terminal panel has focus.
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-[": ["workspace::SendKeystrokes", "cmd-e ctrl-["],
+            "ctrl-]": ["workspace::SendKeystrokes", "cmd-e ctrl-]"],
         },
     },
 
@@ -35,6 +58,14 @@
             "cmd-7": ["pane::ActivateItem", 6],
             "cmd-8": ["pane::ActivateItem", 7],
             "cmd-9": ["pane::ActivateItem", 8],
+        },
+    },
+
+    // Reserve Space as a leader without the default Vim movement timeout.
+    {
+        "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting && !menu",
+        "bindings": {
+            "space": null,
         },
     },
 
@@ -60,8 +91,11 @@
             "space b n": "pane::ActivateNextItem",
             "space b p": "pane::ActivatePreviousItem",
             "space t t": "tab_switcher::Toggle",
-            "space t g": "editor::ToggleTabBar",
+            "space t b": "editor::ToggleTabBar",
             "space t p": "pane::TogglePinTab",
+            "space t i": "editor::ToggleInlayHints",
+            "space t h": "editor::ToggleInlayHints",
+            "space t g": "editor::ToggleGitBlameInline",
 
             // Copy/yank/paste
             "Y": ["workspace::SendKeystrokes", "y $"],
@@ -120,6 +154,7 @@
             "space g h": "git::FileHistory",
             "space g l": ["task::Spawn", { "task_name": "lazygit" }],
             "space g n": "editor::GoToHunk",
+            "space g p": "editor::GoToPreviousHunk",
 
             // Errors / diagnostics
             "space e e": "diagnostics::Deploy",
@@ -159,8 +194,6 @@
             "ctrl-/": "vim::ToggleComments",
             "alt-j": "editor::MoveLineDown",
             "alt-k": "editor::MoveLineUp",
-            "ctrl-]": "pane::ActivateNextItem",
-            "ctrl-[": "pane::ActivatePreviousItem",
             "alt-t": "vim::Increment",
             "cmd-ctrl-[": "editor::SelectLargerSyntaxNode",
             "cmd-ctrl-]": "editor::SelectSmallerSyntaxNode",
@@ -198,10 +231,10 @@
             "space 8": ["workspace::SendKeystrokes", "' 8"],
             "space 9": ["workspace::SendKeystrokes", "' 9"],
             "space m m": ["workspace::SendKeystrokes", ": marks enter"],
-            "ctrl-h": ["terminal::SendKeystroke", "' H"],
-            "ctrl-j": ["terminal::SendKeystroke", "' J"],
-            "ctrl-k": ["terminal::SendKeystroke", "' K"],
-            "ctrl-l": ["terminal::SendKeystroke", "' L"],
+            "ctrl-h": ["workspace::SendKeystrokes", "' H"],
+            "ctrl-j": ["workspace::SendKeystrokes", "' J"],
+            "ctrl-k": ["workspace::SendKeystrokes", "' K"],
+            "ctrl-l": ["workspace::SendKeystrokes", "' L"],
         },
     },
 

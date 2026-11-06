@@ -3,6 +3,10 @@
     "cli_default_open_behavior": "existing_window",
     "helix_mode": false,
     "vim_mode": true,
+    "which_key": {
+        "enabled": true,
+        "delay_ms": 300,
+    },
     "vim": {
         "use_smartcase_find": true,
         "toggle_relative_line_numbers": true,
@@ -11,7 +15,7 @@
     // Looks / Editor
     "icon_theme": "Base Charmed Icons",
     "ui_font_size": 14,
-    "ui_font_family": "MonaspiceKr Nerd Font",
+    "ui_font_family": "MonaspiceKr Nerd Font Mono",
     "buffer_font_size": 13,
     "buffer_line_height": { "custom": 2.8 },
     "buffer_font_family": "MonaspiceKr Nerd Font Mono",
@@ -155,7 +159,7 @@
     "show_edit_predictions": true,
     "agent": {
         "threads_sidebar": {
-            "position": "left"
+            "position": "left",
         },
         "inline_assistant_model": {
             "provider": "copilot_chat",
@@ -167,20 +171,16 @@
         "favorite_models": [],
         "model_parameters": [],
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-5.4",
+            "effort": "low",
+            "enable_thinking": true,
+            "provider": "openai-subscribed",
+            "model": "gpt-6.1-sol",
         },
     },
     "edit_predictions": {
         "mode": "eager",
     },
     "agent_servers": {
-        "github-copilot-cli": {
-            "default_config_options": {
-                "model": "gpt-5.4",
-            },
-            "type": "registry",
-        },
         "codex-acp": {
             "default_config_options": {
                 "model": "gpt-5.4-mini",
@@ -225,12 +225,13 @@
             "format_on_save": "on",
             "document_symbols": "on",
             "language_servers": [
-                "phptools",
+                "!phptools",
                 "!phpactor",
-                "!intelephense",
+                "intelephense",
                 "laravel-lsp",
                 "emmet-language-server",
-                "tailwindcss-intellisense-css",
+                "!tailwindcss-intellisense-css",
+                "tailwindcss-language-server",
             ],
             "formatter": {
                 "external": {
@@ -290,6 +291,14 @@
                             "**/_model_helpers.php",
                         ],
                     },
+                },
+            },
+        },
+        "tailwindcss-language-server": {
+            "settings": {
+                "includeLanguages": {
+                    "php": "html",
+                    "blade": "html",
                 },
             },
         },

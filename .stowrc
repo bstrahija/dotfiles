@@ -8,5 +8,9 @@
 --ignore=git
 --ignore=test
 --ignore=.*\.old.*
+--ignore=.*\.bak
+--ignore=.*\.log
+--ignore=.*\.sock
+--ignore=_nvim
 --ignore=Brewfile
 --ignore=pint\.json

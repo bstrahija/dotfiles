@@ -17,7 +17,7 @@
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : true,
   "enableSpaceControlTilesAnimations" : true,
-  "enableSwipeGestures" : true,
+  "enableSwipeGestures" : false,
   "enableWorkspaceSwitcher" : false,
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
@@ -32,7 +32,9 @@
   "loopWorkspaces" : true,
   "loopWorkspacesOnAllDisplays" : false,
   "menuBarDisplayAliases" : "",
+  "menuBarTitleScriptPath" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
+  "menuBarTitleUseScript" : false,
   "pipApps" : [
 
   ],
