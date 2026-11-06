@@ -133,3 +133,7 @@ add-zsh-hook -d chpwd load-nvmrc 2>/dev/null
 
 # Worktrunk
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+
+# Herd injected PHP 8.6 configuration.
+export HERD_PHP_86_INI_SCAN_DIR="/Users/boris/Library/Application Support/Herd/config/php/86"
